@@ -9,14 +9,89 @@
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/components.css">
     <style>
-        .placeholder-hero {
-            padding: var(--space-4xl) 0;
+        .case-hero {
+            padding: var(--space-4xl) 0 var(--space-2xl);
             text-align: center;
-            min-height: 60vh;
+        }
+
+        .case-card {
+            background: var(--color-glass-bg);
+            border: 1px solid var(--color-glass-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--color-accent);
+        }
+
+        .case-header {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-xl);
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+
+        .case-title h2 {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--space-xs);
+        }
+
+        .case-meta {
+            font-family: var(--font-mono);
+            color: var(--color-accent);
+            font-size: var(--font-size-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+        }
+
+        .case-section h3 {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-md);
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: var(--space-xs);
+        }
+
+        .case-results {
+            background: rgba(99, 102, 241, 0.1);
+            padding: var(--space-xl);
+            border-radius: var(--radius-md);
+            margin-top: var(--space-xl);
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--space-xs);
+        }
+
+        .result-value {
+            font-weight: 700;
+            color: var(--color-success);
+        }
+
+        @media (max-width: 768px) {
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -38,11 +113,145 @@
         </div>
     </nav>
 
-    <section class="placeholder-hero">
+    <section class="case-hero">
         <div class="container">
-            <h1>Proven <span class="text-gradient">Results</span></h1>
-            <p class="text-large text-muted">Detailed case studies are being compiled. Coming soon.</p>
-            <a href="index.html" class="btn btn-secondary" style="margin-top: var(--space-xl);">Back to Home</a>
+            <h1>Evidence. <span class="text-gradient">Not Promises.</span></h1>
+            <p class="text-large text-muted">Real revenue engineering. Real results.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <!-- Case Study 1 -->
+        <div class="case-card scroll-reveal" id="saas-startup">
+            <div class="case-header">
+                <div class="case-title">
+                    <h2>The "Silo War" Ceasefire</h2>
+                    <div class="case-meta">Client: Series B Fintech ($12M ARR)</div>
+                </div>
+            </div>
+            <div class="case-grid">
+                <div>
+                    <div class="case-section">
+                        <h3>The Glaring Gap</h3>
+                        <p>Marketing was celebrating "record MQLs" while Sales was missing quota for 3 quarters. The CRO
+                            and CMO were barely speaking. Marketing was incentivized on volume; Sales on closed-won. No
+                            feedback loop existed.</p>
+                    </div>
+                    <div class="case-section" style="margin-top: var(--space-xl);">
+                        <h3>The Engineering Fix</h3>
+                        <ul class="feature-list">
+                            <li><strong>Unified Data Layer:</strong> Synced HubSpot & Salesforce in real-time.</li>
+                            <li><strong>Metric Shift:</strong> Killed "MQLs". Replaced with behavioral "PQLs".</li>
+                            <li><strong>Amazon Mechanism:</strong> Installed weekly "Pipeline WBR" where both teams
+                                reviewed the <em>same</em> dashboard.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="case-results">
+                    <h3>The Results</h3>
+                    <div class="result-item">
+                        <span>Lead Volume (Junk)</span>
+                        <span class="result-value">⬇ 40%</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Pipeline Velocity</span>
+                        <span class="result-value">⬆ 2.5x</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Revenue vs Plan</span>
+                        <span class="result-value">110%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="case-card scroll-reveal" id="global-tech">
+            <div class="case-header">
+                <div class="case-title">
+                    <h2>The "Dirty Data" AI Transformation</h2>
+                    <div class="case-meta">Client: HealthTech Scale-up ($25M ARR)</div>
+                </div>
+            </div>
+            <div class="case-grid">
+                <div>
+                    <div class="case-section">
+                        <h3>The Glaring Gap</h3>
+                        <p>The Board demanded "AI Forecasting". The CEO bought expensive tools (Clari/Gong), but they
+                            hallucinated because the Salesforce data was garbage. 30% of "Active" deals were actually
+                            dead.</p>
+                    </div>
+                    <div class="case-section" style="margin-top: var(--space-xl);">
+                        <h3>The Engineering Fix</h3>
+                        <ul class="feature-list">
+                            <li><strong>"Clean Pipes" Initiative:</strong> Purged 5,000+ stale opportunities via script.
+                            </li>
+                            <li><strong>Process Engineering:</strong> Implemented strict "Exit Criteria" for every deal
+                                stage.</li>
+                            <li><strong>AI Activation:</strong> Reactivated AI forecasting <em>after</em> the data
+                                hygiene fix.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="case-results">
+                    <h3>The Results</h3>
+                    <div class="result-item">
+                        <span>Forecast Accuracy</span>
+                        <span class="result-value">60% → 95%</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Rep Admin Time</span>
+                        <span class="result-value">⬇ 5 hrs/week</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Board Confidence</span>
+                        <span class="result-value">Restored</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="case-card scroll-reveal" id="customer-success">
+            <div class="case-header">
+                <div class="case-title">
+                    <h2>Scaling the "Amazon Way"</h2>
+                    <div class="case-meta">Client: Logistics SaaS ($8M ARR)</div>
+                </div>
+            </div>
+            <div class="case-grid">
+                <div>
+                    <div class="case-section">
+                        <h3>The Glaring Gap</h3>
+                        <p>Founder-led sales worked, but hiring failed. The "Magic" was in the Founder's head.
+                            Onboarding was "shadow me". No standard operating procedures (SOPs).</p>
+                    </div>
+                    <div class="case-section" style="margin-top: var(--space-xl);">
+                        <h3>The Engineering Fix</h3>
+                        <ul class="feature-list">
+                            <li><strong>Playbook Extraction:</strong> Documented "Sales Mechanics" into a scalable
+                                playbook.</li>
+                            <li><strong>"Bar Raiser" Hiring:</strong> Implemented Amazon-style interview loops.</li>
+                            <li><strong>"Two-Pizza Teams":</strong> Split sales org into agile Pods (AE+SDR+CS).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="case-results">
+                    <h3>The Results</h3>
+                    <div class="result-item">
+                        <span>Rep Ramp Time</span>
+                        <span class="result-value">6mo → 2mo</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Headcount Scale</span>
+                        <span class="result-value">4 → 20 Reps</span>
+                    </div>
+                    <div class="result-item">
+                        <span>ARR Growth</span>
+                        <span class="result-value">2x (12 mos)</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

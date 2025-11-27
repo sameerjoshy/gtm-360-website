@@ -59,30 +59,6 @@ git push -u origin main
 7. Configure build settings:
    - **Production branch:** `main`
    - **Build command:** (leave empty)
-   - **Build output directory:** `/`
-8. Click **"Save and Deploy"**
-
-## Step 6: Add Custom Domain
-
-1. In your Cloudflare Pages project → **Custom domains**
-2. Click **"Set up a custom domain"**
-3. Enter: `www.gtm-360.com`
-4. Cloudflare will automatically configure DNS
-5. Wait 2-5 minutes for deployment
-
-## ✅ Done!
-
-Your website is now live with automated deployments!
-
----
-
-## Future Updates (Simple 3-Command Workflow)
-
-Whenever you make changes to your website:
-
-```bash
-# 1. Stage all changes
-git add .
 
 # 2. Commit with a message
 git commit -m "Updated homepage hero section"
