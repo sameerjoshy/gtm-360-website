@@ -48,83 +48,57 @@ const Header = () => {
                         <img src={logo} alt="GTM 360" className={`transition-all duration-300 ${isScrolled ? 'h-14 md:h-20' : 'h-16 md:h-28'}`} />
                     </Link>
 
+                    {/* DESKTOP NAV */}
                     <nav className="hidden md:flex items-center space-x-8">
-                        {navLinks.map((link) => (
-                            link.path.startsWith('http') ? (
-                                <a
-                                    key={link.title}
-                                    href={link.path}
-                                    className="text-sm font-medium text-gray-700 hover:text-[var(--color-primary)] transition-colors"
-                                >
-                                    {link.title}
-                                </a>
-                            ) : (
-                                <Link
-                                    key={link.title}
-                                    to={link.path}
-                                    className="text-sm font-medium text-gray-700 hover:text-[var(--color-primary)] transition-colors"
-                                >
-                                    {link.title}
-                                </Link>
-                            )
-                        ))}
+                        <Link to="/services" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
+                            How We Help
+                        </Link>
+                        <Link to="/planning-cycle" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
+                            The Planning Cycle
+                        </Link>
+                        <Link to="/workbench" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
+                            Agent Workbench
+                        </Link>
+                        <Link to="/insights" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
+                            Insights
+                        </Link>
                     </nav>
                 </div>
 
-                {/* Right Group: CTA */}
-                <div className="hidden md:block">
-                    <Link
-                        to="/diagnostic"
-                        className="text-sm font-medium text-[var(--color-primary)] border border-[var(--color-primary)] px-6 py-3 rounded hover:bg-[var(--color-primary)] hover:text-white transition-colors"
-                    >
-                        Run a Diagnostic
+                {/* CTA BUTTONS */}
+                <div className="hidden md:flex items-center space-x-4">
+                    <a href="https://app.gtm-360.com" className="text-sm font-medium text-slate-500 hover:text-indigo-600">
+                        Login
+                    </a>
+                    <Link to="/start-here" className="btn btn-primary bg-[var(--color-primary)] text-white px-5 py-2.5 rounded hover:bg-indigo-700 transition-colors shadow-sm text-sm font-bold">
+                        Start Here
                     </Link>
                 </div>
 
-                {/* Mobile Menu Toggle */}
-                <button
-                    className="md:hidden text-gray-700"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+                {/* MOBILE MENU BUTTON */}
+                <div className="md:hidden">
+                    <button onClick={() => setIsOpen(!isOpen)} className="text-slate-600 hover:text-indigo-600">
+                        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                    </button>
+                </div>
             </div>
 
-            {/* Mobile Nav */}
-            {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg py-4 px-6 flex flex-col space-y-4 h-[calc(100vh-64px)] overflow-y-auto">
-                    {navLinks.map((link) => (
-                        link.path.startsWith('http') ? (
-                            <a
-                                key={link.title}
-                                href={link.path}
-                                className="text-lg font-medium text-gray-800 py-3 border-b border-gray-50 hover:text-[var(--color-primary)]"
-                            >
-                                {link.title}
-                            </a>
-                        ) : (
-                            <Link
-                                key={link.title}
-                                to={link.path}
-                                className="text-lg font-medium text-gray-800 py-3 border-b border-gray-50 hover:text-[var(--color-primary)]"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                {link.title}
-                            </Link>
-                        )
+            {link.title}
+        </Link>
+    )
                     ))}
-                    <div className="pt-4">
-                        <Link
-                            to="/contact"
-                            className="block w-full text-center text-lg font-semibold text-white bg-[var(--color-primary)] py-4 rounded-lg shadow-md hover:bg-indigo-700 transition-[background-color]"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            Book a System Audit
-                        </Link>
-                    </div>
-                </div>
+<div className="pt-4">
+    <Link
+        to="/contact"
+        className="block w-full text-center text-lg font-semibold text-white bg-[var(--color-primary)] py-4 rounded-lg shadow-md hover:bg-indigo-700 transition-[background-color]"
+        onClick={() => setIsMobileMenuOpen(false)}
+    >
+        Book a System Audit
+    </Link>
+</div>
+                </div >
             )}
-        </header>
+        </header >
     );
 };
 
