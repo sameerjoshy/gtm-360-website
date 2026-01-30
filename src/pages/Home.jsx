@@ -10,6 +10,7 @@ import VideoEmbed from '../components/media/VideoEmbed';
 
 import TechStackMarquee from '../components/social/TechStackMarquee';
 import LeadMagnet from '../components/marketing/LeadMagnet';
+import GrowthStallChart from '../components/visuals/GrowthStallChart';
 
 const Home = () => {
     const organizationSchema = {
@@ -172,8 +173,6 @@ const Home = () => {
                     </p>
                 </div>
             </section>
-
-            import GrowthStallChart from '../components/visuals/GrowthStallChart';
 
             {/* BLOCK 2: MISDIAGNOSIS */}
             <section className="section bg-[var(--color-secondary)]">
