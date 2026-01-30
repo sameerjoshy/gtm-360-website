@@ -246,41 +246,6 @@ const Home = () => {
                 );
 };
 
-                export default Home;
-
-                {/* BLOCK 2: MISDIAGNOSIS */}
-                <section className="section bg-[var(--color-secondary)]">
-                    <div className="container">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                            <div>
-                                <span className="text-[var(--color-primary)] font-mono text-xs tracking-widest uppercase mb-4 block">The Hidden Mechanic</span>
-                                <h2 className="text-3xl font-semibold text-[var(--color-primary)] mb-6">Most stalled growth is misdiagnosed.</h2>
-                                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                                    When growth slows, companies respond predictably: more pipeline, more tools, more activity, more inspection.
-                                </p>
-                                <p className="text-lg text-gray-600 font-medium mb-8">
-                                    But usually, the issue isn't talent or effort. It's the "Complexity Wall."
-                                </p>
-                                <div className="bg-white p-6 rounded border-l-4 border-[var(--color-primary)] shadow-sm">
-                                    <p className="text-gray-800 italic">
-                                        "What worked at $5M often breaks at $20M. The system quietly starts enforcing the wrong behaviors."
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* CHART COMPONENT */}
-                            <div className="relative">
-                                <GrowthStallChart />
-                                <p className="text-center text-xs text-slate-500 mt-4 font-mono">Figure 1.1: The Complexity Inflection Point</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* BLOCK 2.5: SOCIAL PROOF */}
-                <TestimonialMarquee />
-
-                {/* BLOCK 2.6: FOUNDER MEMO (VIDEO) */}
                 <section className="section bg-white border-b border-gray-100">
                     <div className="container max-w-5xl">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
