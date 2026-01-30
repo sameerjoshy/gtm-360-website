@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageSquare, Users, Cpu, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
-import PlanningCycleDiagram from '../components/visuals/PlanningCycleDiagram';
+import PlanningCycleMinimal from '../components/visuals/PlanningCycleMinimal';
 
 const HowWeWork = () => {
     return (
@@ -31,7 +31,7 @@ const HowWeWork = () => {
                 <div className="container max-w-5xl">
                     <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
                         <div className="w-full md:w-1/2">
-                            <PlanningCycleDiagram />
+                            <PlanningCycleMinimal />
                         </div>
                         <div className="w-full md:w-1/2">
                             <h2 className="text-2xl font-bold text-slate-900 mb-6">Shared Foundation</h2>
