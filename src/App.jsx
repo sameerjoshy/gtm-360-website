@@ -45,6 +45,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/workbench" element={<AgentWorkbench />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
 
