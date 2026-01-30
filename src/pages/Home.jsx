@@ -42,21 +42,30 @@ const Home = () => {
                 <div className="container max-w-6xl relative z-10">
                     <div className="flex flex-col md:flex-row items-center gap-12 mt-20">
                         <div className="flex-1">
+                            {/* RECOGNITION (They are already successful) */}
+                            <div className="inline-block px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full mb-6">
+                                <span className="text-xs font-bold text-indigo-900 uppercase tracking-widest">Built for $5M - $50M ARR Teams</span>
+                            </div>
+
+                            {/* TENSION (The new constraint) */}
                             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-slate-900 tracking-tight">
-                                The Revenue Operating System for <span className="text-[var(--color-primary)]">B2B Growth.</span>
+                                Scale breaks everything. <br />
+                                <span className="text-[var(--color-primary)]">We fix the engine.</span>
                             </h1>
+
+                            {/* REFRAME & SUPPORT (How we help) */}
                             <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl font-light">
-                                We fix the decision systems that cause stalled growth—without adding more tools, headcount, or complexity.
+                                GTM-360 helps leadership teams rethink how revenue runs when the old way stops scaling — without losing what already works.
                             </p>
 
-                            {/* 3 BULLETS (WHAT WE FIX) */}
+                            {/* 3 BULLETS (Operator Language) */}
                             <ul className="space-y-4 mb-10">
                                 <li className="flex items-start">
                                     <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                                         <Activity className="w-4 h-4 text-emerald-600" />
                                     </div>
                                     <div>
-                                        <span className="font-bold text-slate-900">Pipeline Quality:</span> <span className="text-slate-600">Stop celebrating "busy work" and start tracking true signal.</span>
+                                        <span className="font-bold text-slate-900">Signal Clarity:</span> <span className="text-slate-600">Identify the few deals that actually matter. Ignore the noise.</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start">
@@ -64,7 +73,7 @@ const Home = () => {
                                         <TrendingDown className="w-4 h-4 text-indigo-600" />
                                     </div>
                                     <div>
-                                        <span className="font-bold text-slate-900">Conversion Decay:</span> <span className="text-slate-600">Fix the broken handoffs that kill deals late in the funnel.</span>
+                                        <span className="font-bold text-slate-900">System Drag:</span> <span className="text-slate-600">Remove the friction between stages that kills velocity.</span>
                                     </div>
                                 </li>
                                 <li className="flex items-start">
@@ -72,7 +81,7 @@ const Home = () => {
                                         <Users className="w-4 h-4 text-purple-600" />
                                     </div>
                                     <div>
-                                        <span className="font-bold text-slate-900">Forecast Accuracy:</span> <span className="text-slate-600">Replace "gut feel" with engineering-grade predictability.</span>
+                                        <span className="font-bold text-slate-900">Predictability:</span> <span className="text-slate-600">Move from "heroics and hope" to engineering controls.</span>
                                     </div>
                                 </li>
                             </ul>
@@ -80,31 +89,31 @@ const Home = () => {
                             {/* DUAL CTAs */}
                             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-10">
                                 <Link to="/contact" className="btn bg-[var(--color-primary)] text-white hover:bg-indigo-700 transition-all shadow-lg px-8 py-4 text-lg">
-                                    Book a System Audit
+                                    Book a Diagnostic
                                 </Link>
                                 <Link to="/insights" className="px-6 py-4 text-slate-600 font-semibold hover:text-[var(--color-primary)] flex items-center group">
-                                    Explore the Insights <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    Read the Operating Manual <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>
 
-                            {/* PROVEN IMPACT (Mini Case Studies) */}
+                            {/* PROVEN IMPACT (Mini Case Studies - Concise) */}
                             <div className="border-t border-slate-200 pt-6">
-                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Proven Impact</p>
+                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Typical Outcomes</p>
                                 <div className="flex gap-8">
                                     <div>
-                                        <div className="text-2xl font-bold text-slate-900">364%</div>
-                                        <div className="text-xs text-slate-500">ROI (Fintech Unlocked)</div>
+                                        <div className="text-2xl font-bold text-slate-900">Explicit</div>
+                                        <div className="text-xs text-slate-500">Revenue Engine</div>
                                     </div>
                                     <div className="w-px bg-slate-200 h-10"></div>
                                     <div>
-                                        <div className="text-2xl font-bold text-slate-900">3x</div>
-                                        <div className="text-xs text-slate-500">Deal Velocity (SaaS Scale-up)</div>
+                                        <div className="text-2xl font-bold text-slate-900">High Trust</div>
+                                        <div className="text-xs text-slate-500">Forecast Models</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* HERO IMAGE */}
+                        {/* HERO IMAGE (Keep existing visual for now) */}
                         <div className="flex-1 w-full relative group hidden md:block">
                             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
                             <img
@@ -115,7 +124,7 @@ const Home = () => {
                             <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded shadow-sm border border-indigo-50">
                                 <div className="flex items-center gap-2">
                                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                                    <span className="text-xs font-mono text-indigo-900 font-bold">SYSTEM_OPTIMIZED</span>
+                                    <span className="text-xs font-mono text-indigo-900 font-bold">SYSTEM_STABILIZED</span>
                                 </div>
                             </div>
                         </div>
@@ -126,27 +135,40 @@ const Home = () => {
             {/* BLOCK 1.5: TECH STACK MARQUEE */}
             <TechStackMarquee />
 
-            {/* BLOCK 1.6: ICP SELF-SELECTION */}
+            {/* BLOCK 1.6: ICP RECOGNITION (Replaces "Is This You" with Narrative Arc) */}
             <section className="section bg-white border-b border-gray-100">
                 <div className="container max-w-4xl">
-                    <h2 className="text-3xl font-semibold text-center mb-12">Is This You?</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {[
-                            "You're generating leads, but deals stall or drag.",
-                            "Sales cycles are long and unpredictable.",
-                            "Marketing spend isn't translating into revenue.",
-                            "You suspect positioning, pricing, or messaging—not product—is the bottleneck."
-                        ].map((statement, i) => (
-                            <div key={i} className="flex items-start gap-4 p-6 bg-red-50 border border-red-100 rounded-lg">
-                                <div className="w-6 h-6 rounded-full bg-red-500 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <AlertTriangle className="w-4 h-4 text-white" />
-                                </div>
-                                <p className="text-lg text-gray-800">{statement}</p>
-                            </div>
-                        ))}
+                    <div className="text-center mb-12">
+                        <span className="text-[var(--color-primary)] font-mono text-xs tracking-widest uppercase">The Growth Paradox</span>
+                        <h2 className="text-3xl font-semibold mt-4 mb-6">Why "what worked before" stops working.</h2>
+                        <p className="text-xl text-gray-600 leading-relaxed">
+                            At your stage, the problem isn't lack of effort. It's usually that the organization has outgrown its own operating system.
+                        </p>
                     </div>
-                    <p className="text-center text-xl font-medium text-gray-700 mt-12 italic">
-                        If this sounds familiar, the issue is structural—not tactical.
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-slate-50 p-8 rounded-lg border border-slate-100">
+                            <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                <TrendingDown className="w-5 h-5 text-slate-400" />
+                                The Symptom
+                            </h3>
+                            <p className="text-slate-600 mb-4">
+                                You add more SDRs, but pipeline stays flat. You buy more tools, but visibility gets worse. You push harder on forecast calls, but accuracy drops.
+                            </p>
+                        </div>
+                        <div className="bg-indigo-50 p-8 rounded-lg border border-indigo-100">
+                            <h3 className="font-bold text-indigo-900 mb-4 flex items-center gap-2">
+                                <Activity className="w-5 h-5 text-indigo-500" />
+                                The Reality
+                            </h3>
+                            <p className="text-slate-700 mb-4">
+                                This is a structural issue, not a performance issue. Your revenue engine has become too complex to be run on "tribal knowledge" alone.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p className="text-center text-lg font-medium text-gray-800 mt-12 italic">
+                        "We help you build the engineering controls to run revenue like a system, not a series of heroics."
                     </p>
                 </div>
             </section>
