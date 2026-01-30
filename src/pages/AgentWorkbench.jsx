@@ -1,7 +1,9 @@
+```javascript
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Activity, Filter, GitMerge } from 'lucide-react';
 import SEO from '../components/SEO';
+import WorkbenchLoopVisual from '../components/visuals/WorkbenchLoopVisual';
 
 const AgentWorkbench = () => {
     return (
@@ -31,8 +33,8 @@ const AgentWorkbench = () => {
 
             {/* WHAT IT DOES */}
             <section className="py-24 bg-white">
-                <div className="container max-w-5xl">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div className="container max-w-6xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">What it actually does</h2>
                             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
@@ -46,34 +48,10 @@ const AgentWorkbench = () => {
                                 <p className="text-slate-700">It’s the layer that makes your CRM usable again.</p>
                             </div>
                         </div>
-                        <div className="space-y-6">
-                            <div className="flex gap-4">
-                                <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <Activity className="w-6 h-6 text-slate-600" />
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-2">Capturing signals</h3>
-                                    <p className="text-slate-600">Across the funnel, ensuring nothing is missed in the noise.</p>
-                                </div>
-                            </div>
-                            <div className="flex gap-4">
-                                <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <GitMerge className="w-6 h-6 text-slate-600" />
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-2">Connecting context</h3>
-                                    <p className="text-slate-600">Linking isolated events to accounts and decisions.</p>
-                                </div>
-                            </div>
-                            <div className="flex gap-4">
-                                <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <Filter className="w-6 h-6 text-slate-600" />
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-2">Shared source of truth</h3>
-                                    <p className="text-slate-600">Creating a single view for action, not just reporting.</p>
-                                </div>
-                            </div>
+
+                        {/* THE LOOP VISUAL */}
+                        <div className="w-full">
+                            <WorkbenchLoopVisual />
                         </div>
                     </div>
                 </div>

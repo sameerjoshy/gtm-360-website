@@ -1,8 +1,9 @@
+```
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import GrowthStallChart from '../components/visuals/GrowthStallChart';
-import PlanningCycleDiagram from '../components/visuals/PlanningCycleDiagram';
+import PlanningCycleMinimal from '../components/visuals/PlanningCycleMinimal';
 
 const Home = () => {
     return (
@@ -89,45 +90,42 @@ const Home = () => {
             </section>
 
             {/* BLOCK 4: THE PLANNING CYCLE (SIGNATURE) */}
-            <section className="py-24 bg-slate-900 text-white overflow-hidden">
+            <section className="py-24 bg-slate-50 overflow-hidden">
                 <div className="container max-w-6xl">
                     <div className="flex flex-col md:flex-row items-center gap-16">
                         <div className="w-full md:w-1/2">
-                            <span className="text-indigo-400 font-mono text-xs tracking-widest uppercase mb-4 block">Our Methodology</span>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                            <span className="text-[var(--color-primary)] font-mono text-xs tracking-widest uppercase mb-4 block">Our Methodology</span>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
                                 This is how we think about growth — simply.
                             </h2>
-                            <ul className="space-y-6 text-lg text-slate-300">
+                            <ul className="space-y-6 text-lg text-slate-600">
                                 <li>
-                                    <strong className="text-white block mb-1">Where are we?</strong>
-                                    What’s actually happening across pipeline, conversion, and execution — not just what the dashboard says.
+                                    <strong className="text-slate-900 block mb-1">Where are we?</strong>
+                                    What’s actually happening — not just what the dashboard says.
                                 </li>
                                 <li>
-                                    <strong className="text-white block mb-1">How did we get here?</strong>
-                                    Which decisions, incentives, and shortcuts created today’s reality.
+                                    <strong className="text-slate-900 block mb-1">How did we get here?</strong>
+                                    Which decisions and incentives created today’s reality.
                                 </li>
                                 <li>
-                                    <strong className="text-white block mb-1">Where could we be?</strong>
-                                    Not a fantasy plan — a credible next phase.
+                                    <strong className="text-slate-900 block mb-1">Where could we be?</strong>
+                                    A credible next phase, not a fantasy plan.
                                 </li>
                                 <li>
-                                    <strong className="text-white block mb-1">How do we get there?</strong>
-                                    The operating changes that matter, not surface-level tweaks.
+                                    <strong className="text-slate-900 block mb-1">How do we get there?</strong>
+                                    The few operating changes that matter.
                                 </li>
                                 <li>
-                                    <strong className="text-white block mb-1">Are we getting there?</strong>
-                                    Clear signals, not vanity metrics.
+                                    <strong className="text-slate-900 block mb-1">Are we getting there?</strong>
+                                    Signals that confirm progress — or reveal drift.
                                 </li>
                             </ul>
-                            <p className="mt-8 text-indigo-300 italic">
+                            <p className="mt-8 text-slate-500 italic">
                                 This cycle runs everything we do — advisory, diagnostics, and the Workbench.
                             </p>
                         </div>
                         <div className="w-full md:w-1/2 flex justify-center">
-                            {/* Inverted Diagram for Dark Background */}
-                            <div className="bg-white/5 p-8 rounded-full">
-                                <PlanningCycleDiagram />
-                            </div>
+                            <PlanningCycleMinimal />
                         </div>
                     </div>
                 </div>
