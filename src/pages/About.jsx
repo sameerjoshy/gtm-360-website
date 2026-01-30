@@ -15,21 +15,33 @@ const About = () => {
                     <h1 className="text-4xl font-bold text-slate-900 mb-10">
                         Operator-led.
                     </h1>
-                    <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                        Built from experience across startups and scaled GTM orgs.
+                    <p className="text-xl text-slate-600 mb-12 leading-relaxed font-light">
+                        Built from experience across startups and scaled GTM organizations.
                     </p>
-                    <div className="bg-slate-50 p-8 rounded-xl inline-block text-left">
-                        <ul className="space-y-4 text-lg text-slate-700 font-medium">
-                            <li className="flex items-center gap-3">
-                                <span className="w-2 h-2 bg-slate-900 rounded-full"></span> No mythology.
-                            </li>
-                            <li className="flex items-center gap-3">
-                                <span className="w-2 h-2 bg-slate-900 rounded-full"></span> No guru positioning.
-                            </li>
-                            <li className="flex items-center gap-3">
-                                <span className="w-2 h-2 bg-slate-900 rounded-full"></span> Just a bias toward clarity.
-                            </li>
+                    <div className="bg-slate-50 p-10 rounded-xl inline-block text-left border border-slate-100">
+                        <p className="text-lg text-slate-700 mb-8 leading-relaxed">
+                            I’ve spent years inside revenue teams — scaling, fixing, and rebuilding systems as companies grew. <br />
+                            What I kept seeing was this gap:
+                        </p>
+                        <ul className="space-y-4 text-lg text-slate-800 font-bold mb-8 pl-4 border-l-4 border-slate-300">
+                            <li>Strategy lived in decks</li>
+                            <li>Execution lived in tools</li>
+                            <li>Reality lived somewhere in between</li>
                         </ul>
+                        <p className="text-lg text-slate-700">
+                            GTM-360 exists to close that gap — with clarity, systems, and respect for the people doing the work.
+                        </p>
+                    </div>
+
+                    <div className="mt-12">
+                        <div className="flex flex-col sm:flex-row justify-center gap-6">
+                            <span className="text-slate-400 font-mono uppercase text-xs tracking-widest pt-2">Values</span>
+                            <span className="text-slate-900 font-medium">No mythology.</span>
+                            <span className="text-slate-300 hidden sm:inline">|</span>
+                            <span className="text-slate-900 font-medium">No guru positioning.</span>
+                            <span className="text-slate-300 hidden sm:inline">|</span>
+                            <span className="text-slate-900 font-medium">Bias toward clarity.</span>
+                        </div>
                     </div>
                 </div>
             </section>

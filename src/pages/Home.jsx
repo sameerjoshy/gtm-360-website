@@ -1,4 +1,3 @@
-```
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -10,118 +9,109 @@ const Home = () => {
         <div className="font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
             <SEO
                 title="GTM-360 | The Operating System for Revenue Teams"
-                description="Helping B2B companies scale their revenue systems. Not more hustle. Not more tools. Better judgment, supported by systems."
+                description="Growth doesn’t stall because teams stop working hard. It stalls because the system that got you here doesn’t get you there."
             />
 
-            {/* BLOCK 1: HERO */}
+            {/* v1.0 HERO */}
             <section className="pt-32 pb-24 bg-white">
                 <div className="container max-w-4xl text-center">
-                    <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-8 text-slate-900 leading-[1.1]">
-                        Growth gets harder <br /> before it gets messy.
+                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 text-slate-900 leading-[1.1]">
+                        Growth doesn’t stall because <br /> teams stop working hard.
                     </h1>
-                    <p className="text-xl md:text-2xl text-slate-600 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                        Most teams feel it — fewer leads convert, pipelines become noisy, forecasts lose meaning.
+                    <p className="text-xl md:text-2xl text-slate-600 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                        It stalls because the system that got you here doesn’t get you there.
                     </p>
                     <p className="text-lg text-slate-500 mb-12 max-w-2xl mx-auto">
-                        GTM-360 helps founders and CROs rethink how growth decisions get made as the business scales. <br />
-                        <span className="font-semibold text-slate-700">Not more hustle. Not more tools. Better judgment, supported by systems.</span>
+                        GTM-360 helps founders and CROs rethink how revenue actually gets built — <br />
+                        across strategy, execution, and the systems underneath.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6">
                         <Link to="/start-here" className="btn bg-[var(--color-primary)] text-white px-8 py-4 rounded shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all font-bold">
-                            Start Here
+                            Start here
                         </Link>
-                        <Link to="/workbench" className="btn bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded hover:bg-slate-50 hover:border-slate-300 transition-all font-medium">
-                            See the Workbench
+                        <Link to="/how-we-work" className="btn bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded hover:bg-slate-50 hover:border-slate-300 transition-all font-medium">
+                            How we work
                         </Link>
                     </div>
                 </div>
             </section>
 
-            {/* BLOCK 2: REALITY CHECK (WHAT'S REALLY HAPPENING) */}
+            {/* v1.0 REALITY CHECK */}
             <section className="py-24 bg-slate-50">
                 <div className="container max-w-6xl">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <span className="text-[var(--color-primary)] font-mono text-xs tracking-widest uppercase mb-4 block">The Problem</span>
+                            <span className="text-[var(--color-primary)] font-mono text-xs tracking-widest uppercase mb-4 block">The Reality Most Teams Hit</span>
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                                If you’ve grown from 5 → 10 → 20, you didn’t get there by accident.
+                                You didn’t do anything wrong.
                             </h2>
                             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                                You built momentum by moving fast, wearing multiple hats, and fixing problems as they showed up.
+                                Most teams reach a point where growth feels heavier than it should.
                             </p>
-                            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                                At some point, that same approach starts to work against you. <br />
-                                <strong>Not because it’s wrong — but because the business has changed shape.</strong>
-                            </p>
+                            <ul className="space-y-4 mb-8 text-slate-600">
+                                <li className="flex items-start gap-3">
+                                    <span className="text-red-400 mt-1">●</span>
+                                    <span>Pipeline volume is there, but quality isn’t consistent</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="text-red-400 mt-1">●</span>
+                                    <span>Forecasts need more explanation than confidence</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="text-red-400 mt-1">●</span>
+                                    <span>Differentiation sounds fine on slides, weaker in deals</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="text-red-400 mt-1">●</span>
+                                    <span>Everyone is busy — progress is harder to see</span>
+                                </li>
+                            </ul>
+                            <div className="bg-white p-6 rounded-lg border-l-4 border-[var(--color-primary)] shadow-sm">
+                                <p className="font-bold text-slate-900 mb-2">This isn’t failure. It’s an inflection point.</p>
+                                <p className="text-slate-600 text-sm">The habits and systems that helped you grow from 5 to 10 don’t naturally take you from 10 to 50.</p>
+                            </div>
                         </div>
                         <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
                             {/* Growth Stall Chart Visual */}
                             <GrowthStallChart />
-                            <p className="text-center text-sm text-slate-400 mt-4 italic">The Complexity Wall</p>
+                            <p className="text-center text-sm text-slate-400 mt-4 italic">Same system, diminishing returns.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* BLOCK 3: THE INFLECTION POINT */}
-            <section className="py-24 bg-white">
-                <div className="container max-w-4xl text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
-                        Every growth curve has inflection points.
-                    </h2>
-                    <p className="text-xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-                        Early growth rewards speed. Later growth demands clarity. <br />
-                        Most teams try to push through the next phase by optimizing funnels, adding dashboards, or throwing AI at execution.
-                    </p>
-                    <div className="bg-indigo-50 p-8 rounded-xl border border-indigo-100 inline-block text-left max-w-2xl">
-                        <p className="text-lg text-indigo-900 font-medium mb-4">
-                            That might get you from 10 → 12. It won’t get you from 10 → 50.
-                        </p>
-                        <p className="text-slate-700">
-                            That jump requires a rethink of:
-                        </p>
-                        <ul className="mt-4 space-y-2 text-slate-700">
-                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> What decisions matter</li>
-                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> Who owns them</li>
-                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> How signals turn into action</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            {/* BLOCK 4: THE PLANNING CYCLE (SIGNATURE) */}
-            <section className="py-24 bg-slate-50 overflow-hidden">
+            {/* v1.0 PLANNING CYCLE */}
+            <section className="py-24 bg-white overflow-hidden">
                 <div className="container max-w-6xl">
                     <div className="flex flex-col md:flex-row items-center gap-16">
                         <div className="w-full md:w-1/2">
-                            <span className="text-[var(--color-primary)] font-mono text-xs tracking-widest uppercase mb-4 block">Our Methodology</span>
+                            <span className="text-[var(--color-primary)] font-mono text-xs tracking-widest uppercase mb-4 block">Our Operating Lens</span>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
-                                This is how we think about growth — simply.
+                                How we think about growth
                             </h2>
-                            <ul className="space-y-6 text-lg text-slate-600">
-                                <li>
-                                    <strong className="text-slate-900 block mb-1">Where are we?</strong>
-                                    What’s actually happening — not just what the dashboard says.
+                            <p className="text-lg text-slate-600 mb-6 font-light">
+                                Every engagement — advisory or product — follows the same operating loop. <br />
+                                <strong>Not a framework. A way of seeing reality clearly.</strong>
+                            </p>
+                            <ul className="space-y-4 text-lg text-slate-700">
+                                <li className="flex items-center gap-3">
+                                    <span className="font-bold text-slate-300">01</span> Where are we, really?
                                 </li>
-                                <li>
-                                    <strong className="text-slate-900 block mb-1">How did we get here?</strong>
-                                    Which decisions and incentives created today’s reality.
+                                <li className="flex items-center gap-3">
+                                    <span className="font-bold text-slate-300">02</span> How did we get here?
                                 </li>
-                                <li>
-                                    <strong className="text-slate-900 block mb-1">Where could we be?</strong>
-                                    A credible next phase, not a fantasy plan.
+                                <li className="flex items-center gap-3">
+                                    <span className="font-bold text-slate-300">03</span> Where could we be?
                                 </li>
-                                <li>
-                                    <strong className="text-slate-900 block mb-1">How do we get there?</strong>
-                                    The few operating changes that matter.
+                                <li className="flex items-center gap-3">
+                                    <span className="font-bold text-slate-300">04</span> How do we get there?
                                 </li>
-                                <li>
-                                    <strong className="text-slate-900 block mb-1">Are we getting there?</strong>
-                                    Signals that confirm progress — or reveal drift.
+                                <li className="flex items-center gap-3">
+                                    <span className="font-bold text-slate-300">05</span> Are we getting there?
                                 </li>
                             </ul>
-                            <p className="mt-8 text-slate-500 italic">
-                                This cycle runs everything we do — advisory, diagnostics, and the Workbench.
+                            <p className="mt-8 text-slate-500 italic text-sm">
+                                This loop shows up in our conversations, our diagnostics, and the Workbench itself.
                             </p>
                         </div>
                         <div className="w-full md:w-1/2 flex justify-center">
@@ -131,20 +121,59 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* BLOCK 5: HOW IT FITS (A + B) */}
-            <section className="py-24 bg-white text-center">
-                <div className="container max-w-3xl">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-8">
-                        Some teams want a thinking partner in the room. <br />
-                        Some want a system that keeps the machine honest. <br />
-                        <span className="text-[var(--color-primary)]">Most need both, at different moments.</span>
+            {/* v1.0 HOW WE HELP (PREVIEW) */}
+            <section className="py-24 bg-slate-50">
+                <div className="container max-w-6xl text-center">
+                    <h2 className="text-3xl font-bold text-slate-900 mb-12">
+                        How teams typically work with us
                     </h2>
-                    <p className="text-xl text-slate-600 mb-12">
-                        That’s how GTM-360 is designed.
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                        {/* CARD 1 */}
+                        <div className="bg-white p-8 rounded-xl border border-slate-200">
+                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 block">Diagnostic</span>
+                            <h3 className="text-xl font-bold text-slate-900 mb-3">The first conversation</h3>
+                            <p className="text-slate-600 text-sm mb-4">A focused diagnostic to understand where growth is getting constrained — and why.</p>
+                            <p className="text-slate-500 text-xs italic">No deck. No scorecard. Just clarity.</p>
+                        </div>
+                        {/* CARD 2 */}
+                        <div className="bg-white p-8 rounded-xl border border-slate-200">
+                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 block">Advisory</span>
+                            <h3 className="text-xl font-bold text-slate-900 mb-3">Ongoing partnership</h3>
+                            <p className="text-slate-600 text-sm mb-4">We work alongside founders and CROs as a thinking partner — shaping decisions, pressure-testing plans, and keeping the system honest.</p>
+                        </div>
+                        {/* CARD 3 */}
+                        <div className="bg-white p-8 rounded-xl border border-slate-200">
+                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 block">Workbench</span>
+                            <h3 className="text-xl font-bold text-slate-900 mb-3">The operating system</h3>
+                            <p className="text-slate-600 text-sm mb-4">A practical Workbench that turns strategy into signals, evidence, and decisions — without creating more operational noise.</p>
+                        </div>
+                    </div>
+                    <div className="mt-12">
+                        <Link to="/how-we-work" className="text-[var(--color-primary)] font-bold hover:underline">
+                            How we work →
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* v1.0 CREDIBILITY & FINAL CTA */}
+            <section className="py-24 bg-white text-center border-t border-slate-100">
+                <div className="container max-w-3xl">
+                    <p className="text-lg text-slate-500 mb-12 leading-relaxed">
+                        This work is built from years inside real revenue teams — scaling, fixing, rebuilding, and operating through multiple growth cycles. <br />
+                        <span className="text-slate-800 font-medium">What we’re offering isn’t theory. It’s a system we wish we had earlier.</span>
                     </p>
-                    <Link to="/how-we-work" className="btn bg-white text-[var(--color-primary)] border-2 border-[var(--color-primary)] px-8 py-4 rounded font-bold hover:bg-[var(--color-primary)] hover:text-white transition-all">
-                        See How We Work
-                    </Link>
+                    <h2 className="text-3xl font-bold text-slate-900 mb-8">
+                        If growth feels harder than it should, start here.
+                    </h2>
+                    <div className="flex flex-col sm:flex-row justify-center gap-6">
+                        <Link to="/start-here" className="btn bg-slate-900 text-white px-8 py-4 rounded hover:bg-slate-800 transition-all font-bold">
+                            Start here
+                        </Link>
+                        <Link to="/workbench" className="btn bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded hover:bg-slate-50 transition-all font-bold">
+                            Explore the Workbench
+                        </Link>
+                    </div>
                 </div>
             </section>
         </div>
