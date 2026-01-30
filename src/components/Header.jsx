@@ -33,17 +33,23 @@ const Header = () => {
 
                     {/* DESKTOP NAV */}
                     <nav className="hidden md:flex items-center space-x-8">
-                        <Link to="/services" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
-                            How We Help
+                        <Link to="/start-here" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
+                            Start Here
                         </Link>
-                        <Link to="/planning-cycle" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
-                            The Planning Cycle
-                        </Link>
-                        <Link to="/workbench" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
-                            Agent Workbench
+                        <Link to="/how-we-work" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
+                            How We Work
                         </Link>
                         <Link to="/insights" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
                             Insights
+                        </Link>
+                        <Link to="/workbench" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
+                            Workbench
+                        </Link>
+                        <Link to="/about" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
+                            About
+                        </Link>
+                        <Link to="/contact" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
+                            Contact
                         </Link>
                     </nav>
                 </div>

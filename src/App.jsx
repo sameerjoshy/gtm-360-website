@@ -48,7 +48,7 @@ function App() {
                 <Route path="/workbench" element={<AgentWorkbench />} />
                 <Route path="/start-here" element={<StartHere />} /> {/* Route */}
                 <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
+                <Route path="/how-we-work" element={<HowWeWork />} /> {/* Replaced /services with /how-we-work */}
 
                 {/* Service Detail Routes */}
                 <Route path="/services/gtm-operating-model" element={<GTMOperatingModel />} />
