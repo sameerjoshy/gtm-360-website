@@ -43,89 +43,41 @@ const Home = () => {
                 <div className="container max-w-6xl relative z-10">
                     <div className="flex flex-col md:flex-row items-center gap-12 mt-20">
                         <div className="flex-1">
-                            {/* RECOGNITION (They are already successful) */}
-                            <div className="inline-block px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full mb-6">
-                                <span className="text-xs font-bold text-indigo-900 uppercase tracking-widest">Built for $5M - $50M ARR Teams</span>
-                            </div>
-
-                            {/* TENSION (The new constraint) */}
-                            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-slate-900 tracking-tight">
-                                Scale breaks everything. <br />
-                                <span className="text-[var(--color-primary)]">We fix the engine.</span>
+                            {/* CANONICAL HEADLINE */}
+                            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8 text-slate-900 tracking-tight">
+                                Helping B2B companies scale their revenue systems — <span className="text-[var(--color-primary)]">without losing clarity, momentum, or control.</span>
                             </h1>
 
-                            {/* REFRAME & SUPPORT (How we help) */}
-                            <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl font-light">
-                                GTM-360 helps leadership teams rethink how revenue runs when the old way stops scaling — without losing what already works.
+                            {/* CANONICAL SUBHEAD */}
+                            <p className="text-xl text-slate-600 mb-8 max-w-2xl font-light leading-relaxed">
+                                We work with founders and CROs at growth inflection points. <br className="hidden md:block" />
+                                When what got you here still works — but isn’t enough to get you where you want to go.
                             </p>
 
-                            {/* 3 BULLETS (Operator Language) */}
-                            <ul className="space-y-4 mb-10">
-                                <li className="flex items-start">
-                                    <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                        <Activity className="w-4 h-4 text-emerald-600" />
-                                    </div>
-                                    <div>
-                                        <span className="font-bold text-slate-900">Signal Clarity:</span> <span className="text-slate-600">Identify the few deals that actually matter. Ignore the noise.</span>
-                                    </div>
-                                </li>
-                                <li className="flex items-start">
-                                    <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                        <TrendingDown className="w-4 h-4 text-indigo-600" />
-                                    </div>
-                                    <div>
-                                        <span className="font-bold text-slate-900">System Drag:</span> <span className="text-slate-600">Remove the friction between stages that kills velocity.</span>
-                                    </div>
-                                </li>
-                                <li className="flex items-start">
-                                    <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                        <Users className="w-4 h-4 text-purple-600" />
-                                    </div>
-                                    <div>
-                                        <span className="font-bold text-slate-900">Predictability:</span> <span className="text-slate-600">Move from "heroics and hope" to engineering controls.</span>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            {/* DUAL CTAs */}
+                            {/* CANONICAL CTAs */}
                             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-10">
                                 <Link to="/contact" className="btn bg-[var(--color-primary)] text-white hover:bg-indigo-700 transition-all shadow-lg px-8 py-4 text-lg">
-                                    Book a Diagnostic
+                                    Start with a conversation
                                 </Link>
-                                <Link to="/insights" className="px-6 py-4 text-slate-600 font-semibold hover:text-[var(--color-primary)] flex items-center group">
-                                    Read the Operating Manual <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                <Link to="/start-here" className="px-6 py-4 text-slate-600 font-semibold hover:text-[var(--color-primary)] flex items-center group">
+                                    Start here <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                            </div>
-
-                            {/* PROVEN IMPACT (Mini Case Studies - Concise) */}
-                            <div className="border-t border-slate-200 pt-6">
-                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Typical Outcomes</p>
-                                <div className="flex gap-8">
-                                    <div>
-                                        <div className="text-2xl font-bold text-slate-900">Explicit</div>
-                                        <div className="text-xs text-slate-500">Revenue Engine</div>
-                                    </div>
-                                    <div className="w-px bg-slate-200 h-10"></div>
-                                    <div>
-                                        <div className="text-2xl font-bold text-slate-900">High Trust</div>
-                                        <div className="text-xs text-slate-500">Forecast Models</div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
-                        {/* HERO IMAGE (Keep existing visual for now) */}
-                        <div className="flex-1 w-full relative group hidden md:block">
-                            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-                            <img
-                                src={heroWarRoom}
-                                alt="GTM360 War Room: Operators solving system problems"
-                                className="relative rounded-lg shadow-2xl border border-gray-100 transform group-hover:scale-[1.01] transition duration-500"
-                            />
-                            <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded shadow-sm border border-indigo-50">
-                                <div className="flex items-center gap-2">
-                                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                                    <span className="text-xs font-mono text-indigo-900 font-bold">SYSTEM_STABILIZED</span>
+                        {/* HERO IMAGE: Abstract System Motif */}
+                        <div className="flex-1 w-full relative group hidden md:block pl-10">
+                            <div className="relative rounded-lg shadow-2xl border border-gray-100 bg-white p-6 overflow-hidden">
+                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+                                <div className="grid grid-cols-2 gap-4 opacity-50">
+                                    <div className="h-24 bg-slate-50 rounded border border-slate-100"></div>
+                                    <div className="h-24 bg-slate-50 rounded border border-slate-100"></div>
+                                    <div className="h-24 bg-slate-50 rounded border border-slate-100 col-span-2"></div>
+                                </div>
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="bg-white/90 backdrop-blur px-6 py-3 rounded-full border border-slate-200 shadow-lg text-slate-600 font-mono text-sm">
+                                        System_State: <span className="text-emerald-600 font-bold">ALIGNED</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -133,44 +85,69 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* BLOCK 1.5: TECH STACK MARQUEE */}
-            <TechStackMarquee />
-
-            {/* BLOCK 1.6: ICP RECOGNITION (Replaces "Is This You" with Narrative Arc) */}
+            {/* SECTION: THE REALITY (Normalizing, Not Blaming) */}
             <section className="section bg-white border-b border-gray-100">
-                <div className="container max-w-4xl">
-                    <div className="text-center mb-12">
-                        <span className="text-[var(--color-primary)] font-mono text-xs tracking-widest uppercase">The Growth Paradox</span>
-                        <h2 className="text-3xl font-semibold mt-4 mb-6">Why "what worked before" stops working.</h2>
-                        <p className="text-xl text-gray-600 leading-relaxed">
-                            At your stage, the problem isn't lack of effort. It's usually that the organization has outgrown its own operating system.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="bg-slate-50 p-8 rounded-lg border border-slate-100">
-                            <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                                <TrendingDown className="w-5 h-5 text-slate-400" />
-                                The Symptom
-                            </h3>
-                            <p className="text-slate-600 mb-4">
-                                You add more SDRs, but pipeline stays flat. You buy more tools, but visibility gets worse. You push harder on forecast calls, but accuracy drops.
+                <div className="container max-w-5xl">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <span className="text-[var(--color-primary)] font-mono text-xs tracking-widest uppercase mb-4 block">The Reality</span>
+                            <h2 className="text-3xl font-semibold mb-6">Most teams don’t stall because they’re doing things wrong.</h2>
+                            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                                They stall because the system they built to get from 0 → 10 is now being asked to take them from 10 → 50.
+                            </p>
+                            <p className="text-lg text-gray-600 font-medium mb-8">
+                                That’s when familiar patterns show up:
+                            </p>
+                            <ul className="space-y-4">
+                                {[
+                                    "Pipeline exists, but accuracy drops",
+                                    "Leads are coming in, but quality is uneven",
+                                    "Teams are busy, but alignment is harder",
+                                    "Optimizations help — but progress feels incremental"
+                                ].map((item, i) => (
+                                    <li key={i} className="flex items-start text-gray-700">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 mr-3 flex-shrink-0"></span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                            <p className="mt-8 text-slate-500 italic">
+                                This happens to capable teams. At predictable moments in growth.
                             </p>
                         </div>
-                        <div className="bg-indigo-50 p-8 rounded-lg border border-indigo-100">
-                            <h3 className="font-bold text-indigo-900 mb-4 flex items-center gap-2">
-                                <Activity className="w-5 h-5 text-indigo-500" />
-                                The Reality
-                            </h3>
-                            <p className="text-slate-700 mb-4">
-                                This is a structural issue, not a performance issue. Your revenue engine has become too complex to be run on "tribal knowledge" alone.
-                            </p>
+
+                        {/* VISUAL: Growth Curve with Flattening */}
+                        <div className="relative">
+                            <GrowthStallChart />
+                            <p className="text-center text-xs text-slate-400 mt-4 font-mono">Figure 1.0: The Optimization Plateau</p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <p className="text-center text-lg font-medium text-gray-800 mt-12 italic">
-                        "We help you build the engineering controls to run revenue like a system, not a series of heroics."
+            {/* SECTION: WHY OPTIMIZATION ISN'T ENOUGH */}
+            <section className="section bg-[var(--color-secondary)]">
+                <div className="container max-w-4xl mx-auto text-center">
+                    <h2 className="text-3xl font-semibold mb-8">Why optimization isn’t enough.</h2>
+                    <p className="text-xl text-gray-600 leading-relaxed mb-12 max-w-3xl mx-auto">
+                        At early stages, momentum comes from speed and iteration. <br />
+                        Later, progress depends on something else: <strong>Clear priorities. Shared signals. A revenue system that scales.</strong>
                     </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                        <div className="bg-white p-8 rounded border border-slate-200">
+                            <h3 className="text-lg font-bold text-slate-500 mb-2 uppercase tracking-wide">The Trap</h3>
+                            <p className="text-slate-700">
+                                You can squeeze incremental gains with tools, process, or AI. That might take you from 10 to 12.
+                            </p>
+                        </div>
+                        <div className="bg-indigo-50 p-8 rounded border border-indigo-100">
+                            <h3 className="text-lg font-bold text-indigo-600 mb-2 uppercase tracking-wide">The Shift</h3>
+                            <p className="text-slate-800 font-medium">
+                                But going from 10 to 50 usually requires a rethink: How decisions are made. How teams coordinate. What actually gets measured.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
