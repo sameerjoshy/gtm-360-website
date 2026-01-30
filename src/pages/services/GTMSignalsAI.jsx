@@ -1,3 +1,7 @@
+import React from 'react';
+import SEO from '../../components/SEO';
+import { Link } from 'react-router-dom';
+import { Cpu, CheckCircle, Clock, ArrowRight } from 'lucide-react';
 import SignalFilterDemo from '../../components/visuals/SignalFilterDemo';
 
 const GTMSignalsAI = () => {
