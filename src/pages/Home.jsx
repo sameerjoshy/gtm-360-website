@@ -12,13 +12,31 @@ import TechStackMarquee from '../components/social/TechStackMarquee';
 import LeadMagnet from '../components/marketing/LeadMagnet';
 
 const Home = () => {
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "GTM-360",
+        "url": "https://gtm-360.com",
+        "logo": "https://gtm-360.com/logo.png",
+        "sameAs": [
+            "https://www.linkedin.com/company/gtm-360"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "url": "https://gtm-360.com/contact"
+        }
+    };
+
     return (
         <div className="home-page">
             <SEO
-                title="The Revenue Operating System"
-                description="When growth stalls, the problem is rarely effort. It's the GTM operating model. GTM360 helps leadership teams fix the decision systems that convert effort into revenue."
-                canonical="https://gtm-360.com/"
-            />
+                title="The Revenue Operating System for B2B Growth"
+                description="We fix the decision systems that cause stalled growth—without adding more tools, headcount, or complexity."
+                canonical="https://gtm-360.com"
+            >
+                <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+            </SEO>
             {/* BLOCK 1: HERO */}
             <section className="section !pt-0 pb-24 md:pb-32 aurora-bg relative overflow-hidden" style={{ paddingTop: '0px' }}>
                 <div className="container max-w-6xl relative z-10">
