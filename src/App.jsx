@@ -29,10 +29,14 @@ function ScrollToTop() {
     return null;
 }
 
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 function App() {
     return (
         <Router>
             <ScrollToTop />
+            <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -47,6 +51,7 @@ function App() {
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
             </Routes>
+            <Footer />
         </Router>
     );
 }
