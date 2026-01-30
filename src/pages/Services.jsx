@@ -48,6 +48,42 @@ const Services = () => {
         }
     ];
 
+    // Static Color Mapping for Tailwind (to ensure classes are generated)
+    const colorStyles = {
+        blue: {
+            bg: "bg-blue-50",
+            hoverBg: "group-hover:bg-blue-100",
+            iconBg: "bg-blue-50",
+            text: "text-blue-600",
+            badge: "text-blue-600 bg-blue-50",
+            decoration: "bg-blue-50"
+        },
+        green: {
+            bg: "bg-green-50",
+            hoverBg: "group-hover:bg-green-100",
+            iconBg: "bg-green-50",
+            text: "text-green-600",
+            badge: "text-green-600 bg-green-50",
+            decoration: "bg-green-50"
+        },
+        purple: {
+            bg: "bg-purple-50",
+            hoverBg: "group-hover:bg-purple-100",
+            iconBg: "bg-purple-50",
+            text: "text-purple-600",
+            badge: "text-purple-600 bg-purple-50",
+            decoration: "bg-purple-50"
+        },
+        indigo: {
+            bg: "bg-indigo-50",
+            hoverBg: "group-hover:bg-indigo-100",
+            iconBg: "bg-indigo-50",
+            text: "text-indigo-600",
+            badge: "text-indigo-600 bg-indigo-50",
+            decoration: "bg-indigo-50"
+        }
+    };
+
     return (
         <div className="services-page bg-slate-50 min-h-screen">
             <SEO
@@ -77,44 +113,47 @@ const Services = () => {
             <section className="section -mt-12 relative z-20">
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                        {services.map((service, index) => (
-                            <Link
-                                key={index}
-                                to={service.link}
-                                className="group relative bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 hover:border-gray-200 transition-all duration-300 flex flex-col h-full overflow-hidden"
-                            >
-                                {/* Decorative Gradient */}
-                                <div className={`absolute top-0 right-0 w-32 h-32 bg-${service.color}-50 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-${service.color}-100 transition-colors`}></div>
+                        {services.map((service, index) => {
+                            const styles = colorStyles[service.color];
+                            return (
+                                <Link
+                                    key={index}
+                                    to={service.link}
+                                    className="group relative bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl border border-gray-100 hover:border-gray-200 transition-all duration-300 flex flex-col h-full overflow-hidden"
+                                >
+                                    {/* Decorative Gradient */}
+                                    <div className={`absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl -mr-16 -mt-16 transition-colors ${styles.decoration} ${styles.hoverBg}`}></div>
 
-                                <div className="relative z-10">
-                                    <div className="flex items-center justify-between mb-8">
-                                        <div className={`w-14 h-14 rounded-xl bg-${service.color}-50 flex items-center justify-center text-${service.color}-600 group-hover:scale-110 transition-transform duration-300`}>
-                                            <IconRenderer icon={service.icon} className="w-7 h-7" />
+                                    <div className="relative z-10">
+                                        <div className="flex items-center justify-between mb-8">
+                                            <div className={`w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${styles.iconBg} ${styles.text}`}>
+                                                <IconRenderer icon={service.icon} className="w-7 h-7" />
+                                            </div>
+                                            <span className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full ${styles.badge}`}>
+                                                Solution
+                                            </span>
                                         </div>
-                                        <span className={`text-xs font-bold uppercase tracking-widest text-${service.color}-600 bg-${service.color}-50 px-3 py-1 rounded-full`}>
-                                            Solution
-                                        </span>
+
+                                        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[var(--color-primary)] transition-colors">
+                                            {service.title}
+                                        </h3>
+
+                                        {/* Symptom Tag */}
+                                        <div className="mb-6 flex items-start text-sm text-gray-500 bg-gray-50 p-3 rounded-lg border border-gray-100 italic">
+                                            <span className="font-semibold text-gray-700 not-italic mr-2">Fixes:</span> {service.symptom}
+                                        </div>
+
+                                        <p className="text-gray-600 mb-8 text-lg leading-relaxed flex-grow">
+                                            {service.desc}
+                                        </p>
+
+                                        <div className="flex items-center text-[var(--color-primary)] font-bold group-hover:translate-x-2 transition-transform">
+                                            View Service Details <ArrowRight className="ml-2 w-5 h-5" />
+                                        </div>
                                     </div>
-
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[var(--color-primary)] transition-colors">
-                                        {service.title}
-                                    </h3>
-
-                                    {/* Symptom Tag */}
-                                    <div className="mb-6 flex items-start text-sm text-gray-500 bg-gray-50 p-3 rounded-lg border border-gray-100 italic">
-                                        <span className="font-semibold text-gray-700 not-italic mr-2">Fixes:</span> {service.symptom}
-                                    </div>
-
-                                    <p className="text-gray-600 mb-8 text-lg leading-relaxed flex-grow">
-                                        {service.desc}
-                                    </p>
-
-                                    <div className="flex items-center text-[var(--color-primary)] font-bold group-hover:translate-x-2 transition-transform">
-                                        View Service Details <ArrowRight className="ml-2 w-5 h-5" />
-                                    </div>
-                                </div>
-                            </Link>
-                        ))}
+                                </Link>
+                            );
+                        })}
                     </div>
                 </div>
             </section>

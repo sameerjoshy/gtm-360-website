@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 
 // Pages
 import Home from './pages/Home';
@@ -66,6 +66,12 @@ function App() {
 
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
+
+                {/* Redirects for Footer placeholders */}
+                <Route path="/playbooks" element={<Navigate to="/insights" replace />} />
+                <Route path="/glossary" element={<Navigate to="/insights" replace />} />
+                <Route path="/platform" element={<Navigate to="/how-we-work" replace />} />
+
             </Routes>
             <Footer />
         </Router>

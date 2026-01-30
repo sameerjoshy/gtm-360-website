@@ -30,16 +30,16 @@ const Diagnostic = () => {
             <section className="section py-20 md:py-32 bg-white">
                 <div className="container max-w-4xl opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
                     <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-8 text-[var(--color-primary)]">
-                        Initialize System Diagnostic
+                        GTM System Diagnostic
                     </h1>
                     <h2 className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed font-normal">
                         Identify the structural constraint limiting revenue throughput.<br className="hidden md:block" />
-                        Analysis begins immediately upon data ingestion.
+                        We identify the constraint before you spend another dollar.
                     </h2>
 
                     <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
                         <a href="#diagnostic-form" className="btn bg-[var(--color-primary)] text-white hover:bg-opacity-90">
-                            Begin Diagnostic Sequence
+                            Begin Diagnostic
                         </a>
                         <Link to="/problems" className="text-[var(--color-primary)] font-medium hover:underline">
                             Review Failure Patterns →
@@ -264,9 +264,9 @@ const Diagnostic = () => {
             <section id="diagnostic-form" className="section bg-[var(--color-primary)] text-white">
                 <div className="container max-w-4xl">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-semibold text-white mb-4">Metric Ingestion</h2>
+                        <h2 className="text-4xl font-semibold text-white mb-4">Tell us what's broken</h2>
                         <p className="text-xl text-indigo-100">
-                            Configure parameters to begin system analysis.
+                            Share your context so we can prepare the right questions.
                         </p>
                     </div>
 
@@ -352,8 +352,7 @@ Timeline: ${formData.timeline}
             }
         } catch (error) {
             console.error('HubSpot Error:', error);
-            // Fallback for safety
-            navigate('/thank-you');
+            setStatus('error');
         }
     };
 
@@ -416,8 +415,14 @@ Timeline: ${formData.timeline}
                 <input type="text" name="timeline" value={formData.timeline} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-[var(--color-primary)] outline-none" placeholder="e.g. ASAP, Next Quarter" />
             </div>
 
+            {status === 'error' && (
+                <div className="bg-red-50 text-red-700 p-3 rounded text-sm mb-4">
+                    ⚠️ Submission failed. Please try again or email us directly at hello@gtm-360.com.
+                </div>
+            )}
+
             <button type="submit" disabled={status === 'submitting'} className="w-full btn bg-[var(--color-primary)] text-white hover:bg-opacity-90 py-4 text-lg font-mono tracking-wide">
-                {status === 'submitting' ? 'PROCESSING SIGNAL...' : 'INITIALIZE DIAGNOSTIC'}
+                {status === 'submitting' ? 'PROCESSING SIGNAL...' : 'REQUEST DIAGNOSTIC'}
             </button>
         </form>
     );
