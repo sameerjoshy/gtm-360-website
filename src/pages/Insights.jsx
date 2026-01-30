@@ -180,6 +180,24 @@ const Insights = () => {
                     </div>
                 </div>
             </section>
+            {/* CONTEXTUAL CTA: LINK BACK TO SERVICES */}
+            <section className="py-20 bg-indigo-900 border-t border-indigo-800 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+                <div className="container max-w-4xl text-center relative z-10 px-6">
+                    <h2 className="text-3xl font-bold text-white mb-6">Diagnosis is just the first step.</h2>
+                    <p className="text-xl text-indigo-200 mb-10 font-light">
+                        Once you see the system failure, you need a plan to fix it without breaking revenue momentum.
+                    </p>
+                    <div className="flex flex-col sm:flex-row justify-center gap-6">
+                        <Link to="/services" className="px-8 py-4 bg-white text-indigo-900 font-bold rounded-lg hover:bg-indigo-50 transition-colors shadow-lg flex items-center justify-center">
+                            View Repair Services <ArrowRight className="ml-2 w-5 h-5" />
+                        </Link>
+                        <Link to="/contact" className="px-8 py-4 border border-indigo-500 text-indigo-300 font-medium rounded-lg hover:bg-indigo-800/50 hover:text-white transition-colors flex items-center justify-center">
+                            Talk to an Architect
+                        </Link>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

@@ -92,13 +92,13 @@ const Header = () => {
 
             {/* Mobile Nav */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg py-4 px-6 flex flex-col space-y-4">
+                <div className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg py-4 px-6 flex flex-col space-y-4 h-[calc(100vh-64px)] overflow-y-auto">
                     {navLinks.map((link) => (
                         link.path.startsWith('http') ? (
                             <a
                                 key={link.title}
                                 href={link.path}
-                                className="text-base font-medium text-gray-800 py-2 border-b border-gray-50"
+                                className="text-lg font-medium text-gray-800 py-3 border-b border-gray-50 hover:text-[var(--color-primary)]"
                             >
                                 {link.title}
                             </a>
@@ -106,18 +106,22 @@ const Header = () => {
                             <Link
                                 key={link.title}
                                 to={link.path}
-                                className="text-base font-medium text-gray-800 py-2 border-b border-gray-50"
+                                className="text-lg font-medium text-gray-800 py-3 border-b border-gray-50 hover:text-[var(--color-primary)]"
+                                onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 {link.title}
                             </Link>
                         )
                     ))}
-                    <Link
-                        to="/diagnostic"
-                        className="text-base font-medium text-[var(--color-primary)] py-2"
-                    >
-                        Run a Diagnostic
-                    </Link>
+                    <div className="pt-4">
+                        <Link
+                            to="/contact"
+                            className="block w-full text-center text-lg font-semibold text-white bg-[var(--color-primary)] py-4 rounded-lg shadow-md hover:bg-indigo-700 transition-[background-color]"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Book a System Audit
+                        </Link>
+                    </div>
                 </div>
             )}
         </header>
