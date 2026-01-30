@@ -1,0 +1,1104 @@
+
+
+export const playbooks = [
+    {
+        id: "marketing-gtm-audit",
+        slug: "gtm-audit-diagnostic",
+        category: "Marketing",
+        title: "The GTM Audit & Diagnostic",
+        subtitle: "How to audit your own Go-To-Market engine in 4 hours. Stop guessing, start engineering.",
+        readTime: "10 min read",
+        difficulty: "Strategic",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        hasBlueprint: true,
+        content: {
+            onePager: `
+                <h3>The Core Concept</h3>
+                <p><strong>You can't fix what you can't see.</strong></p>
+                <p>Most leadership teams debate tactics ("Should we do TikTok?") before they agree on the problem ("Our CAC is too high because our message is generic").</p>
+                <p>A GTM Audit is not a 3-month McKinsey project. It is a 4-hour "Dissection" of your Revenue Engine to find the <strong>Constraint</strong>.</p>
+                
+                <h3>The 4 Layers of the Audit</h3>
+                <p>You must audit your engine in this specific order. Most people start with Talent (Level 4). You must start with Data (Level 1).</p>
+                <div class="space-y-4 my-6">
+                    <div class="p-4 bg-slate-100 rounded-lg">
+                        <h4 class="font-bold text-slate-900 mt-0">Level 1: Data Model (The Truth)</h4>
+                        <p class="text-sm">Do Sales and Marketing agree on what a "Lead" is? If not, stop. You have no engine.</p>
+                    </div>
+                    <div class="p-4 bg-slate-100 rounded-lg">
+                        <h4 class="font-bold text-slate-900 mt-0">Level 2: Operating Model (The Logic)</h4>
+                        <p class="text-sm">Do you have clear entry/exit criteria for every pipeline stage? Or is it based on "Rep Sentiment"?</p>
+                    </div>
+                    <div class="p-4 bg-slate-100 rounded-lg">
+                        <h4 class="font-bold text-slate-900 mt-0">Level 3: Process Map (The Flow)</h4>
+                        <p class="text-sm">Is the handoff from SDR to AE documented? Is the handoff from AE to CS automated?</p>
+                    </div>
+                    <div class="p-4 bg-slate-100 rounded-lg">
+                        <h4 class="font-bold text-slate-900 mt-0">Level 4: Talent & Tools (The Fuel)</h4>
+                        <p class="text-sm">Only now do you ask: "Do we have the right people/tools to run this process?"</p>
+                    </div>
+                </div>
+
+                <h3>The Output</h3>
+                <p>The goal of the audit is to find the <strong>One Constraint</strong>. There is always only one primary constraint holding back growth (Theory of Constraints). Fix that, and everything else gets easier.</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK - 0:00-0:05]</strong><br/>
+                Stop hiring more sales reps until you fix your leaky bucket.<br/>
+                You are pouring water into a strainer.<br/><br/>
+
+                <strong>[THE INSIGHT - 0:05-0:30]</strong><br/>
+                Most leaders think "Growth" means "More Activity".<br/>
+                More calls. More ads. More emails.<br/>
+                But if your GTM Operating Model is broken, "More Activity" just accelerates your cash burn.<br/>
+                You don't need a new CMO. You need an Audit.<br/><br/>
+
+                <strong>[THE SHIFT - 0:30-0:50]</strong><br/>
+                Audit your business in this order:<br/>
+                1. Data (Do we agree on the math?)<br/>
+                2. Stages (Do we agree on the milestones?)<br/>
+                3. Handoffs (Where does the ball drop?)<br/>
+                Only then do you look at People.<br/>
+                Fix the system, and average people become rockstars.<br/><br/>
+
+                <strong>[CTA - 0:50-1:00]</strong><br/>
+                Don't guess.<br/>
+                Dissect the engine.<br/>
+            `,
+            scriptDeepDive: `
+                <strong>Topic:</strong> Running the 4-Hour GTM Diagnostic<br/>
+                <strong>Format:</strong> Workshop Template<br/>
+                <strong>Duration:</strong> 15 Minutes<br/><br/>
+
+                <strong>Section 1: The "War Room" Setup</strong><br/>
+                - Who needs to be in the room? (CEO, CRO, CMO, CS Leader).<br/>
+                - The "No Laptop" rule.<br/><br/>
+
+                <strong>Section 2: The "Whiteboard Dissection"</strong><br/>
+                - How to draw the "Golden Thread" from First Touch to Renewal.<br/>
+                - Identifying the "Red Flag" drop-off points.<br/><br/>
+
+                <strong>Section 3: Defining the Constraint</strong><br/>
+                - Leaving the room with ONE priority for the quarter.<br/>
+            `,
+            bestPracticeSnippets: [
+                "Audit in order: Data -> Logic -> Process -> People. Never start with People.",
+                "If Sales and Marketing can't agree on the definition of a 'Qualified Lead', you don't have a GTM problem; you have a cultural problem.",
+                "The goal of an audit is not to list 50 broken things. It is to find the ONE thing that makes the other 49 irrelevant.",
+                "A bad process kills good talent. A good process protects the business from bad talent.",
+                "Your CRM is a crime scene. Stop trusting it until you have audited the entry criteria.",
+                "The 'Shadow Funnel' is 10x larger than your visible pipeline. If you can't measure it, at least respect it.",
+                "Zombie Pipeline is not an asset; it is a liability. It gives you false confidence and destroys forecast accuracy.",
+                "Speed > Perfection. A directional audit today is worth more than a perfect audit in 3 months.",
+                "The 'No Decision' outcome is your biggest competitor. Audit why you are losing to status quo, not why you are losing to competitors.",
+                "Revenue Engineering is not about motivation. It is about physics. Remove the friction, and the velocity will increase."
+            ]
+        },
+        videos: [
+            {
+                title: "How to Audit a GTM Engine in 4 Hours",
+                embedId: "dQw4w9WgXcQ", // Placeholder (Rick Roll, but standard placeholder ID) - Switch to real ID if available
+                platform: "youtube",
+                duration: "14:20"
+            }
+        ],
+        resources: [
+            {
+                title: "The GTM Audit Checklist",
+                valueProp: "The exact PDF we use with $50M+ ARR Companies.",
+                link: "#",
+                type: "template"
+            }
+        ],
+        relatedService: {
+            title: "GTM Operating Model Realignment",
+            link: "/services/gtm-operating-model"
+        }
+    },
+    {
+        id: "marketing-95-5-rule",
+        slug: "the-95-5-rule",
+        category: "Marketing",
+        title: "The 95/5 Rule: Fixing B2B Demand",
+        subtitle: "Why 95% of your buyers are not in-market, and why your ads are annoying them.",
+        readTime: "5 min read",
+        difficulty: "Strategic",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Core Concept</h3>
+                <p>The 95/5 Rule states that at any given moment, <strong>95% of your total addressable market is NOT ready to buy</strong>. Only 5% are actively in-market.</p>
+                <p>Most B2B marketing fails because it uses "Hunters" (Lead Gen) to do a "Farmer's" job (Brand Gen).</p>
+                
+                <h3>The Trap: "Direct Response" Addiction</h3>
+                <p>Companies addicted to attribution software (HubSpot, GA4) prioritize "Capture" over "Creation" because Capture is measurable.</p>
+                <ul>
+                    <li>You run "Book a Demo" ads to cold audiences.</li>
+                    <li>The 95% (who aren't ready) ignore you.</li>
+                    <li>The 5% (who are ready) are expensive because everyone is bidding on them.</li>
+                    <li>Result: High CPA, low brand recall, and a pipeline that dries up the moment you stop spending.</li>
+                </ul>
+
+                <h3>The Shift: A Two-Track System</h3>
+                <p>You need two distinct operating modes:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                    <div class="bg-blue-50 p-4 border-l-4 border-blue-500">
+                        <h4 class="font-bold text-blue-900 mt-0">Track A: Demand Creation (The 95%)</h4>
+                        <ul class="text-sm text-blue-800">
+                            <li><strong>Goal:</strong> Memory (Mental Availability)</li>
+                            <li><strong>Metric:</strong> Reach, Consumption, Recall</li>
+                            <li><strong>Content:</strong> Education, Story, POV</li>
+                            <li><strong>Offer:</strong> "Learn how to X"</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 p-4 border-l-4 border-green-500">
+                        <h4 class="font-bold text-green-900 mt-0">Track B: Demand Capture (The 5%)</h4>
+                        <ul class="text-sm text-green-800">
+                            <li><strong>Goal:</strong> Conversion (Physical Availability)</li>
+                            <li><strong>Metric:</strong> Pipeline, Revenue</li>
+                            <li><strong>Content:</strong> Proof, Pricing, Case Studies</li>
+                            <li><strong>Offer:</strong> "Fix problem X now"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Implementation</h3>
+                <p>Stop asking your Demand Creation ads to generate leads. Ask them to generate <strong>trust</strong>. When the 95% eventually enter the market, you win automatically because you are the only vendor they remember.</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK - 0:00-0:05]</strong><br/>
+                Stop trying to sell to people who aren't buying.<br/>
+                If you are running "Book a Demo" ads to cold traffic, you are lighting money on fire.<br/><br/>
+
+                <strong>[THE INSIGHT - 0:05-0:30]</strong><br/>
+                Here is the math: The "95/5 Rule".<br/>
+                At any given moment, 95% of your market is NOT ready to buy. They don't care about your software. They care about their problems.<br/>
+                Only 5% are ready. And everyone is fighting for them.<br/><br/>
+
+                <strong>[THE SHIFT - 0:30-0:50]</strong><br/>
+                Smart companies split their marketing.<br/>
+                For the 5%: Show them the product. Capture the demand.<br/>
+                But for the 95%: Stop selling. Start teaching.<br/>
+                Build a relationship <em>before</em> they need you. So when they <em>do</em> need you, they don't Google your competitors. They just call you.<br/><br/>
+
+                <strong>[CTA - 0:50-1:00]</strong><br/>
+                Capture the 5%. Educate the 95%.<br/>
+                Don't mix them up.
+            `,
+            scriptDeepDive: `
+                <strong>Topic:</strong> Why Attribution Software Killed Marketing Strategy<br/>
+                <strong>Format:</strong> Fireside Chat / Solo Analysis<br/>
+                <strong>Duration:</strong> 10-15 Minutes<br/><br/>
+
+                <strong>Section 1: The "Attribution Trap"</strong><br/>
+                - Start with a story: "The CEO who cut all brand spend because 'it doesn't show up in HubSpot'."<br/>
+                - Explain the "Last Touch" fallacy.<br/><br/>
+
+                <strong>Section 2: The 95/5 Rule Explained</strong><br/>
+                - Reference: LinkedIn B2B Institute / Ehrenberg-Bass.<br/>
+                - Mental Availability vs. Physical Availability.<br/><br/>
+
+                <strong>Section 3: The "Split Funnel" Model</strong><br/>
+                - How to structure the team.<br/>
+                - Team A (Media) vs. Team B (Growth).<br/><br/>
+
+                <strong>Section 4: Actionable Steps</strong><br/>
+                - Audit your ad account. What % is "Ask" vs. "Give"?<br/>
+            `,
+            bestPracticeSnippets: [
+                "Stop asking Demand Creation ads to generate leads. Ask them to generate trust.",
+                "Mental Availability is won when the buyer isn't in-market. Physical Availability is won when they are.",
+                "Split your budget: 80% for the 95% (Educate), 20% for the 5% (Capture).",
+                "If you can't describe your POV in one sentence without mentioning your product features, you don't have a strategy."
+            ]
+        },
+        videos: [
+            {
+                title: "The 95/5 Rule: Fixing B2B Demand",
+                embedId: "6pGjK6h9qMI", // YouTube ID (Example: Chris Walker/Refine Labs content usually)
+                platform: "youtube",
+                duration: "8:42"
+            },
+            {
+                title: "How to Measure Dark Social",
+                embedId: "M7w3Kj3vk3U", // Placeholder
+                platform: "youtube",
+                duration: "12:15"
+            }
+        ],
+        resources: [
+            {
+                title: "Demand Creation Budget Template",
+                valueProp: "A Google Sheet to model your split between Capture and Creation spend.",
+                link: "#",
+                type: "template"
+            },
+            {
+                title: "The Dark Social Masterclass",
+                valueProp: "A 4-part video workshop on setting up self-reported attribution.",
+                link: "#",
+                type: "course"
+            }
+        ],
+        relatedService: {
+            title: "Fix Your Go-To-Market Model",
+            link: "/services/gtm-operating-model"
+        }
+    },
+    {
+        id: "sales-multithreading",
+        slug: "the-multithreaded-close",
+        category: "Sales",
+        title: "The Multithreaded Close",
+        subtitle: "Why single-threaded deals die, and how to engineer consensus without being annoying.",
+        readTime: "7 min read",
+        difficulty: "Tactical",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Core Concept</h3>
+                <p><strong>Deals don't die because of competitors. They die because of Indecision.</strong></p>
+                <p>Indecision happens when you have a "Champion" who loves you, but a "Budget Holder" who doesn't know you exist. The deal stalls in the gap between them.</p>
+                <p>The "Multithreaded Close" is not about emailing everyone. It's about engineering a consensus event.</p>
+
+                <h3>The Trap: "Happy Ears"</h3>
+                <p>Reps love talking to Champions because Champions are nice. They return calls. They say "We love the demo."</p>
+                <p>But Champions rarely sign the check. In modern B2B, the average buying group is 6-10 people. If you are only talking to 1, your deal is 90% risk.</p>
+
+                <h3>The Shift: The Committee Map</h3>
+                <p>You must validate three roles in every deal before Stage 3:</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>The Champion (User):</strong> Owns the pain.</li>
+                    <li><strong>The Economic Buyer (Approver):</strong> Owns the budget. Cares about ROI/Risk.</li>
+                    <li><strong>The Technical Validator (Blocker):</strong> Owns the integration. Cares about security/compliance.</li>
+                </ul>
+
+                <h3>Implementation: The "Access" Ask</h3>
+                <p>Don't go around your Champion. Go <em>with</em> them.</p>
+                <p><em>"Hey Champion, usually at this stage, the CFO asks about X and Y. I don't want you to get stuck answering that alone. Can we spend 15 mins with them to arm you with the right data?"</em></p>
+            `,
+            scriptShort: `
+                <strong>[HOOK - 0:00-0:05]</strong><br/>
+                If you are only talking to one person in a B2B deal, you don't have a deal.<br/>
+                You have a friend.<br/><br/>
+
+                <strong>[THE INSIGHT - 0:05-0:30]</strong><br/>
+                Single-threaded deals are the #1 cause of "Unknown Slip" in pipelines.<br/>
+                You think it's closing because your Champion said "Yes".<br/>
+                But the CFO said "Who?"<br/>
+                And the IT Director said "No".<br/><br/>
+
+                <strong>[THE SHIFT - 0:30-0:50]</strong><br/>
+                Stop accepting "I'll run it up the flagpole."<br/>
+                Your job is to Multithread.<br/>
+                Don't go around your Champion. Empower them.<br/>
+                "Hey, the CFO is going to grill you on ROI. Let's build that slide together so you don't look bad."<br/><br/>
+
+                <strong>[CTA - 0:50-1:00]</strong><br/>
+                Map the committee. Or lose the deal.<br/>
+                It's that simple.
+            `,
+            scriptDeepDive: `
+                <strong>Topic:</strong> How to Multithread Without Being Annoying<br/>
+                <strong>Format:</strong> Tactical Workshop<br/>
+                <strong>Duration:</strong> 12 Minutes<br/><br/>
+
+                <strong>Section 1: The "Hidden" Org Chart</strong><br/>
+                - Why Org Charts lie.<br/>
+                - Finding the "Political Capital" vs. the "Job Title".<br/><br/>
+
+                <strong>Section 2: The 3-Point Access Strategy</strong><br/>
+                - How to get to Power (CFO).<br/>
+                - How to get to Technical (IT/Security).<br/>
+                - How to get to Legal (Procurement).<br/><br/>
+
+                <strong>Section 3: Handling Pushback</strong><br/>
+                - What to do when a Champion says "No, I handle everything."<br/>
+                - The concept of "Selling on Behalf Of".<br/>
+            `,
+            bestPracticeSnippets: [
+                "Don't go around your Champion. Empower them to look like the hero to their CFO.",
+                "Validating the 'Technical Blocker' early saves 2 months of security review at the finish line.",
+                "The person who signs the check usually cares about Risk and ROI, not features. Sell the outcome.",
+                "If you haven't identified at least 3 distinct stakeholders by Stage 2, your deal is at 90% risk."
+            ]
+        },
+        relatedService: {
+            title: "Pipeline & Deal Quality Repair",
+            link: "/services/pipeline-quality"
+        }
+    },
+    {
+        id: "revops-signal-vs-noise",
+        slug: "signal-vs-noise",
+        category: "RevOps",
+        title: "Signal vs. Noise: Why Your Dashboard is Lying",
+        subtitle: "Activity metrics hide reality. Learn to measure outcomes, not busy work.",
+        readTime: "6 min read",
+        difficulty: "Technical",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Core Concept</h3>
+                <p><strong>More data does not equal better decisions. Usually, it equals more confusion.</strong></p>
+                <p>RevOps teams trip into the trap of "Tracking Everything." The result is a dashboard with 40 tiles that nobody looks at, because it doesn't tell a story.</p>
+                
+                <h3>The Trap: "Vanity Activity"</h3>
+                <p>We measure what is easy to count, not what matters.</p>
+                <ul>
+                    <li>Calls Made (Easy) vs. Conversations Had (Hard).</li>
+                    <li>MQLs Genereated (Easy) vs. Meetings Held (Hard).</li>
+                    <li>Emails Sent (Easy) vs. Replies Positive (Hard).</li>
+                </ul>
+                <p>When you incentivize "Calls Made," reps will just call the same 10 people 5 times. The chart goes up. Revenue stays flat.</p>
+
+                <h3>The Shift: Verification Metrics</h3>
+                <p>Move from "Activity" to "Verification".</p>
+                <p>A "Verification Metric" requires a counter-party action.</p>
+                <ul class="list-disc pl-5 my-4">
+                    <li><strong>Activity:</strong> I sent a quote. (Noise)</li>
+                    <li><strong>Verification:</strong> The customer opened the doc and viewed the pricing page. (Signal)</li>
+                </ul>
+
+                <h3>Implementation</h3>
+                <p>Audit your dashboard. If a metric can be gamed by an employee pressing a button, delete it (or hide it). Only surface metrics that require a customer to do something.</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK - 0:00-0:05]</strong><br/>
+                Your CRM dashboard is lying to you.<br/>
+                It's full of green arrows, but you missed your number. Why?<br/><br/>
+
+                <strong>[THE INSIGHT - 0:05-0:30]</strong><br/>
+                Because you are tracking "Vanity Activity".<br/>
+                Calls made. Emails sent. MQLs.<br/>
+                These aren't results. They are effort.<br/>
+                You can make 100 calls and speak to 0 people.<br/>
+                The chart looks great. The bank account looks empty.<br/><br/>
+
+                <strong>[THE SHIFT - 0:30-0:50]</strong><br/>
+                Switch to "Verification Metrics".<br/>
+                Don't track what *you* did. Track what *they* did.<br/>
+                Did they reply? Did they show up? Did they sign the POC?<br/><br/>
+
+                <strong>[CTA - 0:50-1:00]</strong><br/>
+                If your metric doesn't require a customer action,<br/>
+                it's just noise.<br/>
+                Delete it.
+            `,
+            scriptDeepDive: `
+                <strong>Topic:</strong> The Dashboard Cleanup Protocol<br/>
+                <strong>Format:</strong> Screen-share / Walkthrough<br/>
+                <strong>Duration:</strong> 10 Minutes<br/><br/>
+
+                <strong>Section 1: The 80/20 of Data</strong><br/>
+                - 80% of CRM fields are never used in decision making.<br/>
+                - The cost of data maintenance.<br/><br/>
+
+                <strong>Section 2: Defining "Signal"</strong><br/>
+                - The concept of "Bi-Directional Verification".<br/>
+                - Why "Stage Duration" is the only truth.<br/><br/>
+
+                <strong>Section 3: Building the "Executive View"</strong><br/>
+                - How to build a dashboard that fits on one screen.<br/>
+                - The 4 tiles every CRO needs.<br/>
+            `,
+            bestPracticeSnippets: [
+                "If a metric can be gamed by an employee pressing a button without a customer action, delete it.",
+                "Measure 'Stage Duration' over 'Opportunity Count'. Velocity is the best disinfectant.",
+                "A dashboard with more than 5 tiles is a research project, not a management tool.",
+                "Treat high MQL volume as a warning sign of 'Noise' until proven otherwise by conversion rates."
+            ]
+        },
+        relatedService: {
+            title: "Forecasting & Revenue Governance",
+            link: "/services/forecasting-governance"
+        }
+    },
+    {
+        id: "cs-qbr-trap",
+        slug: "the-qbr-trap",
+        category: "CS",
+        title: "The QBR Trap: Why Customers Ghost Your Reviews",
+        subtitle: "Stop reading usage logs to your customers. Start validating outcomes.",
+        readTime: "6 min read",
+        difficulty: "Strategic",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Core Concept</h3>
+                <p><strong>Your customers hate your Quarterly Business Reviews (QBRs).</strong></p>
+                <p>Why? Because most QBRs are actually "Vendor Business Reviews." You talk about your roadmap, your features, and your support tickets.</p>
+                <p>The customer sits there politely, checks their email, and wonders: "Did I get promoted because of this tool?"</p>
+
+                <h3>The Trap: "Usage = Value"</h3>
+                <p>CSMs often confuse specific usage (logins) with value (ROI). Just because they logged in doesn't mean they are winning. They might be logging in to struggle with a bug.</p>
+
+                <h3>The Shift: The Impact Review</h3>
+                <p>Rename the meeting. Call it an "Impact Review" or "Strategy Sync."</p>
+                <p>The deck should have 3 slides:</p>
+                <ol class="list-decimal pl-5 my-4">
+                    <li><strong>The Promise:</strong> "Here is why you bought us."</li>
+                    <li><strong>The Proof:</strong> "Here is the data showing we delivered that specific outcome."</li>
+                    <li><strong>The Path:</strong> "Here is how we unlock the next level of value."</li>
+                </ol>
+
+                <h3>Implementation</h3>
+                <p>If you can't fill out Slide 2 (The Proof), cancel the meeting. You have a churn risk. Go fix the value gap first.</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK - 0:00-0:05]</strong><br/>
+                Your customers are ghosting your QBRs for one reason:<br/>
+                They are boring.<br/><br/>
+
+                <strong>[THE INSIGHT - 0:05-30]</strong><br/>
+                Most QBRs are just you reading a usage report out loud.<br/>
+                "You logged in 50 times! You created 12 widgets!"<br/>
+                Who cares?<br/>
+                Your champion doesn't get promoted for creating widgets.<br/>
+                They get promoted for saving money or making money.<br/><br/>
+
+                <strong>[THE SHIFT - 0:30-0:50]</strong><br/>
+                Stop doing "Usage Reviews". Start doing "Impact Reviews".<br/>
+                One slide: "You paid us $50k. We saved you $120k. Here is the math."<br/>
+                If you can't make that slide...<br/>
+                You don't have a renewal. You have a hostage.<br/><br/>
+
+                <strong>[CTA - 0:50-1:00]</strong><br/>
+                Prove the value.<br/>
+                Or lose the account.
+            `,
+            scriptDeepDive: `
+                <strong>Topic:</strong> Reinventing the QBR<br/>
+                <strong>Format:</strong> Presentation / Slide Breakdown<br/>
+                <strong>Duration:</strong> 14 Minutes<br/><br/>
+
+                <strong>Section 1: The Anatomy of a Bad QBR</strong><br/>
+                - The "Feature Dump" mistake.<br/>
+                - The "Support Ticket Review" mistake.<br/><br/>
+
+                <strong>Section 2: The "Hero's Journey" Framework</strong><br/>
+                - Framing the Customer as the Hero, and you as the Guide.<br/>
+                - How to find the ROI data (even if your tool doesn't track it).<br/><br/>
+
+                <strong>Section 3: The "Pre-Renew" Strategy</strong><br/>
+                - Using the QBR to close the renewal 90 days early.<br/>
+            `,
+            bestPracticeSnippets: [
+                "If you can't fill out the 'Proof of Impact' slide, cancel the QBR and go fix the value gap.",
+                "Usage is a lagging indicator of interest. Impact is the leading indicator of renewal.",
+                "Frame the Customer as the Hero and your product as the Guide in every review.",
+                "The renewal should be a formality, not a negotiation. Prove the ROI 90 days early."
+            ]
+        },
+        relatedService: {
+            title: "GTM Operating Model Realignment",
+            link: "/services/gtm-operating-model"
+        }
+    },
+    {
+        id: "founder-gtm-os",
+        slug: "revenue-operating-system",
+        category: "Founders",
+        title: "The Revenue Operating System: Escaping Hero Mode",
+        subtitle: "Why scaling breaks your business, and how to switch from 'Heroics' to 'Engineering'.",
+        readTime: "8 min read",
+        difficulty: "Strategic",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Core Concept</h3>
+                <p><strong>Most companies don't grow; they just swell.</strong></p>
+                <p>In the early days (Seed/Series A), growth comes from <strong>Heroics</strong>. The founders hustle, the first rep is a rockstar, and everyone works 80 hours.</p>
+                <p>But Heroics don't scale. As you add people, efficiency drops. You hire a VP of Sales to "fix it," but they fail. Why? Because you didn't need a leader; you needed a <strong>System</strong>.</p>
+
+                <h3>The Trap: "The Talent Delusion"</h3>
+                <p>Founders often think: <em>"If I just hire a Google/Salesforce vet, they will bring the playbook."</em></p>
+                <p>Wrong. They will bring <em>Google's</em> playbook. And Google's playbook assumes you have Google's brand, budget, and product-market fit. You have none of those.</p>
+
+                <h3>The Shift: Installing the OS</h3>
+                <p>A Revenue Operating System (GTM-OS) replaces personality with process. It has 4 layers:</p>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><strong>Data Layer:</strong> One truth. No "Marketing numbers" vs "Sales numbers."</li>
+                    <li><strong>Decision Layer:</strong> Clear logic for pricing, disqualification, and forecasting.</li>
+                    <li><strong>Process Layer:</strong> Documented workflows that don't rely on "tribal knowledge."</li>
+                    <li><strong>Talent Layer:</strong> People plug <em>into</em> the system; they don't <em>carry</em> it.</li>
+                </ul>
+
+                <h3>Implementation</h3>
+                <p>Stop asking "Who do we hire next?" Start asking "What system is broken?"</p>
+                <p>If you can't describe your revenue engine as a schematic diagram, you don't have an engine. You have a casino.</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK - 0:00-0:05]</strong><br/>
+                Your business is addicted to Heroics.<br/>
+                And that is why you stopped growing.<br/><br/>
+
+                <strong>[THE INSIGHT - 0:05-0:30]</strong><br/>
+                In the early days, you grew because you hustled.<br/>
+                You were the Hero.<br/>
+                But now you have 50 people. You can't hero-mode 50 people.<br/>
+                You hired a VP of Sales to fix it. They failed.<br/>
+                You hired a CMO. They failed.<br/><br/>
+
+                <strong>[THE SHIFT - 0:30-0:50]</strong><br/>
+                It's not them. It's the System.<br/>
+                You are trying to scale "Hard Work".<br/>
+                You need to scale "Engineering".<br/>
+                A Revenue Operating System means the business grows even if you sleep.<br/>
+                It means the process wins, not the person.<br/><br/>
+
+                <strong>[CTA - 0:50-1:00]</strong><br/>
+                Stop hiring "Rockstars".<br/>
+                Start building an Orchestra.
+            `,
+            scriptDeepDive: `
+                <strong>Topic:</strong> From Founder-Led to System-Led Growth<br/>
+                <strong>Format:</strong> Keynote / Board Presentation<br/>
+                <strong>Duration:</strong> 20 Minutes<br/><br/>
+
+                <strong>Section 1: The "Series B Cliff"</strong><br/>
+                - Why companies stall at $10M ARR.<br/>
+                - The collapse of "Tribal Knowledge".<br/><br/>
+
+                <strong>Section 2: The 4 Components of a GTM-OS</strong><br/>
+                - Data, Decision, Process, Talent.<br/>
+                - Why you must build them in that order (Talent last).<br/><br/>
+
+                <strong>Section 3: The Board Conversation</strong><br/>
+                - How to tell your investors you are rebuilding the engine.<br/>
+                - Why "slowing down to speed up" is the only path.<br/>
+            `,
+            bestPracticeSnippets: [
+                "Stop hiring 'Rockstars' to fix broken systems. They'll just burn out faster.",
+                "Revenue Engineering > Founder Heroics. You can't scale a personality.",
+                "Build your systems in order: Data first, then Process, then Talent.",
+                "If you can't draw your revenue engine as a schematic, you don't have an engine; you have a casino."
+            ]
+        },
+        relatedService: {
+            title: "GTM Operating Model Realignment",
+            link: "/services/gtm-operating-model"
+        }
+    },
+    {
+        id: "revops-revenue-engineering",
+        slug: "revenue-engineering-framework",
+        category: "RevOps",
+        title: "The Revenue Engineering Framework",
+        subtitle: "Stop treating revenue as a goal. Start treating it as a mathematical output of your system.",
+        readTime: "9 min read",
+        difficulty: "Strategic",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Core Concept</h3>
+                <p><strong>Revenue is not something you "get." It is something that happens as a result of a healthy system.</strong></p>
+                <p>High-growth companies stop obsessing over the "Number" and start obsessing over the "Gears." If the gears turn at the right rate, the revenue output is guaranteed by physics.</p>
+                
+                <h3>The 3 Gears of Revenue Engineering</h3>
+                <div class="space-y-4 my-6">
+                    <div class="p-4 bg-slate-100 rounded-lg">
+                        <h4 class="font-bold text-slate-900 mt-0">Gear 1: Volume (The Fuel)</h4>
+                        <p class="text-sm">Not leads, but <em>qualified interactions</em>. How many times per week does your point of view meet a high-intent buyer?</p>
+                    </div>
+                    <div class="p-4 bg-slate-100 rounded-lg">
+                        <h4 class="font-bold text-slate-900 mt-0">Gear 2: Velocity (The Flow)</h4>
+                        <p class="text-sm">The time it takes to move from 'Curious' to 'Committed'. Friction is the enemy of velocity.</p>
+                    </div>
+                    <div class="p-4 bg-slate-100 rounded-lg">
+                        <h4 class="font-bold text-slate-900 mt-0">Gear 3: Value (The Yield)</h4>
+                        <p class="text-sm">The average yield per unit of effort. This is optimized by ICP focus and pricing integrity.</p>
+                    </div>
+                </div>
+
+                <h3>The Shift: Mathematical Forecasting</h3>
+                <p>Instead of asking "Will we hit the number?", Ask: "Is the ratio of Volume to Velocity holding steady?" If the ratio breaks, the number will fail regardless of how much you pressure the sales team.</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK - 0:00-0:05]</strong><br/>
+                Revenue is not a goal.<br/>
+                Revenue is a mathematical output.<br/><br/>
+
+                <strong>[THE INSIGHT - 0:05-0:30]</strong><br/>
+                Most leaders treat revenue like a destination they can reach through effort.<br/>
+                But you don't "effort" your way to predictable growth.<br/>
+                You engineer it.<br/>
+                Think of your GTM as a machine with three gears: Volume, Velocity, and Value.<br/><br/>
+
+                <strong>[THE SHIFT - 0:30-0:50]</strong><br/>
+                Stop managing the outcome. Start managing the gears.<br/>
+                Is your velocity dropping? Pressure won't fix that. Removing friction will.<br/>
+                Is your value low? More leads won't fix that. ICP focus will.<br/><br/>
+
+                <strong>[CTA - 0:50-1:00]</strong><br/>
+                Stop guessing.<br/>
+                Start engineering.
+            `,
+            scriptDeepDive: `
+                <strong>Topic:</strong> The Math of the 3-Gear Engine<br/>
+                <strong>Format:</strong> Whiteboard / Logic Breakdown<br/>
+                <strong>Duration:</strong> 15 Minutes<br/><br/>
+
+                <strong>Section 1: Why Linear Scaling Fails</strong><br/>
+                - The "Double-Double" fallacy.<br/>
+                - Why adding reps often *decreases* efficiency.<br/><br/>
+
+                <strong>Section 2: The 3 Gears in Detail</strong><br/>
+                - Volume: Defining "Minimum Viable Signal".<br/>
+                - Velocity: Measuring decision-latency.<br/>
+                - Value: The price-to-problem alignment.<br/><br/>
+
+                <strong>Section 3: Designing Your Dashboard</strong><br/>
+                - Transitioning from lagging ROI to leading Engineering metrics.<br/>
+            `,
+            bestPracticeSnippets: [
+                "Obsess over the 'Gears' (Volume, Velocity, Value) and the revenue output will take care of itself.",
+                "Friction in the buying process is the primary killer of revenue velocity.",
+                "If you can't describe your revenue model as a series of conversion ratios, you don't have a model; you have a hope.",
+                "Revenue Engineering is the process of removing the 'Heroics' variable from your growth equation."
+            ]
+        },
+        relatedService: {
+            title: "GTM Operating Model Realignment",
+            link: "/services/gtm-operating-model"
+        }
+    },
+    {
+        id: "sales-discovery-disinfectant",
+        slug: "discovery-disinfectant",
+        category: "Sales",
+        title: "The Discovery Disinfectant",
+        subtitle: "How to find the real business constraint before you waste 3 months on a dead deal.",
+        readTime: "7 min read",
+        difficulty: "Tactical",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Core Concept</h3>
+                <p><strong>The goal of discovery is not to confirm that the customer has a problem. It is to find the one problem they are WILLING to solve now.</strong></p>
+                <p>Most discovery is "Surface Level." The customer says they want X, the rep shows X. But 3 months later, the deal dies because X wasn't actually a priority.</p>
+                <p>The "Disinfectant" is a series of questions designed to uncover the *cost of inaction* and the *political will* to change.</p>
+
+                <h3>The Trap: The "Yes" Men</h3>
+                <p>Reps love hearing "Yes." But in discovery, "Yes" is often a polite way of saying "I'm not going to fight for this."</p>
+                <p>You need to look for the "No" or the "Maybe later." Only then do you know what you are actually fighting against.</p>
+
+                <h3>The Shift: The "Disinfectant" Questions</h3>
+                <ul class="list-disc pl-5 my-4 space-y-2">
+                    <li><em>"If you change nothing today, what is the specific cost to the business in 12 months?"</em></li>
+                    <li><em>"Whose bonus is tied to fixing this specific metric?"</em></li>
+                    <li><em>"What has failed in the past when you tried to solve this?"</em></li>
+                </ul>
+
+                <h3>Implementation</h3>
+                <p>Discard deals where the "Cost of Inaction" is lower than the "Cost of Change." Disinfect your pipeline by removing the "Nice to Haves" early.</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK - 0:00-0:05]</strong><br/>
+                Stop doing "Checklist" discovery.<br/>
+                You are wasting your time on "Nice to Have" deals.<br/><br/>
+
+                <strong>[THE INSIGHT - 0:05-0:30]</strong><br/>
+                In B2B, a "Yes" is cheap. A "Budget Approval" is expensive.<br/>
+                Most discovery calls only find proof that the tool *could* help.<br/>
+                They don't find proof that the customer *will* buy.<br/>
+                You need to "Disinfect" your discovery.<br/><br/>
+
+                <strong>[THE SHIFT - 0:30-0:50]</strong><br/>
+                Ask the hard questions early.<br/>
+                "If you ignore this problem for another year, who actually gets fired?"<br/>
+                If the answer is "Nobody," then you don't have a deal. You have a conversation.<br/>
+                Kill the conversations. Close the deals.<br/><br/>
+
+                <strong>[CTA - 0:50-1:00]</strong><br/>
+                Disinfect your pipeline.<br/>
+                Find the real priority.
+            `,
+            scriptDeepDive: `
+                <strong>Topic:</strong> Advanced Discovery Logic<br/>
+                <strong>Format:</strong> Roleplay / Case Study Analysis<br/>
+                <strong>Duration:</strong> 12 Minutes<br/><br/>
+
+                <strong>Section 1: The Psychology of Priority</strong><br/>
+                - Why business priorities change mid-cycle.<br/>
+                - How to anchor your tool to the CEO's top 3 initiatives.<br/><br/>
+
+                <strong>Section 2: The 5 Disinfectant Questions</strong><br/>
+                - Deep dive into cost of inaction, political capital, and past failures.<br/><br/>
+
+                <strong>Section 3: The "Disqualification" Professional</strong><br/>
+                - Why the best reps have the highest disqualification rates.<br/>
+            `,
+            bestPracticeSnippets: [
+                "The goal of discovery is to find the truth, not to find a 'Yes'.",
+                "If the 'Cost of Inaction' isn't explicitly defined in terms of dollars or risk, you aren't in a deal yet.",
+                "Surface-level pain leads to surface-level deals. Dig until you find the structural constraint.",
+                "A polite 'No' at 15 minutes is worth 10x more than a fake 'Yes' at 3 months."
+            ]
+        },
+        relatedService: {
+            title: "Pipeline & Deal Quality Repair",
+            link: "/services/pipeline-quality"
+        }
+    },
+    // --- MICRO-PLAYBOOKS: MARKETING ---
+    {
+        id: "marketing-f-pattern",
+        slug: "the-f-pattern",
+        category: "Marketing",
+        title: "The F-Pattern Scan",
+        subtitle: "Your buyers don't read. They scan. Here is how to design for the lazy brain.",
+        readTime: "3 min read",
+        difficulty: "Tactical",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Concept</h3>
+                <p>Eye-tracking studies prove that B2B buyers scan websites in an 'F-Pattern'. They read the top headline (Horizontal), scan down the left side (Vertical), and only read across again if something catches their eye.</p>
+                <p>If your value prop is buried in a paragraph on the right side of the screen, it does not exist.</p>
+                <h3>The Fix</h3>
+                <ol>
+                    <li><strong>Load the Left:</strong> Put your strongest words (verbs) as the first word of every bullet point.</li>
+                    <li><strong>Kill the Paragraphs:</strong> No block of text should be deeper than 3 lines.</li>
+                    <li><strong>Bold the Insight:</strong> Bold the one phrase you need them to remember.</li>
+                </ol>
+            `,
+            scriptShort: `
+                <strong>[HOOK]</strong><br/>
+                Your website copy is great. But nobody is reading it.<br/>
+                Because B2B buyers don't read. They scan.<br/><br/>
+                <strong>[INSIGHT]</strong><br/>
+                Science shows the brain uses an 'F-Pattern' to conserve energy.<br/>
+                Top line across. Scan down the left. Middle line across.<br/>
+                If your key benefit is buried in a paragraph on the right? Invisible.<br/><br/>
+                <strong>[ACTION]</strong><br/>
+                Audit your site today.<br/>
+                Load your power verbs on the left margin.<br/>
+                If it's not in the 'F', it's not in their head.
+            `
+        }
+    },
+    {
+        id: "marketing-against-narrative",
+        slug: "the-against-narrative",
+        category: "Marketing",
+        title: "The 'Against' Narrative",
+        subtitle: "Positioning is not about who you are. It's about who you are fighting.",
+        readTime: "3 min read",
+        difficulty: "Strategic",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Concept</h3>
+                <p>Great brands are defined by their enemies. Salesforce was 'No Software'. Apple was 'Mac vs PC'.</p>
+                <p>If you position yourself as 'Better', you are comparing features. If you position yourself 'Against' the old way, you are selling a movement.</p>
+                <h3>The Fix</h3>
+                <p>Don't fight a competitor (that looks petty). Fight the <em>Status Quo</em>.</p>
+                <p><strong>Bad:</strong> "We are faster than X."</p>
+                <p><strong>Good:</strong> "Stop waiting 3 days for reports."</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK]</strong><br/>
+                Nobody cares what you are 'For'.<br/>
+                They care what you are 'Against'.<br/><br/>
+                <strong>[INSIGHT]</strong><br/>
+                The strongest brands in history pick a fight.<br/>
+                Salesforce fought 'Software'. Apple fought 'IBM'.<br/>
+                When you define an enemy, you define a tribe.<br/><br/>
+                <strong>[ACTION]</strong><br/>
+                Stop fighting your competitors.<br/>
+                Fight the 'Old Way' of doing things.<br/>
+                Name the enemy. Win the fan.
+            `
+        }
+    },
+    {
+        id: "marketing-zero-click",
+        slug: "zero-click-content",
+        category: "Marketing",
+        title: "Zero-Click Value",
+        subtitle: "Stop asking for the click. Give the lesson in the feed.",
+        readTime: "3 min read",
+        difficulty: "Tactical",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Concept</h3>
+                <p>Platforms (LinkedIn, Twitter, YouTube) hate links. They want to keep users on the platform. If you post a link, the algorithm buries you.</p>
+                <p>'Zero-Click Content' gives the entire value in the post itself. No teaser. No 'Link in comments'.</p>
+                <h3>The Fix</h3>
+                <p>Optimize for consumption, not clicks. If 1,000 people read your insight, you win brand equity. If 10 people click your link, you win nothing.</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK]</strong><br/>
+                Your 'Link in Bio' strategy is killing your reach.<br/>
+                Here is why.<br/><br/>
+                <strong>[INSIGHT]</strong><br/>
+                Algorithms want retention. They hate when you send people away.<br/>
+                When you post a link, you get punished.<br/>
+                When you post the full lesson, you get rewarded.<br/><br/>
+                <strong>[ACTION]</strong><br/>
+                Stop teasing content.<br/>
+                Give the whole meal in the feed.<br/>
+                Optimize for influence, not for clicks.
+            `
+        }
+    },
+
+    // --- MICRO-PLAYBOOKS: SALES ---
+    {
+        id: "sales-upfront-contract",
+        slug: "upfront-contract",
+        category: "Sales",
+        title: "The Upfront Contract",
+        subtitle: "How to stop meetings from running over time and ending with 'maybe'.",
+        readTime: "3 min read",
+        difficulty: "Tactical",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Concept</h3>
+                <p>Most sales meetings end vaguely because they started vaguely.</p>
+                <p>An Upfront Contract (Sandler Rule) sets the rules of engagement in the first 2 minutes.</p>
+                <h3>The Script</h3>
+                <p>"We have 30 minutes. My goal is to show you X. You probably have questions about Y. By the end, we should decide if it makes sense to schedule a scoping call or if this isn't a fit. Does that sound fair?"</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK]</strong><br/>
+                Does your sales call end with "I'll think about it"?<br/>
+                That's your fault. You didn't set the rules.<br/><br/>
+                <strong>[INSIGHT]</strong><br/>
+                The "Upfront Contract" saves deal cycles.<br/>
+                In the first minute, agree on the outcome.<br/>
+                "By the end of this call, let's decide if this is a fit or not. If it's a no, tell me no."<br/><br/>
+                <strong>[ACTION]</strong><br/>
+                Give them permission to say No.<br/>
+                And you will get to the Yes faster.
+            `
+        }
+    },
+    {
+        id: "sales-pricing-anchor",
+        slug: "pricing-anchor",
+        category: "Sales",
+        title: "Pricing Anchoring",
+        subtitle: "Mentioning price early to reset psychology.",
+        readTime: "3 min read",
+        difficulty: "Psychological",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Concept</h3>
+                <p>If you wait until the end to show price, the customer is holding their breath the whole time. They aren't listening; they are worrying.</p>
+                <p>Anchoring drops a high number early to make the real number feel safe.</p>
+                <h3>The Fix</h3>
+                <p>"Typically, enterprise deployments like this run $100k+, but for your scope..." (Customer exhales). "We are looking closer to $40k." (Customer feels relief).</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK]</strong><br/>
+                Stop hiding your price until the last slide.<br/>
+                You are creating anxiety, not suspense.<br/><br/>
+                <strong>[INSIGHT]</strong><br/>
+                It's called "Anchoring".<br/>
+                Drop a big number early. "Usually this costs $100k."<br/>
+                Watch them flinch.<br/>
+                Then land the plane. "But for you, it's $30k."<br/><br/>
+                <strong>[ACTION]</strong><br/>
+                The $30k feels cheap after the $100k.<br/>
+                It feels expensive after $0.<br/>
+                Set the anchor.
+            `
+        }
+    },
+    {
+        id: "sales-not-close",
+        slug: "the-not-close",
+        category: "Sales",
+        title: "The 'Not' Close",
+        subtitle: "Using reverse psychology to trigger honesty.",
+        readTime: "3 min read",
+        difficulty: "Tactical",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Concept</h3>
+                <p>When you push, buyers pull away. When you pull away, they lean in.</p>
+                <p>The 'Not' Close is a technique where you verbally disqualify the deal to see if the prospect fights for it.</p>
+                <h3>The Script</h3>
+                <p>"Honestly, based on what you said about budget, I'm not sure we're the right fit right now. It sounds like a spreadsheet might be better for Q1."</p>
+                <p><strong>Reaction A:</strong> "Yeah, you're right." (Great, you saved 3 months).</p>
+                <p><strong>Reaction B:</strong> "No, we really need this because..." (Great, they just sold themselves).</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK]</strong><br/>
+                Want to close more deals?<br/>
+                Try trying NOT to close them.<br/><br/>
+                <strong>[INSIGHT]</strong><br/>
+                People want what they can't have.<br/>
+                When you say "I'm not sure we are a fit", the buyer's brain switches mode.<br/>
+                They stop defending and start chasing.<br/><br/>
+                <strong>[ACTION]</strong><br/>
+                Pull away.<br/>
+                "It sounds like you should stick with Excel for now."<br/>
+                If they let you go, you never had them.
+            `
+        }
+    },
+    {
+        id: "sales-champion-test",
+        slug: "champion-testing",
+        category: "Sales",
+        title: "Champion Testing",
+        subtitle: "Verify your champion before you forecast the deal.",
+        readTime: "3 min read",
+        difficulty: "Strategic",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Concept</h3>
+                <p>A Champion is not someone who likes you. A Champion is someone who has power and is willing to use it for you.</p>
+                <p>You must 'Test' them. Ask for a micro-commitment that requires them to spend social capital.</p>
+                <h3>The Test</h3>
+                <p>"Can you get me the Org Chart by Friday?" or "Can you stick your neck out and schedule a meeting with the VP?"</p>
+                <p>If they say no, they aren't a Champion. They are a Coach (or a waste of time).</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK]</strong><br/>
+                You don't have a Champion.<br/>
+                You have a work-friend.<br/>
+                Here is how to tell the difference.<br/><br/>
+                <strong>[INSIGHT]</strong><br/>
+                A Champion takes action when you aren't in the room.<br/>
+                Test them.<br/>
+                Ask for something hard.<br/>
+                "Can you get me the CFO's cell phone number?"<br/><br/>
+                <strong>[ACTION]</strong><br/>
+                If they hesitate, remove the deal from your forecast.<br/>
+                Real Champions spend political capital.
+            `
+        }
+    },
+
+    // --- MICRO-PLAYBOOKS: CS ---
+    {
+        id: "cs-quick-win",
+        slug: "90-day-quick-win",
+        category: "CS",
+        title: "The 90-Day Quick Win",
+        subtitle: "Orchestrating the first moment of delight to prevent churn.",
+        readTime: "3 min read",
+        difficulty: "Tactical",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Concept</h3>
+                <p>Churn doesn't happen at renewal. Churn happens in the first 90 days when the customer thinks "This is harder than I thought."</p>
+                <p>You need to manufacture a "Quick Win" — a small, specific ROI moment — in the first 2 weeks.</p>
+                <h3>The Fix</h3>
+                <p>Don't try to implement the whole platform. Implement the one feature that saves them 1 hour this Friday.</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK]</strong><br/>
+                You lose customers in the first 90 days.<br/>
+                You just don't know it until day 365.<br/><br/>
+                <strong>[INSIGHT]</strong><br/>
+                Buyer's Remorse sets in fast.<br/>
+                Counter it with a 'Quick Win'.<br/>
+                Don't boil the ocean.<br/>
+                Just make them a cup of tea.<br/><br/>
+                <strong>[ACTION]</strong><br/>
+                Find one feature that solves one headache in Week 1.<br/>
+                Get that win. Then build the rest.
+            `
+        }
+    },
+    {
+        id: "cs-executive-brief",
+        slug: "the-executive-brief",
+        category: "CS",
+        title: "The Executive Brief",
+        subtitle: "How to write a QBR that a CEO will actually read.",
+        readTime: "3 min read",
+        difficulty: "Strategic",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Concept</h3>
+                <p>CEOs don't read usage dashboards. They read Executive Briefs.</p>
+                <p>An Executive Brief is a 1-page PDF sent 24 hours before the QBR.</p>
+                <h3>The Format</h3>
+                <ul>
+                    <li><strong>Headline:</strong> Value delivered in $ terms.</li>
+                    <li><strong>Red:</strong> What is broken (be honest).</li>
+                    <li><strong>Green:</strong> What is working.</li>
+                    <li><strong>Ask:</strong> What you need from them.</li>
+                </ul>
+            `,
+            scriptShort: `
+                <strong>[HOOK]</strong><br/>
+                The CEO is not coming to your QBR.<br/>
+                Unless you send this email first.<br/><br/>
+                <strong>[INSIGHT]</strong><br/>
+                Send an 'Executive Brief' 24 hours prior.<br/>
+                One page.<br/>
+                "We saved you $50k. We are blocked on Project X. We need your help here."<br/><br/>
+                <strong>[ACTION]</strong><br/>
+                尊重 (Respect) their time.<br/>
+                Give them the bottom line first.<br/>
+                They will show up to clear the blocker.
+            `
+        }
+    },
+    {
+        id: "cs-referral-loop",
+        slug: "referral-loop",
+        category: "CS",
+        title: "The Referral Loop",
+        subtitle: "Triggering expansion requests automatically after NPS scores.",
+        readTime: "3 min read",
+        difficulty: "Tactical",
+        author: "GTM-360 Intelligence",
+        lastUpdated: "January 2026",
+        content: {
+            onePager: `
+                <h3>The Concept</h3>
+                <p>The best time to ask for a referral is the exact second a customer says they love you.</p>
+                <p>Most CS agents wait for a "Referral Meeting." That is too late.</p>
+                <h3>The Trigger</h3>
+                <p>Automate it. When a user gives an NPS score of 9 or 10, trigger an immediate personal email from the Founder: "Saw you gave us a 10. That means the world. Is there one other VP of Sales you know who puts up with this same problem?"</p>
+            `,
+            scriptShort: `
+                <strong>[HOOK]</strong><br/>
+                You are asking for referrals at the wrong time.<br/>
+                You ask when you are desperate.<br/>
+                You should ask when they are happy.<br/><br/>
+                <strong>[INSIGHT]</strong><br/>
+                The 'Referral Loop' connects Sentiment to Ask.<br/>
+                They gave you a 10 NPS?<br/>
+                The auto-reply shouldn't be "Thanks".<br/>
+                It should be "Thanks. Who else do you know?"<br/><br/>
+                <strong>[ACTION]</strong><br/>
+                Strike while the iron is hot.<br/>
+                Psychology says they want to help you right now.<br/>
+                Let them.
+            `
+        }
+    }
+];
