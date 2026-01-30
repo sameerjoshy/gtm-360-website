@@ -22,52 +22,83 @@ const Home = () => {
             {/* BLOCK 1: HERO */}
             <section className="section !pt-0 pb-24 md:pb-32 aurora-bg relative overflow-hidden" style={{ paddingTop: '0px' }}>
                 <div className="container max-w-6xl relative z-10">
-                    <div className="flex flex-col md:flex-row items-center gap-12 mt-16">
+                    <div className="flex flex-col md:flex-row items-center gap-12 mt-20">
                         <div className="flex-1">
-                            <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-6 text-[var(--color-primary)]">
-                                Unlock 2–3× Revenue from Your Existing Tech Assets
-                                <span className="block text-4xl md:text-5xl opacity-75 mt-2">Without Increasing Ad Spend</span>
+                            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-slate-900 tracking-tight">
+                                The Revenue Operating System for <span className="text-[var(--color-primary)]">B2B Growth.</span>
                             </h1>
-                            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl">
-                                We help growth-stage B2B tech companies shorten sales cycles, increase ticket sizes, and unlock hidden demand using proven GTM diagnostics, Buyer-2.0 frameworks, and execution systems.
+                            <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl font-light">
+                                We fix the decision systems that cause stalled growth—without adding more tools, headcount, or complexity.
                             </p>
 
-                            {/* PROOF STRIP */}
-                            <div className="grid grid-cols-3 gap-4 mb-10 p-6 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200 shadow-sm">
-                                <div className="text-center">
-                                    <div className="text-3xl font-bold text-emerald-600">364%</div>
-                                    <div className="text-xs text-gray-600 uppercase tracking-wider">ROI for B2B SaaS</div>
-                                </div>
-                                <div className="text-center border-l border-r border-gray-200">
-                                    <div className="text-3xl font-bold text-indigo-600">3×</div>
-                                    <div className="text-xs text-gray-600 uppercase tracking-wider">Customers, Same Spend</div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="text-3xl font-bold text-purple-600">1.4%</div>
-                                    <div className="text-xs text-gray-600 uppercase tracking-wider">vs 0.18% Baseline (Fintech)</div>
-                                </div>
+                            {/* 3 BULLETS (WHAT WE FIX) */}
+                            <ul className="space-y-4 mb-10">
+                                <li className="flex items-start">
+                                    <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                        <Activity className="w-4 h-4 text-emerald-600" />
+                                    </div>
+                                    <div>
+                                        <span className="font-bold text-slate-900">Pipeline Quality:</span> <span className="text-slate-600">Stop celebrating "busy work" and start tracking true signal.</span>
+                                    </div>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                        <TrendingDown className="w-4 h-4 text-indigo-600" />
+                                    </div>
+                                    <div>
+                                        <span className="font-bold text-slate-900">Conversion Decay:</span> <span className="text-slate-600">Fix the broken handoffs that kill deals late in the funnel.</span>
+                                    </div>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                        <Users className="w-4 h-4 text-purple-600" />
+                                    </div>
+                                    <div>
+                                        <span className="font-bold text-slate-900">Forecast Accuracy:</span> <span className="text-slate-600">Replace "gut feel" with engineering-grade predictability.</span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            {/* DUAL CTAs */}
+                            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-10">
+                                <Link to="/contact" className="btn bg-[var(--color-primary)] text-white hover:bg-indigo-700 transition-all shadow-lg px-8 py-4 text-lg">
+                                    Book a System Audit
+                                </Link>
+                                <Link to="/insights" className="px-6 py-4 text-slate-600 font-semibold hover:text-[var(--color-primary)] flex items-center group">
+                                    Explore the Insights <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                </Link>
                             </div>
 
-                            <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-                                <Link to="/tools" className="btn bg-[var(--color-primary)] text-white hover:bg-opacity-90 transition-all shadow-lg">
-                                    Enter the Workbench →
-                                </Link>
-                                <Link to="/insights" className="text-[var(--color-primary)] font-medium hover:underline">
-                                    See Real Case Results →
-                                </Link>
+                            {/* PROVEN IMPACT (Mini Case Studies) */}
+                            <div className="border-t border-slate-200 pt-6">
+                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Proven Impact</p>
+                                <div className="flex gap-8">
+                                    <div>
+                                        <div className="text-2xl font-bold text-slate-900">364%</div>
+                                        <div className="text-xs text-slate-500">ROI (Fintech Unlocked)</div>
+                                    </div>
+                                    <div className="w-px bg-slate-200 h-10"></div>
+                                    <div>
+                                        <div className="text-2xl font-bold text-slate-900">3x</div>
+                                        <div className="text-xs text-slate-500">Deal Velocity (SaaS Scale-up)</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        {/* HERO IMAGE: Human War Room */}
-                        <div className="flex-1 w-full relative group">
-                            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                        {/* HERO IMAGE */}
+                        <div className="flex-1 w-full relative group hidden md:block">
+                            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
                             <img
                                 src={heroWarRoom}
                                 alt="GTM360 War Room: Operators solving system problems"
                                 className="relative rounded-lg shadow-2xl border border-gray-100 transform group-hover:scale-[1.01] transition duration-500"
                             />
-                            <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded text-xs font-mono text-indigo-600 border border-indigo-100">
-                                {'/// OPERATOR_VIEW_ACTIVE'}
+                            <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded shadow-sm border border-indigo-50">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                    <span className="text-xs font-mono text-indigo-900 font-bold">SYSTEM_OPTIMIZED</span>
+                                </div>
                             </div>
                         </div>
                     </div>
