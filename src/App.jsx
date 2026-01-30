@@ -21,6 +21,12 @@ import Diagnostic from './pages/Diagnostic';
 // import ContentMultiplier from './pages/ContentMultiplier';
 // import RevenueCalculator from './pages/RevenueCalculator';
 
+// Services Detail Pages
+import GTMOperatingModel from './pages/services/GTMOperatingModel';
+import PipelineQuality from './pages/services/PipelineQuality';
+import ForecastingGovernance from './pages/services/ForecastingGovernance';
+import GTMSignalsAI from './pages/services/GTMSignalsAI';
+
 function ScrollToTop() {
     const { pathname } = useLocation();
     useEffect(() => {
@@ -41,6 +47,13 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
+
+                {/* Service Detail Routes */}
+                <Route path="/services/gtm-operating-model" element={<GTMOperatingModel />} />
+                <Route path="/services/pipeline-quality" element={<PipelineQuality />} />
+                <Route path="/services/forecasting-governance" element={<ForecastingGovernance />} />
+                <Route path="/services/gtm-signals-and-ai" element={<GTMSignalsAI />} />
+
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/insights" element={<Insights />} />
                 <Route path="/partners" element={<Partners />} />
