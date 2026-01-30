@@ -46,6 +46,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/workbench" element={<AgentWorkbench />} />
+                <Route path="/start-here" element={<StartHere />} /> {/* Route */}
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
 
