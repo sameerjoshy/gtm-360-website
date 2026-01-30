@@ -17,7 +17,7 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 
 // Tools
-// import Diagnostic from './pages/Diagnostic';
+import Diagnostic from './pages/Diagnostic';
 // import ContentMultiplier from './pages/ContentMultiplier';
 // import RevenueCalculator from './pages/RevenueCalculator';
 
@@ -46,6 +46,9 @@ function App() {
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/problems" element={<Problems />} />
                 <Route path="/how-we-work" element={<HowWeWork />} />
+
+                {/* Tools & Diagnostics */}
+                <Route path="/diagnostic" element={<Diagnostic />} />
                 <Route path="/tools" element={<Tools />} />
 
                 <Route path="/privacy" element={<Privacy />} />

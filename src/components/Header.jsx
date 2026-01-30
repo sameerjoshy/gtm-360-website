@@ -29,7 +29,7 @@ const Header = () => {
     const navLinks = [
         { title: 'Problems', path: '/problems' },
         { title: 'Diagnostic', path: '/diagnostic' },
-        { title: 'Agent Swarm', path: '/agent-workbench' }, // New!
+        { title: 'Agent Swarm', path: 'https://app.gtm-360.com' }, // External Link
         { title: 'Workbench', path: '/tools' },
         { title: 'Services', path: '/services' },
         { title: 'Insights', path: '/insights' },
@@ -50,13 +50,23 @@ const Header = () => {
 
                     <nav className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => (
-                            <Link
-                                key={link.title}
-                                to={link.path}
-                                className="text-sm font-medium text-gray-700 hover:text-[var(--color-primary)] transition-colors"
-                            >
-                                {link.title}
-                            </Link>
+                            link.path.startsWith('http') ? (
+                                <a
+                                    key={link.title}
+                                    href={link.path}
+                                    className="text-sm font-medium text-gray-700 hover:text-[var(--color-primary)] transition-colors"
+                                >
+                                    {link.title}
+                                </a>
+                            ) : (
+                                <Link
+                                    key={link.title}
+                                    to={link.path}
+                                    className="text-sm font-medium text-gray-700 hover:text-[var(--color-primary)] transition-colors"
+                                >
+                                    {link.title}
+                                </Link>
+                            )
                         ))}
                     </nav>
                 </div>
@@ -84,13 +94,23 @@ const Header = () => {
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg py-4 px-6 flex flex-col space-y-4">
                     {navLinks.map((link) => (
-                        <Link
-                            key={link.title}
-                            to={link.path}
-                            className="text-base font-medium text-gray-800 py-2 border-b border-gray-50"
-                        >
-                            {link.title}
-                        </Link>
+                        link.path.startsWith('http') ? (
+                            <a
+                                key={link.title}
+                                href={link.path}
+                                className="text-base font-medium text-gray-800 py-2 border-b border-gray-50"
+                            >
+                                {link.title}
+                            </a>
+                        ) : (
+                            <Link
+                                key={link.title}
+                                to={link.path}
+                                className="text-base font-medium text-gray-800 py-2 border-b border-gray-50"
+                            >
+                                {link.title}
+                            </Link>
+                        )
                     ))}
                     <Link
                         to="/diagnostic"
