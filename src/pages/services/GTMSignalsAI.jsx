@@ -1,7 +1,4 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { Link } from 'react-router-dom';
-import { Cpu, CheckCircle, Clock, ArrowRight } from 'lucide-react';
+import SignalFilterDemo from '../../components/visuals/SignalFilterDemo';
 
 const GTMSignalsAI = () => {
     return (
@@ -13,13 +10,25 @@ const GTMSignalsAI = () => {
             />
 
             {/* HERO */}
-            <section className="bg-slate-900 text-white py-20">
-                <div className="container max-w-4xl">
+            <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
+                <div className="absolute inset-0 bg-noise opacity-10"></div>
+                <div className="container max-w-4xl relative z-10">
                     <div className="text-indigo-400 font-mono text-sm uppercase tracking-widest mb-4">Service Detail</div>
                     <h1 className="text-4xl md:text-5xl font-bold mb-6">GTM Signals, Tooling & AI</h1>
-                    <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
+                    <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mb-12">
                         Stop buying tools that just create more noise. We audit your stack, clean your data signals, and deploy AI that actually moves the needle.
                     </p>
+                </div>
+            </section>
+
+            {/* INTERACTIVE DEMO */}
+            <section className="bg-slate-950 py-12 border-b border-slate-800">
+                <div className="container max-w-5xl">
+                    <div className="text-center mb-10">
+                        <h2 className="text-2xl font-bold text-white mb-2">The Difference Between Noise & Signal</h2>
+                        <p className="text-slate-400">See how our engine filters thousands of raw events into a single qualified trigger.</p>
+                    </div>
+                    <SignalFilterDemo />
                 </div>
             </section>
 
