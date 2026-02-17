@@ -86,8 +86,8 @@ const StartHere = () => {
                                 <h4 className="font-bold text-slate-900 mb-2">Explore how we work</h4>
                                 <p className="text-xs text-slate-500">See our engagement models.</p>
                             </Link>
-                            <Link to="/workbench" className="bg-white p-6 rounded-lg text-center border border-slate-200 hover:border-indigo-300 transition-all shadow-sm">
-                                <h4 className="font-bold text-slate-900 mb-2">See the Workbench</h4>
+                            <Link href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="bg-white p-6 rounded-lg text-center border border-slate-200 hover:border-indigo-300 transition-all shadow-sm">
+                                <h4 className="font-bold text-slate-900 mb-2">See the Agents</h4>
                                 <p className="text-xs text-slate-500">How the system supports this.</p>
                             </Link>
                         </div>

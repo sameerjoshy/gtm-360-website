@@ -9,7 +9,7 @@ const HowWeWork = () => {
         <div className="min-h-screen bg-white font-sans selection:bg-indigo-100 selection:text-indigo-900">
             <SEO
                 title="How We Work | GTM-360"
-                description="We don’t sell packages. We work through inflection points. Diagnostic, Advisory, and Workbench."
+                description="We don’t sell packages. We work through inflection points. Diagnostic, Advisory, and Agents."
             />
 
             {/* v1.0 HEADER */}
@@ -111,9 +111,9 @@ const HowWeWork = () => {
                                 <Cpu className="w-8 h-8 text-purple-600" />
                             </div>
                             <div>
-                                <h3 className="text-2xl font-bold text-slate-900 mb-2">3. The Workbench (Product)</h3>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-2">3. The Agents (Product)</h3>
                                 <p className="text-slate-600 mb-4 leading-relaxed">
-                                    A productized Workbench that supports how we think and work — whether we’re in the room or not.
+                                    A productized Agents that supports how we think and work — whether we’re in the room or not.
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-700 mb-6">
                                     <div>
@@ -126,8 +126,8 @@ const HowWeWork = () => {
                                     </div>
                                 </div>
                                 <p className="text-xs text-slate-500 italic mb-4">Either way, it exists to prevent drift — not to add complexity.</p>
-                                <Link to="/workbench" className="text-purple-700 font-bold text-sm hover:underline">
-                                    Explore the Workbench →
+                                <Link href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="text-purple-700 font-bold text-sm hover:underline">
+                                    Explore the Agents →
                                 </Link>
                             </div>
                         </div>
@@ -148,8 +148,8 @@ const HowWeWork = () => {
                         <Link to="/contact" className="btn bg-[var(--color-primary)] text-white hover:bg-indigo-700 px-8 py-4 shadow-lg font-bold">
                             Start with a conversation
                         </Link>
-                        <Link to="/workbench" className="btn bg-white text-[var(--color-primary)] hover:bg-indigo-50 px-8 py-4 shadow-sm border border-indigo-100 font-bold">
-                            Explore the Workbench
+                        <Link href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="btn bg-white text-[var(--color-primary)] hover:bg-indigo-50 px-8 py-4 shadow-sm border border-indigo-100 font-bold">
+                            Explore the Agents
                         </Link>
                     </div>
                 </div>

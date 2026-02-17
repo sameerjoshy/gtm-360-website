@@ -124,7 +124,7 @@ const PlanningCycle = () => {
                         You can do this on a whiteboard. <br /> Or you can use the Workbench to keep it running.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6">
-                        <Link to="/workbench" className="btn bg-[var(--color-primary)] text-white hover:bg-indigo-700 px-8 py-4 shadow-lg flex items-center justify-center">
+                        <Link href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="btn bg-[var(--color-primary)] text-white hover:bg-indigo-700 px-8 py-4 shadow-lg flex items-center justify-center">
                             See the Workbench <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                     </div>

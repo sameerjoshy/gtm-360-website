@@ -42,9 +42,10 @@ const Header = () => {
                         <Link to="/insights" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
                             Insights
                         </Link>
-                        <Link to="/workbench" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
-                            Workbench
-                        </Link>
+                        <a href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors flex items-center gap-1.5">
+                            Agents
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" style={{ animation: 'pulse 2s infinite' }} />
+                        </a>
                         <Link to="/about" className="text-sm font-medium text-slate-600 hover:text-[var(--color-primary)] transition-colors">
                             About
                         </Link>
@@ -81,7 +82,10 @@ const Header = () => {
                 <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl py-6 px-4 flex flex-col space-y-4">
                     <Link to="/services" className="text-lg font-medium text-slate-700">How We Help</Link>
                     <Link to="/planning-cycle" className="text-lg font-medium text-slate-700">The Planning Cycle</Link>
-                    <Link to="/workbench" className="text-lg font-medium text-slate-700">Agent Workbench</Link>
+                    <a href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="text-lg font-medium text-slate-700 flex items-center gap-2">
+                        Agents
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" style={{ animation: 'pulse 2s infinite' }} />
+                    </a>
                     <Link to="/insights" className="text-lg font-medium text-slate-700">Insights</Link>
 
                     <div className="border-t border-gray-100 pt-4 mt-2 flex flex-col gap-4">

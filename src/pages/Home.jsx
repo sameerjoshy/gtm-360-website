@@ -111,7 +111,7 @@ const Home = () => {
                                 </li>
                             </ul>
                             <p className="mt-8 text-slate-500 italic text-sm">
-                                This loop shows up in our conversations, our diagnostics, and the Workbench itself.
+                                This loop shows up in our conversations, our diagnostics, and the Agents itself.
                             </p>
                         </div>
                         <div className="w-full md:w-1/2 flex justify-center">
@@ -143,9 +143,9 @@ const Home = () => {
                         </div>
                         {/* CARD 3 */}
                         <div className="bg-white p-8 rounded-xl border border-slate-200">
-                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 block">Workbench</span>
+                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 block">Agents</span>
                             <h3 className="text-xl font-bold text-slate-900 mb-3">The operating system</h3>
-                            <p className="text-slate-600 text-sm mb-4">A practical Workbench that turns strategy into signals, evidence, and decisions — without creating more operational noise.</p>
+                            <p className="text-slate-600 text-sm mb-4">A practical Agents that turns strategy into signals, evidence, and decisions — without creating more operational noise.</p>
                         </div>
                     </div>
                     <div className="mt-12">
@@ -170,8 +170,8 @@ const Home = () => {
                         <Link to="/start-here" className="btn bg-slate-900 text-white px-8 py-4 rounded hover:bg-slate-800 transition-all font-bold">
                             Start here
                         </Link>
-                        <Link to="/workbench" className="btn bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded hover:bg-slate-50 transition-all font-bold">
-                            Explore the Workbench
+                        <Link href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="btn bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded hover:bg-slate-50 transition-all font-bold">
+                            Explore the Agents
                         </Link>
                     </div>
                 </div>
