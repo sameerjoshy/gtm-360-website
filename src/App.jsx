@@ -20,9 +20,15 @@ import PipelineQuality from './pages/services/PipelineQuality';
 import ForecastingGovernance from './pages/services/ForecastingGovernance';
 import GTMSignalsAI from './pages/services/GTMSignalsAI';
 
+// Problem detail pages
+import StalledGrowth from './pages/problems/StalledGrowth';
+import PipelineConversion from './pages/problems/PipelineConversion';
+import ForecastVolatility from './pages/problems/ForecastVolatility';
+
 // Legal
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import ThankYou from './pages/ThankYou';
 
 // Layout
 import Header from './components/Header';
@@ -48,6 +54,9 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/how-we-work" element={<HowWeWork />} />
                 <Route path="/problems" element={<Problems />} />
+                <Route path="/problems/stalled-growth" element={<StalledGrowth />} />
+                <Route path="/problems/pipeline-conversion" element={<PipelineConversion />} />
+                <Route path="/problems/forecast-volatility" element={<ForecastVolatility />} />
                 <Route path="/insights" element={<Insights />} />
 
                 {/* Engagement */}
@@ -64,6 +73,7 @@ function App() {
                 {/* Legal */}
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
+                <Route path="/thank-you" element={<ThankYou />} />
 
                 {/* Redirects — legacy URLs */}
                 <Route path="/workbench" element={<Navigate to="/agents" replace />} />
