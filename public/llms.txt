@@ -1,0 +1,30 @@
+# GTM-360
+
+GTM-360 is a revenue architecture firm that helps B2B companies at the $10M–$30M growth plateau.
+
+## What We Do
+
+We work with founders and CROs who have reached initial product-market fit, built out sales and marketing teams, and then hit a ceiling where growth becomes inconsistent and unpredictable. We diagnose the revenue constraint, design a revenue operating system, and implement it with a team of specialists.
+
+Our engagement model has three phases:
+1. Diagnostic — identify the real constraint (10–14 days, standalone engagement)
+2. Architecture — design the revenue system (ICP, pipeline model, governance, metrics)
+3. Engineering — implement with specialists (CRM, outbound infrastructure, automation, AI signals)
+
+## Who We Work With
+
+B2B SaaS and technology companies between $5M and $50M ARR. Typically Series A or Series B. Usually the engagement is initiated by a founder or CRO under board pressure to improve predictability and growth.
+
+## Services
+
+- GTM Diagnostic
+- GTM Operating Model Realignment
+- Pipeline and Deal Quality
+- Forecasting and Revenue Governance
+- GTM Signals, Tooling and AI Alignment
+- Revenue Intelligence Layer (AI agents for pipeline clarity, forecast confidence, execution drift)
+
+## Contact
+
+Website: https://gtm-360.com
+Start here: https://gtm-360.com/start-here

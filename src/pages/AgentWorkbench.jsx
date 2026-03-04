@@ -1,107 +1,207 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Activity, Filter, GitMerge } from 'lucide-react';
+import { ArrowRight, Activity, Filter, BarChart2, Users, Zap, Eye } from 'lucide-react';
 import SEO from '../components/SEO';
-import WorkbenchLoopVisual from '../components/visuals/WorkbenchLoopVisual';
+
+const agents = [
+    {
+        icon: <Filter className="w-6 h-6" />,
+        name: "Pipeline Clarity Agent",
+        question: "Which deals in my pipeline are real?",
+        what: "Analyses open opportunities against stage criteria, buyer engagement signals, and historical close patterns. Surfaces deals that look active but have no genuine buyer momentum.",
+        output: "A ranked view of pipeline by evidence quality — not rep optimism.",
+        color: "emerald"
+    },
+    {
+        icon: <BarChart2 className="w-6 h-6" />,
+        name: "Forecast Confidence Agent",
+        question: "What can I actually commit to this quarter?",
+        what: "Triangulates pipeline signals, historical conversion rates, deal velocity, and engagement depth to produce a confidence-weighted forecast.",
+        output: "A defensible number — with the evidence behind it, not just the gut behind it.",
+        color: "indigo"
+    },
+    {
+        icon: <Activity className="w-6 h-6" />,
+        name: "Execution Drift Agent",
+        question: "Where is the team drifting from the plan?",
+        what: "Monitors activity signals, stage progression, and engagement patterns against expected behaviour. Surfaces drift early — before it shows up as a missed quarter.",
+        output: "Early warning on where execution is diverging from strategy.",
+        color: "violet"
+    },
+    {
+        icon: <Users className="w-6 h-6" />,
+        name: "ICP Signal Agent",
+        question: "Are we still targeting the right accounts?",
+        what: "Analyses win/loss patterns, deal velocity, and conversion rates by segment to surface ICP drift — when the accounts being pursued no longer match the accounts that close.",
+        output: "Clarity on which segment is performing and where targeting has drifted.",
+        color: "blue"
+    },
+    {
+        icon: <Zap className="w-6 h-6" />,
+        name: "Deal Momentum Agent",
+        question: "Which deals need attention now?",
+        what: "Tracks buyer engagement signals across email, meetings, and content interaction. Flags deals going cold before the rep notices and identifies where deals are stalling.",
+        output: "A daily view of which deals have momentum and which are quietly dying.",
+        color: "amber"
+    },
+    {
+        icon: <Eye className="w-6 h-6" />,
+        name: "Expansion Signal Agent",
+        question: "Which customers are ready to expand?",
+        what: "Monitors product usage, support patterns, and engagement signals within existing accounts to identify expansion readiness before customers ask.",
+        output: "A prioritised expansion view — surfaced by evidence, not by CS intuition alone.",
+        color: "teal"
+    }
+];
 
 const AgentWorkbench = () => {
+    const [activeAgent, setActiveAgent] = useState(0);
+
     return (
         <div className="min-h-screen bg-white font-sans selection:bg-purple-100 selection:text-purple-900">
             <SEO
-                title="The GTM Workbench | GTM-360"
-                description="A practical system for turning strategy into signals, evidence, and decisions. The layer that makes your CRM usable again."
+                title="GTM Intelligence Layer | GTM-360"
+                description="AI agents that answer the revenue questions your team is already asking — with evidence instead of opinion."
             />
 
-            {/* v1.0 HERO */}
-            <section className="pt-32 pb-24 bg-slate-900 text-white border-b border-slate-800">
-                <div className="container max-w-4xl text-center">
-                    <span className="text-purple-400 font-mono text-xs tracking-widest uppercase mb-4 block">Product</span>
-                    <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-8 text-white leading-[1.1]">
-                        The GTM Workbench
-                    </h1>
-                    <p className="text-2xl text-slate-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                        A practical system for turning strategy into signals, evidence, and decisions.
-                    </p>
-                    <div className="flex justify-center gap-4">
-                        <a href="https://app.gtm-360.com" className="btn bg-purple-600 text-white px-8 py-4 rounded shadow-lg shadow-purple-900/50 hover:bg-purple-500 transition-all font-bold flex items-center">
-                            Request Access <ArrowRight className="ml-2 w-5 h-5" />
-                        </a>
-                        <a href="https://app.gtm-360.com/login" className="btn bg-slate-800 text-slate-300 border border-slate-700 px-8 py-4 rounded hover:bg-slate-700 transition-all font-bold">
-                            Login
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            {/* v1.0 WHAT IT IS */}
-            <section className="py-24 bg-white">
-                <div className="container max-w-6xl">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">What it is</h2>
-                            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                                The Workbench groups agent swarms around real GTM questions:
-                            </p>
-                            <ul className="space-y-3 mb-8 text-slate-700">
-                                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Pipeline quality</li>
-                                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Account focus</li>
-                                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Differentiation signals</li>
-                                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Forecast confidence</li>
-                                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Execution drift</li>
-                            </ul>
-                            <p className="text-slate-600">
-                                Each swarm combines multiple agents — research, signals, drafting, review — into one coherent flow.
-                            </p>
-                        </div>
-
-                        {/* THE LOOP VISUAL */}
-                        <div className="w-full">
-                            <WorkbenchLoopVisual />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* v1.0 HOW TEAMS USE IT */}
-            <section className="py-24 bg-slate-50">
+            {/* HERO */}
+            <section className="pt-32 pb-24 bg-slate-900 text-white">
                 <div className="container max-w-4xl">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">How teams use it</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-                        <div className="bg-white p-6 rounded shadow-sm border border-slate-200">
-                            <span className="text-2xl font-bold text-purple-200 block mb-2">01</span>
-                            <h4 className="font-bold text-slate-900">Start with a question</h4>
-                        </div>
-                        <div className="bg-white p-6 rounded shadow-sm border border-slate-200">
-                            <span className="text-2xl font-bold text-purple-200 block mb-2">02</span>
-                            <h4 className="font-bold text-slate-900">Run a swarm</h4>
-                        </div>
-                        <div className="bg-white p-6 rounded shadow-sm border border-slate-200">
-                            <span className="text-2xl font-bold text-purple-200 block mb-2">03</span>
-                            <h4 className="font-bold text-slate-900">Review signals & evidence</h4>
-                        </div>
-                        <div className="bg-white p-6 rounded shadow-sm border border-slate-200">
-                            <span className="text-2xl font-bold text-purple-200 block mb-2">04</span>
-                            <h4 className="font-bold text-slate-900">Decide what to do next</h4>
-                        </div>
-                    </div>
-                    <div className="text-center mt-12 mx-auto max-w-xl">
-                        <p className="text-slate-500 italic">No dashboards for the sake of dashboards. No "AI magic".</p>
+                    <span className="text-indigo-400 font-mono text-xs tracking-widest uppercase mb-6 block">Revenue Intelligence</span>
+                    <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 text-white leading-tight">
+                        Answers to the questions<br />your team is already asking.
+                    </h1>
+                    <p className="text-xl text-slate-300 mb-6 max-w-2xl font-light leading-relaxed">
+                        Every revenue team has the same weekly questions. Which deals are real? What can we actually commit? Where is execution drifting? The GTM Intelligence Layer answers them with evidence — not gut feel.
+                    </p>
+                    <p className="text-slate-400 mb-12 max-w-xl">
+                        Not a dashboard. Not more data. A layer that sits on top of your existing systems and produces decisions, not noise.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                        <a
+                            href="https://app.gtm-360.com"
+                            className="inline-flex items-center justify-center bg-indigo-600 text-white px-8 py-4 rounded font-bold hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-900/40"
+                        >
+                            Request access <ArrowRight className="ml-2 w-4 h-4" />
+                        </a>
+                        <Link
+                            to="/how-we-work"
+                            className="inline-flex items-center justify-center bg-transparent text-slate-300 border border-slate-700 px-8 py-4 rounded font-medium hover:border-slate-500 transition-all"
+                        >
+                            See how it fits the system
+                        </Link>
                     </div>
                 </div>
             </section>
 
-            {/* v1.0 TRANSPARENCY */}
-            <section className="py-24 bg-white border-t border-slate-200">
-                <div className="container max-w-4xl text-center">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-6">Transparency</h2>
-                    <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-                        Every agent shows what it does, what inputs it uses, what outputs it produces, and what data it reads/writes.
-                    </p>
-                    <p className="text-lg font-bold text-slate-900 mb-12">Nothing is hidden.</p>
+            {/* WHAT IT IS — honest, non-hype */}
+            <section className="py-24 bg-white border-b border-slate-100">
+                <div className="container max-w-5xl">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[
+                            {
+                                label: "What it is",
+                                text: "A set of purpose-built AI agents, each designed to answer one specific revenue question. Built on top of your CRM, outbound, and engagement data."
+                            },
+                            {
+                                label: "What it is not",
+                                text: "It is not a replacement for human judgment. It is not another dashboard to maintain. It does not add complexity to an already noisy system."
+                            },
+                            {
+                                label: "What makes it different",
+                                text: "Each agent is trained on the same diagnostic frameworks we use in engagements. The output is designed to support decisions — not to create more things to look at."
+                            }
+                        ].map((item, i) => (
+                            <div key={i} className="border-l-2 border-slate-200 pl-6">
+                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">{item.label}</p>
+                                <p className="text-slate-700 leading-relaxed">{item.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
-                    <a href="https://app.gtm-360.com" className="btn bg-purple-600 text-white px-8 py-4 rounded hover:bg-purple-500 transition-all font-bold">
-                        Request Access
-                    </a>
+            {/* THE AGENTS */}
+            <section className="py-24 bg-slate-50">
+                <div className="container max-w-6xl">
+                    <div className="text-center mb-14">
+                        <span className="text-slate-400 font-mono text-xs tracking-widest uppercase mb-4 block">The Agent Suite</span>
+                        <h2 className="text-3xl font-bold text-slate-900 mb-4">Six questions. Six agents.</h2>
+                        <p className="text-slate-500 max-w-xl mx-auto font-light">
+                            Each agent is built around a real question revenue leaders ask every week. Select one to see what it does.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                        {/* Agent selector */}
+                        <div className="lg:col-span-2 space-y-3">
+                            {agents.map((agent, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setActiveAgent(i)}
+                                    className={`w-full text-left p-4 rounded-lg border transition-all ${
+                                        activeAgent === i
+                                            ? 'bg-slate-900 border-slate-900 text-white'
+                                            : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
+                                    }`}
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <span className={activeAgent === i ? 'text-indigo-400' : 'text-slate-400'}>
+                                            {agent.icon}
+                                        </span>
+                                        <span className="font-medium text-sm">{agent.name}</span>
+                                    </div>
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Agent detail */}
+                        <div className="lg:col-span-3 bg-white border border-slate-200 rounded-xl p-10">
+                            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">The question it answers</p>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-8 leading-tight">
+                                "{agents[activeAgent].question}"
+                            </h3>
+
+                            <div className="space-y-6">
+                                <div>
+                                    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">What it does</p>
+                                    <p className="text-slate-600 leading-relaxed">{agents[activeAgent].what}</p>
+                                </div>
+                                <div className="p-5 bg-slate-50 rounded-lg border-l-4 border-indigo-500">
+                                    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Output</p>
+                                    <p className="text-slate-800 font-medium leading-relaxed">{agents[activeAgent].output}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* HOW IT FITS */}
+            <section className="py-24 bg-white border-y border-slate-100">
+                <div className="container max-w-4xl text-center">
+                    <span className="text-slate-400 font-mono text-xs tracking-widest uppercase mb-4 block">Context</span>
+                    <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                        Built to run on top of the system we build with you.
+                    </h2>
+                    <p className="text-xl text-slate-500 mb-8 font-light leading-relaxed max-w-2xl mx-auto">
+                        The Intelligence Layer is most effective after the revenue system has been designed and implemented. It's the monitoring and signal layer — not a shortcut to the thinking.
+                    </p>
+                    <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+                        <a
+                            href="https://app.gtm-360.com"
+                            className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all"
+                        >
+                            Request access
+                        </a>
+                        <Link
+                            to="/start-here"
+                            className="inline-flex items-center justify-center bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded font-medium hover:bg-slate-50 transition-all"
+                        >
+                            Start with a diagnostic first
+                        </Link>
+                    </div>
+                    <p className="text-slate-400 text-sm">All data stays in your systems. Nothing is hidden. Every agent shows its inputs and reasoning.</p>
                 </div>
             </section>
         </div>
