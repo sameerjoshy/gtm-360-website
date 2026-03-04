@@ -69,7 +69,7 @@ const AgentWorkbench = () => {
                 <div className="container max-w-4xl">
                     <span className="text-indigo-400 font-mono text-xs tracking-widest uppercase mb-6 block">Revenue Intelligence</span>
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 text-white leading-tight">
-                        Answers to the questions<br />your team is already asking.
+                        The questions your team asks every week — answered with evidence, not gut feel.
                     </h1>
                     <p className="text-xl text-slate-300 mb-6 max-w-2xl font-light leading-relaxed">
                         Every revenue team has the same weekly questions. Which deals are real? What can we actually commit? Where is execution drifting? The GTM Intelligence Layer answers them with evidence — not gut feel.

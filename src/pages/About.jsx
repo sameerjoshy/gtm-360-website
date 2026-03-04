@@ -5,33 +5,33 @@ import SEO from '../components/SEO';
 const team = [
     {
         name: "[ Your Name ]",
-        role: "Founder & Revenue Architect",
+        role: "Founder",
         domain: "GTM Strategy · Revenue Systems · Diagnostic",
-        bio: "15+ years inside B2B revenue teams — scaling, fixing, and rebuilding systems through multiple growth cycles. Built GTM-360 because the gap between strategy and execution keeps showing up in the same places.",
-        linkedin: "#",
+        bio: "[ X ] years inside B2B revenue teams. Built sales motions from scratch, fixed broken ones, and sat in front of boards explaining why the numbers weren't moving. GTM-360 is built from that experience.",
+        linkedin: "[ LinkedIn URL ]",
         initials: "YN"
     },
     {
         name: "[ Specialist Name ]",
-        role: "CRM & RevOps Architect",
+        role: "CRM & RevOps",
         domain: "HubSpot · Salesforce · Pipeline Architecture",
-        bio: "Specialist in CRM architecture, pipeline design, and revenue operations infrastructure for B2B SaaS teams at scale.",
+        bio: "Builds CRM systems that reflect how revenue actually works — not how it's supposed to work on paper.",
         linkedin: "#",
         initials: "S1"
     },
     {
         name: "[ Specialist Name ]",
-        role: "Outbound Infrastructure",
-        domain: "Clay · Sequencing · Signal Enrichment",
-        bio: "Builds outbound systems that run on buyer signals, not spray-and-pray volume. Clay-certified, multi-channel execution specialist.",
+        role: "Outbound & Sequencing",
+        domain: "Clay · Multi-channel · Enrichment",
+        bio: "Builds outbound infrastructure on buyer signals, not volume. Runs on Clay and knows how to make it actually convert.",
         linkedin: "#",
         initials: "S2"
     },
     {
         name: "[ Specialist Name ]",
-        role: "AI & Automation Engineer",
-        domain: "Workflow Automation · AI Agents · Systems Integration",
-        bio: "Designs and implements automation layers that give revenue teams leverage — without adding operational noise.",
+        role: "Automation & AI",
+        domain: "Workflow Automation · AI Agents · Integrations",
+        bio: "Automates the parts of your GTM that shouldn't require human time — without adding complexity to everything else.",
         linkedin: "#",
         initials: "S3"
     }
@@ -39,132 +39,99 @@ const team = [
 
 const About = () => {
     return (
-        <div className="min-h-screen bg-white font-sans selection:bg-indigo-100 selection:text-indigo-900">
+        <div className="min-h-screen bg-white font-sans">
             <SEO
                 title="About | GTM-360"
-                description="Operator-led revenue architecture. Built from years inside real B2B revenue teams — not from consulting theory."
+                description="GTM-360 is built by operators who've been in the room — not consultants who haven't."
             />
 
             {/* HERO */}
-            <section className="pt-32 pb-20 bg-white">
-                <div className="container max-w-4xl">
-                    <span className="text-indigo-600 font-mono text-xs tracking-widest uppercase mb-4 block">Who We Are</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
-                        Operators who've<br />sat in the seat.
+            <section className="pt-32 pb-20 bg-white border-b border-slate-100">
+                <div className="container max-w-3xl">
+                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                        Built by people who've been in the room.
                     </h1>
-                    <p className="text-xl text-slate-600 max-w-2xl leading-relaxed font-light">
-                        GTM-360 is not a consulting practice built on frameworks. It's built from years inside real revenue teams — scaling, fixing, and rebuilding systems as companies grew through the same inflection points we now help others navigate.
+                    <p className="text-xl text-slate-500 font-light leading-relaxed">
+                        Not consultants who study revenue systems from the outside. Operators who've run them, broken them, and fixed them — at companies that look a lot like yours.
                     </p>
                 </div>
             </section>
 
-            {/* FOUNDER STORY */}
-            <section className="py-20 bg-slate-50 border-y border-slate-100">
+            {/* FOUNDER */}
+            <section className="py-20 bg-white">
                 <div className="container max-w-5xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                        {/* Photo placeholder */}
-                        <div className="bg-slate-200 rounded-xl aspect-[4/5] flex items-center justify-center">
+                        {/* Photo */}
+                        <div className="bg-slate-100 rounded-xl aspect-[4/5] flex items-center justify-center">
                             <div className="text-center text-slate-400">
-                                <div className="w-20 h-20 rounded-full bg-slate-300 mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-slate-500">
-                                    [ Photo ]
-                                </div>
-                                <p className="text-sm">Add founder photo here</p>
+                                <div className="w-20 h-20 rounded-full bg-slate-200 mx-auto mb-3 flex items-center justify-center text-2xl font-bold text-slate-400">?</div>
+                                <p className="text-sm">Add photo here</p>
                             </div>
                         </div>
 
-                        <div className="pt-4">
+                        <div className="pt-2">
                             <span className="text-slate-400 font-mono text-xs tracking-widest uppercase mb-4 block">Founder</span>
-                            <h2 className="text-3xl font-bold text-slate-900 mb-2">[ Your Name ]</h2>
-                            <p className="text-indigo-600 font-medium mb-8">Revenue Architect · GTM-360</p>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-1">[ Your Name ]</h2>
+                            <p className="text-indigo-600 font-medium mb-8">GTM-360</p>
 
-                            <div className="space-y-5 text-slate-600 leading-relaxed">
-                                <p>
-                                    I've spent [ X ] years inside B2B revenue teams — as an operator, not a consultant. I've built sales motions from scratch, rebuilt broken ones, hired and managed revenue teams, and sat in front of boards explaining why the numbers weren't tracking.
-                                </p>
-                                <p>
-                                    What I kept seeing at the $10M–$30M stage was the same pattern: capable teams executing against an incomplete understanding of the problem. More pipeline. More tools. More pressure. None of it working — because the system underneath hadn't been designed. It had been improvised.
-                                </p>
-                                <p className="font-medium text-slate-800">
-                                    GTM-360 exists to close that gap. With diagnosis first, then architecture, then implementation by specialists who've done it before.
-                                </p>
+                            <div className="space-y-4 text-slate-600 leading-relaxed">
+                                <p>I've spent [ X ] years inside B2B revenue teams. Not advising — running them. Building sales motions from scratch, rebuilding ones that had stopped working, hiring and managing revenue teams, and sitting in front of boards explaining why the numbers weren't where they needed to be.</p>
+                                <p>The pattern I kept seeing was the same at every company that hit the $10M wall: the system that had worked stopped working, and nobody could quite name why. So they added more. More pipeline. More tools. More process. More pressure. None of it helped — because the diagnosis was wrong.</p>
+                                <p className="font-medium text-slate-800">GTM-360 exists to fix the diagnosis first. Then fix the system. Then build it so it runs.</p>
                             </div>
 
-                            <div className="mt-8 flex gap-4">
-                                <a
-                                    href="[ Your LinkedIn URL ]"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-sm font-bold text-indigo-600 hover:underline"
-                                >
-                                    LinkedIn →
-                                </a>
-                                <Link to="/start-here" className="inline-flex items-center gap-2 text-sm font-bold text-slate-700 hover:underline">
-                                    Work with us →
-                                </Link>
+                            <div className="mt-8 flex gap-6">
+                                <a href="[ LinkedIn URL ]" target="_blank" rel="noopener noreferrer"
+                                    className="text-sm font-bold text-indigo-600 hover:underline">LinkedIn →</a>
+                                <Link to="/start-here" className="text-sm font-bold text-slate-700 hover:underline">Work with us →</Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* THE SPECIALIST TEAM */}
-            <section className="py-20 bg-white">
-                <div className="container max-w-6xl">
+            {/* TEAM */}
+            <section className="py-20 bg-slate-50 border-y border-slate-100">
+                <div className="container max-w-5xl">
                     <div className="mb-12">
-                        <span className="text-slate-400 font-mono text-xs tracking-widest uppercase mb-4 block">The Team</span>
-                        <h2 className="text-3xl font-bold text-slate-900 mb-4">Specialists at every layer.</h2>
-                        <p className="text-lg text-slate-500 max-w-xl font-light">
-                            Every engagement draws on specialists matched to what the system actually needs — not a generalist team stretched thin.
-                        </p>
+                        <h2 className="text-3xl font-bold text-slate-900 mb-3">The team behind the work.</h2>
+                        <p className="text-slate-500 font-light max-w-xl">Every engagement draws on specialists matched to what needs to be built. You work with the people who actually do the work — not an account manager.</p>
                     </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {team.map((member, i) => (
-                            <div key={i} className="border border-slate-200 rounded-xl p-8 hover:border-indigo-200 transition-colors">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        {team.map((m, i) => (
+                            <div key={i} className="bg-white border border-slate-200 rounded-xl p-7 hover:border-indigo-200 transition-colors">
                                 <div className="flex items-start gap-4 mb-4">
-                                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-600 to-slate-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                                        {member.initials}
+                                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-indigo-600 to-slate-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                                        {m.initials}
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-slate-900">{member.name}</h3>
-                                        <p className="text-sm text-indigo-600 font-medium">{member.role}</p>
-                                        <p className="text-xs text-slate-400 mt-0.5">{member.domain}</p>
+                                        <h3 className="font-bold text-slate-900">{m.name}</h3>
+                                        <p className="text-sm text-indigo-600 font-medium">{m.role}</p>
+                                        <p className="text-xs text-slate-400 mt-0.5">{m.domain}</p>
                                     </div>
                                 </div>
-                                <p className="text-slate-600 text-sm leading-relaxed">{member.bio}</p>
+                                <p className="text-slate-500 text-sm leading-relaxed">{m.bio}</p>
                             </div>
                         ))}
                     </div>
-                    <p className="text-xs text-slate-300 mt-6 italic text-center">⚠ Replace placeholder names with real team members + LinkedIn links before publishing.</p>
+                    <p className="text-xs text-slate-300 mt-5 italic text-center">⚠ Replace placeholders with real names + LinkedIn links before publishing.</p>
                 </div>
             </section>
 
-            {/* VALUES */}
-            <section className="py-20 bg-slate-50 border-t border-slate-100">
+            {/* HOW WE OPERATE */}
+            <section className="py-20 bg-white">
                 <div className="container max-w-4xl">
-                    <span className="text-slate-400 font-mono text-xs tracking-widest uppercase mb-8 block">How We Operate</span>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-8">How we operate.</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         {[
-                            {
-                                title: "Diagnosis before execution",
-                                desc: "We don't start building until we understand the constraint. Executing against the wrong problem is expensive."
-                            },
-                            {
-                                title: "Operators, not theorists",
-                                desc: "Everything we recommend comes from having done it — not from frameworks built in isolation."
-                            },
-                            {
-                                title: "AI as infrastructure, not magic",
-                                desc: "We use AI and automation where they create genuine leverage. We don't lead with technology."
-                            },
-                            {
-                                title: "The customer is the expert on their business",
-                                desc: "We bring outside perspective and system design. We never pretend to know your business better than you do."
-                            }
+                            { t: "Diagnosis before anything else", d: "We don't start building until we know what's actually broken. Fixing the wrong problem is expensive." },
+                            { t: "We work with your team, not around them", d: "The people running the system need to understand it. We design with them — not for them." },
+                            { t: "AI is a tool, not the answer", d: "We use AI and automation where they genuinely help. We don't lead with technology." },
+                            { t: "We'll tell you if we can't help", d: "If the diagnostic shows we're not the right fit, we'll say so. We'd rather lose a deal than waste your time." }
                         ].map((v, i) => (
-                            <div key={i} className="bg-white p-6 rounded-lg border border-slate-200">
-                                <h3 className="font-bold text-slate-900 mb-2">{v.title}</h3>
-                                <p className="text-slate-500 text-sm leading-relaxed">{v.desc}</p>
+                            <div key={i} className="border border-slate-200 rounded-lg p-6">
+                                <h3 className="font-bold text-slate-900 mb-2">{v.t}</h3>
+                                <p className="text-slate-500 text-sm leading-relaxed">{v.d}</p>
                             </div>
                         ))}
                     </div>
@@ -172,15 +139,12 @@ const About = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-20 bg-white border-t border-slate-100 text-center">
-                <div className="container max-w-2xl">
-                    <h2 className="text-2xl font-bold text-slate-900 mb-6">Ready to have an honest conversation?</h2>
-                    <p className="text-slate-500 mb-8">No qualification layer. No sales deck. Direct conversation with a partner.</p>
-                    <Link
-                        to="/start-here"
-                        className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all"
-                    >
-                        Start with a diagnostic
+            <section className="py-16 bg-slate-50 border-t border-slate-100 text-center">
+                <div className="container max-w-xl">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4">Want to have a conversation?</h2>
+                    <p className="text-slate-500 mb-8 text-sm">Tell us what's happening. We'll tell you honestly if we can help.</p>
+                    <Link to="/start-here" className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
+                        Talk to us
                     </Link>
                 </div>
             </section>

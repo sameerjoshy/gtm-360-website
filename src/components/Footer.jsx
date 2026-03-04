@@ -52,7 +52,7 @@ const Footer = () => {
                         © {new Date().getFullYear()} GTM-360. All rights reserved.
                     </p>
                     <p className="text-slate-300 text-xs italic">
-                        Revenue architecture for B2B companies at the $10M–$30M inflection point.
+                        Your GTM partner at the growth plateau.
                     </p>
                 </div>
             </div>
