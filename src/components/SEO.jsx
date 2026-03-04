@@ -6,7 +6,7 @@ const SEO = ({ title, description, canonical, type = 'website', children }) => {
     const siteName = 'GTM-360';
     const mainTitle = title ? `${title} | ${siteName}` : siteName;
     const defaultDescription = "The Operating System for Revenue Teams. Stop acting like consultants. Start building like engineers.";
-    const currentUrl = window.location.href;
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://gtm-360.com';
 
     return (
         <Helmet>

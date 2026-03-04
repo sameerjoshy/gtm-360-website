@@ -324,7 +324,7 @@ Timeline: ${formData.timeline}
         `.trim();
 
         const context = {
-            pageUri: window.location.href,
+            pageUri: typeof window !== 'undefined' ? window.location.href : 'https://gtm-360.com/diagnostic',
             pageName: 'Diagnostic Page',
             hutk: getCookie('hubspotutk')
         };

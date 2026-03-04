@@ -37,7 +37,7 @@ const StartHere = () => {
                         { name: 'company', value: formData.company },
                         { name: 'message', value: detailedMessage }
                     ],
-                    context: { pageUri: window.location.href, pageName: 'Start Here', hutk: getCookie('hubspotutk') }
+                    context: { pageUri: typeof window !== 'undefined' ? window.location.href : 'https://gtm-360.com/start-here', pageName: 'Start Here', hutk: getCookie('hubspotutk') }
                 })
             });
             if (res.ok) { setStatus('success'); navigate('/thank-you'); }
