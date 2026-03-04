@@ -15,7 +15,7 @@ const Footer = () => {
                             Revenue architecture for B2B companies at the growth plateau. Diagnose. Design. Build.
                         </p>
                         <a
-                            href="[ Your LinkedIn URL ]"
+                            href="https://www.linkedin.com/company/gtm-360"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors"

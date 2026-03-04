@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { Menu, X } from 'lucide-react';
 
-// 4 items only — everything else is reached through page content
 const navLinks = [
     { to: "/problems", label: "Problems We Solve" },
     { to: "/how-we-work", label: "How We Work" },
@@ -16,6 +15,7 @@ const Header = () => {
     const location = useLocation();
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
         const handleScroll = () => setIsScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -27,7 +27,6 @@ const Header = () => {
         <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-white'}`}>
             <div className="container flex justify-between items-center h-20">
 
-                {/* Logo + Nav */}
                 <div className="flex items-center gap-10">
                     <Link to="/">
                         <img src={logo} alt="GTM-360"
@@ -43,7 +42,6 @@ const Header = () => {
                     </nav>
                 </div>
 
-                {/* CTA */}
                 <div className="hidden md:flex items-center gap-5">
                     <a href="https://app.gtm-360.com"
                         className="text-sm text-slate-400 hover:text-slate-700 transition-colors font-medium">
@@ -55,13 +53,11 @@ const Header = () => {
                     </Link>
                 </div>
 
-                {/* Mobile toggle */}
                 <button className="md:hidden text-slate-700 p-1" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </div>
 
-            {/* Mobile nav */}
             {isOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-xl py-6 px-6 flex flex-col">
                     {navLinks.map(link => (

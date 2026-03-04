@@ -81,7 +81,7 @@ const About = () => {
                             </div>
 
                             <div className="mt-8 flex gap-6">
-                                <a href="[ LinkedIn URL ]" target="_blank" rel="noopener noreferrer"
+                                <a href="https://www.linkedin.com/company/gtm-360" target="_blank" rel="noopener noreferrer"
                                     className="text-sm font-bold text-indigo-600 hover:underline">LinkedIn →</a>
                                 <Link to="/start-here" className="text-sm font-bold text-slate-700 hover:underline">Work with us →</Link>
                             </div>
