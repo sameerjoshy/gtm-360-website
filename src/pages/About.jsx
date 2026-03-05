@@ -4,12 +4,12 @@ import SEO from '../components/SEO';
 
 const team = [
     {
-        name: "[ Your Name ]",
+        name: "Sameer Joshi",
         role: "Founder",
-        domain: "GTM Strategy · Revenue Systems · Diagnostic",
-        bio: "[ X ] years inside B2B revenue teams. Built sales motions from scratch, fixed broken ones, and sat in front of boards explaining why the numbers weren't moving. GTM-360 is built from that experience.",
-        linkedin: "[ LinkedIn URL ]",
-        initials: "YN"
+        domain: "GTM Strategy · Revenue Operations · Diagnostic",
+        bio: "20+ years inside global B2B revenue teams — AWS, Dell, Amazon, and two startups. Built GTM systems from scratch, ran them as COO and VP, and sat in front of boards when the numbers weren't moving. GTM-360 is built from that experience.",
+        linkedin: "https://www.linkedin.com/in/sameer-joshi1/",
+        initials: "SJ"
     },
     {
         name: "[ Specialist Name ]",
@@ -71,17 +71,17 @@ const About = () => {
 
                         <div className="pt-2">
                             <span className="text-slate-400 font-mono text-xs tracking-widest uppercase mb-4 block">Founder</span>
-                            <h2 className="text-3xl font-bold text-slate-900 mb-1">[ Your Name ]</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-1">Sameer Joshi</h2>
                             <p className="text-indigo-600 font-medium mb-8">GTM-360</p>
 
                             <div className="space-y-4 text-slate-600 leading-relaxed">
-                                <p>I've spent [ X ] years inside B2B revenue teams. Not advising — running them. Building sales motions from scratch, rebuilding ones that had stopped working, hiring and managing revenue teams, and sitting in front of boards explaining why the numbers weren't where they needed to be.</p>
-                                <p>The pattern I kept seeing was the same at every company that hit the $10M wall: the system that had worked stopped working, and nobody could quite name why. So they added more. More pipeline. More tools. More process. More pressure. None of it helped — because the diagnosis was wrong.</p>
-                                <p className="font-medium text-slate-800">GTM-360 exists to fix the diagnosis first. Then fix the system. Then build it so it runs.</p>
+                                <p>I've spent 20+ years inside global B2B revenue teams — not advising from the outside, but running them. As COO at AWS India I scaled the business to $500M ARR. As VP of Strategy and RevOps at Innovapptive I rebuilt the entire revenue engine of a Series B SaaS company — forecast accuracy up 70%, win rates up 10 points, expansion revenue unlocked. Before that, Dell and Amazon in the US, and two startups as a co-founder.</p>
+                                <p>The pattern I kept seeing across all of it was the same: capable teams executing against an incomplete understanding of the problem. More pipeline, more tools, more headcount, more pressure. None of it working — because the diagnosis was wrong.</p>
+                                <p className="font-medium text-slate-800">GTM-360 exists to fix the diagnosis first. Then fix the system. Then build it so it actually runs.</p>
                             </div>
 
                             <div className="mt-8 flex gap-6">
-                                <a href="https://www.linkedin.com/company/gtm-360" target="_blank" rel="noopener noreferrer"
+                                <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer"
                                     className="text-sm font-bold text-indigo-600 hover:underline">LinkedIn →</a>
                                 <Link to="/start-here" className="text-sm font-bold text-slate-700 hover:underline">Work with us →</Link>
                             </div>
