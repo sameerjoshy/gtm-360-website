@@ -2,40 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
-const team = [
-    {
-        name: "Sameer Joshi",
-        role: "Founder",
-        domain: "GTM Strategy · Revenue Operations · Diagnostic",
-        bio: "20+ years inside global B2B revenue teams — AWS, Dell, Amazon, and two startups. Built GTM systems from scratch, ran them as COO and VP, and sat in front of boards when the numbers weren't moving. GTM-360 is built from that experience.",
-        linkedin: "https://www.linkedin.com/in/sameer-joshi1/",
-        initials: "SJ"
-    },
-    {
-        name: "[ Specialist Name ]",
-        role: "CRM & RevOps",
-        domain: "HubSpot · Salesforce · Pipeline Architecture",
-        bio: "Builds CRM systems that reflect how revenue actually works — not how it's supposed to work on paper.",
-        linkedin: "#",
-        initials: "S1"
-    },
-    {
-        name: "[ Specialist Name ]",
-        role: "Outbound & Sequencing",
-        domain: "Clay · Multi-channel · Enrichment",
-        bio: "Builds outbound infrastructure on buyer signals, not volume. Runs on Clay and knows how to make it actually convert.",
-        linkedin: "#",
-        initials: "S2"
-    },
-    {
-        name: "[ Specialist Name ]",
-        role: "Automation & AI",
-        domain: "Workflow Automation · AI Agents · Integrations",
-        bio: "Automates the parts of your GTM that shouldn't require human time — without adding complexity to everything else.",
-        linkedin: "#",
-        initials: "S3"
-    }
-];
+
 
 const About = () => {
     return (
@@ -61,11 +28,16 @@ const About = () => {
             <section className="py-20 bg-white">
                 <div className="container max-w-5xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                        {/* Photo */}
-                        <div className="bg-slate-100 rounded-xl aspect-[4/5] flex items-center justify-center">
-                            <div className="text-center text-slate-400">
-                                <div className="w-20 h-20 rounded-full bg-slate-200 mx-auto mb-3 flex items-center justify-center text-2xl font-bold text-slate-400">?</div>
-                                <p className="text-sm">Add photo here</p>
+                        {/* Founder identity block */}
+                        <div className="bg-slate-900 rounded-xl aspect-[4/5] flex items-center justify-center">
+                            <div className="text-center">
+                                <div className="w-24 h-24 rounded-full bg-indigo-600 mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white">SJ</div>
+                                <p className="text-white font-bold text-lg">Sameer Joshi</p>
+                                <p className="text-slate-400 text-sm mt-1">Founder, GTM-360</p>
+                                <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer"
+                                    className="inline-block mt-4 text-indigo-400 text-sm font-medium hover:text-indigo-300 transition-colors">
+                                    LinkedIn →
+                                </a>
                             </div>
                         </div>
 
@@ -90,31 +62,14 @@ const About = () => {
                 </div>
             </section>
 
-            {/* TEAM */}
+            {/* HOW ENGAGEMENTS ARE STAFFED */}
             <section className="py-20 bg-slate-50 border-y border-slate-100">
-                <div className="container max-w-5xl">
-                    <div className="mb-12">
-                        <h2 className="text-3xl font-bold text-slate-900 mb-3">The team behind the work.</h2>
-                        <p className="text-slate-500 font-light max-w-xl">Every engagement draws on specialists matched to what needs to be built. You work with the people who actually do the work — not an account manager.</p>
+                <div className="container max-w-3xl">
+                    <h2 className="text-3xl font-bold text-slate-900 mb-6">How engagements are staffed.</h2>
+                    <div className="space-y-4 text-slate-600 leading-relaxed text-lg font-light">
+                        <p>Each engagement is staffed based on what needs to be built. CRM and pipeline work draws on RevOps specialists. Outbound infrastructure on sequencing and enrichment practitioners. Automation and AI signal layers on people who build these systems day-to-day.</p>
+                        <p>You work directly with whoever is doing the work — there's no account management layer between you and the people actually building. The diagnostic and design phases are led by Sameer.</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        {team.map((m, i) => (
-                            <div key={i} className="bg-white border border-slate-200 rounded-xl p-7 hover:border-indigo-200 transition-colors">
-                                <div className="flex items-start gap-4 mb-4">
-                                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-indigo-600 to-slate-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                                        {m.initials}
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-slate-900">{m.name}</h3>
-                                        <p className="text-sm text-indigo-600 font-medium">{m.role}</p>
-                                        <p className="text-xs text-slate-400 mt-0.5">{m.domain}</p>
-                                    </div>
-                                </div>
-                                <p className="text-slate-500 text-sm leading-relaxed">{m.bio}</p>
-                            </div>
-                        ))}
-                    </div>
-                    <p className="text-xs text-slate-300 mt-5 italic text-center">⚠ Replace placeholders with real names + LinkedIn links before publishing.</p>
                 </div>
             </section>
 
