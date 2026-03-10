@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTM-360 — How We Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:     #0d1117;
+    --paper:   #f6f8fb;
+    --white:   #ffffff;
+    --slate:   #1e293b;
+    --steel:   #334155;
+    --mist:    #64748b;
+    --silver:  #94a3b8;
+    --light:   #e2e8f0;
+    --blue:    #3b82f6;
+    --indigo:  #4f46e5;
+    --green:   #10b981;
+    --violet:  #8b5cf6;
+    --amber:   #f59e0b;
+    --red:     #ef4444;
+    --font-d:  'Playfair Display', Georgia, serif;
+    --font-b:  'DM Sans', system-ui, sans-serif;
+  }
+
+  html, body { width: 100%; height: 100%; overflow: hidden; background: var(--paper); font-family: var(--font-b); color: var(--ink); }
+
+  #stage { width: 100vw; height: 100vh; position: relative; overflow: hidden; }
+
+  /* Top gradient stripe */
+  #stage::before {
+    content: '';
+    position: fixed; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--green), var(--indigo), var(--violet));
+    z-index: 200;
+  }
+
+  /* Subtle background */
+  #stage::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 15% 90%, rgba(79,70,229,0.05) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 15%, rgba(139,92,246,0.04) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  /* Logo */
+  #logo {
+    position: fixed; top: 44px; left: 64px;
+    display: flex; align-items: center; gap: 10px;
+    z-index: 150;
+    opacity: 0; animation: fadeUp 0.6s ease 0.4s forwards;
+  }
+  #logo-bar { width: 4px; height: 20px; background: var(--indigo); border-radius: 1px; }
+  #logo-text { font-weight: 800; font-size: 13px; color: var(--slate); letter-spacing: 0.15em; text-transform: uppercase; }
+
+  /* Progress */
+  #progress { position: fixed; bottom: 0; left: 0; right: 0; height: 3px; background: var(--light); z-index: 200; }
+  #progress-fill { height: 100%; background: var(--indigo); width: 0%; transition: width 0.1s linear; }
+
+  /* Scenes */
+  .scene { position: absolute; inset: 0; opacity: 0; pointer-events: none; display: flex; align-items: center; justify-content: center; }
+  .scene.active { pointer-events: auto; }
+
+  @keyframes fadeUp { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes slideUp { from { opacity:0; transform: translateY(28px); } to { opacity:1; transform: translateY(0); } }
+  @keyframes slideLeft { from { opacity:0; transform: translateX(-14px); } to { opacity:1; transform: translateX(0); } }
+  @keyframes sceneIn  { from { opacity:0; } to { opacity:1; } }
+  @keyframes sceneOut { from { opacity:1; } to { opacity:0; } }
+  @keyframes cardIn   { from { opacity:0; transform: translateY(24px) scale(0.97); } to { opacity:1; transform: translateY(0) scale(1); } }
+
+  .r { opacity:0; }
+  .r.go      { animation: slideUp  0.65s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .r.go-left { animation: slideLeft 0.55s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .r.go-fade { animation: fadeIn   0.45s ease forwards; }
+  .r.go-card { animation: cardIn   0.55s cubic-bezier(0.22,1,0.36,1) forwards; }
+
+  /* ── SCENE 1: Opening ── */
+  .s1-wrap { text-align: center; width: 86%; max-width: 900px; }
+  .s1-eyebrow { font-size: clamp(9px,0.85vw,11px); letter-spacing: 0.24em; text-transform: uppercase; color: var(--mist); margin-bottom: 24px; font-weight: 700; }
+  .s1-headline { font-family: var(--font-d); font-size: clamp(48px,5.5vw,82px); line-height: 1.0; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 28px; }
+  .s1-headline em { font-style: italic; color: var(--indigo); }
+  .s1-body { font-size: clamp(15px,1.4vw,20px); color: var(--mist); font-weight: 300; line-height: 1.75; max-width: 600px; margin: 0 auto 40px; }
+  .brand-strip { display: flex; justify-content: center; gap: 40px; align-items: center; }
+  .brand-item { font-size: clamp(10px,0.9vw,12px); font-weight: 700; color: var(--light); letter-spacing: 0.12em; text-transform: uppercase; }
+  .brand-note { font-size: clamp(10px,0.9vw,11px); color: var(--silver); margin-top: 8px; text-align: center; }
+
+  /* ── SCENE 2: Three cards ── */
+  #s2 { flex-direction: column; padding: 72px 0 60px; }
+  .s2-hd-wrap { text-align: center; margin-bottom: 40px; }
+  .s2-headline { font-family: var(--font-d); font-size: clamp(28px,2.8vw,42px); letter-spacing: -0.02em; color: var(--ink); margin-bottom: 10px; }
+  .s2-sub { font-size: clamp(14px,1.3vw,18px); color: var(--mist); font-weight: 300; }
+  .s2-sub strong { color: var(--indigo); font-weight: 700; }
+  .cards-row { display: flex; gap: 16px; align-items: stretch; padding: 0 5vw; }
+  .phase-card {
+    flex: 1; background: var(--white);
+    border-radius: 16px; border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 28px rgba(0,0,0,0.06);
+    padding: 28px 24px; position: relative; overflow: hidden;
+    opacity: 0;
+  }
+  .phase-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--card-color, var(--indigo));
+  }
+  .phase-tag { font-size: 10px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--card-color, var(--indigo)); margin-bottom: 10px; }
+  .phase-title { font-family: var(--font-d); font-size: clamp(16px,1.4vw,20px); color: var(--ink); margin-bottom: 18px; line-height: 1.3; }
+  .phase-pts { display: flex; flex-direction: column; gap: 10px; }
+  .phase-pt { display: flex; gap: 10px; align-items: flex-start; }
+  .phase-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--card-color, var(--indigo)); margin-top: 7px; flex-shrink: 0; }
+  .phase-pt-text { font-size: clamp(11px,1.1vw,13px); color: var(--mist); line-height: 1.55; }
+  .connector { align-self: center; opacity: 0; flex-shrink: 0; }
+  .s2-footer { text-align: center; margin-top: 30px; }
+  .s2-footer-pill {
+    display: inline-block; padding: 12px 24px;
+    background: rgba(79,70,229,0.07); border: 1px solid rgba(79,70,229,0.15);
+    border-radius: 8px; font-size: clamp(13px,1.2vw,16px); color: var(--ink);
+    font-weight: 400;
+  }
+  .s2-footer-pill strong { color: var(--indigo); }
+
+  /* ── SCENE 3: Metrics ── */
+  #s3 { flex-direction: column; }
+  .s3-hd { text-align: center; margin-bottom: 44px; }
+  .s3-headline { font-family: var(--font-d); font-size: clamp(30px,3vw,48px); letter-spacing: -0.025em; color: var(--ink); margin-bottom: 10px; }
+  .s3-sub { font-size: clamp(14px,1.3vw,18px); color: var(--mist); font-weight: 300; }
+  .metrics-row { display: flex; gap: 16px; padding: 0 8vw; }
+  .metric-card {
+    flex: 1; background: var(--white);
+    border-radius: 14px; border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    padding: 28px 24px; text-align: center; opacity: 0;
+  }
+  .metric-tag { font-size: 10px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--m-color); margin-bottom: 12px; }
+  .metric-num { font-family: var(--font-d); font-size: clamp(44px,4.5vw,64px); letter-spacing: -0.04em; line-height: 1; color: var(--m-color); }
+  .metric-label { font-size: clamp(12px,1.1vw,14px); color: var(--mist); margin-top: 8px; }
+  .metric-time { font-size: 11px; color: var(--silver); margin-top: 4px; }
+  .s3-note { font-size: 11px; color: var(--silver); font-style: italic; margin-top: 22px; text-align: center; }
+
+  /* ── SCENE 4: CTA ── */
+  #s4 { flex-direction: column; text-align: center; }
+  .s4-headline { font-family: var(--font-d); font-size: clamp(40px,4.5vw,64px); letter-spacing: -0.03em; color: var(--ink); margin-bottom: 18px; }
+  .s4-body { font-size: clamp(16px,1.5vw,20px); color: var(--mist); font-weight: 300; margin-bottom: 36px; line-height: 1.7; }
+  .s4-btn {
+    display: inline-block; background: var(--ink); color: var(--white);
+    padding: 16px 48px; border-radius: 8px;
+    font-size: clamp(14px,1.4vw,17px); font-weight: 700; letter-spacing: 0.04em;
+    text-decoration: none; cursor: pointer; transition: background 0.2s;
+  }
+  .s4-btn:hover { background: var(--slate); }
+
+  /* Controls */
+  #dots { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 200; }
+  .dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(0,0,0,0.15); transition: background 0.3s, width 0.3s; cursor: pointer; }
+  .dot.active { background: var(--indigo); width: 18px; border-radius: 3px; }
+  #controls { position: fixed; bottom: 18px; right: 24px; display: flex; gap: 8px; z-index: 200; }
+  .ctrl-btn { background: rgba(0,0,0,0.07); border: 1px solid rgba(0,0,0,0.12); color: var(--steel); padding: 7px 14px; border-radius: 4px; font-size: 12px; cursor: pointer; font-family: var(--font-b); letter-spacing: 0.04em; transition: background 0.15s; }
+  .ctrl-btn:hover { background: rgba(0,0,0,0.12); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="logo"><div id="logo-bar"></div><div id="logo-text">GTM-360</div></div>
+  <div id="progress"><div id="progress-fill"></div></div>
+
+  <!-- SCENE 1 -->
+  <div class="scene" id="s1">
+    <div class="s1-wrap">
+      <div class="r s1-eyebrow" id="e1a">What GTM-360 does</div>
+      <div class="r s1-headline" id="e1b">A senior GTM partner.<br><em>Not another consultant.</em></div>
+      <div class="r s1-body" id="e1c">We work alongside your team — diagnosing, designing,<br>and building the system that removes the constraint.</div>
+      <div class="r brand-strip" id="e1d">
+        <span class="brand-item">AWS</span>
+        <span class="brand-item">Dell</span>
+        <span class="brand-item">Amazon</span>
+        <span class="brand-item">Series B SaaS</span>
+      </div>
+      <div class="r brand-note" id="e1e">Inside these teams — not advising them</div>
+    </div>
+  </div>
+
+  <!-- SCENE 2 -->
+  <div class="scene" id="s2">
+    <div class="s2-hd-wrap">
+      <div class="r s2-headline" id="e2h">Three phases. One outcome.</div>
+      <div class="r s2-sub" id="e2s">Most advisories hand you a roadmap. <strong>We stay through step three.</strong></div>
+    </div>
+    <div class="cards-row">
+      <div class="phase-card" id="pc0" style="--card-color:#10b981">
+        <div class="phase-tag">Phase 01 · Diagnostic</div>
+        <div class="phase-title">Find the real constraint</div>
+        <div class="phase-pts">
+          <div class="phase-pt"><div class="phase-dot"></div><div class="phase-pt-text">Not the symptom — the cause</div></div>
+          <div class="phase-pt"><div class="phase-dot"></div><div class="phase-pt-text">Why previous fixes didn't stick</div></div>
+          <div class="phase-pt"><div class="phase-dot"></div><div class="phase-pt-text">What to change first</div></div>
+        </div>
+      </div>
+      <div class="connector" id="conn0">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14 L22 14 M16 8 L22 14 L16 20" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="phase-card" id="pc1" style="--card-color:#4f46e5">
+        <div class="phase-tag">Phase 02 · Architecture</div>
+        <div class="phase-title">Design the revenue system</div>
+        <div class="phase-pts">
+          <div class="phase-pt"><div class="phase-dot"></div><div class="phase-pt-text">Pipeline & stage structure</div></div>
+          <div class="phase-pt"><div class="phase-dot"></div><div class="phase-pt-text">ICP and segmentation</div></div>
+          <div class="phase-pt"><div class="phase-dot"></div><div class="phase-pt-text">Governance and metrics</div></div>
+        </div>
+      </div>
+      <div class="connector" id="conn1">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14 L22 14 M16 8 L22 14 L16 20" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="phase-card" id="pc2" style="--card-color:#8b5cf6">
+        <div class="phase-tag">Phase 03 · Engineering</div>
+        <div class="phase-title">Build it</div>
+        <div class="phase-pts">
+          <div class="phase-pt"><div class="phase-dot"></div><div class="phase-pt-text">CRM rebuilt around new model</div></div>
+          <div class="phase-pt"><div class="phase-dot"></div><div class="phase-pt-text">Outbound infrastructure</div></div>
+          <div class="phase-pt"><div class="phase-dot"></div><div class="phase-pt-text">Automation and AI signals</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="s2-footer">
+      <div class="r s2-footer-pill" id="e2fp">You don't get a slide deck. You get a <strong>running system.</strong></div>
+    </div>
+  </div>
+
+  <!-- SCENE 3 -->
+  <div class="scene" id="s3">
+    <div class="s3-hd">
+      <div class="r s3-headline" id="e3h">Real numbers. Real timeframes.</div>
+      <div class="r s3-sub" id="e3s">What this produces</div>
+    </div>
+    <div class="metrics-row">
+      <div class="metric-card" id="mc0" style="--m-color:#10b981">
+        <div class="metric-tag">Pipeline</div>
+        <div class="metric-num" data-prefix="+" data-suffix=" pts" data-target="8">+0 pts</div>
+        <div class="metric-label">Close rate</div>
+        <div class="metric-time">90 days</div>
+      </div>
+      <div class="metric-card" id="mc1" style="--m-color:#4f46e5">
+        <div class="metric-tag">Forecasting</div>
+        <div class="metric-num" data-prefix="+" data-suffix=" pts" data-target="26">+0 pts</div>
+        <div class="metric-label">Forecast accuracy</div>
+        <div class="metric-time">One quarter</div>
+      </div>
+      <div class="metric-card" id="mc2" style="--m-color:#8b5cf6">
+        <div class="metric-tag">GTM Alignment</div>
+        <div class="metric-num" data-prefix="−" data-suffix="%" data-target="30">−0%</div>
+        <div class="metric-label">Sales cycle length</div>
+        <div class="metric-time">60 days</div>
+      </div>
+    </div>
+    <div class="r s3-note" id="e3n">All numbers from real engagements. Companies anonymised.</div>
+  </div>
+
+  <!-- SCENE 4 -->
+  <div class="scene" id="s4">
+    <div>
+      <div class="r s4-headline" id="e4h">Worth a conversation.</div>
+      <div class="r s4-body" id="e4b">Tell us what's happening.<br>We'll tell you if we can help.</div>
+      <div class="r" id="e4c"><a class="s4-btn" href="https://gtm-360.com/start-here" target="_blank">gtm-360.com → Talk to us</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="dots">
+  <div class="dot active" data-i="0"></div>
+  <div class="dot" data-i="1"></div>
+  <div class="dot" data-i="2"></div>
+  <div class="dot" data-i="3"></div>
+</div>
+<div id="controls">
+  <button class="ctrl-btn" id="btn-prev">← Prev</button>
+  <button class="ctrl-btn" id="btn-play">⏸ Pause</button>
+  <button class="ctrl-btn" id="btn-next">Next →</button>
+</div>
+
+<script>
+function animCard(id, delay) {
+  setTimeout(() => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.style.animation = 'cardIn 0.55s cubic-bezier(0.22,1,0.36,1) forwards';
+  }, delay);
+}
+function animFade(id, delay) {
+  setTimeout(() => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.style.transition = 'opacity 0.4s ease';
+    el.style.opacity = '1';
+  }, delay);
+}
+function animMetric(id, delay) {
+  setTimeout(() => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.style.animation = 'cardIn 0.55s cubic-bezier(0.22,1,0.36,1) forwards';
+    const numEl = el.querySelector('.metric-num');
+    if (!numEl) return;
+    const target = +numEl.dataset.target;
+    const prefix = numEl.dataset.prefix || '';
+    const suffix = numEl.dataset.suffix || '';
+    let start = null;
+    const dur = 1400;
+    function tick(ts) {
+      if (!start) start = ts;
+      const p = Math.min((ts - start) / dur, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      numEl.textContent = prefix + Math.round(ease * target) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }, delay);
+}
+
+const SCENES = [
+  { id: 's1', dur: 9000,
+    run() {
+      reveal('e1a', 400, 'go-left');
+      reveal('e1b', 800, 'go');
+      reveal('e1c', 1600, 'go');
+      reveal('e1d', 3200, 'go-fade');
+      reveal('e1e', 3600, 'go-fade');
+    }
+  },
+  { id: 's2', dur: 12000,
+    run() {
+      reveal('e2h', 300, 'go');
+      reveal('e2s', 700, 'go');
+      animCard('pc0', 1400);
+      animFade('conn0', 2200);
+      animCard('pc1', 2600);
+      animFade('conn1', 3400);
+      animCard('pc2', 3800);
+      reveal('e2fp', 6000, 'go');
+    }
+  },
+  { id: 's3', dur: 9000,
+    run() {
+      reveal('e3h', 300, 'go');
+      reveal('e3s', 600, 'go');
+      animMetric('mc0', 1200);
+      animMetric('mc1', 2000);
+      animMetric('mc2', 2800);
+      reveal('e3n', 5500, 'go-fade');
+    }
+  },
+  { id: 's4', dur: 10000,
+    run() {
+      reveal('e4h', 400, 'go');
+      reveal('e4b', 1000, 'go');
+      reveal('e4c', 1900, 'go');
+    }
+  },
+];
+
+let current = 0, paused = false, timers = [], pTimer = null;
+
+function reveal(id, delay, cls) {
+  timers.push(setTimeout(() => {
+    const e = document.getElementById(id);
+    if (e) e.classList.add(cls || 'go');
+  }, delay));
+}
+
+function clearAll() {
+  timers.forEach(clearTimeout); timers = [];
+  if (pTimer) clearInterval(pTimer); pTimer = null;
+}
+
+function showScene(idx) {
+  clearAll();
+  const prev = document.querySelector('.scene.active');
+  if (prev) {
+    prev.classList.remove('active');
+    prev.style.animation = 'sceneOut 0.5s ease forwards';
+    const _p = prev;
+    setTimeout(() => { _p.style.opacity = '0'; _p.style.animation = ''; }, 500);
+  }
+  const scene = SCENES[idx];
+  const el = document.getElementById(scene.id);
+  // Reset
+  el.querySelectorAll('.r').forEach(e => { e.classList.remove('go','go-left','go-fade'); e.style.opacity='0'; e.style.animation=''; });
+  el.querySelectorAll('.phase-card,.metric-card').forEach(e => { e.style.opacity='0'; e.style.animation=''; });
+  el.querySelectorAll('.connector').forEach(e => { e.style.opacity='0'; });
+  el.style.opacity = '0'; el.style.animation = '';
+  el.classList.add('active');
+  requestAnimationFrame(() => { el.style.animation = 'sceneIn 0.4s ease forwards'; });
+
+  // Progress
+  document.getElementById('progress-fill').style.width = '0%';
+  let elapsed = 0;
+  pTimer = setInterval(() => {
+    if (paused) return;
+    elapsed += 100;
+    document.getElementById('progress-fill').style.width = Math.min((elapsed/scene.dur)*100,100) + '%';
+  }, 100);
+
+  scene.run();
+  timers.push(setTimeout(() => { if (!paused) nextScene(); }, scene.dur));
+
+  document.querySelectorAll('.dot').forEach((d,i) => d.classList.toggle('active', i === idx));
+  current = idx;
+}
+
+function nextScene() { showScene(current < SCENES.length-1 ? current+1 : 0); }
+function prevScene() { if (current > 0) showScene(current-1); }
+
+document.getElementById('btn-play').addEventListener('click', () => {
+  paused = !paused;
+  document.getElementById('btn-play').textContent = paused ? '▶ Play' : '⏸ Pause';
+  if (!paused) showScene(current);
+});
+document.getElementById('btn-next').addEventListener('click', nextScene);
+document.getElementById('btn-prev').addEventListener('click', prevScene);
+document.querySelectorAll('.dot').forEach(d => d.addEventListener('click', () => showScene(+d.dataset.i)));
+document.addEventListener('keydown', e => {
+  if (e.key==='ArrowRight'||e.key===' ') nextScene();
+  if (e.key==='ArrowLeft') prevScene();
+});
+showScene(0);
+</script>
+</body>
+</html>

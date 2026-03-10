@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTM-360 — The $10M Plateau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:      #080c14;
+    --ink2:     #0f1623;
+    --slate:    #1e2a3a;
+    --mist:     #2d3f55;
+    --fog:      #5c7090;
+    --smoke:    #8ba0bc;
+    --silver:   #b8cce0;
+    --ghost:    #e8f0f8;
+    --white:    #ffffff;
+    --indigo:   #4f46e5;
+    --indigoL:  #818cf8;
+    --amber:    #f59e0b;
+    --red:      #ef4444;
+    --font-d:   'DM Serif Display', Georgia, serif;
+    --font-b:   'DM Sans', system-ui, sans-serif;
+  }
+
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--ink);
+    color: var(--white);
+    font-family: var(--font-b);
+    overflow: hidden;
+  }
+
+  #stage {
+    width: 100vw; height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── Grain overlay ── */
+  #stage::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  /* ── Ambient glows ── */
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: breathe 6s ease-in-out infinite;
+  }
+  .glow-indigo {
+    width: 900px; height: 900px;
+    left: -250px; top: -200px;
+    background: radial-gradient(circle, rgba(79,70,229,0.15) 0%, transparent 70%);
+    animation-duration: 7s;
+  }
+  .glow-amber {
+    width: 700px; height: 700px;
+    right: -150px; bottom: -150px;
+    background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);
+    animation-duration: 9s;
+    animation-delay: -3s;
+  }
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50%       { transform: scale(1.08); opacity: 1; }
+  }
+
+  /* ── Progress bar ── */
+  #progress {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: rgba(255,255,255,0.05);
+    z-index: 200;
+  }
+  #progress-fill {
+    height: 100%;
+    background: var(--indigo);
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+
+  /* ── Logo ── */
+  #logo {
+    position: fixed; top: 44px; left: 64px;
+    display: flex; align-items: center; gap: 10px;
+    z-index: 150;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.5s forwards;
+  }
+  #logo-bar {
+    width: 4px; height: 20px;
+    background: var(--indigo); border-radius: 1px;
+  }
+  #logo-text {
+    font-weight: 800; font-size: 13px;
+    color: var(--smoke); letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* ── Scenes ── */
+  .scene {
+    position: absolute; inset: 0;
+    display: flex; align-items: center;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .scene.active {
+    pointer-events: auto;
+  }
+
+  /* ── Keyframes ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes fadeDown {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+  @keyframes sceneIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes sceneOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideLeft {
+    from { opacity: 0; transform: translateX(-16px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes lineGrow {
+    from { width: 0; }
+    to   { width: var(--line-w, 120px); }
+  }
+  @keyframes strike {
+    from { width: 0; }
+    to   { width: 100%; }
+  }
+  @keyframes countUp {
+    from { --n: 0; }
+    to   { --n: var(--target); }
+  }
+  @keyframes glowPulse {
+    0%, 100% { text-shadow: 0 0 80px rgba(79,70,229,0.2); }
+    50%       { text-shadow: 0 0 160px rgba(79,70,229,0.4); }
+  }
+
+  /* Utility reveal classes */
+  .r { opacity: 0; }
+  .r.go { animation: slideUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .r.go-left { animation: slideLeft 0.6s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .r.go-fade { animation: fadeIn 0.5s ease forwards; }
+
+  /* ─────────────────────────────────────
+     SCENE 1 — The look
+  ───────────────────────────────────── */
+  #s1 { padding-left: 8vw; align-items: center; }
+  .s1-label {
+    font-size: clamp(9px, 0.9vw, 11px);
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--fog);
+    font-weight: 700;
+    margin-bottom: 28px;
+  }
+  .s1-headline {
+    font-family: var(--font-d);
+    font-size: clamp(52px, 6.5vw, 96px);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--white);
+  }
+  .s1-headline em {
+    font-style: normal;
+    color: var(--smoke);
+  }
+  .s1-rule {
+    height: 2px; background: var(--indigo); border-radius: 1px;
+    margin-top: 36px;
+    --line-w: 110px;
+    width: 0;
+  }
+  .s1-sub {
+    font-size: clamp(16px, 1.5vw, 20px);
+    color: var(--fog);
+    font-weight: 300;
+    line-height: 1.7;
+    margin-top: 18px;
+    max-width: 480px;
+  }
+
+  /* ─────────────────────────────────────
+     SCENE 2 — $10M
+  ───────────────────────────────────── */
+  #s2 { justify-content: center; flex-direction: column; align-items: center; text-align: center; }
+  .s2-eyebrow {
+    font-size: clamp(10px, 1vw, 12px);
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--fog); margin-bottom: 14px;
+  }
+  .s2-big {
+    font-family: var(--font-d);
+    font-size: clamp(100px, 14vw, 210px);
+    font-weight: 400;
+    color: var(--white);
+    letter-spacing: -0.05em;
+    line-height: 0.9;
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+  .s2-body {
+    font-size: clamp(16px, 1.6vw, 22px);
+    color: var(--smoke); font-weight: 300;
+    line-height: 1.75; margin-top: 28px; max-width: 680px;
+  }
+  .s2-body strong { color: var(--amber); font-weight: 600; }
+
+  /* ─────────────────────────────────────
+     SCENE 3 — Strikethroughs
+  ───────────────────────────────────── */
+  #s3 { padding-left: 8vw; flex-direction: column; align-items: flex-start; justify-content: center; }
+  .s3-intro {
+    font-size: clamp(13px, 1.2vw, 16px);
+    color: var(--fog); letter-spacing: 0.04em;
+    margin-bottom: 40px;
+  }
+  .strike-item {
+    position: relative; display: inline-block;
+    font-family: var(--font-d);
+    font-size: clamp(36px, 4.2vw, 58px);
+    color: var(--silver);
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    line-height: 1.15;
+    display: block;
+  }
+  .strike-line {
+    position: absolute; left: 0; top: 55%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--red), rgba(239,68,68,0.5));
+    border-radius: 2px;
+    width: 0;
+  }
+  .s3-foot {
+    font-size: clamp(16px, 1.5vw, 22px);
+    color: var(--fog); font-style: italic; font-weight: 300;
+    margin-top: 16px;
+  }
+
+  /* ─────────────────────────────────────
+     SCENE 4 — Credibility
+  ───────────────────────────────────── */
+  #s4 { flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .s4-sub {
+    font-size: clamp(14px, 1.3vw, 17px);
+    color: var(--fog); letter-spacing: 0.04em; margin-bottom: 16px;
+  }
+  .s4-headline {
+    font-family: var(--font-d);
+    font-size: clamp(28px, 3.2vw, 46px);
+    line-height: 1.2; letter-spacing: -0.02em;
+    color: var(--white); margin-bottom: 52px;
+  }
+  .s4-headline span { color: var(--indigoL); }
+  .stats-row {
+    display: flex; justify-content: center; gap: 0;
+  }
+  .stat-cell {
+    text-align: center; padding: 24px 52px;
+    border-left: 1px solid var(--slate);
+    opacity: 0;
+  }
+  .stat-cell:first-child { border-left: none; }
+  .stat-num {
+    font-family: var(--font-d);
+    font-size: clamp(52px, 5.5vw, 84px);
+    letter-spacing: -0.04em; line-height: 1;
+  }
+  .stat-label {
+    font-size: clamp(9px, 0.85vw, 11px);
+    color: var(--fog); margin-top: 12px;
+    letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700;
+  }
+
+  /* ─────────────────────────────────────
+     SCENE 5 — Diagnosis
+  ───────────────────────────────────── */
+  #s5 { padding-left: 8vw; flex-direction: column; align-items: flex-start; justify-content: center; }
+  .s5-eyebrow {
+    font-size: clamp(12px, 1.1vw, 15px); color: var(--fog);
+    letter-spacing: 0.07em; margin-bottom: 22px;
+  }
+  .s5-headline {
+    font-family: var(--font-d);
+    font-size: clamp(44px, 5.5vw, 80px);
+    line-height: 1.06; letter-spacing: -0.025em;
+    color: var(--white); max-width: 820px;
+  }
+  .s5-headline .hi { color: var(--indigoL); }
+  .s5-headline .ha { color: var(--amber); }
+  .s5-rule { height: 2px; background: var(--mist); border-radius: 1px; margin-top: 32px; --line-w: 140px; width: 0; }
+  .s5-foot {
+    font-size: clamp(14px, 1.4vw, 18px); color: var(--fog);
+    font-weight: 300; margin-top: 14px;
+  }
+
+  /* ─────────────────────────────────────
+     SCENE 6 — What we do
+  ───────────────────────────────────── */
+  #s6 { flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .s6-eyebrow {
+    font-size: clamp(9px, 0.9vw, 11px); letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--fog); margin-bottom: 18px;
+  }
+  .s6-headline {
+    font-family: var(--font-d);
+    font-size: clamp(44px, 5.2vw, 76px);
+    line-height: 1.1; letter-spacing: -0.03em;
+    color: var(--white); margin-bottom: 24px;
+  }
+  .s6-body {
+    font-size: clamp(16px, 1.5vw, 22px); color: var(--smoke);
+    font-weight: 300; line-height: 1.8; margin-bottom: 32px;
+  }
+  .s6-pill {
+    display: inline-flex; gap: 22px; padding: 12px 28px;
+    border: 1px solid var(--slate); border-radius: 6px;
+    font-size: clamp(11px, 1.1vw, 13px); color: var(--fog);
+    letter-spacing: 0.03em;
+  }
+  .s6-pill span { color: var(--mist); }
+
+  /* ─────────────────────────────────────
+     SCENE 7 — CTA
+  ───────────────────────────────────── */
+  #s7 { flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .s7-brand {
+    font-family: var(--font-d);
+    font-size: clamp(72px, 9vw, 130px);
+    letter-spacing: -0.04em; line-height: 0.95;
+    color: var(--white);
+    animation: glowPulse 4s ease-in-out infinite;
+  }
+  .s7-rule { height: 2px; background: var(--indigo); border-radius: 1px; margin: 22px auto 0; --line-w: 260px; width: 0; }
+  .s7-url { font-size: clamp(16px, 1.5vw, 22px); color: var(--fog); margin-top: 16px; letter-spacing: 0.04em; }
+  .s7-btn {
+    display: inline-block; margin-top: 28px;
+    background: var(--indigo); color: var(--white);
+    padding: 14px 44px; border-radius: 6px;
+    font-size: clamp(14px, 1.4vw, 17px); font-weight: 700;
+    letter-spacing: 0.04em; cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .s7-btn:hover { background: #4338ca; }
+
+  /* ── Controls ── */
+  #controls {
+    position: fixed; bottom: 20px; right: 24px;
+    display: flex; gap: 8px; z-index: 200;
+  }
+  .ctrl-btn {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--smoke); padding: 7px 14px;
+    border-radius: 4px; font-size: 12px; cursor: pointer;
+    font-family: var(--font-b); letter-spacing: 0.04em;
+    transition: background 0.15s;
+  }
+  .ctrl-btn:hover { background: rgba(255,255,255,0.15); }
+
+  /* ── Scene indicator dots ── */
+  #dots {
+    position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 6px; z-index: 200;
+  }
+  .dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    transition: background 0.3s, width 0.3s;
+  }
+  .dot.active { background: var(--indigo); width: 18px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="glow glow-indigo"></div>
+  <div class="glow glow-amber"></div>
+
+  <!-- Logo -->
+  <div id="logo">
+    <div id="logo-bar"></div>
+    <div id="logo-text">GTM-360</div>
+  </div>
+
+  <!-- Progress -->
+  <div id="progress"><div id="progress-fill"></div></div>
+
+  <!-- SCENE 1: The look -->
+  <div class="scene" id="s1">
+    <div>
+      <div class="r s1-label" id="s1a">A pattern</div>
+      <div class="r s1-headline" id="s1b">Most founders<br><em>have the</em><br>same look.</div>
+      <div class="r s1-rule" id="s1c"></div>
+      <div class="r s1-sub" id="s1d">When we first speak.</div>
+    </div>
+  </div>
+
+  <!-- SCENE 2: $10M -->
+  <div class="scene" id="s2">
+    <div class="r s2-eyebrow" id="s2a">The business is at</div>
+    <div class="r s2-big" id="s2b">$10M</div>
+    <div class="r s2-body" id="s2c">The team is working. Pipeline looks okay.<br>But growth has stalled — <strong>nobody can explain why.</strong></div>
+  </div>
+
+  <!-- SCENE 3: Strikethrough -->
+  <div class="scene" id="s3">
+    <div style="width:100%">
+      <div class="r s3-intro" id="s3intro">They've already tried the obvious things.</div>
+      <div class="strike-item r" id="si0">More pipeline<div class="strike-line" id="sl0"></div></div>
+      <div class="strike-item r" id="si1">A new tool<div class="strike-line" id="sl1"></div></div>
+      <div class="strike-item r" id="si2">A new hire<div class="strike-line" id="sl2"></div></div>
+      <div class="strike-item r" id="si3">Better messaging<div class="strike-line" id="sl3"></div></div>
+      <div class="r s3-foot" id="s3foot">None of it moved the number.</div>
+    </div>
+  </div>
+
+  <!-- SCENE 4: Credibility -->
+  <div class="scene" id="s4">
+    <div style="width:100%">
+      <div class="r s4-sub" id="s4a">What I've learned —</div>
+      <div class="r s4-headline" id="s4b">Not from advising revenue teams.<br><span>From running them.</span></div>
+      <div class="stats-row">
+        <div class="stat-cell" id="sc0">
+          <div class="stat-num" style="color:#818cf8" data-prefix="$" data-suffix="M" data-target="500">$0M</div>
+          <div class="stat-label">AWS India ARR</div>
+        </div>
+        <div class="stat-cell" id="sc1">
+          <div class="stat-num" style="color:#b8cce0" data-prefix="" data-suffix="+" data-target="20">0+</div>
+          <div class="stat-label">Years in B2B revenue</div>
+        </div>
+        <div class="stat-cell" id="sc2">
+          <div class="stat-num" style="color:#f59e0b" data-prefix="+" data-suffix="pts" data-target="70">+0pts</div>
+          <div class="stat-label">Forecast accuracy ↑</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 5: Diagnosis -->
+  <div class="scene" id="s5">
+    <div>
+      <div class="r s5-eyebrow" id="s5a">It's the system underneath.</div>
+      <div class="r s5-headline" id="s5b">
+        The one that got you<br>
+        to <span class="hi">$10M</span> —<br>
+        creating drag on<br>
+        the next <span class="ha">$20M.</span>
+      </div>
+      <div class="r s5-rule" id="s5c"></div>
+      <div class="r s5-foot" id="s5d">Same effort. Diminishing returns.</div>
+    </div>
+  </div>
+
+  <!-- SCENE 6: What we do -->
+  <div class="scene" id="s6">
+    <div>
+      <div class="r s6-eyebrow" id="s6a">What we do</div>
+      <div class="r s6-headline" id="s6b">10 to 14 days.<br>Find the real constraint.</div>
+      <div class="r s6-body" id="s6c">Not the symptom. The actual thing in the way.<br>Then we fix it.</div>
+      <div class="r s6-pill" id="s6d">
+        <span style="color:var(--smoke)">Standalone engagement</span>
+        <span>·</span>
+        <span style="color:var(--smoke)">No commitment to continue</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 7: CTA -->
+  <div class="scene" id="s7">
+    <div>
+      <div class="r s7-brand" id="s7a">GTM-360</div>
+      <div class="r s7-rule" id="s7b"></div>
+      <div class="r s7-url" id="s7c">gtm-360.com</div>
+      <a class="r s7-btn" id="s7d" href="https://gtm-360.com/start-here" target="_blank">Talk to us →</a>
+    </div>
+  </div>
+</div>
+
+<!-- Dots & controls -->
+<div id="dots">
+  <div class="dot active" data-i="0"></div>
+  <div class="dot" data-i="1"></div>
+  <div class="dot" data-i="2"></div>
+  <div class="dot" data-i="3"></div>
+  <div class="dot" data-i="4"></div>
+  <div class="dot" data-i="5"></div>
+  <div class="dot" data-i="6"></div>
+</div>
+<div id="controls">
+  <button class="ctrl-btn" id="btn-prev">← Prev</button>
+  <button class="ctrl-btn" id="btn-play">⏸ Pause</button>
+  <button class="ctrl-btn" id="btn-next">Next →</button>
+</div>
+
+<script>
+const SCENES = [
+  // [sceneId, duration_ms, reveals: [{id, delay, class?, extraFn?}]]
+  {
+    id: 's1', dur: 8500,
+    reveals: [
+      { id: 's1a', delay: 300, cls: 'go-left' },
+      { id: 's1b', delay: 700, cls: 'go' },
+      { id: 's1c', delay: 1500, fn: growLine },
+      { id: 's1d', delay: 1900, cls: 'go' },
+    ]
+  },
+  {
+    id: 's2', dur: 7000,
+    reveals: [
+      { id: 's2a', delay: 200, cls: 'go-fade' },
+      { id: 's2b', delay: 500, cls: 'go' },
+      { id: 's2c', delay: 1400, cls: 'go' },
+    ]
+  },
+  {
+    id: 's3', dur: 9000,
+    reveals: [
+      { id: 's3intro', delay: 200, cls: 'go' },
+      { id: 'si0', delay: 700,  cls: 'go', after: { fn: strike, id: 'sl0', delay: 1500 } },
+      { id: 'si1', delay: 1300, cls: 'go', after: { fn: strike, id: 'sl1', delay: 1500 } },
+      { id: 'si2', delay: 1900, cls: 'go', after: { fn: strike, id: 'sl2', delay: 1500 } },
+      { id: 'si3', delay: 2500, cls: 'go', after: { fn: strike, id: 'sl3', delay: 1500 } },
+      { id: 's3foot', delay: 5200, cls: 'go' },
+    ]
+  },
+  {
+    id: 's4', dur: 10000,
+    reveals: [
+      { id: 's4a', delay: 300, cls: 'go' },
+      { id: 's4b', delay: 700, cls: 'go' },
+      { id: 'sc0', delay: 2000, fn: revealStat },
+      { id: 'sc1', delay: 3200, fn: revealStat },
+      { id: 'sc2', delay: 4400, fn: revealStat },
+    ]
+  },
+  {
+    id: 's5', dur: 8500,
+    reveals: [
+      { id: 's5a', delay: 300, cls: 'go' },
+      { id: 's5b', delay: 700, cls: 'go' },
+      { id: 's5c', delay: 3200, fn: growLine },
+      { id: 's5d', delay: 3600, cls: 'go' },
+    ]
+  },
+  {
+    id: 's6', dur: 8500,
+    reveals: [
+      { id: 's6a', delay: 200, cls: 'go-fade' },
+      { id: 's6b', delay: 500, cls: 'go' },
+      { id: 's6c', delay: 1800, cls: 'go' },
+      { id: 's6d', delay: 3200, cls: 'go' },
+    ]
+  },
+  {
+    id: 's7', dur: 12000,
+    reveals: [
+      { id: 's7a', delay: 300, cls: 'go' },
+      { id: 's7b', delay: 1200, fn: growLine },
+      { id: 's7c', delay: 1700, cls: 'go' },
+      { id: 's7d', delay: 2600, cls: 'go' },
+    ]
+  },
+];
+
+let current = 0;
+let paused = false;
+let timers = [];
+let progressTimer = null;
+
+function growLine(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.style.transition = 'width 0.9s cubic-bezier(0.22,1,0.36,1)';
+  el.style.width = el.style.getPropertyValue('--line-w') || getComputedStyle(el).getPropertyValue('--line-w') || '120px';
+  setTimeout(() => { el.style.width = '120px'; }, 50);
+  // Recompute from CSS var
+  requestAnimationFrame(() => {
+    const w = getComputedStyle(el).getPropertyValue('--line-w').trim() || '120px';
+    el.style.transition = 'none';
+    el.style.width = '0px';
+    requestAnimationFrame(() => {
+      el.style.transition = 'width 0.9s cubic-bezier(0.22,1,0.36,1)';
+      el.style.width = w;
+    });
+  });
+}
+
+function strike(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.style.transition = 'width 0.5s cubic-bezier(0.22,1,0.36,1)';
+  el.style.width = '100%';
+}
+
+function revealStat(id) {
+  const cell = document.getElementById(id);
+  if (!cell) return;
+  cell.style.transition = 'opacity 0.5s ease, transform 0.6s cubic-bezier(0.22,1,0.36,1)';
+  cell.style.transform = 'translateY(0)';
+  cell.style.opacity = '1';
+  // Animate number
+  const numEl = cell.querySelector('.stat-num');
+  if (!numEl) return;
+  const target = +numEl.dataset.target;
+  const prefix = numEl.dataset.prefix || '';
+  const suffix = numEl.dataset.suffix || '';
+  let start = null;
+  const dur = 1600;
+  function tick(ts) {
+    if (!start) start = ts;
+    const p = Math.min((ts - start) / dur, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    numEl.textContent = prefix + Math.round(ease * target) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+function clearTimers() {
+  timers.forEach(t => clearTimeout(t));
+  timers = [];
+  if (progressTimer) clearInterval(progressTimer);
+  progressTimer = null;
+}
+
+function setProgress(pct) {
+  document.getElementById('progress-fill').style.width = pct + '%';
+}
+
+function showScene(idx, instant = false) {
+  clearTimers();
+  const prev = document.querySelector('.scene.active');
+  if (prev) {
+    prev.classList.remove('active');
+    prev.style.animation = 'sceneOut 0.5s ease forwards';
+    const _p = prev;
+    setTimeout(() => { _p.style.opacity = '0'; _p.style.animation = ''; }, 500);
+  }
+
+  const scene = SCENES[idx];
+  const el = document.getElementById(scene.id);
+  el.style.opacity = '0';
+  el.style.animation = '';
+  el.classList.add('active');
+
+  // Reset all reveals in this scene
+  scene.reveals.forEach(r => {
+    const e = document.getElementById(r.id);
+    if (!e) return;
+    e.classList.remove('go', 'go-left', 'go-fade');
+    e.style.opacity = '0';
+    e.style.transition = '';
+    e.style.transform = '';
+    // Reset strike lines
+    if (e.classList.contains('strike-line')) { e.style.width = '0'; e.style.transition = ''; }
+    // Reset stat cells
+    if (e.classList.contains('stat-cell')) { e.style.opacity = '0'; e.style.transform = 'translateY(14px)'; }
+    // Reset lines
+    if (e.classList.contains('s1-rule') || e.classList.contains('s5-rule') || e.classList.contains('s7-rule')) {
+      e.style.width = '0'; e.style.transition = '';
+    }
+  });
+
+  // Fade scene in
+  requestAnimationFrame(() => {
+    el.style.animation = 'sceneIn 0.4s ease forwards';
+  });
+
+  // Progress
+  setProgress(0);
+  let elapsed = 0;
+  progressTimer = setInterval(() => {
+    if (paused) return;
+    elapsed += 100;
+    setProgress(Math.min((elapsed / scene.dur) * 100, 100));
+  }, 100);
+
+  // Fire reveals
+  scene.reveals.forEach(r => {
+    const delay = instant ? 0 : r.delay;
+    timers.push(setTimeout(() => {
+      if (paused && !instant) return;
+      const e = document.getElementById(r.id);
+      if (!e) return;
+      if (r.fn) {
+        r.fn(r.id);
+      } else {
+        e.classList.add(r.cls || 'go');
+      }
+      // After fn
+      if (r.after) {
+        timers.push(setTimeout(() => r.after.fn(r.after.id), r.after.delay));
+      }
+    }, delay));
+  });
+
+  // Auto-advance
+  timers.push(setTimeout(() => {
+    if (!paused) nextScene();
+  }, scene.dur));
+
+  // Update dots
+  document.querySelectorAll('.dot').forEach((d, i) => {
+    d.classList.toggle('active', i === idx);
+  });
+
+  // Update progress step
+  const pct = ((idx + 1) / SCENES.length) * 100;
+  current = idx;
+}
+
+function nextScene() {
+  if (current < SCENES.length - 1) showScene(current + 1);
+  else showScene(0); // loop
+}
+function prevScene() {
+  if (current > 0) showScene(current - 1);
+}
+
+// Controls
+document.getElementById('btn-play').addEventListener('click', () => {
+  paused = !paused;
+  document.getElementById('btn-play').textContent = paused ? '▶ Play' : '⏸ Pause';
+  if (!paused) showScene(current);
+});
+document.getElementById('btn-next').addEventListener('click', nextScene);
+document.getElementById('btn-prev').addEventListener('click', prevScene);
+
+// Dot clicks
+document.querySelectorAll('.dot').forEach(d => {
+  d.addEventListener('click', () => showScene(+d.dataset.i));
+});
+
+// Keyboard
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ') nextScene();
+  if (e.key === 'ArrowLeft') prevScene();
+});
+
+// Init
+showScene(0);
+</script>
+</body>
+</html>
