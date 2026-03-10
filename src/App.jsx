@@ -12,7 +12,6 @@ import Insights from './pages/Insights';
 // Engagement
 import Diagnostic from './pages/Diagnostic';
 import StartHere from './pages/StartHere';
-import AgentWorkbench from './pages/AgentWorkbench';
 
 // Problem detail pages
 import StalledGrowth from './pages/problems/StalledGrowth';
@@ -60,7 +59,6 @@ export function AppRoutes() {
                 <Route path="/insights" element={<Insights />} />
                 <Route path="/start-here" element={<StartHere />} />
                 <Route path="/diagnostic" element={<Diagnostic />} />
-                <Route path="/agents" element={<AgentWorkbench />} />
                 <Route path="/services/gtm-operating-model" element={<GTMOperatingModel />} />
                 <Route path="/services/pipeline-quality" element={<PipelineQuality />} />
                 <Route path="/services/forecasting-governance" element={<ForecastingGovernance />} />
@@ -69,10 +67,8 @@ export function AppRoutes() {
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/thank-you" element={<ThankYou />} />
                 {/* Redirects */}
-                <Route path="/workbench" element={<Navigate to="/agents" replace />} />
                 <Route path="/services" element={<Navigate to="/how-we-work" replace />} />
                 <Route path="/playbooks" element={<Navigate to="/insights" replace />} />
-                <Route path="/platform" element={<Navigate to="/agents" replace />} />
             </Routes>
             <Footer />
         </>
