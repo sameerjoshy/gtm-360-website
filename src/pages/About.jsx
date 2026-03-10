@@ -28,17 +28,13 @@ const About = () => {
             <section className="py-20 bg-white">
                 <div className="container max-w-5xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                        {/* Founder identity block */}
-                        <div className="bg-slate-900 rounded-xl aspect-[4/5] flex items-center justify-center">
-                            <div className="text-center">
-                                <div className="w-24 h-24 rounded-full bg-indigo-600 mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white">SJ</div>
-                                <p className="text-white font-bold text-lg">Sameer Joshi</p>
-                                <p className="text-slate-400 text-sm mt-1">Founder, GTM-360</p>
-                                <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer"
-                                    className="inline-block mt-4 text-indigo-400 text-sm font-medium hover:text-indigo-300 transition-colors">
-                                    LinkedIn →
-                                </a>
-                            </div>
+                        {/* Founder photo */}
+                        <div className="rounded-xl overflow-hidden aspect-[4/5] bg-slate-100">
+                            <img
+                                src="/sameer-joshi.jpg"
+                                alt="Sameer Joshi — Founder, GTM-360"
+                                className="w-full h-full object-cover object-top"
+                            />
                         </div>
 
                         <div className="pt-2">
