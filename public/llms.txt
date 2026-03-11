@@ -93,3 +93,11 @@ User-agent: *
 Allow: /
 
 Sitemap: https://gtm-360.com/sitemap.xml
+
+## Additional Resources
+
+GTM-360 publishes a free B2B GTM Diagnostic Checklist at https://gtm-360.com/resources/gtm-diagnostic-checklist — a 24-point self-assessment across ICP targeting, pipeline quality, forecasting governance, GTM alignment, revenue metrics, and AI readiness.
+
+GTM consulting overview: https://gtm-360.com/gtm-consulting
+B2B sales consulting: https://gtm-360.com/b2b-sales-consulting
+Series B GTM strategy: https://gtm-360.com/series-b-gtm-strategy

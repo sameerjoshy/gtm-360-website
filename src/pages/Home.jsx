@@ -214,16 +214,23 @@ const Home = () => {
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container max-w-2xl text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                        Worth a conversation.
+                        Start with the diagnostic.
                     </h2>
                     <p className="text-xl text-slate-400 mb-4 font-light leading-relaxed">
-                        Tell us what's happening. We'll tell you honestly whether we can help and what it would take.
+                        A standalone 10–14 day engagement to find the real constraint. Tell us what's happening — we'll tell you honestly whether we can help.
                     </p>
-                    <p className="text-slate-500 mb-12 text-sm">No pitch. No proposal until you've asked for one. Just a straight conversation.</p>
-                    <Link to="/start-here"
-                        className="inline-flex items-center justify-center bg-white text-slate-900 px-10 py-4 rounded font-bold hover:bg-slate-100 transition-all">
-                        Talk to us
-                    </Link>
+                    <p className="text-slate-500 mb-12 text-sm">Goes directly to a partner. Not a CRM queue.</p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link to="/start-here"
+                            className="inline-flex items-center justify-center bg-white text-slate-900 px-10 py-4 rounded font-bold hover:bg-slate-100 transition-all">
+                            Start with the diagnostic →
+                        </Link>
+                        <Link to="/resources/gtm-diagnostic-checklist"
+                            className="inline-flex items-center justify-center bg-transparent text-slate-400 border border-slate-700 px-8 py-4 rounded font-medium hover:border-slate-500 hover:text-slate-300 transition-all">
+                            Self-assess first →
+                        </Link>
+                    </div>
+                    <p className="text-slate-600 text-xs mt-4">Not ready to talk? Run the 24-point checklist yourself.</p>
                 </div>
             </section>
         </div>

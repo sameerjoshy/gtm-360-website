@@ -162,6 +162,12 @@ const StartHere = () => {
                         </button>
                         <p className="text-xs text-slate-400 text-center">Goes directly to a partner. Not a CRM queue.</p>
                     </form>
+                    <div className="mt-8 pt-8 border-t border-slate-100 text-center">
+                        <p className="text-sm text-slate-500 mb-3">Not ready to talk yet?</p>
+                        <Link to="/resources/gtm-diagnostic-checklist" className="text-sm font-medium text-indigo-600 hover:underline">
+                            Run the 24-point GTM Diagnostic Checklist first →
+                        </Link>
+                    </div>
                 </div>
             </section>
         </div>

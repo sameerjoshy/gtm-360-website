@@ -69,7 +69,7 @@ const Header = () => {
                     ))}
                     <div className="pt-6 flex flex-col gap-3">
                         <a href="https://app.gtm-360.com" className="text-base font-medium text-slate-400 py-2">Login</a>
-                        <Link to="/start-here" className="bg-slate-900 text-white text-center py-3.5 rounded font-bold">Talk to us</Link>
+                        <Link to="/start-here" className="bg-slate-900 text-white text-center py-3.5 rounded font-bold">Start diagnostic →</Link>
                     </div>
                 </div>
             )}

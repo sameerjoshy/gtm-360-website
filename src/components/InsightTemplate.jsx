@@ -143,6 +143,23 @@ const InsightTemplate = ({ data }) => {
                 </div>
             </section>
 
+            {/* RELATED ARTICLES */}
+            {data.relatedArticles && data.relatedArticles.length > 0 && (
+                <section className="py-16 bg-white border-t border-slate-100">
+                    <div className="container max-w-4xl">
+                        <h2 className="text-2xl font-bold text-slate-900 mb-8">Related reading</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {data.relatedArticles.map((a, i) => (
+                                <Link key={i} to={a.href} className="border border-slate-200 rounded-xl p-6 hover:shadow-sm hover:border-indigo-200 transition-all group">
+                                    <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest block mb-3">{a.tag || 'Insight'}</span>
+                                    <h3 className="text-sm font-bold text-slate-900 leading-snug group-hover:text-indigo-700 transition-colors">{a.title}</h3>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* 8. CTA (SOFT, CONSISTENT) */}
             <section className="py-24 bg-white border-t border-gray-100 text-center">
                 <div className="container max-w-2xl">

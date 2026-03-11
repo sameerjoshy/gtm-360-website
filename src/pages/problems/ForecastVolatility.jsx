@@ -69,6 +69,19 @@ const ForecastVolatility = () => (
                 </div>
             </div>
         </section>
+        <section className="py-16 bg-white border-t border-slate-100">
+            <div className="container max-w-4xl">
+                <h2 className="text-2xl font-bold text-slate-900 mb-8">Related reading</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {[LINKS].map((a, i) => (
+                        <Link key={i} to={a.href} className="border border-slate-200 rounded-xl p-6 hover:shadow-sm hover:border-indigo-200 transition-all group">
+                            <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest block mb-3">{a.tag}</span>
+                            <h3 className="text-sm font-bold text-slate-900 leading-snug group-hover:text-indigo-700 transition-colors">{a.title}</h3>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </section>
         <section className="py-16 bg-slate-50 border-t border-slate-100 text-center">
             <div className="container max-w-2xl">
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">Recognise this pattern?</h2>

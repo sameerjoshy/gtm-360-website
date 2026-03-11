@@ -2,6 +2,11 @@ export const insights = {
 
     "why-growth-stalls": {
         slug: "/insights/why-growth-stalls",
+        relatedArticles: [
+            { title: "The Hidden Cost of Solving the Wrong Problem", href: "/insights/solving-wrong-problem", tag: "Insight" },
+            { title: "ICP Drift — The Silent Revenue Killer", href: "/insights/icp-drift", tag: "Insight" },
+            { title: "GTM Operating Model Realignment", href: "/services/gtm-operating-model", tag: "Service" }
+        ],
         publishDate: "2025-11-15",
         keyTakeaway: "Growth stalls after early traction because the revenue motion that worked at $5M is not the same motion needed at $15M. The system needs to be rebuilt — not the team.",
         title: "Why Growth Stalls After Early Traction",
@@ -57,6 +62,11 @@ export const insights = {
 
     "stage-definition-problem": {
         slug: "/insights/stage-definition-problem",
+        relatedArticles: [
+            { title: "Why Forecasts Decay Over Time", href: "/insights/forecast-decay", tag: "Insight" },
+            { title: "Pipeline Full, Revenue Flat — Case Study", href: "/insights/case-studies/pipeline-full-revenue-flat", tag: "Case Study" },
+            { title: "Pipeline Quality & Win Rate", href: "/services/pipeline-quality", tag: "Service" }
+        ],
         publishDate: "2025-12-01",
         keyTakeaway: "CRM stage definitions that measure seller activity instead of buyer commitment cause pipeline to look healthy while deal quality silently deteriorates.",
         title: "The Stage Definition Problem Nobody Talks About",
@@ -109,6 +119,11 @@ export const insights = {
 
     "forecast-decay": {
         slug: "/insights/forecast-decay",
+        relatedArticles: [
+            { title: "The Stage Definition Problem Nobody Talks About", href: "/insights/stage-definition-problem", tag: "Insight" },
+            { title: "Forecast Accuracy Case Study", href: "/insights/case-studies/forecast-board-wanted-predictability", tag: "Case Study" },
+            { title: "Forecasting & Revenue Governance", href: "/services/forecasting-governance", tag: "Service" }
+        ],
         publishDate: "2025-12-15",
         keyTakeaway: "Forecast accuracy decays when stage criteria drift from buyer behaviour. The fix is not a better forecasting process — it is better pipeline discipline at every stage.",
         title: "Why Forecasts Decay Over Time",
@@ -161,6 +176,11 @@ export const insights = {
 
     "solving-wrong-problem": {
         slug: "/insights/solving-wrong-problem",
+        relatedArticles: [
+            { title: "Why Growth Stalls After Early Traction", href: "/insights/why-growth-stalls", tag: "Insight" },
+            { title: "When Fixing the Obvious Problem Made Things Worse", href: "/insights/case-studies/fixing-the-wrong-problem", tag: "Case Study" },
+            { title: "GTM Consulting overview", href: "/gtm-consulting", tag: "Overview" }
+        ],
         publishDate: "2026-01-10",
         keyTakeaway: "The hidden cost of solving the wrong problem is not wasted effort — it is compounding the original constraint while adding new ones.",
         title: "The Hidden Cost of Solving the Wrong Problem",
@@ -208,6 +228,11 @@ export const insights = {
 
     "when-ai-makes-gtm-worse": {
         slug: "/insights/when-ai-makes-gtm-worse",
+        relatedArticles: [
+            { title: "The Hidden Cost of Solving the Wrong Problem", href: "/insights/solving-wrong-problem", tag: "Insight" },
+            { title: "When AI Increased Activity but Reduced Clarity", href: "/insights/case-studies/when-ai-created-noise-not-clarity", tag: "Case Study" },
+            { title: "GTM Signals & AI Alignment", href: "/services/gtm-signals-and-ai", tag: "Service" }
+        ],
         publishDate: "2026-01-28",
         keyTakeaway: "AI makes GTM worse when deployed into a system that has not been deliberately designed. It accelerates a broken motion, not a good one.",
         title: "When AI Makes Your GTM Worse",
@@ -255,6 +280,11 @@ export const insights = {
 
     "icp-drift": {
         slug: "/insights/icp-drift",
+        relatedArticles: [
+            { title: "Why Growth Stalls After Early Traction", href: "/insights/why-growth-stalls", tag: "Insight" },
+            { title: "Sales Cycle Doubled — ICP Drift Case Study", href: "/insights/case-studies/sales-cycle-doubled-icp-drift", tag: "Case Study" },
+            { title: "B2B Sales Consulting", href: "/b2b-sales-consulting", tag: "Overview" }
+        ],
         publishDate: "2026-02-12",
         keyTakeaway: "ICP drift is the silent revenue killer because it degrades multiple metrics simultaneously — win rate, sales cycle, NRR — without any single metric collapsing visibly.",
         title: "ICP Drift — The Silent Revenue Killer",

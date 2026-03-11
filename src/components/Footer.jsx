@@ -30,6 +30,8 @@ const Footer = () => {
                         <div className="space-y-3">
                             <Link to="/start-here" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Start Here</Link>
                             <Link to="/gtm-consulting" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">GTM Consulting</Link>
+                            <Link to="/b2b-sales-consulting" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">B2B Sales Consulting</Link>
+                            <Link to="/series-b-gtm-strategy" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Series B GTM</Link>
                             <Link to="/how-we-work" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">How We Work</Link>
                             <Link to="/problems" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Problems We Solve</Link>
                             <Link to="/insights" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Insights</Link>
@@ -41,6 +43,7 @@ const Footer = () => {
                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Company</p>
                         <div className="space-y-3">
                             <Link to="/about" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">About</Link>
+                            <Link to="/resources/gtm-diagnostic-checklist" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">GTM Diagnostic Checklist</Link>
                             <Link to="/contact" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Contact</Link>
                             <Link to="/privacy" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Privacy</Link>
                             <Link to="/terms" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Terms</Link>

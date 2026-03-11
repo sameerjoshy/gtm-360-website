@@ -30,12 +30,26 @@ const About = () => {
             {/* HERO */}
             <section className="pt-32 pb-20 bg-white border-b border-slate-100">
                 <div className="container max-w-3xl">
+                    <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-6">Former AWS COO · Dell · Series B RevOps · 20+ Years B2B</p>
                     <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                         Built by people who've been in the room.
                     </h1>
-                    <p className="text-xl text-slate-500 font-light leading-relaxed">
+                    <p className="text-xl text-slate-500 font-light leading-relaxed mb-8">
                         Not consultants who study revenue systems from the outside. Operators who've run them, broken them, and fixed them — at companies that look a lot like yours.
                     </p>
+                    <div className="flex flex-wrap gap-4 text-sm">
+                        {[
+                            { label: "AWS India COO", sub: "Scaled to $500M ARR" },
+                            { label: "Innovapptive VP RevOps", sub: "+70% forecast accuracy" },
+                            { label: "Dell & Amazon", sub: "US enterprise revenue" },
+                            { label: "2× SaaS co-founder", sub: "Series A–B" }
+                        ].map((c, i) => (
+                            <div key={i} className="bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
+                                <p className="font-bold text-slate-900 text-xs">{c.label}</p>
+                                <p className="text-slate-500 text-xs">{c.sub}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
