@@ -105,7 +105,7 @@ const LeadMagnet = () => {
                         </button>
                     </form>
                     <p className="text-[10px] text-center text-gray-400 mt-4">
-                        Join 2,000+ Revenue Leaders.
+                        No fluff. Unsubscribe anytime.
                     </p>
                 </div>
             </div>

@@ -66,6 +66,7 @@ const About = () => {
                             <img
                                 src="/sameer-joshi.jpg"
                                 alt="Sameer Joshi — Founder, GTM-360"
+                                loading="lazy"
                                 className="w-full h-full object-cover object-top"
                             />
                         </div>
