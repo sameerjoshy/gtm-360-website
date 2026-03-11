@@ -60,8 +60,8 @@ const Insights = () => {
     return (
         <div className="min-h-screen bg-white font-sans selection:bg-indigo-100 selection:text-indigo-900">
             <SEO
-                title="GTM Insights | Revenue Patterns in B2B Growth | GTM-360"
-                description="Short, opinionated writing from inside real GTM systems. Patterns we see repeatedly in B2B companies at the growth plateau."
+                title="B2B GTM Insights & Case Studies | Revenue Patterns | GTM-360"
+                description="GTM consulting insights from real B2B engagements. Patterns in pipeline quality, forecast volatility, ICP drift, and revenue stalls."
                 canonical="https://gtm-360.com/insights"
             />
 

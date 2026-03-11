@@ -7,8 +7,8 @@ const GTMOperatingModel = () => {
     return (
         <div className="service-detail-page pt-20">
             <SEO
-                title="GTM Operating Model Realignment | GTM-360 Services"
-                description="Align strategy, roles, and KPIs into a unified engine. Eliminate silos and increase execution velocity."
+                title="GTM Operating Model Consulting | Revenue System Design | GTM-360"
+                description="GTM operating model consulting for B2B companies. We align strategy, roles, and KPIs into a unified revenue engine and eliminate the silos slowing growth."
                 canonical="https://gtm-360.com/services/gtm-operating-model"
             />
 

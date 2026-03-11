@@ -8,8 +8,8 @@ const GTMSignalsAI = () => {
     return (
         <div className="service-detail-page pt-20">
             <SEO
-                title="GTM Signals & AI Alignment | GTM-360 Services"
-                description="Audit your stack to ensure every tool amplifies a specific decision. Reduce noise, clean data, and align AI to strategy."
+                title="GTM Tech Stack & AI Alignment for B2B Sales Teams | GTM-360"
+                description="GTM stack audit and AI alignment for B2B revenue teams. Reduce tool noise, fix data quality, and ensure AI amplifies the right decisions — not just activity."
                 canonical="https://gtm-360.com/services/gtm-signals-and-ai"
             />
 

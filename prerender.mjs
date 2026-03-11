@@ -31,6 +31,7 @@ const routes = [
     '/services/pipeline-quality',
     '/services/forecasting-governance',
     '/services/gtm-signals-and-ai',
+    '/gtm-consulting',
     '/thank-you',
     '/privacy',
     '/terms',

@@ -51,8 +51,8 @@ const StartHere = () => {
     return (
         <div className="min-h-screen bg-white font-sans">
             <SEO
-                title="Talk to Us | GTM-360"
-                description="Tell us what's happening with your revenue. We'll tell you honestly whether we can help and what it would take."
+                title="B2B GTM Diagnostic | Start Here | GTM-360"
+                description="Start with a GTM diagnostic. Tell us what's happening — pipeline, forecast, growth. We'll tell you honestly whether we can help and what it would take."
                 canonical="https://gtm-360.com/start-here"
             />
 

@@ -2,11 +2,14 @@ export const insights = {
 
     "why-growth-stalls": {
         slug: "/insights/why-growth-stalls",
+        publishDate: "2025-11-15",
+        keyTakeaway: "Growth stalls after early traction because the revenue motion that worked at $5M is not the same motion needed at $15M. The system needs to be rebuilt — not the team.",
         title: "Why Growth Stalls After Early Traction",
         category: "Growth Inflection",
         readTime: "5 min read",
         description: "The system that built your first $10M creates drag on the next $20M. Here's why — and what has to change structurally, not just operationally.",
-        relatedService: { name: "GTM Diagnostic", link: "/start-here" },
+        relatedService: { name: "GTM Operating Model Realignment", link: "/services/gtm-operating-model" },
+        relatedProblem: { name: "Stalled growth patterns", link: "/problems/stalled-growth" },
         sections: {
             problemRecognition: `
                 <p>At some point between $8M and $15M ARR, the growth curve flattens. Not collapses — flattens. The team is working harder than ever. The product is better than it's ever been. The brand is gaining recognition. But the number isn't moving the way it used to.</p>
@@ -54,11 +57,14 @@ export const insights = {
 
     "stage-definition-problem": {
         slug: "/insights/stage-definition-problem",
+        publishDate: "2025-12-01",
+        keyTakeaway: "CRM stage definitions that measure seller activity instead of buyer commitment cause pipeline to look healthy while deal quality silently deteriorates.",
         title: "The Stage Definition Problem Nobody Talks About",
         category: "Pipeline",
         readTime: "5 min read",
         description: "Most pipeline inflation isn't caused by bad reps. It's caused by stage criteria that measure seller activity instead of buyer commitment.",
-        relatedService: { name: "Pipeline Diagnostic", link: "/start-here" },
+        relatedService: { name: "Pipeline Quality & Win Rate", link: "/services/pipeline-quality" },
+        relatedProblem: { name: "Pipeline growing, revenue flat", link: "/problems/stalled-growth" },
         sections: {
             problemRecognition: `
                 <p>Every quarter, the same conversation happens in sales reviews: the pipeline looks healthy in week 4, starts wobbling in week 8, and collapses in week 11. Deals that were "90% likely to close" get pushed. Committed revenue disappears.</p>
@@ -103,11 +109,14 @@ export const insights = {
 
     "forecast-decay": {
         slug: "/insights/forecast-decay",
+        publishDate: "2025-12-15",
+        keyTakeaway: "Forecast accuracy decays when stage criteria drift from buyer behaviour. The fix is not a better forecasting process — it is better pipeline discipline at every stage.",
         title: "Why Forecasts Decay Over Time",
         category: "Forecasting",
         readTime: "5 min read",
         description: "Without a shared definition of what 'evidence' means in a deal, forecasts become a negotiation between sales optimism and finance conservatism. Neither is right.",
-        relatedService: { name: "Revenue Governance Diagnostic", link: "/start-here" },
+        relatedService: { name: "Forecasting & Revenue Governance", link: "/services/forecasting-governance" },
+        relatedProblem: { name: "Forecast volatility", link: "/problems/forecast-volatility" },
         sections: {
             problemRecognition: `
                 <p>At the start of a quarter, the forecast looks solid. 10 weeks out, leadership has reasonable confidence. Then week 6 arrives and a $400K deal gets pushed. Then another. By week 10 you're doing recovery math and having tense conversations about what's actually in the commit.</p>
@@ -152,11 +161,14 @@ export const insights = {
 
     "solving-wrong-problem": {
         slug: "/insights/solving-wrong-problem",
+        publishDate: "2026-01-10",
+        keyTakeaway: "The hidden cost of solving the wrong problem is not wasted effort — it is compounding the original constraint while adding new ones.",
         title: "The Hidden Cost of Solving the Wrong Problem",
         category: "Misdiagnosis",
         readTime: "5 min read",
         description: "More pipeline, more tools, more headcount. When the underlying constraint is misunderstood, additional effort compounds the problem instead of solving it.",
-        relatedService: { name: "GTM Diagnostic", link: "/start-here" },
+        relatedService: { name: "GTM Operating Model Realignment", link: "/services/gtm-operating-model" },
+        relatedProblem: { name: "Why growth stalls", link: "/problems/stalled-growth" },
         sections: {
             problemRecognition: `
                 <p>The board asks why growth has stalled. Leadership runs an analysis. The pipeline is thin, win rates are declining, average deal size is flat. Obvious conclusion: we need more pipeline, better salespeople, and bigger deals.</p>
@@ -196,11 +208,14 @@ export const insights = {
 
     "when-ai-makes-gtm-worse": {
         slug: "/insights/when-ai-makes-gtm-worse",
+        publishDate: "2026-01-28",
+        keyTakeaway: "AI makes GTM worse when deployed into a system that has not been deliberately designed. It accelerates a broken motion, not a good one.",
         title: "When AI Makes Your GTM Worse",
         category: "AI & Tools",
         readTime: "4 min read",
         description: "AI amplifies the system underneath it. If the system is misaligned, AI makes misalignment faster and more expensive. The diagnosis has to come first.",
-        relatedService: { name: "GTM Signals & AI Alignment", link: "/start-here" },
+        relatedService: { name: "GTM Signals & AI Alignment", link: "/services/gtm-signals-and-ai" },
+        relatedProblem: { name: "AI noise vs signal", link: "/problems" },
         sections: {
             problemRecognition: `
                 <p>The pitch is compelling: AI will write your sequences, score your leads, summarise your calls, and tell your reps which deals to prioritise. You implement it. Activity goes up. Volume goes up. The team feels like it's moving faster.</p>
@@ -240,11 +255,14 @@ export const insights = {
 
     "icp-drift": {
         slug: "/insights/icp-drift",
+        publishDate: "2026-02-12",
+        keyTakeaway: "ICP drift is the silent revenue killer because it degrades multiple metrics simultaneously — win rate, sales cycle, NRR — without any single metric collapsing visibly.",
         title: "ICP Drift — The Silent Revenue Killer",
         category: "ICP",
         readTime: "5 min read",
         description: "ICP drift happens slowly. The accounts you're winning today look different from the accounts your product was built for. By the time it shows in metrics, the damage is done.",
-        relatedService: { name: "ICP Realignment Diagnostic", link: "/start-here" },
+        relatedService: { name: "Pipeline Quality & Win Rate", link: "/services/pipeline-quality" },
+        relatedProblem: { name: "Win rates falling", link: "/problems/pipeline-conversion" },
         sections: {
             problemRecognition: `
                 <p>You're closing deals. Win rates are reasonable. The team is hitting quota, mostly. But NRR is quietly declining. Support tickets are increasing. Customer success is overwhelmed. The product team is getting conflicting feature requests that don't form a coherent pattern. Sales cycles are getting longer.</p>

@@ -1,10 +1,24 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 
 const StalledGrowth = () => (
     <div className="min-h-screen bg-white font-sans">
-        <SEO title="Pipeline Growing But Revenue Isn't | GTM-360" description="When pipeline volume increases but revenue doesn't follow, the constraint is almost never volume. It's qualification and stage definition." />
+        
+        <Helmet>
+            <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        { "@type": "Question", "name": "Why is my B2B pipeline growing but revenue is not?", "acceptedAnswer": { "@type": "Answer", "text": "When B2B pipeline grows but revenue stays flat, the constraint is almost always qualification and stage definition — not volume. Deals are advancing through the CRM based on seller activity rather than genuine buyer commitment. The pipeline looks healthy because stages are being ticked, but the underlying deal quality has quietly deteriorated. Adding more pipeline at the top makes the problem worse, not better." }},
+                        { "@type": "Question", "name": "What is pipeline quality in B2B sales?", "acceptedAnswer": { "@type": "Answer", "text": "Pipeline quality refers to the degree to which deals in the pipeline represent genuine buyer intent and commitment at each stage, rather than seller-driven progression. A high-quality pipeline has stage criteria that require buyer evidence — a documented problem, an identified decision maker, a confirmed budget process — not just a follow-up call completed." }},
+                        { "@type": "Question", "name": "How do you fix a B2B pipeline quality problem?", "acceptedAnswer": { "@type": "Answer", "text": "The fix has two parts: redefine stage entry and exit criteria to require buyer evidence rather than seller activity, and implement a pipeline review cadence that enforces those criteria. This typically causes the pipeline to shrink initially as low-quality deals are removed — but win rates, forecast accuracy, and revenue predictability all improve within one to two quarters." }},
+                        { "@type": "Question", "name": "What are B2B pipeline stage definitions?", "acceptedAnswer": { "@type": "Answer", "text": "Pipeline stage definitions are the criteria a deal must meet to enter and exit each stage in the sales process. Effective stage definitions map to buyer behaviour — what the buyer has done or committed to — rather than seller activity. For example, a deal should only enter Proposal stage when the buyer has confirmed the problem, the decision maker, the timeline, and the evaluation process — not when the seller has sent a proposal." }}
+                    ]
+                })}</script>
+        </Helmet>
+        <SEO title="Why B2B Pipeline Growth Doesn't Fix Revenue | GTM-360" description="When B2B pipeline grows but revenue stays flat, the constraint is qualification — not volume. Here's what's actually happening and how to fix it." />
         <section className="pt-32 pb-16 bg-white border-b border-slate-100">
             <div className="container max-w-3xl">
                 <Link to="/problems" className="text-xs text-slate-400 hover:text-slate-700 mb-6 block">← All patterns</Link>
@@ -34,6 +48,24 @@ const StalledGrowth = () => (
                             <li key={idx} className="flex items-start gap-2"><span className="text-emerald-500 font-bold mt-0.5">✓</span>{i}</li>
                         ))}
                     </ul>
+                </div>
+            </div>
+        </section>
+        <section className="py-16 bg-white border-t border-slate-100">
+            <div className="container max-w-3xl">
+                <h2 className="text-2xl font-bold text-slate-900 mb-8">Frequently asked questions</h2>
+                <div className="space-y-8">
+                    {[
+                        { q: "Why is my B2B pipeline growing but revenue is not?", a: "When B2B pipeline grows but revenue stays flat, the constraint is almost always qualification and stage definition — not volume. Deals are advancing through the CRM based on seller activity rather than genuine buyer commitment. The pipeline looks healthy because stages are being ticked, but the underlying deal quality has quietly deteriorated. Adding more pipeline at the top makes the problem worse, not better." },
+                        { q: "What is pipeline quality in B2B sales?", a: "Pipeline quality refers to the degree to which deals represent genuine buyer intent at each stage, rather than seller-driven progression. A high-quality pipeline has stage criteria that require buyer evidence — a documented problem, an identified decision maker, a confirmed budget process — not just a follow-up call completed." },
+                        { q: "How do you fix a B2B pipeline quality problem?", a: "Redefine stage entry and exit criteria to require buyer evidence rather than seller activity, and implement a pipeline review cadence that enforces those criteria. The pipeline typically shrinks initially as low-quality deals are removed — but win rates, forecast accuracy, and revenue predictability all improve within one to two quarters." },
+                        { q: "What are B2B pipeline stage definitions?", a: "Stage definitions are the criteria a deal must meet to enter and exit each stage. Effective definitions map to buyer behaviour — what the buyer has done or committed to — not what the seller has done. A deal should only enter Proposal stage when the buyer has confirmed the problem, decision maker, timeline, and evaluation process." }
+                    ].map((item, i) => (
+                        <div key={i} className="border-b border-slate-100 pb-8 last:border-0">
+                            <h3 className="text-base font-bold text-slate-900 mb-3">{item.q}</h3>
+                            <p className="text-slate-600 leading-relaxed text-sm">{item.a}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

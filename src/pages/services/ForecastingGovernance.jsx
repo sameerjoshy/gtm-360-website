@@ -7,8 +7,8 @@ const ForecastingGovernance = () => {
     return (
         <div className="service-detail-page pt-20">
             <SEO
-                title="Forecasting & Governance | GTM-360 Services"
-                description="Replace 'gut feel' with engineering-grade predictability. Build data-driven triangulation models for accurate revenue forecasting."
+                title="B2B Sales Forecast Accuracy & Revenue Governance | GTM-360"
+                description="Build forecast accuracy for B2B revenue teams. Replace gut-feel pipeline reviews with structured governance that produces numbers the board can trust."
                 canonical="https://gtm-360.com/services/forecasting-governance"
             />
 

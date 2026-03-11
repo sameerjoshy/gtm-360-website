@@ -29,6 +29,7 @@ import CaseStudyPost from './pages/insights/CaseStudyPost';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import ThankYou from './pages/ThankYou';
+import GTMConsulting from './pages/GTMConsulting';
 
 // Layout
 import Header from './components/Header';
@@ -70,6 +71,7 @@ export function AppRoutes() {
                 <Route path="/thank-you" element={<ThankYou />} />
                 {/* Redirects */}
                 <Route path="/services" element={<Navigate to="/how-we-work" replace />} />
+                <Route path="/gtm-consulting" element={<GTMConsulting />} />
                 <Route path="/playbooks" element={<Navigate to="/insights" replace />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>

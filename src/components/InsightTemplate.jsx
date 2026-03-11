@@ -13,12 +13,16 @@ const InsightTemplate = ({ data }) => {
         "@type": "Article",
         "headline": data.title,
         "description": data.description,
+        "datePublished": data.publishDate || "2025-11-01",
+        "dateModified": data.publishDate || "2025-11-01",
         "author": {
-            "@type": "Organization",
-            "name": "GTM-360"
+            "@type": "Person",
+            "@id": "https://gtm-360.com/about#sameer",
+            "name": "Sameer Joshi"
         },
         "publisher": {
             "@type": "Organization",
+            "@id": "https://gtm-360.com/#organization",
             "name": "GTM-360"
         },
         "mainEntityOfPage": {
@@ -50,6 +54,12 @@ const InsightTemplate = ({ data }) => {
                     <p className="text-xl text-gray-700 leading-relaxed font-serif">
                         {data.description}
                     </p>
+                    {data.keyTakeaway && (
+                        <div className="mt-8 bg-indigo-50 border-l-4 border-indigo-600 rounded-r-lg p-5">
+                            <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-2">Key Takeaway</p>
+                            <p className="text-slate-800 font-medium leading-relaxed">{data.keyTakeaway}</p>
+                        </div>
+                    )}
                 </div>
             </section>
 
@@ -145,8 +155,11 @@ const InsightTemplate = ({ data }) => {
                     <Link to="/start-here" className="btn bg-slate-900 text-white hover:bg-opacity-90 px-10 py-4 text-lg">
                         Start with a Diagnostic
                     </Link>
-                    <div className="mt-8 text-sm text-gray-500">
-                        Related Service: <Link to={data.relatedService.link} className="underline hover:text-slate-900">{data.relatedService.name}</Link>
+                    <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-500">
+                        <span>Related service: <Link to={data.relatedService.link} className="text-indigo-600 font-medium hover:underline">{data.relatedService.name}</Link></span>
+                        {data.relatedProblem && (
+                            <span>· Related pattern: <Link to={data.relatedProblem.link} className="text-indigo-600 font-medium hover:underline">{data.relatedProblem.name}</Link></span>
+                        )}
                     </div>
                 </div>
             </section>

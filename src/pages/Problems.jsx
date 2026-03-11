@@ -13,7 +13,7 @@ const Problems = () => {
             "@type": "Thing",
             "name": "Go-to-Market failures, revenue predictability, misdiagnosis"
         },
-        "description": "The patterns we see most often in B2B companies at the growth plateau. Most persist because teams are solving the wrong problem."
+        "description": "The most common B2B revenue problems: pipeline not converting, forecast volatility, stalled growth. We fix the real constraint, not the symptom."
     };
 
     const symptoms = [

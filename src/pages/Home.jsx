@@ -8,14 +8,41 @@ const Home = () => {
     return (
         <div className="font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
             <SEO
-                title="GTM-360 | Your Revenue Partner at the Growth Plateau"
-                description="Most B2B teams hit a wall around $10M. Pipeline looks fine. The team is working hard. But the numbers aren't moving. We help you find what's actually in the way — and fix it."
+                title="B2B GTM & Sales Consulting | GTM-360"
+                description="B2B GTM consulting for companies hitting the growth plateau. We diagnose the real revenue constraint — pipeline quality, forecast volatility, ICP drift — and fix it. Series A–C engagements."
                 canonical="https://gtm-360.com/"
             />
+            <Helmet>
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@graph": [
+                        {
+                            "@type": ["Organization", "ProfessionalService"],
+                            "@id": "https://gtm-360.com/#organization",
+                            "name": "GTM-360",
+                            "url": "https://gtm-360.com",
+                            "logo": "https://gtm-360.com/og-image.png",
+                            "description": "B2B GTM consulting firm specialising in revenue system diagnostics and fixes for SaaS companies at the growth plateau.",
+                            "founder": { "@type": "Person", "@id": "https://gtm-360.com/about#sameer" },
+                            "serviceType": "GTM Consulting",
+                            "areaServed": "Worldwide",
+                            "sameAs": ["https://www.linkedin.com/company/gtm-360"]
+                        },
+                        {
+                            "@type": "WebSite",
+                            "@id": "https://gtm-360.com/#website",
+                            "url": "https://gtm-360.com",
+                            "name": "GTM-360",
+                            "publisher": { "@id": "https://gtm-360.com/#organization" }
+                        }
+                    ]
+                })}</script>
+            </Helmet>
 
             {/* HERO — plain, direct, human */}
             <section className="pt-36 pb-28 bg-white">
                 <div className="container max-w-3xl">
+                    <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-6">GTM Consulting · B2B SaaS &amp; Technology · Series A–C</p>
                     <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-8 text-slate-900 leading-[1.08]">
                         Growth has slowed.<br />
                         You're not sure why.
@@ -26,16 +53,17 @@ const Home = () => {
                     <p className="text-lg text-slate-800 font-medium mb-12 max-w-xl">
                         We've seen this before. It's not a people problem — it's a revenue system problem. And it's fixable.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex flex-col sm:flex-row gap-4 mb-6">
                         <Link to="/start-here"
                             className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
-                            Talk to us
+                            Start with the diagnostic →
                         </Link>
-                        <Link to="/how-we-work"
+                        <Link to="/insights"
                             className="inline-flex items-center justify-center bg-white text-slate-600 border border-slate-200 px-8 py-4 rounded font-medium hover:bg-slate-50 transition-all">
-                            How we work →
+                            See how we think →
                         </Link>
                     </div>
+                    <p className="text-xs text-slate-400">20+ years in B2B GTM · Former AWS &amp; Dell revenue leadership · Goes directly to a partner — not a CRM queue.</p>
                 </div>
             </section>
 

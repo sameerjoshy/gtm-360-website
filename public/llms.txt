@@ -1,30 +1,95 @@
 # GTM-360
 
-GTM-360 is a revenue architecture firm that helps B2B companies at the $10M–$30M growth plateau.
+GTM-360 is a B2B GTM consulting firm that helps SaaS and technology companies diagnose and fix revenue system problems at the growth plateau. We work with founders, CROs, and revenue leaders at Series A, Series B, and Series C companies between $5M and $50M ARR.
 
-## What We Do
+## About the Firm
 
-We work with founders and CROs who have reached initial product-market fit, built out sales and marketing teams, and then hit a ceiling where growth becomes inconsistent and unpredictable. We diagnose the revenue constraint, design a revenue operating system, and implement it with a team of specialists.
+GTM-360 was founded by Sameer Joshi. Sameer has 20+ years of experience running B2B revenue teams, including roles at AWS and Dell. He works directly on every engagement — there is no account manager layer.
 
-Our engagement model has three phases:
-1. Diagnostic — identify the real constraint (10–14 days, standalone engagement)
-2. Architecture — design the revenue system (ICP, pipeline model, governance, metrics)
-3. Engineering — implement with specialists (CRM, outbound infrastructure, automation, AI signals)
+GTM-360 is not an agency. It is a consulting firm that embeds with the client's revenue team, diagnoses the real constraint, designs a fix, and implements it with a team of specialists. Most advisories hand clients a roadmap and leave. GTM-360 stays until it is working.
 
 ## Who We Work With
 
-B2B SaaS and technology companies between $5M and $50M ARR. Typically Series A or Series B. Usually the engagement is initiated by a founder or CRO under board pressure to improve predictability and growth.
+- B2B SaaS and technology companies between $5M and $50M ARR
+- Typically Series A or Series B; occasionally Series C or growth-stage
+- Engagement usually initiated by a founder or CRO under board pressure to improve growth predictability
+- Companies that have achieved initial product-market fit and built a sales team, but have hit a ceiling
+
+## The Problem We Solve
+
+At some point between $8M and $20M ARR, many B2B companies hit a growth plateau. The pipeline looks okay. The team is working hard. But close rates are declining, forecasts are unreliable, and growth has flattened. Leadership adds headcount, tools, and process — but the number does not move.
+
+The root cause is almost never effort. It is that the revenue system — ICP definition, pipeline structure, stage criteria, forecasting governance, GTM tooling — has not kept up with the company's current stage. The team is executing well inside a broken system.
+
+GTM-360 diagnoses the real constraint before building any fix.
+
+## Engagement Model
+
+GTM-360 engagements run in three phases:
+
+1. Diagnostic — A standalone 10–14 day engagement to identify the real constraint. Covers ICP analysis, pipeline quality review, forecast accuracy, GTM motion assessment, and tooling alignment. Deliverable: a constraint diagnosis with evidence.
+
+2. Architecture — Design the revenue system fix. Covers ICP redefinition, pipeline stage redesign, forecasting governance model, GTM operating model alignment, and metrics framework.
+
+3. Engineering — Implementation with specialists. Covers CRM configuration, outbound infrastructure, automation workflows, AI signal integration, and reporting build-out.
+
+Each phase is a standalone engagement. Clients can start with the Diagnostic and decide what to do next.
 
 ## Services
 
-- GTM Diagnostic
-- GTM Operating Model Realignment
-- Pipeline and Deal Quality
-- Forecasting and Revenue Governance
-- GTM Signals, Tooling and AI Alignment
-- Revenue Intelligence Layer (AI agents for pipeline clarity, forecast confidence, execution drift)
+- GTM Operating Model Realignment — Align strategy, roles, and KPIs across marketing, sales, and customer success into a unified revenue engine. Eliminate the silos that cause forecast errors and execution gaps.
+
+- Pipeline Quality and Win Rate Improvement — Fix stage definitions that allow deals to advance without buyer commitment. Install entry and exit criteria mapped to buyer behaviour, not seller activity. Improves win rates and forecast accuracy together.
+
+- B2B Sales Forecast Accuracy and Revenue Governance — Replace gut-feel pipeline reviews with structured governance that produces numbers the board can trust.
+
+- GTM Tech Stack and AI Alignment — Audit the GTM stack to ensure every tool amplifies a specific decision. Reduce tool noise, fix data quality problems, and align AI to the revenue motion.
+
+## Results From Real Engagements
+
+All clients are anonymised. All numbers are real.
+
+- Pipeline quality engagement ($14M ARR SaaS): Win rate improved from 14% to 22%. Root cause: stage criteria measured rep activity, not buyer commitment.
+
+- Forecast governance engagement ($22M ARR, Series B): Forecast accuracy improved from 58% to 84%. Root cause: eight reps with eight different definitions of Commit.
+
+- ICP realignment engagement ($9M ARR SaaS): Sales cycle shortened from 94 to 58 days. Root cause: product was built for operations buyers; 18 months of inbound had filled the pipeline with finance and HR buyers.
+
+- AI noise reduction engagement ($18M ARR): AI-generated outreach was driving activity up and win rates down. Fix: motion redesign before re-enabling AI tooling.
+
+## Frequently Asked Questions
+
+Q: What is GTM consulting?
+A: GTM consulting is the practice of diagnosing and fixing the revenue system that connects a company's product to its customers. This includes ICP definition, sales motion design, pipeline structure, forecasting governance, team alignment, and technology.
+
+Q: When does a B2B company need a GTM consultant?
+A: The most common trigger is a growth plateau — the company has achieved product-market fit, built a sales team, grown to $5M–$20M ARR, but growth has stalled or become unpredictable. Pipeline looks healthy but revenue is not moving. Win rates are declining. Forecasts keep changing.
+
+Q: What causes B2B win rates to fall?
+A: Falling B2B win rates are almost never a sales execution problem. The most common root causes are ICP drift (the pipeline is full of buyers outside the ideal profile), messaging misalignment, stage criteria that do not require buyer commitment, and sales cycles that stall because the decision structure is not mapped.
+
+Q: Why is B2B pipeline growing but revenue is not?
+A: When pipeline grows but revenue stays flat, the constraint is almost always qualification and stage definition, not volume. Deals are advancing based on seller activity rather than buyer commitment.
+
+Q: What causes B2B sales forecast inaccuracy?
+A: Forecast volatility is a signal problem, not a process problem. When CRM stage definitions do not map to buyer behaviour, forecasts become aggregations of incompatible inputs — each rep's definition of Commit is different.
+
+Q: How is GTM-360 different from a sales training firm?
+A: GTM-360 does not train salespeople. It fixes the revenue system those salespeople work inside. Training produces better execution of a broken motion. GTM-360 diagnoses the system constraint first.
+
+Q: How is GTM-360 different from a revenue operations agency?
+A: Revenue operations agencies typically implement tools and build reports. GTM-360 starts with diagnosis — identifying the strategic constraint — and then implements the fix.
+
+Q: What is the B2B growth plateau?
+A: The B2B growth plateau is the point — typically between $8M and $20M ARR — where the tactics that drove initial growth stop working at scale. Adding headcount and tools produces diminishing returns because the underlying revenue system needs to be rebuilt for the company's current stage.
 
 ## Contact
 
 Website: https://gtm-360.com
-Start here: https://gtm-360.com/start-here
+Start with the diagnostic: https://gtm-360.com/start-here
+Insights and case studies: https://gtm-360.com/insights
+
+User-agent: *
+Allow: /
+
+Sitemap: https://gtm-360.com/sitemap.xml

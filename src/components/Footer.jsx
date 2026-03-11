@@ -29,6 +29,7 @@ const Footer = () => {
                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Work</p>
                         <div className="space-y-3">
                             <Link to="/start-here" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Start Here</Link>
+                            <Link to="/gtm-consulting" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">GTM Consulting</Link>
                             <Link to="/how-we-work" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">How We Work</Link>
                             <Link to="/problems" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Problems We Solve</Link>
                             <Link to="/insights" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Insights</Link>

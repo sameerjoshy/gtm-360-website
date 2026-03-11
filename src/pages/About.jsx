@@ -8,10 +8,24 @@ const About = () => {
     return (
         <div className="min-h-screen bg-white font-sans">
             <SEO
-                title="About GTM-360 | Revenue Partner for B2B Growth"
-                description="20+ years running B2B revenue teams at AWS, Dell, and Series B SaaS. GTM-360 diagnoses the real constraint before building the fix."
+                title="About GTM-360 | B2B GTM Consultant · Former AWS & Dell"
+                description="20+ years running B2B revenue teams at AWS, Dell, and Series B SaaS. GTM-360 is a GTM consulting firm that diagnoses the real constraint before building the fix."
                 canonical="https://gtm-360.com/about"
             />
+            <Helmet>
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Person",
+                    "@id": "https://gtm-360.com/about#sameer",
+                    "name": "Sameer Joshi",
+                    "jobTitle": "Founder & GTM Consultant",
+                    "worksFor": { "@id": "https://gtm-360.com/#organization" },
+                    "description": "20+ years running B2B revenue teams including roles at AWS and Dell. Founder of GTM-360, a GTM consulting firm for B2B SaaS companies.",
+                    "sameAs": ["https://www.linkedin.com/in/sameerjoshy"],
+                    "url": "https://gtm-360.com/about",
+                    "knowsAbout": ["GTM consulting", "B2B sales", "revenue operations", "sales forecasting", "pipeline management", "ICP definition"]
+                })}</script>
+            </Helmet>
 
             {/* HERO */}
             <section className="pt-32 pb-20 bg-white border-b border-slate-100">

@@ -1,10 +1,24 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 
 const PipelineConversion = () => (
     <div className="min-h-screen bg-white font-sans">
-        <SEO title="Win Rates Falling | GTM-360" description="Falling win rates are rarely a sales execution problem. They usually reflect ICP drift, messaging misalignment, or a buyer decision structure that isn't being addressed." />
+        
+        <Helmet>
+            <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        { "@type": "Question", "name": "Why are B2B win rates falling?", "acceptedAnswer": { "@type": "Answer", "text": "Falling B2B win rates are rarely a sales execution problem. The most common root causes are ICP drift — the pipeline has filled with buyers outside the ideal profile — messaging misalignment where the value proposition no longer matches buyer priorities, stage criteria that do not require buyer commitment, and sales cycles that stall because the decision-making structure has not been mapped." }},
+                        { "@type": "Question", "name": "What is ICP drift in B2B sales?", "acceptedAnswer": { "@type": "Answer", "text": "ICP drift is the gradual shift in a company's actual customer base away from its original ideal customer profile. It typically happens through inbound marketing that attracts adjacent personas, partnerships that bring in different buyer types, or product evolution that opens new use cases. The pipeline fills with buyers who are harder to close, require longer sales cycles, and have higher churn rates — but the drift is slow enough that nobody notices until metrics have quietly deteriorated." }},
+                        { "@type": "Question", "name": "How do you improve B2B win rates?", "acceptedAnswer": { "@type": "Answer", "text": "The fix depends on the root cause. If the issue is ICP drift, the solution is to redefine the ICP based on current win rate and retention data and tighten qualification criteria. If the issue is messaging misalignment, the solution is to update the value proposition to match how buyers are currently describing their problems. If the issue is stage criteria, the solution is to rebuild stage definitions around buyer evidence." }},
+                        { "@type": "Question", "name": "What is a good B2B win rate?", "acceptedAnswer": { "@type": "Answer", "text": "B2B SaaS win rates vary by deal size and segment. For SMB deals, 20–30% is typical. For mid-market, 15–25%. For enterprise, 10–20%. More important than the absolute number is the trend and the comparison across segments. A declining win rate in a specific deal size or industry segment usually points to a specific, diagnosable problem." }}
+                    ]
+                })}</script>
+        </Helmet>
+        <SEO title="Why B2B Win Rates Fall: ICP Drift & Messaging Gaps | GTM-360" description="Falling B2B win rates are rarely a sales execution problem. They almost always reflect ICP drift, messaging misalignment, or stage criteria that don't map to buyer behaviour." />
         <section className="pt-32 pb-16 bg-white border-b border-slate-100">
             <div className="container max-w-3xl">
                 <Link to="/problems" className="text-xs text-slate-400 hover:text-slate-700 mb-6 block">← All patterns</Link>
@@ -34,6 +48,24 @@ const PipelineConversion = () => (
                             <li key={idx} className="flex items-start gap-2"><span className="text-emerald-500 font-bold mt-0.5">✓</span>{i}</li>
                         ))}
                     </ul>
+                </div>
+            </div>
+        </section>
+        <section className="py-16 bg-white border-t border-slate-100">
+            <div className="container max-w-3xl">
+                <h2 className="text-2xl font-bold text-slate-900 mb-8">Frequently asked questions</h2>
+                <div className="space-y-8">
+                    {[
+                        { q: "Why are B2B win rates falling?", a: "Falling B2B win rates are rarely a sales execution problem. The most common root causes are ICP drift — the pipeline has filled with buyers outside the ideal profile — messaging misalignment where the value proposition no longer matches buyer priorities, and stage criteria that do not require genuine buyer commitment." },
+                        { q: "What is ICP drift in B2B sales?", a: "ICP drift is the gradual shift in a company's actual customer base away from its ideal customer profile. It typically happens through inbound that attracts adjacent personas, or product evolution that opens new use cases. The pipeline fills with buyers who are harder to close and have higher churn — but the drift is slow enough that nobody notices until metrics have deteriorated." },
+                        { q: "How do you improve B2B win rates?", a: "The fix depends on root cause. ICP drift: redefine the ICP based on current win rate and retention data, tighten qualification. Messaging misalignment: update the value proposition to match how buyers describe their problems today. Stage criteria: rebuild stage definitions around buyer evidence rather than seller activity." },
+                        { q: "What is a good B2B win rate?", a: "B2B SaaS win rates vary by deal size and segment. For SMB deals, 20–30% is typical. For mid-market, 15–25%. For enterprise, 10–20%. More important than the absolute number is the trend and comparison across segments. A declining win rate in a specific segment usually points to a diagnosable problem." }
+                    ].map((item, i) => (
+                        <div key={i} className="border-b border-slate-100 pb-8 last:border-0">
+                            <h3 className="text-base font-bold text-slate-900 mb-3">{item.q}</h3>
+                            <p className="text-slate-600 leading-relaxed text-sm">{item.a}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

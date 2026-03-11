@@ -8,10 +8,38 @@ const HowWeWork = () => {
     return (
         <div className="min-h-screen bg-white font-sans">
             <SEO
-                title="How GTM-360 Works | Diagnose, Design, Build"
-                description="We work alongside your team — not above it. Three phases: find the real problem, design the fix, build it. We stay until it's working."
+                title="GTM Consulting Process: Diagnose, Design, Build | GTM-360"
+                description="How GTM-360 works: a 3-phase consulting engagement that starts with diagnosis, not assumptions. Find the real constraint, design the fix, build it."
                 canonical="https://gtm-360.com/how-we-work"
             />
+            <Helmet>
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "HowTo",
+                    "name": "How GTM-360 Works: B2B GTM Consulting Engagement",
+                    "description": "A 3-phase GTM consulting engagement that starts with diagnosis and ends with a working revenue system.",
+                    "step": [
+                        {
+                            "@type": "HowToStep",
+                            "position": 1,
+                            "name": "Phase 1: Diagnostic",
+                            "text": "A standalone 10–14 day engagement to identify the real revenue constraint. We interview the team, analyse pipeline data, review CRM stage definitions, examine forecast accuracy, and assess GTM motion alignment. Output: a constraint diagnosis with evidence."
+                        },
+                        {
+                            "@type": "HowToStep",
+                            "position": 2,
+                            "name": "Phase 2: Architecture",
+                            "text": "Design the revenue system fix. We redefine the ICP, redesign pipeline stages, build a forecasting governance model, align the GTM operating model, and establish the metrics framework. Output: a revenue system blueprint."
+                        },
+                        {
+                            "@type": "HowToStep",
+                            "position": 3,
+                            "name": "Phase 3: Engineering",
+                            "text": "Implement the fix with specialists. We configure the CRM, build outbound infrastructure, set up automation workflows, integrate AI signals, and build reporting. We stay until it is working."
+                        }
+                    ]
+                })}</script>
+            </Helmet>
 
             {/* HERO */}
             <section className="pt-32 pb-20 bg-white border-b border-slate-100">

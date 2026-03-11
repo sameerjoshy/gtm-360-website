@@ -7,8 +7,8 @@ const PipelineQuality = () => {
     return (
         <div className="service-detail-page pt-20">
             <SEO
-                title="Pipeline & Deal Quality Repair | GTM-360 Services"
-                description="Fix bloated pipelines and late-stage deal loss. Install strict entry/exit criteria and scientific stage definitions."
+                title="B2B Pipeline Quality & Win Rate Improvement | GTM-360"
+                description="Fix B2B pipeline quality: define stage entry/exit criteria that map to buyer commitment, not seller activity. Improve win rates and forecast accuracy together."
                 canonical="https://gtm-360.com/services/pipeline-quality"
             />
 
