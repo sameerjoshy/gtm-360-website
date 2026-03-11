@@ -132,7 +132,7 @@ canonical="https://gtm-360.com/insights"
                     <div className="max-w-xl mb-10">
                         <span className="text-slate-400 font-mono text-xs tracking-widest uppercase mb-3 block">Case Studies</span>
                         <h2 className="text-2xl font-bold text-slate-900 mb-3">What these patterns look like in practice.</h2>
-                        <p className="text-slate-500 font-light">Narrative accounts of real engagements. Names and details anonymised.</p>
+                        <p className="text-slate-500 font-light">Narrative accounts of real engagements. Names and details anonymised by request — context available on a call.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                         {[

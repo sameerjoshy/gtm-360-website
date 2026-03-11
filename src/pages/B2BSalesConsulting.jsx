@@ -164,7 +164,7 @@ const B2BSalesConsulting = () => {
             <section className="py-20 bg-white">
                 <div className="container max-w-4xl">
                     <h2 className="text-3xl font-bold text-slate-900 mb-4">B2B sales results from real engagements</h2>
-                    <p className="text-slate-500 font-light mb-12">Companies anonymised. Every number is real.</p>
+                    <p className="text-slate-500 font-light mb-12">Companies anonymised by request. Every number is real — context available on a call.</p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
                         {[
                             { metric: "14% → 22%", label: "Win rate", arr: "$14M ARR", tag: "Pipeline Quality", desc: "Pipeline was at 4× coverage. Revenue was flat. Stage criteria were measuring rep activity, not buyer commitment. Fixed the stage definitions. Win rate recovered in two quarters.", slug: "/insights/case-studies/pipeline-full-revenue-flat" },

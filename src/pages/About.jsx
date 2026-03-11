@@ -50,6 +50,10 @@ const About = () => {
                             </div>
                         ))}
                     </div>
+                    <p className="text-xs text-slate-400 mt-5">
+                        Background independently verifiable on{" "}
+                        <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline font-medium">LinkedIn</a>.
+                    </p>
                 </div>
             </section>
 
@@ -77,9 +81,11 @@ const About = () => {
                                 <p className="font-medium text-slate-800">GTM-360 exists to fix the diagnosis first. Then fix the system. Then build it so it actually runs.</p>
                             </div>
 
-                            <div className="mt-8 flex gap-6">
+                            <div className="mt-8 flex gap-6 items-center">
                                 <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer"
-                                    className="text-sm font-bold text-indigo-600 hover:underline">LinkedIn →</a>
+                                    className="inline-flex items-center gap-2 text-sm font-bold text-indigo-600 border border-indigo-200 bg-indigo-50 px-4 py-2 rounded hover:bg-indigo-100 transition-all">
+                                    Verify on LinkedIn →
+                                </a>
                                 <Link to="/start-here" className="text-sm font-bold text-slate-700 hover:underline">Work with us →</Link>
                             </div>
                         </div>
@@ -115,6 +121,10 @@ const About = () => {
                             </div>
                         ))}
                     </div>
+                    <p className="text-xs text-slate-400 mt-5">
+                        Background independently verifiable on{" "}
+                        <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline font-medium">LinkedIn</a>.
+                    </p>
                 </div>
             </section>
 

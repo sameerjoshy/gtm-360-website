@@ -63,7 +63,7 @@ const Home = () => {
                             See how we think →
                         </Link>
                     </div>
-                    <p className="text-xs text-slate-400">20+ years in B2B GTM · Former AWS &amp; Dell revenue leadership · Goes directly to a partner — not a CRM queue.</p>
+                    <p className="text-xs text-slate-400">20+ years in B2B GTM · Former AWS &amp; Dell · Sameer's background is verifiable on <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:underline">LinkedIn</a> · Goes directly to a partner — not a CRM queue.</p>
                 </div>
             </section>
 
@@ -161,7 +161,7 @@ const Home = () => {
                 <div className="container max-w-5xl">
                     <div className="max-w-xl mb-14">
                         <h2 className="text-3xl font-bold text-slate-900 mb-4">What we've fixed for others.</h2>
-                        <p className="text-slate-500 font-light">Companies anonymised. Every number is real.</p>
+                        <p className="text-slate-500 font-light">Companies anonymised by request. Every number is real — context available on a call.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {[

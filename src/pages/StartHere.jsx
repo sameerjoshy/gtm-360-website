@@ -70,11 +70,15 @@ const StartHere = () => {
             {/* HERO */}
             <section className="pt-32 pb-16 bg-white border-b border-slate-100">
                 <div className="container max-w-3xl">
+                    <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-6">GTM Diagnostic · Standalone · 10–14 Days</p>
                     <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                         Tell us what's happening.
                     </h1>
-                    <p className="text-xl text-slate-500 font-light leading-relaxed">
+                    <p className="text-xl text-slate-500 font-light leading-relaxed mb-4">
                         Describe the situation — what you're seeing, what you've already tried, and what the pressure looks like. We'll come back to you with an honest view of what we'd do and whether it makes sense to talk further.
+                    </p>
+                    <p className="text-sm text-slate-600 font-medium leading-relaxed">
+                        The diagnostic is deliberately standalone and time-boxed. It's designed to let you test the quality of our thinking before committing to anything larger. Most clients decide whether to continue based on what comes out of it.
                     </p>
                 </div>
             </section>
