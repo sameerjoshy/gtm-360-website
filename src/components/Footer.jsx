@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className="md:col-span-2">
                         <img src={logo} alt="GTM-360" className="h-10 mb-4 opacity-80 hover:opacity-100 transition-all" />
                         <p className="text-slate-500 text-sm max-w-xs leading-relaxed mb-4">
-                            Revenue architecture for B2B companies at the growth plateau. Diagnose. Design. Build.
+                            Your GTM partner at the growth plateau. We find what's actually in the way — and fix it.
                         </p>
                         <a
                             href="https://www.linkedin.com/in/sameer-joshi1/"
@@ -49,9 +49,6 @@ const Footer = () => {
                 <div className="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-slate-400 text-xs">
                         © {new Date().getFullYear()} GTM-360. All rights reserved.
-                    </p>
-                    <p className="text-slate-300 text-xs italic">
-                        Your GTM partner at the growth plateau.
                     </p>
                 </div>
             </div>
