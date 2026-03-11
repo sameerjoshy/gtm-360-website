@@ -10,6 +10,7 @@ const About = () => {
             <SEO
                 title="About GTM-360 | Revenue Partner for B2B Growth"
                 description="20+ years running B2B revenue teams at AWS, Dell, and Series B SaaS. GTM-360 diagnoses the real constraint before building the fix."
+                canonical="https://gtm-360.com/about"
             />
 
             {/* HERO */}

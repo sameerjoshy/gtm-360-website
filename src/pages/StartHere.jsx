@@ -53,6 +53,7 @@ const StartHere = () => {
             <SEO
                 title="Talk to Us | GTM-360"
                 description="Tell us what's happening with your revenue. We'll tell you honestly whether we can help and what it would take."
+                canonical="https://gtm-360.com/start-here"
             />
 
             {/* HERO */}

@@ -10,6 +10,7 @@ const Home = () => {
             <SEO
                 title="GTM-360 | Your Revenue Partner at the Growth Plateau"
                 description="Most B2B teams hit a wall around $10M. Pipeline looks fine. The team is working hard. But the numbers aren't moving. We help you find what's actually in the way — and fix it."
+                canonical="https://gtm-360.com/"
             />
 
             {/* HERO — plain, direct, human */}

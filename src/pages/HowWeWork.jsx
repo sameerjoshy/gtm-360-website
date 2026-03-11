@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import PlanningCycleMinimal from '../components/visuals/PlanningCycleMinimal';
+import EngagementTimeline from '../components/visuals/EngagementTimeline';
 
 const HowWeWork = () => {
     return (
@@ -9,6 +10,7 @@ const HowWeWork = () => {
             <SEO
                 title="How GTM-360 Works | Diagnose, Design, Build"
                 description="We work alongside your team — not above it. Three phases: find the real problem, design the fix, build it. We stay until it's working."
+                canonical="https://gtm-360.com/how-we-work"
             />
 
             {/* HERO */}
@@ -90,6 +92,12 @@ const HowWeWork = () => {
             {/* HOW WE THINK */}
             <section className="py-20 bg-slate-50 border-y border-slate-100">
                 <div className="container max-w-5xl">
+
+                    {/* Timeline visual */}
+                    <div className="mb-16">
+                        <EngagementTimeline />
+                    </div>
+
                     <div className="flex flex-col md:flex-row items-center gap-16">
                         <div className="w-full md:w-1/2">
                             <h2 className="text-2xl font-bold text-slate-900 mb-4">How we think about every engagement</h2>

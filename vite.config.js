@@ -4,7 +4,15 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
     plugins: [react()],
     build: {
-        // Client build output
         outDir: 'dist',
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+                    'motion':       ['framer-motion'],
+                    'ui':           ['lucide-react', 'react-helmet-async'],
+                },
+            },
+        },
     },
 });

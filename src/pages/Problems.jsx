@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, AlertCircle, BarChart2, Activity, PieChart, Users, MessageSquare, Target, Cpu } from 'lucide-react';
+import MisdiagnosisCycle from '../components/visuals/MisdiagnosisCycle';
 
 const Problems = () => {
-    // 1. SEO + AEO FOUNDATION
     const schemaData = {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -13,177 +13,141 @@ const Problems = () => {
             "@type": "Thing",
             "name": "Go-to-Market failures, revenue predictability, misdiagnosis"
         },
-        "description": "Common B2B GTM problems often persist because teams misdiagnose the real constraint. Explore the patterns behind stalled growth."
+        "description": "The patterns we see most often in B2B companies at the growth plateau. Most persist because teams are solving the wrong problem."
     };
 
     const symptoms = [
         {
-            icon: <Activity className="w-8 h-8 text-slate-900" />,
-            title: "Pipeline is growing, but revenue isn’t",
+            icon: <Activity className="w-7 h-7 text-slate-900" />,
+            title: "Pipeline is growing, but revenue isn't",
             slug: "/problems/stalled-growth",
-            desc: "More leads and more activity haven’t translated into predictable growth. This usually signals a decision or qualification problem, not a volume problem."
+            desc: "More leads and more activity haven't moved the number. This usually means pipeline is measuring rep activity, not buyer commitment — and coverage is inflated."
         },
         {
-            icon: <Target className="w-8 h-8 text-slate-900" />,
+            icon: <Target className="w-7 h-7 text-slate-900" />,
             title: "Win rates are falling",
             slug: "/problems/pipeline-conversion",
-            desc: "Deals are entering the funnel but closing less often. This often points to misaligned ICP, messaging, or buyer ownership — not sales effort."
+            desc: "Deals are entering but closing less often. Usually points to ICP drift, messaging that doesn't match the buyer, or no clear owner of the purchase decision."
         },
         {
-            icon: <BarChart2 className="w-8 h-8 text-slate-900" />,
-            title: "Forecasts are unreliable",
+            icon: <BarChart2 className="w-7 h-7 text-slate-900" />,
+            title: "Forecasts keep moving",
             slug: "/problems/forecast-volatility",
-            desc: "Numbers change week to week and confidence is low. Forecasting issues are usually downstream of signal and stage definition problems."
+            desc: "The number changes every week and nobody fully trusts it. Forecast volatility is almost always downstream of a stage definition problem, not a data problem."
         },
-        // ... mapped to existing slugs, others fallback to diagnostic for now
         {
-            icon: <PieChart className="w-8 h-8 text-slate-900" />,
+            icon: <PieChart className="w-7 h-7 text-slate-900" />,
             title: "Sales cycles keep getting longer",
-            slug: "/problems/pipeline-conversion", // Sharing slug for similar pattern
-            desc: "Opportunities move, but at a slower and less predictable pace. Longer cycles often indicate unclear buyer decisions, not deal complexity."
+            slug: "/problems/pipeline-conversion",
+            desc: "Deals move, but slower and less predictably than before. Longer cycles usually mean the wrong person is in the room — not that the deal is complex."
         },
         {
-            icon: <Users className="w-8 h-8 text-slate-900" />,
-            title: "Marketing and sales disagree on quality",
-            slug: "/problems/stalled-growth", // Sharing slug
-            desc: "Leads look good in dashboards but break down in execution. This is often a system alignment issue, not a team alignment issue."
+            icon: <Users className="w-7 h-7 text-slate-900" />,
+            title: "Marketing and sales disagree on lead quality",
+            slug: "/problems/stalled-growth",
+            desc: "Leads look fine in dashboards but break down in execution. This is almost never a team alignment issue — it's a system definition issue."
         },
         {
-            icon: <MessageSquare className="w-8 h-8 text-slate-900" />,
-            title: "Messaging isn’t landing in real deals",
-            slug: "/problems/pipeline-conversion", // Sharing slug
-            desc: "Positioning sounds strong, but buyers don’t internalize urgency. This usually reflects a problem-ownership mismatch, not a copy problem."
+            icon: <MessageSquare className="w-7 h-7 text-slate-900" />,
+            title: "Messaging isn't landing in actual deals",
+            slug: "/problems/pipeline-conversion",
+            desc: "The positioning sounds strong internally. Buyers aren't feeling urgency. Usually a problem-ownership mismatch — your message describes a problem nobody owns."
         },
         {
-            icon: <AlertCircle className="w-8 h-8 text-slate-900" />,
-            title: "RevOps dashboards don’t drive decisions",
-            slug: "/problems/forecast-volatility", // Sharing slug
-            desc: "Metrics are abundant, but decisions still rely on opinion. This typically means signals are being tracked without a governing model."
+            icon: <AlertCircle className="w-7 h-7 text-slate-900" />,
+            title: "RevOps dashboards don't drive decisions",
+            slug: "/problems/forecast-volatility",
+            desc: "Metrics are everywhere. Decisions still rely on gut feel. This means signals are being tracked without a governing model — so nobody knows what to act on."
         },
         {
-            icon: <Cpu className="w-8 h-8 text-slate-900" />,
-            title: "Tools and AI increased noise, not clarity",
-            slug: "/problems/stalled-growth", // Sharing slug
-            desc: "New tools promised leverage but added complexity. Technology amplifies systems — it does not correct misdiagnosis."
+            icon: <Cpu className="w-7 h-7 text-slate-900" />,
+            title: "More tools made things noisier, not clearer",
+            slug: "/problems/stalled-growth",
+            desc: "The stack grew. The clarity didn't. AI and tooling amplify whatever system is underneath — they don't correct a misdiagnosis."
         }
     ];
 
     return (
-        <div className="problems-page">
+        <div className="min-h-screen bg-white font-sans">
             <Helmet>
                 <title>Why B2B Growth Stalls Even When Teams Execute | GTM-360</title>
-                <meta name="description" content="Common B2B GTM problems often persist because teams misdiagnose the real constraint. Explore the patterns behind stalled growth." />
+                <meta name="description" content="The patterns we see most often in B2B companies at the growth plateau. Most persist because teams are solving the wrong problem." />
                 <link rel="canonical" href="https://gtm-360.com/problems" />
                 <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
             </Helmet>
 
-            {/* 2. HERO SECTION */}
-            <section className="section py-20 md:py-32 bg-white text-center">
-                <div className="container max-w-4xl opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
-                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-8 text-slate-900">
-                        Why B2B growth stalls even when teams execute
+            {/* HERO */}
+            <section className="pt-32 pb-20 bg-white border-b border-slate-100">
+                <div className="container max-w-3xl">
+                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                        The team is executing.<br />The number still isn't moving.
                     </h1>
-                    <h2 className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed font-normal">
-                        Most go-to-market problems persist not because teams lack effort,<br className="hidden md:block" />
-                        but because the problem being solved is not the real one.
-                        <br /><br />
-                        This page outlines the most common failure patterns we see in B2B GTM systems.
-                    </h2>
-                    <p className="text-lg font-medium text-gray-500 uppercase tracking-widest">
-                        These are not isolated issues.<br />
-                        They are symptoms of deeper system constraints.
+                    <p className="text-xl text-slate-500 font-light leading-relaxed mb-8">
+                        These are the patterns we see most often in B2B companies between $5M and $40M ARR. In almost every case, the root cause isn't effort. It's that the problem being solved isn't the real one.
                     </p>
-                </div>
-            </section>
-
-            {/* 3. ORIENTING STATEMENT */}
-            <section className="section bg-gray-50">
-                <div className="container max-w-3xl text-center">
-                    <h3 className="text-sm font-bold uppercase text-gray-400 mb-6 tracking-widest">A quick note before you read on</h3>
-                    <div className="bg-white p-8 border-l-4 border-slate-900 shadow-sm text-left">
-                        <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                            If you’re experiencing one or more of the patterns below,
-                            it does not mean your team is underperforming.
-                        </p>
-                        <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                            In most cases, capable teams are executing against
-                            an incomplete or incorrect understanding of the problem.
-                        </p>
-                        <p className="text-lg font-medium text-gray-900 leading-relaxed">
-                            This page is designed to help you recognize those patterns —
-                            not to prescribe fixes.
+                    <div className="p-6 bg-slate-50 border-l-4 border-slate-900 rounded-r">
+                        <p className="text-slate-700 leading-relaxed">
+                            We're not saying your team is underperforming. We're saying capable teams regularly execute against an incomplete diagnosis — and that's a system problem, not a people problem.
                         </p>
                     </div>
                 </div>
             </section>
 
-            {/* 4. SYMPTOM GRID */}
-            <section className="section">
-                <div className="container">
-                    <h2 className="text-3xl font-semibold text-slate-900 mb-12 text-center">Common GTM failure patterns</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* SYMPTOM GRID */}
+            <section className="py-20 bg-white">
+                <div className="container max-w-6xl">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-12">What we see most often.</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                         {symptoms.map((symptom, index) => (
                             <Link
                                 key={index}
                                 to={symptom.slug}
-                                className="group block bg-white border border-gray-200 p-8 rounded-sm hover:border-slate-900 hover:shadow-md transition-all duration-300"
+                                className="group block bg-white border border-slate-200 p-7 rounded-xl hover:border-slate-900 hover:shadow-md transition-all duration-200"
                             >
-                                <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <div className="mb-5 group-hover:scale-110 transition-transform duration-200">
                                     {symptom.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-slate-900 transition-colors">
+                                <h3 className="text-base font-bold text-slate-900 mb-3 leading-snug">
                                     {symptom.title}
                                 </h3>
-                                <p className="text-gray-600 mb-6 leading-relaxed">
+                                <p className="text-slate-500 text-sm leading-relaxed mb-5">
                                     {symptom.desc}
                                 </p>
-                                <div className="flex items-center text-slate-900 font-medium text-sm group-hover:underline">
-                                    Understand what’s actually happening <ArrowRight size={16} className="ml-2" />
-                                </div>
+                                <span className="flex items-center text-slate-900 font-bold text-xs uppercase tracking-wider group-hover:underline">
+                                    See the pattern <ArrowRight size={13} className="ml-1.5" />
+                                </span>
                             </Link>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* 6. MISDIAGNOSIS FRAMING */}
-            <section className="section bg-slate-50">
-                <div className="container max-w-4xl text-center">
-                    <h2 className="text-sm font-bold uppercase text-gray-400 mb-6 tracking-widest">Why these problems persist</h2>
-                    <p className="text-2xl font-medium text-slate-900 leading-relaxed mb-12">
-                        In most B2B organizations, these patterns persist because<br className="hidden md:block" />
-                        teams respond by increasing effort:
+            {/* WHY THESE PERSIST */}
+            <section className="py-20 bg-slate-50 border-y border-slate-100">
+                <div className="container max-w-4xl">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-6">Why these patterns persist.</h2>
+                    <p className="text-lg text-slate-600 leading-relaxed mb-10">
+                        The default response to stalled growth is to increase effort. More pipeline. More tools. More process. More pressure on the team. And when that doesn't work — more of the same.
                     </p>
-
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                        {["more pipeline", "more tools", "more process", "more pressure"].map(item => (
-                            <div key={item} className="bg-white py-4 px-2 rounded-sm font-bold text-gray-500 shadow-sm border border-gray-100">
-                                {item}
-                            </div>
-                        ))}
+                    <div className="mb-10">
+                        <MisdiagnosisCycle />
                     </div>
-
-                    <p className="text-xl text-gray-800 leading-relaxed max-w-2xl mx-auto">
-                        When the underlying constraint is misunderstood,<br />
-                        additional effort often compounds the problem.
+                    <p className="text-lg text-slate-800 font-medium leading-relaxed">
+                        When the underlying constraint is misunderstood, additional effort compounds the problem. You end up doing more of what isn't working — faster.
                     </p>
                 </div>
             </section>
 
-            {/* 7. SOFT TRANSITION */}
-            <section className="section bg-white border-t border-gray-100">
-                <div className="container max-w-4xl text-center">
-                    <h2 className="text-3xl font-semibold text-slate-900 mb-8">A better way to start</h2>
-                    <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                        Before making another hire, tool investment, or execution push,<br className="hidden md:block" />
-                        many leadership teams choose to start with a short diagnostic.
+            {/* CTA */}
+            <section className="py-20 bg-white">
+                <div className="container max-w-3xl">
+                    <h2 className="text-3xl font-bold text-slate-900 mb-6">Start with the right diagnosis.</h2>
+                    <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+                        Before another hire, tool, or execution push — we find out what's actually in the way. The diagnostic is a short conversation. We tell you honestly what we think is broken and whether it's something we can fix.
                     </p>
-                    <p className="text-xl text-gray-900 font-medium mb-12">
-                        Not to commit to a solution —<br />
-                        but to ensure they are fixing the right problem first.
-                    </p>
+                    <p className="text-slate-500 mb-10 text-sm">No proposal until you've asked for one.</p>
                     <Link to="/start-here" className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
-                        Start with a Diagnostic
+                        Talk to us about what you're seeing
                     </Link>
                 </div>
             </section>

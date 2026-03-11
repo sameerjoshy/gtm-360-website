@@ -202,8 +202,8 @@ const CaseStudyPost = () => {
                     <h3 className="text-slate-400 font-bold tracking-widest uppercase text-sm mb-6">
                         Where teams usually start
                     </h3>
-                    <p className="text-2xl text-white font-light mb-10 leading-relaxed">
-                        When this pattern shows up, most teams begin with a short diagnostic to find the real constraint.
+                    <p className="text-xl text-white font-light mb-10 leading-relaxed max-w-xl mx-auto">
+                        {study.cta_hook || 'When this pattern shows up, most teams begin with a short diagnostic to find the real constraint.'}
                     </p>
                     <Link to="/start-here" className="inline-flex items-center justify-center bg-white text-slate-900 hover:bg-slate-100 px-8 py-3 rounded font-bold transition-all">
                         Start with a Diagnostic →

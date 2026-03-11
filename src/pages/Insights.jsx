@@ -62,6 +62,7 @@ const Insights = () => {
             <SEO
                 title="GTM Insights | Revenue Patterns in B2B Growth | GTM-360"
                 description="Short, opinionated writing from inside real GTM systems. Patterns we see repeatedly in B2B companies at the growth plateau."
+                canonical="https://gtm-360.com/insights"
             />
 
             {/* HEADER */}

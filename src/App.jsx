@@ -62,7 +62,6 @@ export function AppRoutes() {
                 <Route path="/insights/:slug" element={<InsightPost />} />
                 <Route path="/insights/case-studies/:slug" element={<CaseStudyPost />} />
                 <Route path="/start-here" element={<StartHere />} />
-                <Route path="/start-here" element={<Diagnostic />} />
                 <Route path="/services/gtm-operating-model" element={<GTMOperatingModel />} />
                 <Route path="/services/pipeline-quality" element={<PipelineQuality />} />
                 <Route path="/services/forecasting-governance" element={<ForecastingGovernance />} />
