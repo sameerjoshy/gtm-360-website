@@ -10,7 +10,6 @@ import Problems from './pages/Problems';
 import Insights from './pages/Insights';
 
 // Engagement
-import Diagnostic from './pages/Diagnostic';
 import StartHere from './pages/StartHere';
 
 // Problem detail pages
@@ -59,8 +58,8 @@ export function AppRoutes() {
                 <Route path="/problems/pipeline-conversion" element={<PipelineConversion />} />
                 <Route path="/problems/forecast-volatility" element={<ForecastVolatility />} />
                 <Route path="/insights" element={<Insights />} />
-                <Route path="/insights/:slug" element={<InsightPost />} />
                 <Route path="/insights/case-studies/:slug" element={<CaseStudyPost />} />
+                <Route path="/insights/:slug" element={<InsightPost />} />
                 <Route path="/start-here" element={<StartHere />} />
                 <Route path="/services/gtm-operating-model" element={<GTMOperatingModel />} />
                 <Route path="/services/pipeline-quality" element={<PipelineQuality />} />
@@ -72,6 +71,7 @@ export function AppRoutes() {
                 {/* Redirects */}
                 <Route path="/services" element={<Navigate to="/how-we-work" replace />} />
                 <Route path="/playbooks" element={<Navigate to="/insights" replace />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
             <Footer />
         </>

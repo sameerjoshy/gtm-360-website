@@ -30,7 +30,7 @@ const PipelineQuality = () => {
                         <div>
                             <h3 className="text-lg font-bold text-gray-900 mb-4 uppercase tracking-wide">Who It's For</h3>
                             <ul className="space-y-3">
-                                <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5" /> <span>CROs seeing pipeline coverage >4x but missing targets.</span></li>
+                                <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5" /> <span>CROs seeing pipeline coverage &gt;4x but missing targets.</span></li>
                                 <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5" /> <span>Teams with high "Close Lost - No Decision" rates.</span></li>
                                 <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5" /> <span>Orgs where "Qualified" means "They took a meeting".</span></li>
                             </ul>

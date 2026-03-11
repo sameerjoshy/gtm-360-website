@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core -->
   <url><loc>https://gtm-360.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://gtm-360.com/start-here</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://gtm-360.com/diagnostic</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://gtm-360.com/how-we-work</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gtm-360.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gtm-360.com/contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Problems -->
   <url><loc>https://gtm-360.com/problems</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gtm-360.com/problems/stalled-growth</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gtm-360.com/problems/pipeline-conversion</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gtm-360.com/problems/forecast-volatility</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Services -->
   <url><loc>https://gtm-360.com/services/gtm-operating-model</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gtm-360.com/services/pipeline-quality</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gtm-360.com/services/forecasting-governance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gtm-360.com/services/gtm-signals-and-ai</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://gtm-360.com/agents</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Insights -->
   <url><loc>https://gtm-360.com/insights</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://gtm-360.com/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://gtm-360.com/contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gtm-360.com/insights/why-growth-stalls</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gtm-360.com/insights/stage-definition-problem</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gtm-360.com/insights/forecast-decay</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gtm-360.com/insights/solving-wrong-problem</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gtm-360.com/insights/when-ai-makes-gtm-worse</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gtm-360.com/insights/icp-drift</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Case Studies -->
+  <url><loc>https://gtm-360.com/insights/case-studies/pipeline-full-revenue-flat</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gtm-360.com/insights/case-studies/forecast-board-wanted-predictability</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gtm-360.com/insights/case-studies/sales-cycle-doubled-icp-drift</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Legal -->
+  <url><loc>https://gtm-360.com/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://gtm-360.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://gtm-360.com/insights/case-studies/fixing-the-wrong-problem</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gtm-360.com/insights/case-studies/when-ai-created-noise-not-clarity</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

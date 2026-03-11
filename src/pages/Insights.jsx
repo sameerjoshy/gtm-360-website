@@ -141,6 +141,18 @@ const Insights = () => {
                                 metric: "94 → 58 day sales cycle",
                                 title: "Sales cycles had doubled. The ICP had quietly changed.",
                                 slug: "/insights/case-studies/sales-cycle-doubled-icp-drift"
+                            },
+                            {
+                                tag: "Misdiagnosis",
+                                metric: "Execution pressure → clarity",
+                                title: "Fixing the 'obvious' problem made growth worse.",
+                                slug: "/insights/case-studies/fixing-the-wrong-problem"
+                            },
+                            {
+                                tag: "AI & Tools",
+                                metric: "More signals → less clarity",
+                                title: "AI increased activity but reduced GTM clarity.",
+                                slug: "/insights/case-studies/when-ai-created-noise-not-clarity"
                             }
                         ].map((cs, i) => (
                             <Link key={i} to={cs.slug} className="bg-white border border-slate-200 rounded-xl p-7 hover:shadow-md hover:border-slate-300 transition-all group block">

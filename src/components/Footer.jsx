@@ -31,6 +31,7 @@ const Footer = () => {
                             <Link to="/start-here" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Start Here</Link>
                             <Link to="/how-we-work" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">How We Work</Link>
                             <Link to="/problems" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Problems We Solve</Link>
+                            <Link to="/insights" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Insights</Link>
                         </div>
                     </div>
 
@@ -39,9 +40,9 @@ const Footer = () => {
                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Company</p>
                         <div className="space-y-3">
                             <Link to="/about" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">About</Link>
-                            <Link to="/insights" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Insights</Link>
                             <Link to="/contact" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Contact</Link>
                             <Link to="/privacy" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Privacy</Link>
+                            <Link to="/terms" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Terms</Link>
                         </div>
                     </div>
                 </div>
@@ -50,6 +51,10 @@ const Footer = () => {
                     <p className="text-slate-400 text-xs">
                         © {new Date().getFullYear()} GTM-360. All rights reserved.
                     </p>
+                    <div className="flex gap-6">
+                        <Link to="/privacy" className="text-xs text-slate-400 hover:text-slate-600 transition-colors">Privacy Policy</Link>
+                        <Link to="/terms" className="text-xs text-slate-400 hover:text-slate-600 transition-colors">Terms of Service</Link>
+                    </div>
                 </div>
             </div>
         </footer>

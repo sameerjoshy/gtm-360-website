@@ -17,7 +17,7 @@ const InsightPost = () => {
     const insight = insights[slug];
 
     if (!insight) {
-        return <Navigate to="/404" />;
+        return <Navigate to="/insights" replace />;
     }
 
     return <InsightTemplate data={insight} />;
