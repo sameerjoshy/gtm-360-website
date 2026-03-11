@@ -142,7 +142,7 @@ const InsightTemplate = ({ data }) => {
                         most teams start with a short diagnostic<br />
                         to ensure they’re fixing the right constraint.
                     </p>
-                    <Link to="/diagnostic" className="btn bg-[var(--color-primary)] text-white hover:bg-opacity-90 px-10 py-4 text-lg">
+                    <Link to="/start-here" className="btn bg-[var(--color-primary)] text-white hover:bg-opacity-90 px-10 py-4 text-lg">
                         Start with a Diagnostic
                     </Link>
                     <div className="mt-8 text-sm text-gray-500">

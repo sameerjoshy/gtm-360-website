@@ -112,7 +112,7 @@ const CaseStudyPost = () => {
                                 <div className="p-6 bg-slate-50 rounded border border-gray-100">
                                     <h4 className="text-xs font-bold uppercase text-gray-400 mb-2">Sound familiar?</h4>
                                     <p className="text-xs text-gray-600 mb-4">See if your system has similar constraints.</p>
-                                    <Link to="/diagnostic" className="text-xs font-bold text-[var(--color-primary)] hover:underline">Start Diagnostic →</Link>
+                                    <Link to="/start-here" className="text-xs font-bold text-[var(--color-primary)] hover:underline">Start Diagnostic →</Link>
                                 </div>
                             </div>
                         </aside>
@@ -206,7 +206,7 @@ const CaseStudyPost = () => {
                         most teams begin with a short diagnostic<br />
                         to ensure they are fixing the right constraint.
                     </p>
-                    <Link to="/diagnostic" className="btn bg-white text-slate-900 hover:bg-gray-100 px-8 py-3 font-semibold">
+                    <Link to="/start-here" className="btn bg-white text-slate-900 hover:bg-gray-100 px-8 py-3 font-semibold">
                         Start with a Diagnostic →
                     </Link>
                 </div>

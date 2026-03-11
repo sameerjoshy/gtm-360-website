@@ -32,7 +32,7 @@ const PersonalizationBanner = () => {
                     <p className="text-white text-sm leading-relaxed">
                         We help companies in {visitor.industry || "your industry"} fix the GTM systems strictly executing growth strategy.
                     </p>
-                    <Link to="/diagnostic" className="mt-4 inline-block text-xs font-bold text-white border-b border-[var(--color-primary)] pb-1 hover:text-[var(--color-primary)] transition-colors">
+                    <Link to="/start-here" className="mt-4 inline-block text-xs font-bold text-white border-b border-[var(--color-primary)] pb-1 hover:text-[var(--color-primary)] transition-colors">
                         See how we can help {visitor.company} →
                     </Link>
                 </div>

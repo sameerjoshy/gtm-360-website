@@ -182,7 +182,7 @@ const Problems = () => {
                         Not to commit to a solution —<br />
                         but to ensure they are fixing the right problem first.
                     </p>
-                    <Link to="/diagnostic" className="btn bg-[var(--color-primary)] text-white hover:bg-opacity-90 px-12">
+                    <Link to="/start-here" className="btn bg-[var(--color-primary)] text-white hover:bg-opacity-90 px-12">
                         Start with a Diagnostic
                     </Link>
                 </div>

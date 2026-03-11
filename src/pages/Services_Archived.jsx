@@ -169,7 +169,7 @@ const Services = () => {
                         Most teams begin with a short diagnostic<br />
                         to understand which system constraint is actually limiting growth.
                     </p>
-                    <Link to="/diagnostic" className="btn bg-white text-[var(--color-primary)] hover:bg-indigo-50 px-10 py-5 text-lg shadow-xl hover:shadow-2xl transition-all">
+                    <Link to="/start-here" className="btn bg-white text-[var(--color-primary)] hover:bg-indigo-50 px-10 py-5 text-lg shadow-xl hover:shadow-2xl transition-all">
                         Start with a Diagnostic
                     </Link>
                 </div>

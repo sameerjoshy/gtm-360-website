@@ -85,7 +85,7 @@ const Insights = () => {
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">{featured.title}</h2>
                         <p className="text-slate-300 mb-8 leading-relaxed text-lg max-w-2xl">{featured.desc}</p>
                         <div className="flex items-center gap-6">
-                            {/* REPLACE href with real article link when published */}
+                            
                             <span className="text-slate-500 text-sm italic">⚠ Publish article then replace this with real link</span>
                             <span className="text-slate-500 text-sm">{featured.readTime}</span>
                         </div>
@@ -104,8 +104,7 @@ const Insights = () => {
                                 <p className="text-slate-500 text-sm leading-relaxed mb-6">{insight.desc}</p>
                                 <div className="flex items-center justify-between pt-4 border-t border-slate-100">
                                     <span className="text-xs text-slate-400">{insight.readTime}</span>
-                                    {/* Replace with <Link to={insight.slug}> when articles are published */}
-                                    <span className="text-xs text-slate-300 italic">Coming soon</span>
+                                    <Link to={insight.slug} className="text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors">Read →</Link>
                                 </div>
                             </div>
                         ))}

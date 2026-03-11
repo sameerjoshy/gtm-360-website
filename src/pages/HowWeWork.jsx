@@ -55,8 +55,8 @@ const HowWeWork = () => {
                             duration: "Depends on scope",
                             body: "A good system design on paper doesn't help anyone. Our specialists build the changes — CRM architecture, outbound infrastructure, automation workflows, AI signal layers, reporting. You don't manage a list of vendors. We own the implementation end to end.\n\nWhen it's done, your team has a running system they understand and can operate — not a set of slides.",
                             gets: ["CRM rebuilt around the new model", "Outbound infrastructure and sequencing", "Automation that reduces manual work", "Reporting that reflects real performance", "Handover with documentation and training"],
-                            link: "/agents",
-                            cta: "See the intelligence layer"
+                            link: "/start-here",
+                            cta: "Start with the diagnostic"
                         }
                     ].map((phase, i) => (
                         <div key={i} className={`bg-white rounded-xl p-8 md:p-10 border border-slate-200 hover:border-${phase.color}-200 transition-colors`}>

@@ -25,6 +25,7 @@ import ForecastingGovernance from './pages/services/ForecastingGovernance';
 import GTMSignalsAI from './pages/services/GTMSignalsAI';
 
 // Legal + utility
+import InsightPost from './pages/insights/InsightPost';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import ThankYou from './pages/ThankYou';
@@ -57,8 +58,9 @@ export function AppRoutes() {
                 <Route path="/problems/pipeline-conversion" element={<PipelineConversion />} />
                 <Route path="/problems/forecast-volatility" element={<ForecastVolatility />} />
                 <Route path="/insights" element={<Insights />} />
+                <Route path="/insights/:slug" element={<InsightPost />} />
                 <Route path="/start-here" element={<StartHere />} />
-                <Route path="/diagnostic" element={<Diagnostic />} />
+                <Route path="/start-here" element={<Diagnostic />} />
                 <Route path="/services/gtm-operating-model" element={<GTMOperatingModel />} />
                 <Route path="/services/pipeline-quality" element={<PipelineQuality />} />
                 <Route path="/services/forecasting-governance" element={<ForecastingGovernance />} />
