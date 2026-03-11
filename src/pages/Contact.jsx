@@ -6,7 +6,7 @@ const Contact = () => {
     return (
         <div className="min-h-screen bg-white font-sans selection:bg-indigo-100 selection:text-indigo-900">
             <SEO
-                title="Contact | GTM-360"
+                title="Talk to GTM-360 | No SDR, Direct Partner Conversation"
                 description="Direct conversation with a partner. No SDR, no qualification layer. Book a call or use the Start Here form."
                 canonical="https://gtm-360.com/contact"
             />

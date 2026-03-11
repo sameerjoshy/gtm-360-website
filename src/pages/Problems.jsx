@@ -18,50 +18,50 @@ const Problems = () => {
 
     const symptoms = [
         {
-            icon: <Activity className="w-8 h-8 text-[var(--color-primary)]" />,
+            icon: <Activity className="w-8 h-8 text-slate-900" />,
             title: "Pipeline is growing, but revenue isn’t",
             slug: "/problems/stalled-growth",
             desc: "More leads and more activity haven’t translated into predictable growth. This usually signals a decision or qualification problem, not a volume problem."
         },
         {
-            icon: <Target className="w-8 h-8 text-[var(--color-primary)]" />,
+            icon: <Target className="w-8 h-8 text-slate-900" />,
             title: "Win rates are falling",
             slug: "/problems/pipeline-conversion",
             desc: "Deals are entering the funnel but closing less often. This often points to misaligned ICP, messaging, or buyer ownership — not sales effort."
         },
         {
-            icon: <BarChart2 className="w-8 h-8 text-[var(--color-primary)]" />,
+            icon: <BarChart2 className="w-8 h-8 text-slate-900" />,
             title: "Forecasts are unreliable",
             slug: "/problems/forecast-volatility",
             desc: "Numbers change week to week and confidence is low. Forecasting issues are usually downstream of signal and stage definition problems."
         },
         // ... mapped to existing slugs, others fallback to diagnostic for now
         {
-            icon: <PieChart className="w-8 h-8 text-[var(--color-primary)]" />,
+            icon: <PieChart className="w-8 h-8 text-slate-900" />,
             title: "Sales cycles keep getting longer",
             slug: "/problems/pipeline-conversion", // Sharing slug for similar pattern
             desc: "Opportunities move, but at a slower and less predictable pace. Longer cycles often indicate unclear buyer decisions, not deal complexity."
         },
         {
-            icon: <Users className="w-8 h-8 text-[var(--color-primary)]" />,
+            icon: <Users className="w-8 h-8 text-slate-900" />,
             title: "Marketing and sales disagree on quality",
             slug: "/problems/stalled-growth", // Sharing slug
             desc: "Leads look good in dashboards but break down in execution. This is often a system alignment issue, not a team alignment issue."
         },
         {
-            icon: <MessageSquare className="w-8 h-8 text-[var(--color-primary)]" />,
+            icon: <MessageSquare className="w-8 h-8 text-slate-900" />,
             title: "Messaging isn’t landing in real deals",
             slug: "/problems/pipeline-conversion", // Sharing slug
             desc: "Positioning sounds strong, but buyers don’t internalize urgency. This usually reflects a problem-ownership mismatch, not a copy problem."
         },
         {
-            icon: <AlertCircle className="w-8 h-8 text-[var(--color-primary)]" />,
+            icon: <AlertCircle className="w-8 h-8 text-slate-900" />,
             title: "RevOps dashboards don’t drive decisions",
             slug: "/problems/forecast-volatility", // Sharing slug
             desc: "Metrics are abundant, but decisions still rely on opinion. This typically means signals are being tracked without a governing model."
         },
         {
-            icon: <Cpu className="w-8 h-8 text-[var(--color-primary)]" />,
+            icon: <Cpu className="w-8 h-8 text-slate-900" />,
             title: "Tools and AI increased noise, not clarity",
             slug: "/problems/stalled-growth", // Sharing slug
             desc: "New tools promised leverage but added complexity. Technology amplifies systems — it does not correct misdiagnosis."
@@ -80,7 +80,7 @@ const Problems = () => {
             {/* 2. HERO SECTION */}
             <section className="section py-20 md:py-32 bg-white text-center">
                 <div className="container max-w-4xl opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
-                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-8 text-[var(--color-primary)]">
+                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-8 text-slate-900">
                         Why B2B growth stalls even when teams execute
                     </h1>
                     <h2 className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed font-normal">
@@ -100,7 +100,7 @@ const Problems = () => {
             <section className="section bg-gray-50">
                 <div className="container max-w-3xl text-center">
                     <h3 className="text-sm font-bold uppercase text-gray-400 mb-6 tracking-widest">A quick note before you read on</h3>
-                    <div className="bg-white p-8 border-l-4 border-[var(--color-primary)] shadow-sm text-left">
+                    <div className="bg-white p-8 border-l-4 border-slate-900 shadow-sm text-left">
                         <p className="text-lg text-gray-700 leading-relaxed mb-4">
                             If you’re experiencing one or more of the patterns below,
                             it does not mean your team is underperforming.
@@ -120,24 +120,24 @@ const Problems = () => {
             {/* 4. SYMPTOM GRID */}
             <section className="section">
                 <div className="container">
-                    <h2 className="text-3xl font-semibold text-[var(--color-primary)] mb-12 text-center">Common GTM failure patterns</h2>
+                    <h2 className="text-3xl font-semibold text-slate-900 mb-12 text-center">Common GTM failure patterns</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {symptoms.map((symptom, index) => (
                             <Link
                                 key={index}
                                 to={symptom.slug}
-                                className="group block bg-white border border-gray-200 p-8 rounded-sm hover:border-[var(--color-primary)] hover:shadow-md transition-all duration-300"
+                                className="group block bg-white border border-gray-200 p-8 rounded-sm hover:border-slate-900 hover:shadow-md transition-all duration-300"
                             >
                                 <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
                                     {symptom.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--color-primary)] transition-colors">
+                                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-slate-900 transition-colors">
                                     {symptom.title}
                                 </h3>
                                 <p className="text-gray-600 mb-6 leading-relaxed">
                                     {symptom.desc}
                                 </p>
-                                <div className="flex items-center text-[var(--color-primary)] font-medium text-sm group-hover:underline">
+                                <div className="flex items-center text-slate-900 font-medium text-sm group-hover:underline">
                                     Understand what’s actually happening <ArrowRight size={16} className="ml-2" />
                                 </div>
                             </Link>
@@ -147,10 +147,10 @@ const Problems = () => {
             </section>
 
             {/* 6. MISDIAGNOSIS FRAMING */}
-            <section className="section bg-[var(--color-secondary)]">
+            <section className="section bg-slate-50">
                 <div className="container max-w-4xl text-center">
                     <h2 className="text-sm font-bold uppercase text-gray-400 mb-6 tracking-widest">Why these problems persist</h2>
-                    <p className="text-2xl font-medium text-[var(--color-primary)] leading-relaxed mb-12">
+                    <p className="text-2xl font-medium text-slate-900 leading-relaxed mb-12">
                         In most B2B organizations, these patterns persist because<br className="hidden md:block" />
                         teams respond by increasing effort:
                     </p>
@@ -173,7 +173,7 @@ const Problems = () => {
             {/* 7. SOFT TRANSITION */}
             <section className="section bg-white border-t border-gray-100">
                 <div className="container max-w-4xl text-center">
-                    <h2 className="text-3xl font-semibold text-[var(--color-primary)] mb-8">A better way to start</h2>
+                    <h2 className="text-3xl font-semibold text-slate-900 mb-8">A better way to start</h2>
                     <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                         Before making another hire, tool investment, or execution push,<br className="hidden md:block" />
                         many leadership teams choose to start with a short diagnostic.
@@ -182,7 +182,7 @@ const Problems = () => {
                         Not to commit to a solution —<br />
                         but to ensure they are fixing the right problem first.
                     </p>
-                    <Link to="/start-here" className="btn bg-[var(--color-primary)] text-white hover:bg-opacity-90 px-12">
+                    <Link to="/start-here" className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
                         Start with a Diagnostic
                     </Link>
                 </div>

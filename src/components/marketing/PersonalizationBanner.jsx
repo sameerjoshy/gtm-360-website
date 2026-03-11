@@ -17,9 +17,9 @@ const PersonalizationBanner = () => {
                 exit={{ y: 100, opacity: 0 }}
                 className="fixed bottom-4 right-4 z-50 max-w-sm w-full"
             >
-                <div className="bg-slate-900 border-l-4 border-[var(--color-primary)] p-6 shadow-2xl rounded-r mx-4 md:mx-0">
+                <div className="bg-slate-900 border-l-4 border-slate-900 p-6 shadow-2xl rounded-r mx-4 md:mx-0">
                     <div className="flex justify-between items-start mb-2">
-                        <span className="text-[var(--color-primary)] text-xs font-bold uppercase tracking-widest">
+                        <span className="text-slate-900 text-xs font-bold uppercase tracking-widest">
                             Welcome {visitor.company} Team
                         </span>
                         <button
@@ -32,7 +32,7 @@ const PersonalizationBanner = () => {
                     <p className="text-white text-sm leading-relaxed">
                         We help companies in {visitor.industry || "your industry"} fix the GTM systems strictly executing growth strategy.
                     </p>
-                    <Link to="/start-here" className="mt-4 inline-block text-xs font-bold text-white border-b border-[var(--color-primary)] pb-1 hover:text-[var(--color-primary)] transition-colors">
+                    <Link to="/start-here" className="mt-4 inline-block text-xs font-bold text-white border-b border-slate-900 pb-1 hover:text-slate-900 transition-colors">
                         See how we can help {visitor.company} →
                     </Link>
                 </div>

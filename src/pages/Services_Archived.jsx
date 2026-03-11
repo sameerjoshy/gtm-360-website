@@ -98,7 +98,7 @@ const Services = () => {
             <section className="section py-24 md:py-32 bg-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-noise opacity-30"></div>
                 <div className="container max-w-4xl relative z-10 opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
-                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-8 text-[var(--color-primary)]">
+                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-8 text-slate-900">
                         How We Unlock Revenue
                     </h1>
                     <h2 className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed font-normal">
@@ -134,7 +134,7 @@ const Services = () => {
                                             </span>
                                         </div>
 
-                                        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[var(--color-primary)] transition-colors">
+                                        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-slate-900 transition-colors">
                                             {service.title}
                                         </h3>
 
@@ -147,7 +147,7 @@ const Services = () => {
                                             {service.desc}
                                         </p>
 
-                                        <div className="flex items-center text-[var(--color-primary)] font-bold group-hover:translate-x-2 transition-transform">
+                                        <div className="flex items-center text-slate-900 font-bold group-hover:translate-x-2 transition-transform">
                                             View Service Details <ArrowRight className="ml-2 w-5 h-5" />
                                         </div>
                                     </div>
@@ -159,7 +159,7 @@ const Services = () => {
             </section>
 
             {/* CTA BLOCK */}
-            <section className="section py-24 bg-[var(--color-primary)] text-white text-center relative overflow-hidden">
+            <section className="section py-24 bg-slate-900 text-white text-center relative overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute top-0 left-0 w-full h-full opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
 
@@ -169,7 +169,7 @@ const Services = () => {
                         Most teams begin with a short diagnostic<br />
                         to understand which system constraint is actually limiting growth.
                     </p>
-                    <Link to="/start-here" className="btn bg-white text-[var(--color-primary)] hover:bg-indigo-50 px-10 py-5 text-lg shadow-xl hover:shadow-2xl transition-all">
+                    <Link to="/start-here" className="btn bg-white text-slate-900 hover:bg-indigo-50 px-10 py-5 text-lg shadow-xl hover:shadow-2xl transition-all">
                         Start with a Diagnostic
                     </Link>
                 </div>

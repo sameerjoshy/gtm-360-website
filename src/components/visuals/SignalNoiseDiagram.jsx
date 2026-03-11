@@ -52,7 +52,7 @@ const SignalNoiseDiagram = () => {
                     </g>
                 )}
             </svg>
-            <div className="absolute top-4 right-4 text-[var(--color-primary)] text-xs font-mono">
+            <div className="absolute top-4 right-4 text-slate-900 text-xs font-mono">
                 {step < 2 ? 'SIGNAL: NOSY' : 'SIGNAL: FILTERED'}
             </div>
         </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import GrowthStallChart from '../components/visuals/GrowthStallChart';
+import TechStackMarquee from '../components/social/TechStackMarquee';
 
 const Home = () => {
     return (
@@ -36,6 +37,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* TOOLS MARQUEE */}
+            <TechStackMarquee />
 
             {/* THE SITUATION — mirrors the board conversation */}
             <section className="py-24 bg-slate-50 border-y border-slate-100">
@@ -159,7 +163,6 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-center text-xs text-slate-300 mt-6 italic">⚠ Replace with real engagement data before publishing.</p>
                 </div>
             </section>
 

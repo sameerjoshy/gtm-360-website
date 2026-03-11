@@ -47,7 +47,7 @@ const ForecastingDiagram = () => {
                     <text x="200" y="380" fill="white" textAnchor="middle" fontSize="14" letterSpacing="2">EVIDENCE</text>
                 </g>
             </svg>
-            <div className="absolute top-4 right-4 text-[var(--color-primary)] text-xs font-mono">
+            <div className="absolute top-4 right-4 text-slate-900 text-xs font-mono">
                 {step < 2 ? 'MODE: GUESSING' : 'MODE: MATHEMATICAL'}
             </div>
         </div>

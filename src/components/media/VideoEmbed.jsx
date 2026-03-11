@@ -20,7 +20,7 @@ const VideoEmbed = ({ videoId, title, poster }) => {
 
     return (
         <div
-            className="relative pb-[56.25%] h-0 rounded-sm overflow-hidden bg-slate-900 shadow-2xl group cursor-pointer border border-slate-700 hover:border-[var(--color-primary)] transition-colors"
+            className="relative pb-[56.25%] h-0 rounded-sm overflow-hidden bg-slate-900 shadow-2xl group cursor-pointer border border-slate-700 hover:border-slate-900 transition-colors"
             onClick={() => setIsPlaying(true)}
         >
             {/* Poster Image or Gradient Fallback */}
@@ -36,7 +36,7 @@ const VideoEmbed = ({ videoId, title, poster }) => {
 
             {/* Play Button Overlay */}
             <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-[var(--color-primary)] rounded-full flex items-center justify-center pl-1 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-slate-900 rounded-full flex items-center justify-center pl-1 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Play className="w-8 h-8 md:w-10 md:h-10 text-white fill-current" />
                 </div>
             </div>

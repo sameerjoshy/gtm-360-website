@@ -29,7 +29,7 @@ const Diagnostic = () => {
             {/* 2. HERO SECTION */}
             <section className="section py-20 md:py-32 bg-white">
                 <div className="container max-w-4xl opacity-0 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
-                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-8 text-[var(--color-primary)]">
+                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-8 text-slate-900">
                         GTM System Diagnostic
                     </h1>
                     <h2 className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed font-normal">
@@ -38,10 +38,10 @@ const Diagnostic = () => {
                     </h2>
 
                     <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-                        <a href="#diagnostic-form" className="btn bg-[var(--color-primary)] text-white hover:bg-opacity-90">
+                        <a href="#diagnostic-form" className="btn bg-slate-900 text-white hover:bg-opacity-90">
                             Begin Diagnostic
                         </a>
-                        <Link to="/problems" className="text-[var(--color-primary)] font-medium hover:underline">
+                        <Link to="/problems" className="text-slate-900 font-medium hover:underline">
                             Review Failure Patterns →
                         </Link>
                     </div>
@@ -49,7 +49,7 @@ const Diagnostic = () => {
             </section>
 
             {/* 3. WHAT THIS IS */}
-            <section className="section bg-[var(--color-secondary)]">
+            <section className="section bg-slate-50">
                 <div className="container max-w-4xl">
                     <h2 className="text-sm font-bold uppercase text-gray-400 mb-6 tracking-widest">What the GTM Diagnostic is</h2>
                     <div className="flex flex-col md:flex-row gap-12">
@@ -61,12 +61,12 @@ const Diagnostic = () => {
                                 It is designed to help leadership teams:
                             </p>
                             <ul className="space-y-3 mt-4">
-                                <li className="flex items-start"><span className="text-[var(--color-primary)] mr-3">•</span> understand what is actually limiting growth</li>
-                                <li className="flex items-start"><span className="text-[var(--color-primary)] mr-3">•</span> avoid investing further in the wrong fixes</li>
-                                <li className="flex items-start"><span className="text-[var(--color-primary)] mr-3">•</span> decide what should change first — and what should not</li>
+                                <li className="flex items-start"><span className="text-slate-900 mr-3">•</span> understand what is actually limiting growth</li>
+                                <li className="flex items-start"><span className="text-slate-900 mr-3">•</span> avoid investing further in the wrong fixes</li>
+                                <li className="flex items-start"><span className="text-slate-900 mr-3">•</span> decide what should change first — and what should not</li>
                             </ul>
                         </div>
-                        <div className="md:w-1/2 bg-white p-8 rounded-sm shadow-sm border-l-4 border-[var(--color-primary)]">
+                        <div className="md:w-1/2 bg-white p-8 rounded-sm shadow-sm border-l-4 border-slate-900">
                             <p className="text-xl font-medium text-gray-800 leading-relaxed">
                                 It is not an audit, and it is not an implementation project.<br />
                                 It is a clarity-first starting point.
@@ -79,7 +79,7 @@ const Diagnostic = () => {
             {/* 4. WHO THIS START IS FOR */}
             <section className="section">
                 <div className="container">
-                    <h2 className="text-3xl font-semibold text-[var(--color-primary)] mb-12 text-center">Who this starting point is for</h2>
+                    <h2 className="text-3xl font-semibold text-slate-900 mb-12 text-center">Who this starting point is for</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16 border-t md:border-t-0 border-gray-200">
                         <div className="py-8 border-b md:border-b-0 md:border-r border-gray-200 pr-8">
                             <h3 className="text-xl font-semibold text-gray-900 mb-6">This is a good starting point if:</h3>
@@ -117,10 +117,10 @@ const Diagnostic = () => {
             </section>
 
             {/* 5. WHAT WE EXAMINE */}
-            <section className="section bg-[var(--color-secondary)]">
+            <section className="section bg-slate-50">
                 <div className="container">
                     <h2 className="text-sm font-bold uppercase text-gray-400 mb-4 tracking-widest">What we examine during the diagnostic</h2>
-                    <p className="text-2xl font-medium text-[var(--color-primary)] max-w-3xl mb-12">
+                    <p className="text-2xl font-medium text-slate-900 max-w-3xl mb-12">
                         We examine how your go-to-market system actually behaves in practice — not how it is supposed to work on paper.
                     </p>
 
@@ -152,7 +152,7 @@ const Diagnostic = () => {
                                 <ul className="space-y-2">
                                     {card.bullets.map(b => (
                                         <li key={b} className="text-sm text-gray-600 flex items-start">
-                                            <span className="mr-2 text-[var(--color-primary)]">•</span> {b}
+                                            <span className="mr-2 text-slate-900">•</span> {b}
                                         </li>
                                     ))}
                                 </ul>
@@ -170,7 +170,7 @@ const Diagnostic = () => {
             {/* 6. WHAT YOU RECEIVE */}
             <section className="section">
                 <div className="container">
-                    <h2 className="text-3xl font-semibold text-[var(--color-primary)] mb-12">What you walk away with</h2>
+                    <h2 className="text-3xl font-semibold text-slate-900 mb-12">What you walk away with</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
                             { title: "Primary GTM Constraint Map", desc: "A clear articulation of the main bottleneck limiting growth." },
@@ -179,7 +179,7 @@ const Diagnostic = () => {
                             { title: "Change Sequencing View", desc: "What must change first, what can wait, and what will not help yet." },
                             { title: "Executive Readout", desc: "A concise narrative suitable for leadership or board discussion." }
                         ].map((item, i) => (
-                            <div key={i} className="border border-gray-200 p-6 rounded-sm hover:border-[var(--color-primary)] transition-colors">
+                            <div key={i} className="border border-gray-200 p-6 rounded-sm hover:border-slate-900 transition-colors">
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
                                 <p className="text-gray-600">{item.desc}</p>
                             </div>
@@ -215,7 +215,7 @@ const Diagnostic = () => {
                             </div>
                         </div>
                         <div className="flex items-center">
-                            <p className="text-2xl font-medium text-white leading-relaxed border-l-4 border-[var(--color-primary)] pl-6">
+                            <p className="text-2xl font-medium text-white leading-relaxed border-l-4 border-slate-900 pl-6">
                                 This engagement exists to prevent expensive mistakes — not to push a predefined solution.
                             </p>
                         </div>
@@ -229,7 +229,7 @@ const Diagnostic = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                         {/* After */}
                         <div>
-                            <h2 className="text-2xl font-semibold text-[var(--color-primary)] mb-6">What happens after the diagnostic</h2>
+                            <h2 className="text-2xl font-semibold text-slate-900 mb-6">What happens after the diagnostic</h2>
                             <p className="text-lg text-gray-700 mb-4">After the diagnostic, there are three possible outcomes:</p>
                             <ul className="space-y-3 mb-6">
                                 <li className="flex items-start"><span className="text-gray-900 font-bold mr-3">1.</span> <span className="text-gray-700">You have clarity and choose to execute internally</span></li>
@@ -240,8 +240,8 @@ const Diagnostic = () => {
                         </div>
 
                         {/* Approach */}
-                        <div className="bg-[var(--color-secondary)] p-8 rounded-sm">
-                            <h2 className="text-2xl font-semibold text-[var(--color-primary)] mb-6">Our approach</h2>
+                        <div className="bg-slate-50 p-8 rounded-sm">
+                            <h2 className="text-2xl font-semibold text-slate-900 mb-6">Our approach</h2>
                             <ul className="space-y-4">
                                 {[
                                     "Operator-led, not theory-led",
@@ -250,7 +250,7 @@ const Diagnostic = () => {
                                     "AI and tools treated as amplifiers, not cures"
                                 ].map(item => (
                                     <li key={item} className="flex items-center text-gray-800 font-medium">
-                                        <div className="w-2 h-2 bg-[var(--color-primary)] rounded-full mr-3"></div>
+                                        <div className="w-2 h-2 bg-slate-900 rounded-full mr-3"></div>
                                         {item}
                                     </li>
                                 ))}
@@ -261,7 +261,7 @@ const Diagnostic = () => {
             </section>
 
             {/* 10. CTA + FORM */}
-            <section id="diagnostic-form" className="section bg-[var(--color-primary)] text-white">
+            <section id="diagnostic-form" className="section bg-slate-900 text-white">
                 <div className="container max-w-4xl">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-semibold text-white mb-4">Tell us what's broken</h2>
@@ -361,29 +361,29 @@ Timeline: ${formData.timeline}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label className="block text-sm font-bold text-gray-700 mb-1">Full Name</label>
-                    <input type="text" name="firstname" required value={formData.firstname} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-[var(--color-primary)] outline-none" placeholder="First Last" />
+                    <input type="text" name="firstname" required value={formData.firstname} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-slate-900 outline-none" placeholder="First Last" />
                 </div>
                 <div>
                     <label className="block text-sm font-bold text-gray-700 mb-1">Email</label>
-                    <input type="email" name="email" required value={formData.email} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-[var(--color-primary)] outline-none" placeholder="name@company.com" />
+                    <input type="email" name="email" required value={formData.email} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-slate-900 outline-none" placeholder="name@company.com" />
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label className="block text-sm font-bold text-gray-700 mb-1">Company</label>
-                    <input type="text" name="company" required value={formData.company} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-[var(--color-primary)] outline-none" placeholder="Company Name" />
+                    <input type="text" name="company" required value={formData.company} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-slate-900 outline-none" placeholder="Company Name" />
                 </div>
                 <div>
                     <label className="block text-sm font-bold text-gray-700 mb-1">Role</label>
-                    <input type="text" name="role" required value={formData.role} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-[var(--color-primary)] outline-none" placeholder="Job Title" />
+                    <input type="text" name="role" required value={formData.role} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-slate-900 outline-none" placeholder="Job Title" />
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label className="block text-sm font-bold text-gray-700 mb-1">Company ARR Range</label>
-                    <select name="arrRange" value={formData.arrRange} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-[var(--color-primary)] outline-none bg-white">
+                    <select name="arrRange" value={formData.arrRange} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-slate-900 outline-none bg-white">
                         <option value="<$5M">&lt;$5M</option>
                         <option value="$5–20M">$5–20M</option>
                         <option value="$20–50M">$20–50M</option>
@@ -393,7 +393,7 @@ Timeline: ${formData.timeline}
                 </div>
                 <div>
                     <label className="block text-sm font-bold text-gray-700 mb-1">Primary Symptom</label>
-                    <select name="primarySymptom" value={formData.primarySymptom} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-[var(--color-primary)] outline-none bg-white">
+                    <select name="primarySymptom" value={formData.primarySymptom} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-slate-900 outline-none bg-white">
                         <option value="Pipeline but no growth">Pipeline but no growth</option>
                         <option value="Falling win rates">Falling win rates</option>
                         <option value="Long sales cycles">Long sales cycles</option>
@@ -407,12 +407,12 @@ Timeline: ${formData.timeline}
 
             <div>
                 <label className="block text-sm font-bold text-gray-700 mb-1">What have you already tried?</label>
-                <textarea name="tried" value={formData.tried} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-[var(--color-primary)] outline-none h-24 resize-none" placeholder="Briefly describe past attempts..."></textarea>
+                <textarea name="tried" value={formData.tried} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-slate-900 outline-none h-24 resize-none" placeholder="Briefly describe past attempts..."></textarea>
             </div>
 
             <div>
                 <label className="block text-sm font-bold text-gray-700 mb-1">Timeline / Urgency (Optional)</label>
-                <input type="text" name="timeline" value={formData.timeline} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-[var(--color-primary)] outline-none" placeholder="e.g. ASAP, Next Quarter" />
+                <input type="text" name="timeline" value={formData.timeline} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded-sm focus:border-slate-900 outline-none" placeholder="e.g. ASAP, Next Quarter" />
             </div>
 
             {status === 'error' && (
@@ -421,7 +421,7 @@ Timeline: ${formData.timeline}
                 </div>
             )}
 
-            <button type="submit" disabled={status === 'submitting'} className="w-full btn bg-[var(--color-primary)] text-white hover:bg-opacity-90 py-4 text-lg font-mono tracking-wide">
+            <button type="submit" disabled={status === 'submitting'} className="w-full btn bg-slate-900 text-white hover:bg-opacity-90 py-4 text-lg font-mono tracking-wide">
                 {status === 'submitting' ? 'PROCESSING SIGNAL...' : 'REQUEST DIAGNOSTIC'}
             </button>
         </form>

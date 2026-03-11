@@ -22,7 +22,7 @@ const GrowthStalls = () => {
             {/* HEADER */}
             <article className="pb-24">
                 <div className="container max-w-3xl">
-                    <span className="text-[var(--color-primary)] font-mono text-xs tracking-widest uppercase mb-6 block">Flagship Insight</span>
+                    <span className="text-slate-900 font-mono text-xs tracking-widest uppercase mb-6 block">Flagship Insight</span>
                     <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
                         Why growth stalls after early traction.
                     </h1>
@@ -96,7 +96,7 @@ const GrowthStalls = () => {
 
                     {/* CTA */}
                     <div className="mt-16 pt-8 border-t border-slate-100">
-                        <Link to="/start-here" className="btn bg-[var(--color-primary)] text-white px-8 py-4 rounded shadow-lg hover:bg-indigo-700 transition-all font-bold inline-block">
+                        <Link to="/start-here" className="btn bg-slate-900 text-white px-8 py-4 rounded shadow-lg hover:bg-indigo-700 transition-all font-bold inline-block">
                             Start here →
                         </Link>
                     </div>

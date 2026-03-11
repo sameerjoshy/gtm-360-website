@@ -23,7 +23,7 @@ const VideoCard = ({ video }) => {
                     <div className="absolute inset-0 flex items-center justify-center">
                         <motion.div
                             whileHover={{ scale: 1.1 }}
-                            className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:bg-[var(--color-primary)] group-hover:border-[var(--color-primary)] transition-all"
+                            className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:bg-slate-900 group-hover:border-slate-900 transition-all"
                         >
                             <Play className="w-6 h-6 text-white ml-1" fill="currentColor" />
                         </motion.div>

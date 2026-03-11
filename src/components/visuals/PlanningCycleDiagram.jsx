@@ -39,7 +39,7 @@ const PlanningCycleDiagram = () => {
                             className="absolute transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center w-40"
                             style={{ left: x, top: y }}
                         >
-                            <div className="w-10 h-10 bg-white border-2 border-[var(--color-primary)] rounded-full flex items-center justify-center font-bold text-[var(--color-primary)] shadow-md mb-2 z-20 relative">
+                            <div className="w-10 h-10 bg-white border-2 border-slate-900 rounded-full flex items-center justify-center font-bold text-slate-900 shadow-md mb-2 z-20 relative">
                                 {step.id}
                                 <div className="absolute inset-0 bg-indigo-100 rounded-full animate-ping opacity-20"></div>
                             </div>

@@ -15,7 +15,7 @@ const PlanningCycle = () => {
             {/* HERO */}
             <section className="pt-32 pb-20 bg-slate-50 border-b border-gray-100">
                 <div className="container max-w-5xl text-center">
-                    <span className="text-[var(--color-primary)] font-mono text-xs tracking-widest uppercase mb-4 block">Methodology</span>
+                    <span className="text-slate-900 font-mono text-xs tracking-widest uppercase mb-4 block">Methodology</span>
                     <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                         The Planning Cycle
                     </h1>
@@ -124,7 +124,7 @@ const PlanningCycle = () => {
                         You can do this on a whiteboard. <br /> Or you can use the Workbench to keep it running.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6">
-                        <Link href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="btn bg-[var(--color-primary)] text-white hover:bg-indigo-700 px-8 py-4 shadow-lg flex items-center justify-center">
+                        <Link href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="btn bg-slate-900 text-white hover:bg-indigo-700 px-8 py-4 shadow-lg flex items-center justify-center">
                             See the Workbench <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                     </div>

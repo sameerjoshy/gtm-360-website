@@ -16,7 +16,7 @@ const VisualConcept = ({ title, description, children, theme = 'dark' }) => {
             <div className="p-8 md:p-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="order-2 lg:order-1">
-                        <h3 className={`text-lg font-bold tracking-widest uppercase mb-4 ${isDark ? 'text-[var(--color-primary)]' : 'text-blue-600'}`}>
+                        <h3 className={`text-lg font-bold tracking-widest uppercase mb-4 ${isDark ? 'text-slate-900' : 'text-blue-600'}`}>
                             {title}
                         </h3>
                         <p className={`text-xl font-serif italic leading-relaxed ${isDark ? 'text-slate-300' : 'text-gray-600'}`}>

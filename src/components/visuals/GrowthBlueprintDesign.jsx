@@ -42,7 +42,7 @@ const GrowthBlueprintDesign = () => {
                                     initial={{ width: 0 }}
                                     animate={{ width: `${pillar.score}%` }}
                                     transition={{ duration: 1, delay: 0.5 + (idx * 0.1) }}
-                                    className={`h-full bg-[var(--color-primary)] rounded-full`}
+                                    className={`h-full bg-slate-900 rounded-full`}
                                 />
                             </div>
                         </div>

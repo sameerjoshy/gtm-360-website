@@ -108,11 +108,11 @@ const PipelineQuality = () => {
             </section>
 
             {/* CTA */}
-            <section className="bg-[var(--color-primary)] py-20 text-center text-white">
+            <section className="bg-slate-900 py-20 text-center text-white">
                 <div className="container max-w-2xl">
                     <h2 className="text-3xl font-bold mb-6">Stop chasing ghost deals.</h2>
                     <p className="text-lg text-indigo-100 mb-8">Let's clean your pipeline and install a system for truth.</p>
-                    <Link to="/contact" className="inline-flex items-center btn bg-white text-[var(--color-primary)] px-8 py-4 rounded font-bold hover:bg-gray-100 transition-all">
+                    <Link to="/contact" className="inline-flex items-center btn bg-white text-slate-900 px-8 py-4 rounded font-bold hover:bg-gray-100 transition-all">
                         Book a Pipeline Audit <ArrowRight className="ml-2 w-5 h-5" />
                     </Link>
                 </div>

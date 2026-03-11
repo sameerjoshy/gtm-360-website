@@ -44,7 +44,7 @@ const InsightTemplate = ({ data }) => {
                         <span>•</span>
                         <span>{data.readTime}</span>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight text-[var(--color-primary)] mb-8">
+                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight text-slate-900 mb-8">
                         {data.title}
                     </h1>
                     <p className="text-xl text-gray-700 leading-relaxed font-serif">
@@ -89,9 +89,9 @@ const InsightTemplate = ({ data }) => {
                 {/* 4. THE ACTUAL CONSTRAINT */}
                 <section className="py-12">
                     <div className="container max-w-3xl">
-                        <div className="bg-blue-50/50 p-8 border-l-4 border-[var(--color-primary)]">
-                            <h3 className="text-sm font-bold uppercase text-[var(--color-primary)] mb-4 tracking-widest">4. The Actual Constraint</h3>
-                            <div className="prose prose-lg prose-blue max-w-none" dangerouslySetInnerHTML={{ __html: data.sections.actualConstraint }} />
+                        <div className="bg-slate-50 p-8 border-l-4 border-slate-900">
+                            <h3 className="text-sm font-bold uppercase text-slate-900 mb-4 tracking-widest">4. The Actual Constraint</h3>
+                            <div className="prose prose-lg prose-slate max-w-none" dangerouslySetInnerHTML={{ __html: data.sections.actualConstraint }} />
                         </div>
                     </div>
                 </section>
@@ -117,7 +117,7 @@ const InsightTemplate = ({ data }) => {
                 </section>
 
                 {/* 7. GTM-360 Perspective */}
-                <section className="py-16 bg-[var(--color-secondary)] mt-12">
+                <section className="py-16 bg-slate-50 mt-12">
                     <div className="container max-w-3xl">
                         <h3 className="text-sm font-bold uppercase text-gray-400 mb-6 tracking-widest">7. How GTM-360 Thinks About This</h3>
                         <div className="prose prose-lg prose-indigo max-w-none" dangerouslySetInnerHTML={{ __html: data.sections.ourView }} />
@@ -142,11 +142,11 @@ const InsightTemplate = ({ data }) => {
                         most teams start with a short diagnostic<br />
                         to ensure they’re fixing the right constraint.
                     </p>
-                    <Link to="/start-here" className="btn bg-[var(--color-primary)] text-white hover:bg-opacity-90 px-10 py-4 text-lg">
+                    <Link to="/start-here" className="btn bg-slate-900 text-white hover:bg-opacity-90 px-10 py-4 text-lg">
                         Start with a Diagnostic
                     </Link>
                     <div className="mt-8 text-sm text-gray-500">
-                        Related Service: <Link to={data.relatedService.link} className="underline hover:text-[var(--color-primary)]">{data.relatedService.name}</Link>
+                        Related Service: <Link to={data.relatedService.link} className="underline hover:text-slate-900">{data.relatedService.name}</Link>
                     </div>
                 </div>
             </section>

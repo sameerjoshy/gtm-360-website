@@ -8,8 +8,8 @@ const About = () => {
     return (
         <div className="min-h-screen bg-white font-sans">
             <SEO
-                title="About | GTM-360"
-                description="GTM-360 is built by operators who've been in the room — not consultants who haven't."
+                title="About GTM-360 | Revenue Partner for B2B Growth"
+                description="20+ years running B2B revenue teams at AWS, Dell, and Series B SaaS. GTM-360 diagnoses the real constraint before building the fix."
             />
 
             {/* HERO */}

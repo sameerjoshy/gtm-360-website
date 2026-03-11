@@ -7,7 +7,7 @@ const HowWeWork = () => {
     return (
         <div className="min-h-screen bg-white font-sans">
             <SEO
-                title="How We Work | GTM-360"
+                title="How GTM-360 Works | Diagnose, Design, Build"
                 description="We work alongside your team — not above it. Three phases: find the real problem, design the fix, build it. We stay until it's working."
             />
 

@@ -87,7 +87,7 @@ const LeadMagnet = () => {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="Enter your work email"
-                                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] text-gray-900"
+                                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-slate-500 text-gray-900"
                                     required
                                 />
                             </div>
@@ -95,7 +95,7 @@ const LeadMagnet = () => {
                         <button
                             type="submit"
                             disabled={status === 'loading'}
-                            className="w-full btn bg-[var(--color-primary)] text-white hover:bg-opacity-90 flex items-center justify-center gap-2 py-3"
+                            className="w-full bg-slate-900 text-white py-3 px-6 rounded font-bold hover:bg-slate-700 transition-all text-white hover:bg-opacity-90 flex items-center justify-center gap-2 py-3"
                         >
                             {status === 'loading' ? 'Processing...' : (
                                 <>

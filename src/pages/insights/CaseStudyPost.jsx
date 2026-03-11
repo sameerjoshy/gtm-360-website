@@ -40,7 +40,7 @@ const CaseStudyPost = () => {
             {/* HEADER */}
             <header className="pt-32 pb-16 bg-white border-b border-gray-100">
                 <div className="container max-w-4xl">
-                    <Link to="/insights" className="flex items-center text-gray-500 hover:text-[var(--color-primary)] mb-8 transition-colors">
+                    <Link to="/insights" className="flex items-center text-gray-500 hover:text-slate-900 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4 mr-2" />
                         Back to Insights
                     </Link>
@@ -98,13 +98,13 @@ const CaseStudyPost = () => {
                                 <div>
                                     <h4 className="text-xs font-bold uppercase text-gray-400 mb-4 tracking-widest">Contents</h4>
                                     <nav className="space-y-1 border-l border-gray-200">
-                                        <a href="#context" className="block pl-4 py-2 text-sm text-gray-600 hover:text-[var(--color-primary)] hover:border-l-2 hover:border-[var(--color-primary)] -ml-[1px] transition-all">1. Context</a>
-                                        <a href="#misdiagnosis" className="block pl-4 py-2 text-sm text-gray-600 hover:text-[var(--color-primary)] hover:border-l-2 hover:border-[var(--color-primary)] -ml-[1px] transition-all">2. The Misdiagnosis</a>
-                                        <a href="#why-reasonable" className="block pl-4 py-2 text-sm text-gray-600 hover:text-[var(--color-primary)] hover:border-l-2 hover:border-[var(--color-primary)] -ml-[1px] transition-all">3. Why it seemed right</a>
-                                        <a href="#diagnostic" className="block pl-4 py-2 text-sm font-bold text-[var(--color-primary)] border-l-2 border-[var(--color-primary)] -ml-[1px] bg-blue-50/50">4. The Diagnostic Reveal</a>
-                                        <a href="#changes" className="block pl-4 py-2 text-sm text-gray-600 hover:text-[var(--color-primary)] hover:border-l-2 hover:border-[var(--color-primary)] -ml-[1px] transition-all">5. Structural Changes</a>
-                                        <a href="#outcome" className="block pl-4 py-2 text-sm text-gray-600 hover:text-[var(--color-primary)] hover:border-l-2 hover:border-[var(--color-primary)] -ml-[1px] transition-all">6. The Outcome</a>
-                                        <a href="#why-matters" className="block pl-4 py-2 text-sm text-gray-600 hover:text-[var(--color-primary)] hover:border-l-2 hover:border-[var(--color-primary)] -ml-[1px] transition-all">7. Why it matters</a>
+                                        <a href="#context" className="block pl-4 py-2 text-sm text-gray-600 hover:text-slate-900 hover:border-l-2 hover:border-slate-900 -ml-[1px] transition-all">1. Context</a>
+                                        <a href="#misdiagnosis" className="block pl-4 py-2 text-sm text-gray-600 hover:text-slate-900 hover:border-l-2 hover:border-slate-900 -ml-[1px] transition-all">2. The Misdiagnosis</a>
+                                        <a href="#why-reasonable" className="block pl-4 py-2 text-sm text-gray-600 hover:text-slate-900 hover:border-l-2 hover:border-slate-900 -ml-[1px] transition-all">3. Why it seemed right</a>
+                                        <a href="#diagnostic" className="block pl-4 py-2 text-sm font-bold text-slate-900 border-l-2 border-slate-900 -ml-[1px] bg-blue-50/50">4. The Diagnostic Reveal</a>
+                                        <a href="#changes" className="block pl-4 py-2 text-sm text-gray-600 hover:text-slate-900 hover:border-l-2 hover:border-slate-900 -ml-[1px] transition-all">5. Structural Changes</a>
+                                        <a href="#outcome" className="block pl-4 py-2 text-sm text-gray-600 hover:text-slate-900 hover:border-l-2 hover:border-slate-900 -ml-[1px] transition-all">6. The Outcome</a>
+                                        <a href="#why-matters" className="block pl-4 py-2 text-sm text-gray-600 hover:text-slate-900 hover:border-l-2 hover:border-slate-900 -ml-[1px] transition-all">7. Why it matters</a>
                                     </nav>
                                 </div>
 
@@ -112,7 +112,7 @@ const CaseStudyPost = () => {
                                 <div className="p-6 bg-slate-50 rounded border border-gray-100">
                                     <h4 className="text-xs font-bold uppercase text-gray-400 mb-2">Sound familiar?</h4>
                                     <p className="text-xs text-gray-600 mb-4">See if your system has similar constraints.</p>
-                                    <Link to="/start-here" className="text-xs font-bold text-[var(--color-primary)] hover:underline">Start Diagnostic →</Link>
+                                    <Link to="/start-here" className="text-xs font-bold text-slate-900 hover:underline">Start Diagnostic →</Link>
                                 </div>
                             </div>
                         </aside>
@@ -145,9 +145,9 @@ const CaseStudyPost = () => {
                             </div>
 
                             {/* SECTION 4: DIAGNOSTIC REVEAL */}
-                            <div id="diagnostic" className="scroll-mt-32 mb-16 p-8 bg-indigo-50/50 border-l-4 border-[var(--color-primary)] rounded-r-sm">
-                                <h3 className="text-sm font-bold uppercase text-[var(--color-primary)] mb-4 tracking-widest flex items-center gap-2">
-                                    <span className="w-8 h-[1px] bg-[var(--color-primary)]"></span> 4. What the Diagnostic Actually Revealed
+                            <div id="diagnostic" className="scroll-mt-32 mb-16 p-8 bg-indigo-50/50 border-l-4 border-slate-900 rounded-r-sm">
+                                <h3 className="text-sm font-bold uppercase text-slate-900 mb-4 tracking-widest flex items-center gap-2">
+                                    <span className="w-8 h-[1px] bg-slate-900"></span> 4. What the Diagnostic Actually Revealed
                                 </h3>
                                 <div dangerouslySetInnerHTML={{ __html: study.sections.diagnosticReveal }} />
                             </div>
@@ -182,7 +182,7 @@ const CaseStudyPost = () => {
                                     <h4 className="text-sm font-bold text-gray-900 mb-4">Related System Components</h4>
                                     <div className="flex flex-col gap-3">
                                         {study.relatedLinks.map((link, idx) => (
-                                            <Link key={idx} to={link.url} className="text-[var(--color-primary)] hover:text-blue-700 font-medium flex items-center group">
+                                            <Link key={idx} to={link.url} className="text-slate-900 hover:text-blue-700 font-medium flex items-center group">
                                                 {link.text}
                                                 <span className="opacity-0 group-hover:opacity-100 transition-opacity ml-2">→</span>
                                             </Link>
@@ -198,7 +198,7 @@ const CaseStudyPost = () => {
             {/* CTA BLOCK */}
             <section className="py-20 bg-slate-900 text-center">
                 <div className="container max-w-2xl">
-                    <h3 className="text-[var(--color-primary)] font-bold tracking-widest uppercase text-sm mb-6">
+                    <h3 className="text-slate-900 font-bold tracking-widest uppercase text-sm mb-6">
                         Where teams usually start
                     </h3>
                     <p className="text-2xl text-white font-serif italic mb-10 leading-relaxed">
