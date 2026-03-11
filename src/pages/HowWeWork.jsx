@@ -120,6 +120,47 @@ const HowWeWork = () => {
                 </div>
             </section>
 
+            {/* SERVICES */}
+            <section className="py-20 bg-white border-t border-slate-100">
+                <div className="container max-w-5xl">
+                    <div className="max-w-xl mb-12">
+                        <h2 className="text-2xl font-bold text-slate-900 mb-3">What we build in Phase 3.</h2>
+                        <p className="text-slate-500 leading-relaxed">Each engagement is scoped to the constraint we found in Phase 1. These are the four areas we work in.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        {[
+                            {
+                                title: "GTM Operating Model",
+                                desc: "Align strategy, roles, handoffs, and KPIs into a single system. Fix the friction between marketing, sales, and customer success that kills velocity.",
+                                link: "/services/gtm-operating-model"
+                            },
+                            {
+                                title: "Pipeline & Deal Quality",
+                                desc: "Rebuild stage definitions around buyer commitment, not seller activity. Fix the inflated pipeline that produces optimistic forecasts and missed targets.",
+                                link: "/services/pipeline-quality"
+                            },
+                            {
+                                title: "Forecasting & Governance",
+                                desc: "Replace gut-feel forecasts with a model that reflects how deals actually move. Install the governance that keeps it honest over time.",
+                                link: "/services/forecasting-governance"
+                            },
+                            {
+                                title: "GTM Signals & AI",
+                                desc: "Audit your stack, reduce noise, and wire AI to actual decisions. Tools should amplify good judgment — not replace it or add confusion.",
+                                link: "/services/gtm-signals-and-ai"
+                            }
+                        ].map((s, i) => (
+                            <Link key={i} to={s.link}
+                                className="group border border-slate-200 rounded-xl p-7 hover:border-slate-900 hover:shadow-md transition-all block">
+                                <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-indigo-700 transition-colors">{s.title}</h3>
+                                <p className="text-slate-500 text-sm leading-relaxed mb-4">{s.desc}</p>
+                                <span className="text-xs font-bold text-slate-400 group-hover:text-slate-900 transition-colors">See details →</span>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA */}
             <section className="py-20 bg-white text-center">
                 <div className="container max-w-2xl">
