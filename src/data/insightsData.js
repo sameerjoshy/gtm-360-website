@@ -329,7 +329,6 @@ export const insights = {
         }
     }
 };
-
 export const caseStudies = {
     "fixing-the-wrong-problem": {
         slug: "/insights/case-studies/fixing-the-wrong-problem",
