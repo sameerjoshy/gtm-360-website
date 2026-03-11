@@ -290,7 +290,7 @@ export const insights = {
         title: "ICP Drift — The Silent Revenue Killer",
         category: "ICP",
         readTime: "5 min read",
-        description: "ICP drift happens slowly. The accounts you're winning today look different from the accounts your product was built for. By the time it shows in metrics, the damage is done.",
+        description: "ICP drift happens slowly. By the time win rates and NRR show the damage, the pipeline has filled with the wrong buyers for 12+ months. Here's how to diagnose and fix it.",
         relatedService: { name: "Pipeline Quality & Win Rate", link: "/services/pipeline-quality" },
         relatedProblem: { name: "Win rates falling", link: "/problems/pipeline-conversion" },
         sections: {

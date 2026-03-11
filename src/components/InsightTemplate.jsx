@@ -34,7 +34,7 @@ const InsightTemplate = ({ data }) => {
     return (
         <div className="insight-post">
             <Helmet>
-                <title>{data.title} | GTM Insights</title>
+                <title>{data.title} | GTM-360</title>
                 <meta name="description" content={data.description} />
                 <link rel="canonical" href={`https://gtm-360.com${data.slug}`} />
                 <script type="application/ld+json">{JSON.stringify(schemaData)}</script>

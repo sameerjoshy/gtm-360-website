@@ -99,8 +99,8 @@ const GTMDiagnosticChecklist = () => {
     return (
         <div className="min-h-screen bg-white font-sans text-slate-900">
             <SEO
-                title="B2B GTM Diagnostic Checklist | 24-Point Revenue System Assessment | GTM-360"
-                description="Free B2B GTM diagnostic checklist. 24 questions across ICP targeting, pipeline quality, forecasting, GTM alignment, and AI readiness. Find where your revenue system is breaking."
+                title="B2B GTM Diagnostic Checklist | Revenue System Assessment | GTM-360"
+                description="Free B2B GTM diagnostic. 24 questions across ICP, pipeline quality, forecasting, GTM alignment, and AI readiness. Find where your revenue system is breaking."
                 canonical="https://gtm-360.com/resources/gtm-diagnostic-checklist"
             />
             <Helmet>

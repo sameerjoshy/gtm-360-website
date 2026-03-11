@@ -5,8 +5,8 @@ const Terms = () => {
     return (
         <div className="min-h-screen bg-white font-sans">
             <SEO
-                title="Terms of Service | GTM-360"
-                description="Terms of service for gtm-360.com."
+                title="Terms of Service | GTM-360 GTM Consulting"
+                description="Terms of service for gtm-360.com. Governs use of the GTM-360 website and consulting services including diagnostic, architecture, and implementation engagements."
                 canonical="https://gtm-360.com/terms"
             />
             <section className="pt-32 pb-24 bg-white">

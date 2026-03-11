@@ -8,7 +8,7 @@ const GTMConsulting = () => {
         <div className="min-h-screen bg-white font-sans text-slate-900">
             <SEO
                 title="B2B GTM Consulting | Revenue System Diagnostics | GTM-360"
-                description="GTM consulting for B2B SaaS companies at the growth plateau. We diagnose the real revenue constraint — pipeline quality, ICP drift, forecast volatility — and fix it. Series A–C engagements."
+                description="GTM consulting for B2B companies at the growth plateau. We diagnose the real revenue constraint — pipeline, ICP drift, forecast — and fix it."
                 canonical="https://gtm-360.com/gtm-consulting"
             />
             <Helmet>

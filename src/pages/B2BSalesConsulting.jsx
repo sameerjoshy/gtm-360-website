@@ -7,8 +7,8 @@ const B2BSalesConsulting = () => {
     return (
         <div className="min-h-screen bg-white font-sans text-slate-900">
             <SEO
-                title="B2B Sales Consulting | Fix Pipeline, Win Rate & Forecast | GTM-360"
-                description="B2B sales consulting for SaaS companies between $5M–$50M ARR. We diagnose why pipeline isn't converting, win rates are falling, or forecasts keep moving — and fix the underlying system."
+                title="B2B Sales Consulting | Pipeline, Win Rate & Forecast | GTM-360"
+                description="B2B sales consulting for $5M–$50M ARR SaaS. We diagnose why win rates are falling, pipeline isn't converting, or forecasts keep moving — then fix the system."
                 canonical="https://gtm-360.com/b2b-sales-consulting"
             />
             <Helmet>

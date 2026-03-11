@@ -18,7 +18,7 @@ const PipelineConversion = () => (
                     ]
                 })}</script>
         </Helmet>
-        <SEO title="Why B2B Win Rates Fall: ICP Drift & Messaging Gaps | GTM-360" description="Falling B2B win rates are rarely a sales execution problem. They almost always reflect ICP drift, messaging misalignment, or stage criteria that don't map to buyer behaviour." />
+        <SEO title="Why B2B Win Rates Fall: ICP Drift & Messaging Gaps | GTM-360" description="Falling B2B win rates rarely signal a sales execution problem. They reflect ICP drift, messaging misalignment, or stage criteria not tied to buyer behaviour." canonical="https://gtm-360.com/problems/pipeline-conversion" />
         <section className="pt-32 pb-16 bg-white border-b border-slate-100">
             <div className="container max-w-3xl">
                 <Link to="/problems" className="text-xs text-slate-400 hover:text-slate-700 mb-6 block">← All patterns</Link>

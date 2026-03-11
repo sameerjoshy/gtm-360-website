@@ -124,7 +124,7 @@ const About = () => {
                     <h2 className="text-2xl font-bold text-slate-900 mb-4">Want to have a conversation?</h2>
                     <p className="text-slate-500 mb-8 text-sm">Tell us what's happening. We'll tell you honestly if we can help.</p>
                     <Link to="/start-here" className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
-                        Talk to us
+                        Start with the diagnostic →
                     </Link>
                 </div>
             </section>

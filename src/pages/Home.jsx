@@ -9,7 +9,7 @@ const Home = () => {
         <div className="font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
             <SEO
                 title="B2B GTM & Sales Consulting | GTM-360"
-                description="B2B GTM consulting for companies hitting the growth plateau. We diagnose the real revenue constraint — pipeline quality, forecast volatility, ICP drift — and fix it. Series A–C engagements."
+                description="B2B GTM consulting for companies at the growth plateau. We find the real revenue constraint and fix the system. Former AWS COO. Series A–C."
                 canonical="https://gtm-360.com/"
             />
             <Helmet>

@@ -39,6 +39,15 @@ const HowWeWork = () => {
                         }
                     ]
                 })}</script>
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        { "@type": "Question", "name": "How long does a GTM consulting engagement take?", "acceptedAnswer": { "@type": "Answer", "text": "The Diagnostic phase is a standalone 10–14 day engagement. Architecture typically runs 3–6 weeks. Engineering runs 6–16 weeks. Most companies start with the Diagnostic only." } },
+                        { "@type": "Question", "name": "What does the GTM diagnostic cover?", "acceptedAnswer": { "@type": "Answer", "text": "The diagnostic reviews ICP definition, pipeline stage criteria, forecast governance, GTM alignment between marketing/sales/CS, and any AI or tooling in the motion. Output is a written constraint diagnosis." } },
+                        { "@type": "Question", "name": "What is the difference between a GTM consultant and a fractional CRO?", "acceptedAnswer": { "@type": "Answer", "text": "A fractional CRO provides ongoing executive revenue leadership. A GTM consultant runs defined diagnostic and design engagements with specific deliverables and end dates. GTM-360 runs engagements, not ongoing placements." } }
+                    ]
+                })}</script>
             </Helmet>
 
             {/* HERO */}
@@ -189,13 +198,34 @@ const HowWeWork = () => {
                 </div>
             </section>
 
+
+            {/* FAQ */}
+            <section className="py-20 bg-slate-50 border-t border-slate-100">
+                <div className="container max-w-3xl">
+                    <h2 className="text-3xl font-bold text-slate-900 mb-10">How GTM-360 engagements work — common questions</h2>
+                    <div className="space-y-8">
+                        {[
+                            { q: "How long does a GTM consulting engagement take?", a: "The Diagnostic phase is a standalone 10–14 day engagement. Architecture (design) typically runs 3–6 weeks depending on scope. Engineering (implementation) runs 6–16 weeks. Most companies start with the Diagnostic only — it produces a findings report and a clear recommendation for what to do next. Whether to proceed with Architecture and Engineering is a separate decision." },
+                            { q: "What does the GTM diagnostic actually cover?", a: "The diagnostic reviews: ICP definition and how well current pipeline matches it; pipeline stage criteria and whether they require buyer evidence or seller activity; forecast governance and accuracy patterns; GTM alignment between marketing, sales, and customer success; and any AI or tooling deployed on top of the motion. The output is a written constraint diagnosis — what's actually blocking revenue growth and why." },
+                            { q: "Do you work with companies that already have a CRO or VP of Sales?", a: "Yes — most of our engagements are with companies that already have a revenue leader. We work alongside existing leadership as an independent diagnostic and design partner, not as a replacement. Many CROs and VPs of Sales use the diagnostic as an independent verification of their own read of the system — particularly when they're new to the role and need an external view before making changes." },
+                            { q: "What's the difference between a GTM consultant and a fractional CRO?", a: "A fractional CRO provides ongoing executive revenue leadership. A GTM consultant runs defined diagnostic and design engagements with specific deliverables and end dates. GTM-360 runs engagements, not ongoing placements. The output is a working system, not an executive relationship." },
+                            { q: "How do you measure whether the engagement worked?", a: "We define success metrics before the engagement starts — specific, measurable outcomes tied to the constraint we identified. For pipeline quality work: win rate and forecast accuracy. For operating model work: sales cycle length and MQL-to-revenue conversion. For forecasting work: forecast accuracy variance. Every engagement has a written definition of what 'it worked' looks like." }
+                        ].map((item, i) => (
+                            <div key={i} className="border-b border-slate-200 pb-8 last:border-0">
+                                <h3 className="text-base font-bold text-slate-900 mb-3">{item.q}</h3>
+                                <p className="text-slate-600 leading-relaxed text-sm">{item.a}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
             {/* CTA */}
             <section className="py-20 bg-white text-center">
                 <div className="container max-w-2xl">
                     <h2 className="text-2xl font-bold text-slate-900 mb-4">Not sure which phase applies to you?</h2>
                     <p className="text-slate-500 mb-10">Most engagements start with a conversation. Tell us what's happening and we'll tell you what we'd suggest.</p>
                     <Link to="/start-here" className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
-                        Talk to us
+                        Start with the diagnostic →
                     </Link>
                 </div>
             </section>

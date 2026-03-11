@@ -50,9 +50,20 @@ const StartHere = () => {
 
     return (
         <div className="min-h-screen bg-white font-sans">
+            <Helmet>
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "name": "GTM Diagnostic",
+                    "description": "A 10–14 day standalone diagnostic engagement to identify the binding constraint in your B2B revenue system.",
+                    "provider": { "@type": "Organization", "@id": "https://gtm-360.com/#organization", "name": "GTM-360" },
+                    "serviceType": "GTM Consulting Diagnostic",
+                    "url": "https://gtm-360.com/start-here"
+                })}</script>
+            </Helmet>
             <SEO
                 title="B2B GTM Diagnostic | Start Here | GTM-360"
-                description="Start with a GTM diagnostic. Tell us what's happening — pipeline, forecast, growth. We'll tell you honestly whether we can help and what it would take."
+                description="Start with a B2B GTM diagnostic. Tell us what's happening in your revenue system — we'll respond with an honest view of whether and how we can help."
                 canonical="https://gtm-360.com/start-here"
             />
 

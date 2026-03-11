@@ -7,8 +7,8 @@ const SeriesBGTM = () => {
     return (
         <div className="min-h-screen bg-white font-sans text-slate-900">
             <SEO
-                title="Series B GTM Strategy | Revenue System for Post-Series B Growth | GTM-360"
-                description="Series B GTM strategy consulting. The GTM motion that got you to Series A doesn't scale to Series B. We diagnose what's breaking and rebuild the revenue system for your current stage."
+                title="Series B GTM Strategy | Revenue System After Series A | GTM-360"
+                description="Series B GTM strategy consulting. The GTM motion that got you to Series A doesn't scale beyond it. We diagnose what's breaking and rebuild."
                 canonical="https://gtm-360.com/series-b-gtm-strategy"
             />
             <Helmet>

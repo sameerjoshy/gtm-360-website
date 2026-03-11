@@ -18,7 +18,7 @@ const StalledGrowth = () => (
                     ]
                 })}</script>
         </Helmet>
-        <SEO title="Why B2B Pipeline Growth Doesn't Fix Revenue | GTM-360" description="When B2B pipeline grows but revenue stays flat, the constraint is qualification — not volume. Here's what's actually happening and how to fix it." />
+        <SEO title="Why B2B Pipeline Growth Doesn't Fix Revenue — B2B GTM | GTM-360" description="When B2B pipeline grows but revenue stays flat, the constraint is qualification — not volume. Here's what's actually happening and how to fix it." canonical="https://gtm-360.com/problems/stalled-growth" />
         <section className="pt-32 pb-16 bg-white border-b border-slate-100">
             <div className="container max-w-3xl">
                 <Link to="/problems" className="text-xs text-slate-400 hover:text-slate-700 mb-6 block">← All patterns</Link>

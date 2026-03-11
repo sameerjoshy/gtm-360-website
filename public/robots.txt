@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+Disallow: /diagnostic
+Disallow: /agents
+Disallow: /resources/how-we-work-one-pager
+
 Sitemap: https://gtm-360.com/sitemap.xml

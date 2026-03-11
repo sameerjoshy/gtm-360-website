@@ -18,7 +18,7 @@ const ForecastVolatility = () => (
                     ]
                 })}</script>
         </Helmet>
-        <SEO title="Why B2B Sales Forecasts Are Unreliable — and How to Fix Them | GTM-360" description="B2B forecast volatility is a signal problem, not a process problem. When CRM stages don't map to buyer behaviour, forecast accuracy collapses — here's the fix." />
+        <SEO title="B2B Sales Forecast Volatility: Causes & Fixes | GTM-360" description="B2B forecast volatility is a signal problem, not a process problem. When CRM stages don't map to buyer behaviour, forecast accuracy collapses — here's the fix." canonical="https://gtm-360.com/problems/forecast-volatility" />
         <section className="pt-32 pb-16 bg-white border-b border-slate-100">
             <div className="container max-w-3xl">
                 <Link to="/problems" className="text-xs text-slate-400 hover:text-slate-700 mb-6 block">← All patterns</Link>

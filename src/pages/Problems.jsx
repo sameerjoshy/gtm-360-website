@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, AlertCircle, BarChart2, Activity, PieChart, Users, MessageSquare, Target, Cpu } from 'lucide-react';
@@ -69,6 +70,11 @@ const Problems = () => {
 
     return (
         <div className="min-h-screen bg-white font-sans">
+            <SEO
+                title="B2B Revenue Problems: Pipeline, Win Rate & Forecast | GTM-360"
+                description="B2B revenue problems at the growth plateau: pipeline not converting, win rates falling, forecast volatile. Identify which pattern matches your situation."
+                canonical="https://gtm-360.com/problems"
+            />
             <Helmet>
                 <title>Why B2B Growth Stalls Even When Teams Execute | GTM-360</title>
                 <meta name="description" content="The patterns we see most often in B2B companies at the growth plateau. Most persist because teams are solving the wrong problem." />
@@ -147,7 +153,7 @@ const Problems = () => {
                     </p>
                     <p className="text-slate-500 mb-10 text-sm">No proposal until you've asked for one.</p>
                     <Link to="/start-here" className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
-                        Talk to us about what you're seeing
+                        Start with the diagnostic →
                     </Link>
                 </div>
             </section>

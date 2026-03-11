@@ -181,10 +181,10 @@ const CaseStudyPost = () => {
                                         {study.relatedLinks.map((link, idx) => (
                                             <Link
                                                 key={idx}
-                                                to={link.url}
+                                                to={link.href || link.url}
                                                 className="text-slate-700 hover:text-indigo-700 font-medium flex items-center gap-1 group text-sm transition-colors"
                                             >
-                                                {link.text}
+                                                {link.label || link.text}
                                                 <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                                             </Link>
                                         ))}

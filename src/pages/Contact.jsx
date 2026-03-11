@@ -5,9 +5,19 @@ import { Link } from 'react-router-dom';
 const Contact = () => {
     return (
         <div className="min-h-screen bg-white font-sans selection:bg-indigo-100 selection:text-indigo-900">
+            <Helmet>
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "ContactPage",
+                    "name": "Contact GTM-360",
+                    "description": "Talk directly to a partner at GTM-360. No CRM queue. No BDR handoff.",
+                    "url": "https://gtm-360.com/contact",
+                    "mainEntity": { "@type": "Organization", "@id": "https://gtm-360.com/#organization", "name": "GTM-360" }
+                })}</script>
+            </Helmet>
             <SEO
                 title="Talk to a GTM Consultant | Direct Partner Access | GTM-360"
-                description="Speak directly with a B2B GTM consultant — no SDR, no qualification layer. Book a call or use the contact form."
+                description="Talk directly to a B2B GTM consultant at GTM-360. No SDR, no CRM queue. Partner access from the first conversation."
                 canonical="https://gtm-360.com/contact"
             />
 

@@ -5,8 +5,8 @@ const Privacy = () => {
     return (
         <div className="min-h-screen bg-white font-sans">
             <SEO
-                title="Privacy Policy | GTM-360"
-                description="How GTM-360 handles information collected through our website."
+                title="Privacy Policy | GTM-360 GTM Consulting"
+                description="GTM-360 privacy policy. How we collect, use, and protect data from visitors and consulting clients. Covers cookies, third-party services, and data handling practices."
                 canonical="https://gtm-360.com/privacy"
             />
             <section className="pt-32 pb-24 bg-white">

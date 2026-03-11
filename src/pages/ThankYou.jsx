@@ -1,11 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 const ThankYou = () => {
     return (
         <div className="min-h-screen bg-white font-sans flex items-center">
-            <SEO title="Thank You | GTM-360" description="We've received your message and will be in touch shortly." />
+            <SEO title="Thank You | GTM-360" description="We've received your message and will be in touch shortly." canonical="https://gtm-360.com/thank-you" />
+            <Helmet><meta name="robots" content="noindex, nofollow" /></Helmet>
             <div className="container max-w-2xl text-center py-32">
                 <span className="text-emerald-600 font-mono text-xs tracking-widest uppercase mb-4 block">Received</span>
                 <h1 className="text-4xl font-bold text-slate-900 mb-6">We'll be in touch.</h1>

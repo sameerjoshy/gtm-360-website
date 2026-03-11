@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
@@ -62,8 +63,19 @@ const Insights = () => {
             <SEO
                 title="B2B GTM Insights & Case Studies | Revenue Patterns | GTM-360"
                 description="GTM consulting insights from real B2B engagements. Patterns in pipeline quality, forecast volatility, ICP drift, and revenue stalls."
-                canonical="https://gtm-360.com/insights"
+canonical="https://gtm-360.com/insights"
             />
+            <Helmet>
+                <script type="application/ld+json">{JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "CollectionPage",
+                    "name": "B2B GTM Insights & Case Studies",
+                    "description": "GTM consulting insights from real B2B revenue engagements. Patterns in pipeline quality, forecast accuracy, ICP drift, and GTM misdiagnosis.",
+                    "url": "https://gtm-360.com/insights",
+                    "publisher": { "@type": "Organization", "@id": "https://gtm-360.com/#organization", "name": "GTM-360" }
+                })}</script>
+            </Helmet>
+
 
             {/* HEADER */}
             <section className="pt-32 pb-20 bg-slate-50 border-b border-slate-100">
