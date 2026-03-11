@@ -85,8 +85,9 @@ const Insights = () => {
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">{featured.title}</h2>
                         <p className="text-slate-300 mb-8 leading-relaxed text-lg max-w-2xl">{featured.desc}</p>
                         <div className="flex items-center gap-6">
-                            
-                            <span className="text-slate-500 text-sm italic">⚠ Publish article then replace this with real link</span>
+                            <Link to={featured.slug} className="text-sm font-bold text-white border-b border-indigo-400 pb-0.5 hover:border-white transition-colors">
+                                Read article →
+                            </Link>
                             <span className="text-slate-500 text-sm">{featured.readTime}</span>
                         </div>
                     </div>
@@ -109,7 +110,46 @@ const Insights = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-center text-xs text-slate-300 mt-10 italic">⚠ Replace "Coming soon" tags with real article links as content is published.</p>
+                </div>
+            </section>
+
+            {/* CASE STUDIES SECTION */}
+            <section className="py-16 bg-slate-50 border-t border-slate-100">
+                <div className="container max-w-5xl">
+                    <div className="max-w-xl mb-10">
+                        <span className="text-slate-400 font-mono text-xs tracking-widest uppercase mb-3 block">Case Studies</span>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-3">What these patterns look like in practice.</h2>
+                        <p className="text-slate-500 font-light">Narrative accounts of real engagements. Names and details anonymised.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        {[
+                            {
+                                tag: "Pipeline Quality",
+                                metric: "14% → 22% win rate",
+                                title: "The pipeline was full. Revenue was flat.",
+                                slug: "/insights/case-studies/pipeline-full-revenue-flat"
+                            },
+                            {
+                                tag: "Forecasting",
+                                metric: "58% → 84% forecast accuracy",
+                                title: "The board wanted predictability. The team was guessing.",
+                                slug: "/insights/case-studies/forecast-board-wanted-predictability"
+                            },
+                            {
+                                tag: "GTM Alignment",
+                                metric: "94 → 58 day sales cycle",
+                                title: "Sales cycles had doubled. The ICP had quietly changed.",
+                                slug: "/insights/case-studies/sales-cycle-doubled-icp-drift"
+                            }
+                        ].map((cs, i) => (
+                            <Link key={i} to={cs.slug} className="bg-white border border-slate-200 rounded-xl p-7 hover:shadow-md hover:border-slate-300 transition-all group block">
+                                <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-3 block">{cs.tag}</span>
+                                <p className="text-sm font-mono text-slate-400 mb-3">{cs.metric}</p>
+                                <h3 className="text-base font-bold text-slate-900 leading-snug group-hover:text-indigo-700 transition-colors">{cs.title}</h3>
+                                <span className="text-xs text-slate-400 mt-4 block">Read full case study →</span>
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </section>
 

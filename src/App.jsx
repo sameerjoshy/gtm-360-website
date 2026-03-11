@@ -26,6 +26,7 @@ import GTMSignalsAI from './pages/services/GTMSignalsAI';
 
 // Legal + utility
 import InsightPost from './pages/insights/InsightPost';
+import CaseStudyPost from './pages/insights/CaseStudyPost';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import ThankYou from './pages/ThankYou';
@@ -59,6 +60,7 @@ export function AppRoutes() {
                 <Route path="/problems/forecast-volatility" element={<ForecastVolatility />} />
                 <Route path="/insights" element={<Insights />} />
                 <Route path="/insights/:slug" element={<InsightPost />} />
+                <Route path="/insights/case-studies/:slug" element={<CaseStudyPost />} />
                 <Route path="/start-here" element={<StartHere />} />
                 <Route path="/start-here" element={<Diagnostic />} />
                 <Route path="/services/gtm-operating-model" element={<GTMOperatingModel />} />

@@ -198,7 +198,7 @@ const CaseStudyPost = () => {
             {/* CTA BLOCK */}
             <section className="py-20 bg-slate-900 text-center">
                 <div className="container max-w-2xl">
-                    <h3 className="text-slate-900 font-bold tracking-widest uppercase text-sm mb-6">
+                    <h3 className="text-slate-400 font-bold tracking-widest uppercase text-sm mb-6">
                         Where teams usually start
                     </h3>
                     <p className="text-2xl text-white font-serif italic mb-10 leading-relaxed">
@@ -206,7 +206,7 @@ const CaseStudyPost = () => {
                         most teams begin with a short diagnostic<br />
                         to ensure they are fixing the right constraint.
                     </p>
-                    <Link to="/start-here" className="btn bg-white text-slate-900 hover:bg-gray-100 px-8 py-3 font-semibold">
+                    <Link to="/start-here" className="inline-flex items-center justify-center bg-white text-slate-900 hover:bg-slate-100 px-8 py-3 rounded font-bold transition-all">
                         Start with a Diagnostic →
                     </Link>
                 </div>

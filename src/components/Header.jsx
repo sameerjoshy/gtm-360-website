@@ -43,7 +43,10 @@ const Header = () => {
                 </div>
 
                 <div className="hidden md:flex items-center gap-5">
-
+                    <a href="https://app.gtm-360.com"
+                        className="text-sm text-slate-400 hover:text-slate-700 transition-colors font-medium">
+                        Login
+                    </a>
                     <Link to="/start-here"
                         className="bg-slate-900 text-white px-5 py-2.5 rounded text-sm font-bold hover:bg-slate-700 transition-all">
                         Talk to us
@@ -64,6 +67,7 @@ const Header = () => {
                         </Link>
                     ))}
                     <div className="pt-6 flex flex-col gap-3">
+                        <a href="https://app.gtm-360.com" className="text-base font-medium text-slate-400 py-2">Login</a>
                         <Link to="/start-here" className="bg-slate-900 text-white text-center py-3.5 rounded font-bold">Talk to us</Link>
                     </div>
                 </div>

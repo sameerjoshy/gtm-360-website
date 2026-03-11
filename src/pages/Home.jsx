@@ -127,7 +127,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* PROOF — case studies, flagged as placeholder */}
+            {/* CASE STUDIES */}
             <section className="py-24 bg-slate-50 border-y border-slate-100">
                 <div className="container max-w-5xl">
                     <div className="max-w-xl mb-14">
@@ -137,29 +137,44 @@ const Home = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {[
                             {
-                                tag: "Pipeline",
-                                title: "Close rate recovered 8 points in 90 days",
-                                story: "$14M ARR. Pipeline was growing. Revenue wasn't. Turned out the pipeline was full of deals that weren't real — stage definitions measured rep activity, not buyer commitment.",
-                                result: "+8pts close rate in 90 days"
+                                tag: "Pipeline Quality",
+                                metric: "14% → 22%",
+                                metricLabel: "Win rate",
+                                hook: "The pipeline was full. Revenue was flat. Nobody could explain why.",
+                                context: "$14M ARR. 4.1× pipeline coverage. Eighteen months below target. The problem wasn't the team — it was that stage criteria measured rep activity, not buyer commitment.",
+                                slug: "/insights/case-studies/pipeline-full-revenue-flat"
                             },
                             {
                                 tag: "Forecasting",
-                                title: "Forecast went from 58% to 84% accurate",
-                                story: "$22M ARR, Series B. Board wanted predictability. The problem wasn't process — it was that nobody agreed on what a 'committed' deal actually meant.",
-                                result: "+26pts accuracy in one quarter"
+                                metric: "58% → 84%",
+                                metricLabel: "Forecast accuracy",
+                                hook: "The board wanted predictability. The team was guessing every week.",
+                                context: "$22M ARR, Series B. Eight reps, eight different definitions of 'Commit.' The forecast was averaging incompatible inputs and calling it a number.",
+                                slug: "/insights/case-studies/forecast-board-wanted-predictability"
                             },
                             {
                                 tag: "GTM Alignment",
-                                title: "Sales cycle cut by 30% after ICP reset",
-                                story: "$9M ARR. Marketing and sales had quietly drifted to different definitions of the ideal customer. Deals were taking twice as long because the wrong people were in the room.",
-                                result: "-30% sales cycle in 60 days"
+                                metric: "94 → 58 days",
+                                metricLabel: "Sales cycle",
+                                hook: "Sales cycles had doubled. Nobody had noticed the ICP had quietly changed.",
+                                context: "$9M ARR. The product was built for operations buyers. Eighteen months of inbound had filled the pipeline with finance and HR buyers instead. Nobody had looked.",
+                                slug: "/insights/case-studies/sales-cycle-doubled-icp-drift"
                             }
                         ].map((cs, i) => (
-                            <div key={i} className="bg-white border border-slate-200 rounded-xl p-8 hover:shadow-md transition-all">
-                                <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-4 block">{cs.tag}</span>
-                                <h3 className="text-lg font-bold text-slate-900 mb-3">{cs.title}</h3>
-                                <p className="text-slate-500 text-sm leading-relaxed mb-6">{cs.story}</p>
-                                <p className="text-sm font-bold text-slate-900 pt-4 border-t border-slate-100">{cs.result}</p>
+                            <div key={i} className="bg-white border border-slate-200 rounded-xl p-8 hover:shadow-md hover:border-slate-300 transition-all flex flex-col">
+                                <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-5 block">{cs.tag}</span>
+                                <div className="mb-5">
+                                    <span className="text-3xl font-bold text-slate-900">{cs.metric}</span>
+                                    <span className="text-sm text-slate-400 ml-2">{cs.metricLabel}</span>
+                                </div>
+                                <h3 className="text-base font-bold text-slate-900 mb-3 leading-snug">{cs.hook}</h3>
+                                <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-1">{cs.context}</p>
+                                <Link
+                                    to={cs.slug}
+                                    className="text-sm font-bold text-slate-900 hover:text-indigo-700 transition-colors pt-4 border-t border-slate-100 inline-flex items-center gap-1"
+                                >
+                                    Read the full story →
+                                </Link>
                             </div>
                         ))}
                     </div>
