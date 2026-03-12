@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist/server",
-    "build:ssg": "npm run build && npm run build:ssr && node prerender.mjs",
+    "build:ssg": "npm run build",
     "postbuild": "node prerender.mjs || true"
   },
   "dependencies": {
