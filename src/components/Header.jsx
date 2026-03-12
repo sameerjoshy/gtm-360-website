@@ -31,7 +31,7 @@ const Header = () => {
                 <div className="flex items-center gap-10">
                     <Link to="/">
                         <img src={logo} alt="GTM-360"
-                            className={`transition-all duration-300 ${isScrolled ? 'h-10 md:h-11' : 'h-11 md:h-14'}`} />
+                            className={`transition-all duration-300 ${isScrolled ? 'h-14 md:h-16' : 'h-16 md:h-20'}`} />
                     </Link>
                     <nav className="hidden md:flex items-center gap-8">
                         {navLinks.map(link => (

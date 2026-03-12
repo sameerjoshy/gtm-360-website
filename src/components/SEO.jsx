@@ -15,8 +15,9 @@ const SEO = ({ title, description, canonical, type = 'website', children }) => {
             <title>{pageTitle}</title>
             <meta name="description" content={description || defaultDescription} />
             <link rel="canonical" href={canonical || currentUrl} />
-            <link rel="icon" type="image/png" href="/favicon.png" />
-            <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+            <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
             {/* Open Graph */}
             <meta property="og:type" content={type} />
