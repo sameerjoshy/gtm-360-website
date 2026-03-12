@@ -327,7 +327,120 @@ export const insights = {
                 <p>If your NRR is declining, your support load is growing, and your sales cycles are lengthening without an obvious cause, ICP drift is the most likely explanation. The diagnostic will confirm it.</p>
             `
         }
-    }
+    },
+
+    "growth-engine-vs-amplifier": {
+        slug: "/insights/growth-engine-vs-amplifier",
+        relatedArticles: [
+            { title: "The Hidden Cost of Solving the Wrong Problem", href: "/insights/solving-wrong-problem", tag: "Insight" },
+            { title: "Why Growth Stalls After Early Traction", href: "/insights/why-growth-stalls", tag: "Insight" },
+            { title: "GTM Operating Model Realignment", href: "/services/gtm-operating-model", tag: "Service" }
+        ],
+        publishDate: "2026-03-12",
+        keyTakeaway: "You cannot amplify zero. Adding more pipeline, tools, or headcount to a broken revenue engine doesn't fix it — it scales the inefficiency. The engine has to be right before amplification makes sense.",
+        title: "Growth Engines vs. Growth Amplifiers — Why More Isn't Working",
+        category: "GTM Strategy",
+        readTime: "6 min read",
+        description: "Most B2B companies stall because they keep adding amplifiers to a broken engine. More pipeline, more tools, more headcount. None of it works until the underlying engine — ICP, stage design, GTM alignment — is actually working.",
+        relatedService: { name: "GTM Operating Model Realignment", link: "/services/gtm-operating-model" },
+        relatedProblem: { name: "Growth has stalled", link: "/problems/stalled-growth" },
+        sections: {
+            problemRecognition: `
+                <p>You've done everything the playbook says. Hired more SDRs. Invested in a better CRM. Launched outbound sequences at scale. Brought in a new VP of Marketing. Added intent data. Ran a pricing experiment. The pipeline numbers are up. Activity metrics are strong. And yet the revenue isn't moving the way it should.</p>
+                <p>This is the most frustrating position in B2B: high effort, visible investment, and a growth curve that refuses to respond. The natural instinct is to add more — more headcount, more tools, more process. The problem is structural, and the structure is being misread.</p>
+            `,
+            wrongExplanation: `
+                <p>The standard explanation is execution. The team isn't working the process hard enough. The tools aren't being used correctly. The reps need more coaching. The campaigns need better copy.</p>
+                <p>So the company executes harder. More activity. Better tracking. Tighter management. The effort is real. The commitment is genuine. And the results are still disappointing — because the diagnosis is wrong.</p>
+                <p>The problem isn't execution. The problem is that the company is adding amplification to a broken engine.</p>
+            `,
+            whyItFails: `
+                <p>Every B2B revenue system has two types of mechanisms: engines and amplifiers.</p>
+                <p><strong>Growth engines are first-order mechanisms.</strong> They create the conditions for revenue. A well-defined ICP that sales and marketing agree on. Pipeline stage criteria that require buyer evidence, not seller activity. Messaging that maps to what buyers actually care about. A forecasting system that produces a number everyone trusts. GTM alignment where every function is optimising for the same outcome. These are the mechanisms that generate growth — not measure it, not accelerate it, but create it.</p>
+                <p><strong>Growth amplifiers are second-order mechanisms.</strong> They increase the output of an existing engine. Outbound sequences amplify the reach of a validated message. Intent data amplifies the targeting of a defined ICP. AI tools amplify a sales motion that already works. Paid media amplifies demand that already exists. A partner program amplifies a value proposition that's already proven.</p>
+                <p>The critical rule: amplifiers multiply the output of the system underneath them. If that system is weak, amplifiers scale the weakness. More outbound with the wrong message produces more ignored emails. More intent data pointed at the wrong ICP produces more qualified-looking leads that don't close. More AI in a broken sales motion produces faster execution of a broken motion.</p>
+                <p>You cannot amplify zero.</p>
+            `,
+            actualConstraint: `
+                <p>The real constraint, in almost every stalled B2B company, is that the growth engine hasn't been properly designed. The ICP is implicit — different people in the company have different working definitions, and nobody has forced a reconciliation. Stage criteria measure what reps did, not what buyers decided. Marketing and sales are optimising for different metrics that don't compound into each other. The forecast is a negotiation, not a signal.</p>
+                <p>These are engine problems. They cannot be solved by amplification. And they're almost always invisible to the people inside the system, because everyone is measuring activity — which looks fine — rather than engine health, which is quietly degraded.</p>
+                <p>The most reliable signal that you have an engine problem rather than an amplification problem: adding more of anything (headcount, tools, spend, process) produces diminishing returns, and the returns started diminishing before the current round of investment.</p>
+            `,
+            consequences: `
+                <p>The cost of misdiagnosing an engine problem as an amplification problem is compounding. Each investment in amplification that doesn't produce expected results leads to a conclusion that the amplification wasn't the right kind, or wasn't executed well enough. So more is added. The engine gets more complex, more expensive to run, and more difficult to diagnose.</p>
+                <p>Two years into this cycle, the company has a large, expensive GTM operation that is structurally incapable of producing the growth it should — because the foundational engine was never fixed, and is now buried under layers of amplification investment that nobody wants to write off.</p>
+                <p>This is why stalled growth is so hard to recover from when caught late. The fix isn't to remove the amplification. It's to go back and fix the engine — but now with a team that's been optimising amplification for two years and finds it hard to see why the engine matters.</p>
+            `,
+            whatChanges: `
+                <p>The correction sequence is fixed: engine first, amplifiers second. Always.</p>
+                <p>Engine design means: defining the ICP with enough specificity that any rep can qualify a deal against it in five minutes. Rebuilding stage criteria around buyer commitment, not seller activity. Aligning marketing and sales on shared definitions of what a good opportunity looks like. Designing a forecasting system that produces a number that actually predicts the close. Getting GTM aligned so that every function's metric compounds into revenue.</p>
+                <p>Only once those mechanisms are working — meaning you can observe them producing the expected output — does amplification make sense. At that point, amplification genuinely compounds. Outbound scales a validated message to more of the right buyers. AI accelerates a motion that already works. Paid media builds demand for a value proposition that's already converting.</p>
+                <p>The diagnostic question is simple: when you add more of something, does growth respond proportionally? If not, you have an engine problem. The amplification is working fine — there's just nothing underneath it to amplify.</p>
+            `,
+            ourView: `
+                <p>Most of the B2B companies we work with at the growth plateau have the same underlying pattern: strong amplification investment sitting on top of a poorly designed engine. The people inside the system can see the amplification — it's visible, measurable, and easy to point to. The engine problems are invisible, because they show up as absence rather than failure. Deals that don't close. Pipeline that doesn't convert. Forecasts that keep missing.</p>
+                <p>The diagnostic starts by separating engine from amplifier. Which parts of your GTM are creating growth conditions, and which are accelerating existing conditions? Once that separation is made clearly, the constraint is almost always obvious.</p>
+                <p>The rule we apply: if adding more isn't working, stop adding more. Find the engine problem first.</p>
+            `
+        }
+    },
+
+    "gtm-revenue-flywheel": {
+        slug: "/insights/gtm-revenue-flywheel",
+        relatedArticles: [
+            { title: "Growth Engines vs. Growth Amplifiers", href: "/insights/growth-engine-vs-amplifier", tag: "Insight" },
+            { title: "When AI Makes Your GTM Worse", href: "/insights/when-ai-makes-gtm-worse", tag: "Insight" },
+            { title: "GTM Signals & AI Alignment", href: "/services/gtm-signals-and-ai", tag: "Service" }
+        ],
+        publishDate: "2026-03-12",
+        keyTakeaway: "A GTM flywheel isn't a metaphor — it's a specific system design where each stage of the revenue cycle produces signal that improves the next. Most B2B companies have the stages but not the connections between them.",
+        title: "The GTM Revenue Flywheel — How B2B Growth Compounds",
+        category: "GTM Strategy",
+        readTime: "7 min read",
+        description: "Most B2B revenue systems run in parallel, not in sequence. Each function optimises independently. The GTM flywheel is a different design — one where every stage produces signal that improves the next cycle. Here's how it works.",
+        relatedService: { name: "GTM Signals & AI Alignment", link: "/services/gtm-signals-and-ai" },
+        relatedProblem: { name: "Growth has stalled", link: "/problems/stalled-growth" },
+        sections: {
+            problemRecognition: `
+                <p>Your GTM functions are all running. Marketing is generating pipeline. Sales is working deals. Customer success is managing accounts. RevOps is building reports. The tech stack is instrumented. Everyone is executing.</p>
+                <p>But the system doesn't feel like it's learning. Every quarter starts from roughly the same place. The same conversations happen. The same deals stall in the same stages. The same types of customers churn for the same reasons. There's no compounding — each cycle of execution is roughly as efficient as the last one.</p>
+                <p>This is the difference between a GTM operation and a GTM flywheel. The operation runs. The flywheel learns.</p>
+            `,
+            wrongExplanation: `
+                <p>The standard response to this is more data. More dashboards. A better BI layer. A data warehouse. A revenue intelligence platform. The assumption is that the learning problem is a visibility problem — if people could see what was happening more clearly, they'd make better decisions.</p>
+                <p>This is partly right and mostly wrong. Visibility is necessary but not sufficient. The problem isn't that the data isn't available. It's that the system isn't designed to use it. Each function looks at its own data, draws its own conclusions, and optimises its own metrics. The signal produced by one stage never reaches the next stage in a form that changes behaviour.</p>
+                <p>More data visibility into a disconnected system produces more detailed reporting on a system that isn't learning.</p>
+            `,
+            whyItFails: `
+                <p>A GTM flywheel has a specific structure. It's not a diagram — it's a set of operational connections between stages that cause each cycle to improve on the last.</p>
+                <p>The flywheel has four stages:</p>
+                <p><strong>Stage 1 — Signal capture.</strong> Every customer interaction — sales calls, email responses, product usage, support tickets, renewal conversations — produces signal about what buyers care about, what objections arise, what value is actually being delivered, and which customer profiles produce the best outcomes. Most companies capture some of this. Few systematise it.</p>
+                <p><strong>Stage 2 — Pattern recognition.</strong> Raw signal becomes insight when it's aggregated and interpreted. Which objections cluster at which stage? Which customer profiles convert fastest, renew most reliably, expand most consistently? Which messages produce responses and which are ignored? Which deal characteristics predict a slip versus a close? This is where most companies have a gap — signal is captured in silos (CRM, CS platform, product analytics) and never brought together into a coherent view.</p>
+                <p><strong>Stage 3 — System update.</strong> Insight changes the operating system. ICP criteria are sharpened based on what expansion customers look like. Stage exit criteria are updated based on where deals most commonly stall. Outbound messaging is refined based on what's producing responses. Qualification criteria are tightened based on the deals most likely to close. This is the stage most companies skip — insight is produced in a report, discussed in a QBR, and then filed. The system doesn't change.</p>
+                <p><strong>Stage 4 — Execution.</strong> The updated system runs. Better targeting produces better-fit pipeline. Sharper qualification produces higher-quality deals. Refined messaging produces more engaged buyers. Better stage criteria produce more accurate forecasts. Each cycle of execution is slightly more efficient than the last — not because the team worked harder, but because the system learned.</p>
+                <p>The flywheel compounds because Stage 4 feeds Stage 1 again. Each cycle of execution produces new signal — richer, more specific, more useful than the last — because the system is better at capturing what matters.</p>
+            `,
+            actualConstraint: `
+                <p>The constraint in most B2B GTM systems is Stage 3 — the system update that should happen between insight and execution. This step requires someone or something to translate pattern recognition into operational changes. It's not automatic, and in most organisations there's no defined owner for it.</p>
+                <p>RevOps sees the data. Sales leadership discusses it. Marketing adjusts campaigns based on their own interpretation. But nobody owns the step of updating the ICP definition, rewriting the stage criteria, changing the qualification checklist, or revising the outbound sequence — based on what was learned in the last cycle.</p>
+                <p>Without Stage 3, the flywheel becomes four disconnected stages running in parallel. Each one is executing, but none are teaching the others. The system doesn't compound.</p>
+            `,
+            consequences: `
+                <p>A GTM operation that doesn't compound creates a particular kind of growth ceiling. Early growth comes from the insight of the founding team — who to target, how to message, what to prioritise. That insight gets baked into the initial system. As the company scales, the system runs but doesn't update. The founding team's insight slowly becomes outdated as the market shifts, the product evolves, and the customer base changes.</p>
+                <p>The team works harder to maintain the same output because the system is running on insight that's two or three years old. Win rates drift down. Sales cycles get longer. Forecast accuracy declines. The response is usually to add people, tools, or process — which runs the system faster but doesn't fix the insight problem.</p>
+            `,
+            whatChanges: `
+                <p>Building the flywheel requires making Stage 3 explicit and operational. That means defining: who owns the ICP definition and how often it's updated. What data triggers a stage criteria review. How messaging changes get tested and rolled out. Who has the authority to change the qualification checklist between quarters.</p>
+                <p>It also requires a signal architecture — deciding what gets captured, where it lives, and how it flows between functions. This isn't a technology problem primarily; it's a design problem. The question is: what does sales need to know from CS to qualify better? What does marketing need to know from sales to target better? What does CS need to know from sales to retain better? Once those questions are answered, the right instrumentation usually follows naturally.</p>
+                <p>AI, when introduced into a working flywheel, significantly accelerates Stages 2 and 3. Pattern recognition across large signal volumes is exactly what AI does well. Updating playbooks, surfacing deal risks, identifying ICP drift, flagging forecast anomalies — all of these become faster and more precise when AI has clean, connected signal to work with. But AI doesn't build the flywheel. It accelerates one that's already turning.</p>
+            `,
+            ourView: `
+                <p>The flywheel model reframes a question we hear constantly: how do we make our GTM more efficient? The honest answer is that efficiency is a byproduct of a system that learns. You don't optimise your way to a compounding GTM — you design one.</p>
+                <p>The diagnostic question for any B2B GTM team: what changed in your operating system last quarter as a result of what you learned the quarter before? If the answer is "not much," the flywheel isn't turning. You're running an operation, not building compounding growth.</p>
+                <p>The good news: the components of the flywheel — signal, pattern, system update, execution — are almost always present in some form. They're just not connected. The diagnostic finds where the connections are broken and what it takes to close the loop.</p>
+            `
+        }
+    },
 };
 export const caseStudies = {
     "fixing-the-wrong-problem": {

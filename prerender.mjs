@@ -30,6 +30,8 @@ const routes = [
     '/insights/solving-wrong-problem',
     '/insights/when-ai-makes-gtm-worse',
     '/insights/icp-drift',
+    '/insights/growth-engine-vs-amplifier',
+    '/insights/gtm-revenue-flywheel',
     '/insights/case-studies/pipeline-full-revenue-flat',
     '/insights/case-studies/forecast-board-wanted-predictability',
     '/insights/case-studies/sales-cycle-doubled-icp-drift',

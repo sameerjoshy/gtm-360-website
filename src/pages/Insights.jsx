@@ -51,6 +51,22 @@ const insights = [
         readTime: "6 min read",
         slug: "/insights/icp-drift",
         featured: false
+    },
+    {
+        tag: "GTM Strategy",
+        title: "Growth engines vs. growth amplifiers — why more isn't working",
+        desc: "Adding more pipeline, tools, or headcount to a broken revenue engine doesn't fix it — it scales the inefficiency. The engine has to be right before amplification makes sense.",
+        readTime: "6 min read",
+        slug: "/insights/growth-engine-vs-amplifier",
+        featured: false
+    },
+    {
+        tag: "GTM Strategy",
+        title: "The GTM revenue flywheel — how B2B growth compounds",
+        desc: "Most B2B revenue systems run in parallel, not in sequence. The flywheel is a different design — where every stage produces signal that improves the next cycle of growth.",
+        readTime: "7 min read",
+        slug: "/insights/gtm-revenue-flywheel",
+        featured: false
     }
 ];
 
