@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import HowWeWork from './pages/HowWeWork';
 import Problems from './pages/Problems';
 import Insights from './pages/Insights';
+import Agents from './pages/Agents';
 
 // Engagement
 import StartHere from './pages/StartHere';
@@ -62,6 +63,7 @@ export function AppRoutes() {
                 <Route path="/problems/pipeline-conversion" element={<PipelineConversion />} />
                 <Route path="/problems/forecast-volatility" element={<ForecastVolatility />} />
                 <Route path="/insights" element={<Insights />} />
+                <Route path="/agents" element={<Agents />} />
                 <Route path="/insights/case-studies/:slug" element={<CaseStudyPost />} />
                 <Route path="/insights/:slug" element={<InsightPost />} />
                 <Route path="/start-here" element={<StartHere />} />

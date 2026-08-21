@@ -28,6 +28,8 @@ const Footer = () => {
                     <div>
                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Work</p>
                         <div className="space-y-3">
+                            <Link to="/agents" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">The Agent Suite</Link>
+                            <a href="https://hq.gtm-360.com" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Try the Agents →</a>
                             <Link to="/start-here" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Start Here</Link>
                             <Link to="/gtm-consulting" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">GTM Consulting</Link>
                             <Link to="/b2b-sales-consulting" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">B2B Sales Consulting</Link>

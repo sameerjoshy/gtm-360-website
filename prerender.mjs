@@ -19,6 +19,7 @@ const routes = [
     '/about',
     '/contact',
     '/how-we-work',
+    '/agents',
     '/problems',
     '/problems/stalled-growth',
     '/problems/pipeline-conversion',

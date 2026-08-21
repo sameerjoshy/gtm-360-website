@@ -157,6 +157,44 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* AGENT SUITE */}
+            <section className="py-24 bg-white">
+                <div className="container max-w-5xl">
+                    <div className="max-w-xl mb-14">
+                        <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-4">The Agent Suite · Free to try</p>
+                        <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                            The same thinking we use in engagements. On your data.
+                        </h2>
+                        <p className="text-slate-500 font-light">
+                            Six revenue agents answer the questions your team is already asking — with evidence, not opinion. No signup gate. No demo call.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {[
+                            ["Prospect Researcher", "A company becomes a briefing: ARR, ICP fit, funding, signals, and the opener that works."],
+                            ["CRM Hygiene Watchdog", "Stale deals, missing fields, data debt. A health score and the fixes — not a lecture."],
+                            ["Deal Intelligence", "Stakeholders, buyer readiness, risk flags, and the next action that moves a deal."],
+                            ["Content Studio", "Raw observation to a QC-scored draft in your voice. Nothing publishes without your call."],
+                            ["Weekly Briefing", "Pipeline pulse, OKRs, flags, and the one thing that matters — every week."],
+                            ["Outbound Engine", "Buying-intent signals become a three-step sequence. Evidence first, always."],
+                        ].map(([name, desc], i) => (
+                            <div key={i} className="border border-slate-200 rounded-xl p-7 hover:border-indigo-200 hover:shadow-sm transition-all">
+                                <h3 className="text-lg font-bold text-slate-900 mb-2">{name}</h3>
+                                <p className="text-sm text-slate-500 leading-relaxed">{desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="mt-12 flex flex-col sm:flex-row items-start gap-4">
+                        <a href="https://hq.gtm-360.com" className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
+                            Try them free →
+                        </a>
+                        <Link to="/agents" className="inline-flex items-center justify-center border border-slate-200 text-slate-600 px-8 py-4 rounded font-medium hover:bg-slate-50 transition-all">
+                            See how each agent works
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
             {/* CASE STUDIES */}
             <section className="py-24 bg-slate-50 border-y border-slate-100">
                 <div className="container max-w-5xl">

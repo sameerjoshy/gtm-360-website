@@ -4,6 +4,7 @@ import logo from '../assets/logo.png';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
+    { to: "/agents", label: "Agents" },
     { to: "/problems", label: "Problems We Solve" },
     { to: "/how-we-work", label: "How We Work" },
     { to: "/insights", label: "Insights" },
@@ -44,9 +45,9 @@ const Header = () => {
                 </div>
 
                 <div className="hidden md:flex items-center gap-5">
-                    <a href="https://app.gtm-360.com"
+                    <a href="https://hq.gtm-360.com"
                         className="text-sm text-slate-400 hover:text-slate-700 transition-colors font-medium">
-                        Login
+                        Operator's Desk
                     </a>
                     <Link to="/start-here"
                         className="bg-slate-900 text-white px-5 py-2.5 rounded text-sm font-bold hover:bg-slate-700 transition-all">
@@ -68,7 +69,7 @@ const Header = () => {
                         </Link>
                     ))}
                     <div className="pt-6 flex flex-col gap-3">
-                        <a href="https://app.gtm-360.com" className="text-base font-medium text-slate-400 py-2">Login</a>
+                        <a href="https://hq.gtm-360.com" className="text-base font-medium text-slate-400 py-2">Operator's Desk</a>
                         <Link to="/start-here" className="bg-slate-900 text-white text-center py-3.5 rounded font-bold">Start diagnostic →</Link>
                     </div>
                 </div>
