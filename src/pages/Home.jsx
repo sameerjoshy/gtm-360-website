@@ -64,7 +64,15 @@ const Home = () => {
                             See how we think →
                         </Link>
                     </div>
-                    <p className="text-xs text-slate-400">20+ years in B2B GTM · Former AWS &amp; Dell · Sameer's background is verifiable on <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:underline">LinkedIn</a> · Goes directly to a partner — not a CRM queue.</p>
+                    <div className="border border-slate-200 rounded-lg p-5 mb-4 bg-slate-50">
+                        <p className="text-sm font-semibold text-slate-800">
+                            You talk to the person who does the work — not a sales rep, not a CRM queue.
+                        </p>
+                        <p className="text-xs text-slate-500 mt-1">
+                            Operator-led practice. Ran GTM at AWS and Dell. Series A–C, B2B SaaS &amp; technology.
+                        </p>
+                    </div>
+                    <p className="text-xs text-slate-400">Sameer's background is verifiable on <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:underline">LinkedIn</a>.</p>
                 </div>
             </section>
 
@@ -161,35 +169,36 @@ const Home = () => {
             <section className="py-24 bg-white">
                 <div className="container max-w-5xl">
                     <div className="max-w-xl mb-14">
-                        <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-4">The Agent Suite · Free to try</p>
+                        <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-4">The Operator's Desk · The method, live</p>
                         <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                            The same thinking we use in engagements. On your data.
+                            The questions we ask before we touch anything.
                         </h2>
                         <p className="text-slate-500 font-light">
-                            Six revenue agents answer the questions your team is already asking — with evidence, not opinion. No signup gate. No demo call.
+                            Six questions. Six answers, with evidence. This is how we diagnose a
+                            revenue system — you can run it yourself on a sample workspace.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {[
-                            ["Prospect Researcher", "A company becomes a briefing: ARR, ICP fit, funding, signals, and the opener that works."],
-                            ["CRM Hygiene Watchdog", "Stale deals, missing fields, data debt. A health score and the fixes — not a lecture."],
-                            ["Deal Intelligence", "Stakeholders, buyer readiness, risk flags, and the next action that moves a deal."],
-                            ["Content Studio", "Raw observation to a QC-scored draft in your voice. Nothing publishes without your call."],
-                            ["Weekly Briefing", "Pipeline pulse, OKRs, flags, and the one thing that matters — every week."],
-                            ["Outbound Engine", "Buying-intent signals become a three-step sequence. Evidence first, always."],
-                        ].map(([name, desc], i) => (
+                            ["Which companies are worth pursuing?", "Prospect Researcher — ARR, ICP fit, funding, signals, and the opener that works."],
+                            ["Is our pipeline data trustworthy?", "CRM Hygiene — stale deals, missing fields, and the fixes. A score, not a lecture."],
+                            ["What's really happening with this deal?", "Deal Intelligence — stakeholders, readiness, risk, and the next move."],
+                            ["Do we have anything worth saying?", "Content Studio — raw observation to a QC-scored draft in your voice."],
+                            ["Where does the system stand?", "Weekly Briefing — pipeline pulse, OKRs, flags, and the one thing that matters."],
+                            ["Who's showing buying intent right now?", "Outbound Engine — signals become a three-step sequence. Evidence first."],
+                        ].map(([question, answer], i) => (
                             <div key={i} className="border border-slate-200 rounded-xl p-7 hover:border-indigo-200 hover:shadow-sm transition-all">
-                                <h3 className="text-lg font-bold text-slate-900 mb-2">{name}</h3>
-                                <p className="text-sm text-slate-500 leading-relaxed">{desc}</p>
+                                <p className="text-xs font-mono text-indigo-500 mb-2">"{question}"</p>
+                                <p className="text-sm text-slate-500 leading-relaxed">{answer}</p>
                             </div>
                         ))}
                     </div>
                     <div className="mt-12 flex flex-col sm:flex-row items-start gap-4">
                         <a href="https://hq.gtm-360.com" className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
-                            Try them free →
+                            Run them on a sample workspace →
                         </a>
                         <Link to="/agents" className="inline-flex items-center justify-center border border-slate-200 text-slate-600 px-8 py-4 rounded font-medium hover:bg-slate-50 transition-all">
-                            See how each agent works
+                            See the six questions
                         </Link>
                     </div>
                 </div>
