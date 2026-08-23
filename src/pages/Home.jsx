@@ -183,18 +183,18 @@ const Home = () => {
                         {[
                             {
                                 href: "https://okr.gtm-360.com",
-                                name: "Plan",
-                                desc: "The goals we set together — OKRs, alignment, confidence — live here. One system for what winning looks like, checked in on weekly.",
+                                name: "Compass",
+                                desc: "Set the course. Goals, OKRs, alignment, and confidence — one system for what winning looks like, checked in on weekly.",
                             },
                             {
                                 href: "https://brain.gtm-360.com",
-                                name: "Brain",
-                                desc: "The execution cockpit. A swarm of specialist agents does the research, deal work, content, and weekly briefing — and only acts on your confirmation.",
+                                name: "Cockpit",
+                                desc: "Command the execution. The agent swarm does the research, deal work, content, and weekly briefing — and only acts on your confirmation.",
                             },
                             {
                                 href: "https://agents.gtm-360.com",
-                                name: "Agents",
-                                desc: "Evidence-first specialist agents across strategy, sales, marketing, CS and RevOps. Answers grounded in your data, on demand.",
+                                name: "Crew",
+                                desc: "Specialists on call. Evidence-first agents across strategy, sales, marketing, CS and RevOps, grounded in your data.",
                             },
                         ].map((p) => (
                             <a
@@ -219,7 +219,7 @@ const Home = () => {
             <section className="py-24 bg-white">
                 <div className="container max-w-5xl">
                     <div className="max-w-xl mb-14">
-                        <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-4">The Operator's Desk · The method, live</p>
+                        <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-4">The Crew · The method, live</p>
                         <h2 className="text-3xl font-bold text-slate-900 mb-4">
                             The questions we ask before we touch anything.
                         </h2>
@@ -244,8 +244,8 @@ const Home = () => {
                         ))}
                     </div>
                     <div className="mt-12 flex flex-col sm:flex-row items-start gap-4">
-                        <a href="https://hq.gtm-360.com" className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
-                            Run them on a sample workspace →
+                        <a href="https://brain.gtm-360.com" className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
+                            Run them in the Cockpit →
                         </a>
                         <Link to="/agents" className="inline-flex items-center justify-center border border-slate-200 text-slate-600 px-8 py-4 rounded font-medium hover:bg-slate-50 transition-all">
                             See the six questions

@@ -28,8 +28,8 @@ const Footer = () => {
                     <div>
                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Work</p>
                         <div className="space-y-3">
-                            <Link to="/agents" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">The Operator's Desk</Link>
-                            <a href="https://hq.gtm-360.com" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Run it on a sample workspace →</a>
+                            <Link to="/agents" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">The Crew — the six questions</Link>
+                            <a href="https://brain.gtm-360.com" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Run it in the Cockpit →</a>
                             <Link to="/start-here" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Start Here</Link>
                             <Link to="/gtm-consulting" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">GTM Consulting</Link>
                             <Link to="/b2b-sales-consulting" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">B2B Sales Consulting</Link>
@@ -44,10 +44,11 @@ const Footer = () => {
                     <div>
                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">The System</p>
                         <div className="space-y-3">
-                            <a href="https://okr.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Plan — OKRs & strategy</a>
-                            <a href="https://brain.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Brain — AI execution cockpit</a>
-                            <a href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Agents — specialist swarm</a>
-                            <a href="https://hq.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Run it on a sample workspace →</a>
+                            <Link to="/system" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">The system — overview</Link>
+                            <a href="https://okr.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Compass — set the course</a>
+                            <a href="https://brain.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Cockpit — command execution</a>
+                            <a href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Crew — specialists on call</a>
+                            <a href="https://brain.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Run it in the Cockpit →</a>
                         </div>
                     </div>
 

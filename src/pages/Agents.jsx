@@ -39,8 +39,8 @@ const AgentsPage = () => {
     return (
         <div className="font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
             <SEO
-                title="The Operator's Desk | GTM-360"
-                description="The same revenue system we use in every engagement, running live on a sample workspace. Six questions. Six agents. Try the method, not a demo."
+                title="The Crew | GTM-360"
+                description="The same revenue system we use in every engagement, running live in the Cockpit. Six questions. Six specialists. Try the method, not a demo."
                 canonical="https://gtm-360.com/agents"
             />
             <Helmet>
@@ -48,9 +48,9 @@ const AgentsPage = () => {
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Service",
-                        "name": "GTM-360 Operator's Desk",
+                        "name": "GTM-360 Crew",
                         "provider": { "@type": "Organization", "name": "GTM-360" },
-                        "description": "The revenue system GTM-360 uses in engagements, running live on a sample workspace: prospect research, CRM hygiene, deal intelligence, content, weekly briefing, and outbound.",
+                        "description": "The revenue system GTM-360 uses in engagements, running live in the Cockpit: prospect research, CRM hygiene, deal intelligence, content, weekly briefing, and outbound.",
                     })}
                 </script>
             </Helmet>
@@ -59,7 +59,7 @@ const AgentsPage = () => {
             <section className="pt-36 pb-20 bg-white">
                 <div className="container max-w-3xl">
                     <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-6">
-                        The Operator's Desk · The method, live
+                        The Crew · The method, live
                     </p>
                     <h1 className="text-5xl font-bold tracking-tight mb-8 text-slate-900 leading-[1.08]">
                         We believe judgment comes from evidence.
@@ -72,10 +72,10 @@ const AgentsPage = () => {
                         theater. Signals, judgment, decision support.
                     </p>
                     <a
-                        href="https://hq.gtm-360.com"
+                        href="https://brain.gtm-360.com"
                         className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all"
                     >
-                        Run them on a sample workspace →
+                        Run them in the Cockpit →
                     </a>
                     <p className="mt-4 text-xs text-slate-400">
                         Try the full suite on anonymised sample data. No signup, no demo call.
@@ -112,10 +112,10 @@ const AgentsPage = () => {
                         conversation.
                     </p>
                     <a
-                        href="https://hq.gtm-360.com"
+                        href="https://brain.gtm-360.com"
                         className="inline-flex items-center justify-center bg-slate-900 text-white px-10 py-4 rounded font-bold hover:bg-slate-700 transition-all"
                     >
-                        Open the Operator's Desk →
+                        Open the Crew in the Cockpit →
                     </a>
                     <p className="mt-4 text-xs text-slate-400">
                         Or <a href="/start-here" className="text-indigo-500 hover:underline">start with a conversation</a> about your revenue system.
