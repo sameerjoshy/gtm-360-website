@@ -45,10 +45,18 @@ const Header = () => {
                 </div>
 
                 <div className="hidden md:flex items-center gap-5">
-                    <a href="https://hq.gtm-360.com"
-                        className="text-sm text-slate-400 hover:text-slate-700 transition-colors font-medium">
-                        Operator's Desk
-                    </a>
+                    <div className="flex items-center gap-1.5 border border-slate-200 rounded-full px-2 py-1">
+                        {[
+                            { name: "Plan", url: "https://okr.gtm-360.com" },
+                            { name: "Brain", url: "https://brain.gtm-360.com" },
+                            { name: "Agents", url: "https://agents.gtm-360.com" },
+                        ].map((p) => (
+                            <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer"
+                                className="text-xs text-slate-400 hover:text-slate-900 transition-colors font-medium px-2">
+                                {p.name}
+                            </a>
+                        ))}
+                    </div>
                     <Link to="/start-here"
                         className="bg-slate-900 text-white px-5 py-2.5 rounded text-sm font-bold hover:bg-slate-700 transition-all">
                         Talk to us
@@ -69,7 +77,9 @@ const Header = () => {
                         </Link>
                     ))}
                     <div className="pt-6 flex flex-col gap-3">
-                        <a href="https://hq.gtm-360.com" className="text-base font-medium text-slate-400 py-2">Operator's Desk</a>
+                        <a href="https://okr.gtm-360.com" className="text-base font-medium text-slate-400 py-2">Plan</a>
+                        <a href="https://brain.gtm-360.com" className="text-base font-medium text-slate-400 py-2">Brain</a>
+                        <a href="https://agents.gtm-360.com" className="text-base font-medium text-slate-400 py-2">Agents</a>
                         <Link to="/start-here" className="bg-slate-900 text-white text-center py-3.5 rounded font-bold">Start diagnostic →</Link>
                     </div>
                 </div>

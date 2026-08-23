@@ -165,6 +165,56 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* STRATEGY → AI EXECUTION */}
+            <section className="py-24 bg-slate-900 text-white">
+                <div className="container max-w-5xl">
+                    <div className="max-w-2xl mb-14">
+                        <p className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4">The operator system</p>
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                            Strategy is the plan. AI is the execution.
+                        </h2>
+                        <p className="text-lg text-slate-400 font-light leading-relaxed">
+                            We develop the strategy with you. Then it runs inside our operator
+                            system — agentic AI executes the support work between engagements, so the
+                            discipline we set up doesn't stop when we leave the room.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {[
+                            {
+                                href: "https://okr.gtm-360.com",
+                                name: "Plan",
+                                desc: "The goals we set together — OKRs, alignment, confidence — live here. One system for what winning looks like, checked in on weekly.",
+                            },
+                            {
+                                href: "https://brain.gtm-360.com",
+                                name: "Brain",
+                                desc: "The execution cockpit. A swarm of specialist agents does the research, deal work, content, and weekly briefing — and only acts on your confirmation.",
+                            },
+                            {
+                                href: "https://agents.gtm-360.com",
+                                name: "Agents",
+                                desc: "Evidence-first specialist agents across strategy, sales, marketing, CS and RevOps. Answers grounded in your data, on demand.",
+                            },
+                        ].map((p) => (
+                            <a
+                                key={p.name}
+                                href={p.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="border border-slate-700 rounded-xl p-7 hover:border-indigo-400 hover:bg-slate-800 transition-all"
+                            >
+                                <p className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-2">{p.name}</p>
+                                <p className="text-slate-300 text-sm leading-relaxed">{p.desc}</p>
+                            </a>
+                        ))}
+                    </div>
+                    <p className="text-slate-500 text-sm italic mt-8 text-center">
+                        The strategy you approve runs itself. You confirm the moves.
+                    </p>
+                </div>
+            </section>
+
             {/* AGENT SUITE */}
             <section className="py-24 bg-white">
                 <div className="container max-w-5xl">

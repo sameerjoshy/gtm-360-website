@@ -40,6 +40,17 @@ const Footer = () => {
                         </div>
                     </div>
 
+                    {/* Products */}
+                    <div>
+                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">The System</p>
+                        <div className="space-y-3">
+                            <a href="https://okr.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Plan — OKRs & strategy</a>
+                            <a href="https://brain.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Brain — AI execution cockpit</a>
+                            <a href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Agents — specialist swarm</a>
+                            <a href="https://hq.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Run it on a sample workspace →</a>
+                        </div>
+                    </div>
+
                     {/* Company */}
                     <div>
                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Company</p>
