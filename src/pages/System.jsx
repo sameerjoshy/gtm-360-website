@@ -30,6 +30,15 @@ const products = [
 ];
 
 const SystemPage = () => {
+    const [identity, setIdentity] = React.useState(null);
+
+    React.useEffect(() => {
+        const match = document.cookie.match(/(?:^|;\s*)gtm360_id=([^;]+)/);
+        if (match) {
+            try { setIdentity(JSON.parse(decodeURIComponent(atob(match[1])))); } catch { /* ignore */ }
+        }
+    }, []);
+
     return (
         <div className="font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
             <SEO
@@ -65,10 +74,12 @@ const SystemPage = () => {
                     </p>
                     <a href="https://okr.gtm-360.com"
                         className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
-                        Start with Compass — free →
+                        {identity ? 'Open Compass →' : 'Start with Compass — free →'}
                     </a>
                     <p className="mt-4 text-xs text-slate-400">
-                        One GTM-360 account across all three products. No credit card to start.
+                        {identity
+                            ? <>Signed in as <span className="text-slate-500 font-medium">{identity.name || identity.email}</span> — one GTM-360 account across all three products.</>
+                            : 'One GTM-360 account across all three products. No credit card to start.'}
                     </p>
                 </div>
             </section>
