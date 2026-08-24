@@ -111,3 +111,17 @@ CTAs should feel like next steps, not conversions.
 *   CROs feel relieved, not judged.
 *   RevOps leaders feel validated, not demoted.
 *   The product feels like a natural extension of the thinking.
+
+---
+
+## 10. v2 — THE OPERATOR SYSTEM (addendum, 2026-08-24)
+
+The product suite (Compass · Cockpit · Crew) extends the method instead of replacing it.
+Reconciles the "AI is never the headline" rule with the system era:
+
+*   **The system IS the method, operationalized.** Not a product that replaces operators — the method they already trust, running continuously between engagements.
+*   **AI is the engine, never the hero.** We say "keeps the method running", "executes the support work", "only acts on your confirmation". We never say "AI-powered growth", "autonomous revenue", or "let AI run it".
+*   **The customer stays the hero.** The operator diagnoses and designs; the system executes the routine work; the human confirms every move. "The strategy you approve runs itself. You confirm the moves."
+*   **Product copy obeys section 4.** No "broken/chaos/disaster". Stalled, straining, noise creeping in — not crisis language.
+*   **Naming is fixed:** Compass (set the course) · Cockpit (command the execution) · Crew (specialists on call). Parent: **GTM-360 — The Revenue Operating System.**
+*   **Test:** if the copy implies the software outsmarts the customer's operator — FAIL. If it implies the operator's judgment is what the software amplifies — PASS.

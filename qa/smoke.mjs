@@ -33,7 +33,7 @@ async function checkProduct(p) {
   try {
     const { status, text } = await get(p.url)
     if (status !== 200) throw new Error(`HTTP ${status}`)
-    const jsMatch = text.match(/src="([^"]+\.js)"/)
+    const jsMatch = text.match(/src="(\/assets\/[^"]+\.js)"/)
     let bundle = text
     if (jsMatch) {
       const bundleUrl = new URL(jsMatch[1], p.url).href

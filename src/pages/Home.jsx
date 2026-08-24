@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
-import GrowthStallChart from '../components/visuals/GrowthStallChart';
 import TechStackMarquee from '../components/social/TechStackMarquee';
 
 const Home = () => {
@@ -10,7 +9,7 @@ const Home = () => {
         <div className="font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
             <SEO
                 title="B2B GTM & Sales Consulting | GTM-360"
-                description="B2B GTM consulting for companies at the growth plateau. We find the real revenue constraint and fix the system. Former AWS COO. Series A–C."
+                description="B2B GTM consulting for companies at the growth plateau. We find the real revenue constraint and fix the system — then the method keeps running. Former AWS COO. Series A–C."
                 canonical="https://gtm-360.com/"
             />
             <Helmet>
@@ -40,7 +39,7 @@ const Home = () => {
                 })}</script>
             </Helmet>
 
-            {/* HERO — plain, direct, human */}
+            {/* HERO — aha in the first breath: it's a system problem, not a people problem */}
             <section className="pt-36 pb-28 bg-white">
                 <div className="container max-w-3xl">
                     <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-6">GTM Consulting · B2B SaaS &amp; Technology · Series A–C</p>
@@ -49,10 +48,10 @@ const Home = () => {
                         You're not sure why.
                     </h1>
                     <p className="text-xl text-slate-500 mb-10 max-w-2xl font-light leading-relaxed">
-                        The pipeline numbers look okay. The team is busy. But close rates are down, forecasts keep moving, and every quarter feels like you're starting from scratch.
-                    </p>
-                    <p className="text-lg text-slate-800 font-medium mb-12 max-w-xl">
-                        We've seen this before. It's not a people problem — it's a revenue system problem. And it's fixable.
+                        The pipeline looks okay. The team is busy. But close rates are down, forecasts
+                        keep moving, and every quarter feels like starting from scratch.{" "}
+                        <span className="text-slate-800 font-medium">It's not a people problem — it's a
+                        revenue system problem. And it's fixable.</span>
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 mb-6">
                         <Link to="/start-here"
@@ -79,43 +78,7 @@ const Home = () => {
             {/* TOOLS MARQUEE */}
             <TechStackMarquee />
 
-            {/* THE SITUATION — mirrors the board conversation */}
-            <section className="py-24 bg-slate-50 border-y border-slate-100">
-                <div className="container max-w-6xl">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-                                What the board is asking. What the team is feeling.
-                            </h2>
-                            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                                You built something that worked. Founder-led sales got you to $5M. You hired a team and got to $10M. Now the same playbook isn't producing the same results — and nobody can quite explain why.
-                            </p>
-                            <div className="space-y-4 mb-8">
-                                {[
-                                    "Marketing is generating leads. Sales says they're not quality.",
-                                    "Deals are in the pipeline. They're just not closing at the same rate.",
-                                    "The forecast changes every week. Nobody fully trusts it.",
-                                    "You've added tools, headcount, process. Growth is still flat.",
-                                ].map((item, i) => (
-                                    <div key={i} className="flex items-start gap-3">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2.5 flex-shrink-0"></span>
-                                        <span className="text-slate-600">{item}</span>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="p-6 bg-white rounded-lg border-l-4 border-slate-900 shadow-sm">
-                                <p className="text-slate-800 font-medium">The team isn't underperforming. The system they're working in hasn't kept up with where the business is now.</p>
-                            </div>
-                        </div>
-                        <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-                            <GrowthStallChart />
-                            <p className="text-center text-sm text-slate-400 mt-4 italic">Same effort. Different results. The model has hit its ceiling.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* HOW WE WORK — simple, no jargon */}
+            {/* THE METHOD — one arc: diagnose, design, build, then it runs */}
             <section className="py-24 bg-white">
                 <div className="container max-w-5xl">
                     <div className="max-w-2xl mb-14">
@@ -123,32 +86,40 @@ const Home = () => {
                             What working with us looks like.
                         </h2>
                         <p className="text-lg text-slate-500 font-light leading-relaxed">
-                            We work alongside your team — not above it. Think of us as a senior GTM partner who's been in the room before and knows what to look for.
+                            We work alongside your team — not above it. The method is simple: find what's
+                            actually broken, fix it, build it, and then keep it running.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
                             {
-                                step: "First",
-                                title: "We find what's actually broken",
-                                desc: "Not what looks broken on the surface. Most teams are fixing the wrong thing — more pipeline, more tools, more pressure. We diagnose the real constraint before anything else.",
+                                step: "1 · Diagnose",
+                                title: "Find what's actually broken",
+                                desc: "Ten to fourteen days of evidence, not opinion. Most teams have already tried the obvious fix — the diagnosis is why it didn't work.",
                                 link: "/start-here",
                                 cta: "Start here →"
                             },
                             {
-                                step: "Then",
-                                title: "We design the fix",
-                                desc: "Once we know the constraint, we redesign the parts of the revenue system that are causing it — pipeline structure, ICP definition, handoffs, how you run your forecast calls.",
+                                step: "2 · Design",
+                                title: "Design the fix",
+                                desc: "Redesign the parts of the revenue system causing the stall — ICP, pipeline, forecast, handoffs. Designed with your team, not for them.",
                                 link: "/how-we-work",
                                 cta: "See how →"
                             },
                             {
-                                step: "Then",
-                                title: "We build it with you",
-                                desc: "Our specialists implement the changes — CRM, outbound, automation, reporting. You don't get a slide deck. You get a working system.",
+                                step: "3 · Build",
+                                title: "Build it with you",
+                                desc: "Specialists implement the changes — CRM, outbound, automation, reporting. You don't get a slide deck. You get a working system.",
                                 link: "/how-we-work",
                                 cta: "See services →"
+                            },
+                            {
+                                step: "4 · Run",
+                                title: "Then it runs continuously",
+                                desc: "The operator system keeps the method working between engagements — the goal is set, the execution runs, specialists answer. You confirm the moves.",
+                                link: "/system",
+                                cta: "See the system →"
                             }
                         ].map((item, i) => (
                             <div key={i} className="border border-slate-200 rounded-xl p-8 hover:shadow-md transition-all">
@@ -160,23 +131,22 @@ const Home = () => {
                         ))}
                     </div>
                     <p className="text-slate-400 text-sm italic mt-8 text-center">
-                        Most advisories hand you a roadmap and leave. We stay until it's working.
+                        Most advisories hand you a roadmap and leave. We stay until it's working — then the system keeps it working.
                     </p>
                 </div>
             </section>
 
-            {/* STRATEGY → AI EXECUTION */}
+            {/* THE SYSTEM — the method, running continuously (AI as infrastructure, not headline) */}
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container max-w-5xl">
                     <div className="max-w-2xl mb-14">
-                        <p className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4">The operator system</p>
+                        <p className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4">The Revenue Operating System</p>
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            Strategy is the plan. AI is the execution.
+                            The method, running for you — 24/7.
                         </h2>
                         <p className="text-lg text-slate-400 font-light leading-relaxed">
-                            We develop the strategy with you. Then it runs inside our operator
-                            system — agentic AI executes the support work between engagements, so the
-                            discipline we set up doesn't stop when we leave the room.
+                            AI doesn't run the show. It keeps the method running between engagements —
+                            so the discipline we set up doesn't stop when we leave the room.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -184,17 +154,20 @@ const Home = () => {
                             {
                                 href: "https://okr.gtm-360.com",
                                 name: "Compass",
-                                desc: "Set the course. Goals, OKRs, alignment, and confidence — one system for what winning looks like, checked in on weekly.",
+                                tagline: "Set the course",
+                                desc: "Goals, OKRs, alignment, and confidence — one system for what winning looks like, checked in on weekly.",
                             },
                             {
                                 href: "https://brain.gtm-360.com",
                                 name: "Cockpit",
-                                desc: "Command the execution. The agent swarm does the research, deal work, content, and weekly briefing — and only acts on your confirmation.",
+                                tagline: "Command the execution",
+                                desc: "The agent swarm does the research, deal work, content, and weekly briefing — and only acts on your confirmation.",
                             },
                             {
                                 href: "https://agents.gtm-360.com",
                                 name: "Crew",
-                                desc: "Specialists on call. Evidence-first agents across strategy, sales, marketing, CS and RevOps, grounded in your data.",
+                                tagline: "Specialists on call",
+                                desc: "Evidence-first specialist agents across strategy, sales, marketing, CS and RevOps, grounded in your data.",
                             },
                         ].map((p) => (
                             <a
@@ -204,7 +177,7 @@ const Home = () => {
                                 rel="noopener noreferrer"
                                 className="border border-slate-700 rounded-xl p-7 hover:border-indigo-400 hover:bg-slate-800 transition-all"
                             >
-                                <p className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-2">{p.name}</p>
+                                <p className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-2">{p.name} · {p.tagline}</p>
                                 <p className="text-slate-300 text-sm leading-relaxed">{p.desc}</p>
                             </a>
                         ))}
@@ -212,45 +185,6 @@ const Home = () => {
                     <p className="text-slate-500 text-sm italic mt-8 text-center">
                         The strategy you approve runs itself. You confirm the moves.
                     </p>
-                </div>
-            </section>
-
-            {/* AGENT SUITE */}
-            <section className="py-24 bg-white">
-                <div className="container max-w-5xl">
-                    <div className="max-w-xl mb-14">
-                        <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-4">The Crew · The method, live</p>
-                        <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                            The questions we ask before we touch anything.
-                        </h2>
-                        <p className="text-slate-500 font-light">
-                            Six questions. Six answers, with evidence. This is how we diagnose a
-                            revenue system — you can run it yourself on a sample workspace.
-                        </p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {[
-                            ["Which companies are worth pursuing?", "Prospect Researcher — ARR, ICP fit, funding, signals, and the opener that works."],
-                            ["Is our pipeline data trustworthy?", "CRM Hygiene — stale deals, missing fields, and the fixes. A score, not a lecture."],
-                            ["What's really happening with this deal?", "Deal Intelligence — stakeholders, readiness, risk, and the next move."],
-                            ["Do we have anything worth saying?", "Content Studio — raw observation to a QC-scored draft in your voice."],
-                            ["Where does the system stand?", "Weekly Briefing — pipeline pulse, OKRs, flags, and the one thing that matters."],
-                            ["Who's showing buying intent right now?", "Outbound Engine — signals become a three-step sequence. Evidence first."],
-                        ].map(([question, answer], i) => (
-                            <div key={i} className="border border-slate-200 rounded-xl p-7 hover:border-indigo-200 hover:shadow-sm transition-all">
-                                <p className="text-xs font-mono text-indigo-500 mb-2">"{question}"</p>
-                                <p className="text-sm text-slate-500 leading-relaxed">{answer}</p>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="mt-12 flex flex-col sm:flex-row items-start gap-4">
-                        <a href="https://brain.gtm-360.com" className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
-                            Run them in the Cockpit →
-                        </a>
-                        <Link to="/agents" className="inline-flex items-center justify-center border border-slate-200 text-slate-600 px-8 py-4 rounded font-medium hover:bg-slate-50 transition-all">
-                            See the six questions
-                        </Link>
-                    </div>
                 </div>
             </section>
 

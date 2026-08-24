@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 const products = [
@@ -76,6 +77,12 @@ const SystemPage = () => {
                         className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
                         {identity ? 'Open Compass →' : 'Start with Compass — free →'}
                     </a>
+                    <div className="mt-4">
+                        <Link to="/resources/gtm-diagnostic-checklist"
+                            className="text-sm text-slate-400 hover:text-slate-200 underline underline-offset-4 transition-colors">
+                            Not ready to sign up? Run the free 24-point diagnostic checklist →
+                        </Link>
+                    </div>
                     <p className="mt-4 text-xs text-slate-400">
                         {identity
                             ? <>Signed in as <span className="text-slate-500 font-medium">{identity.name || identity.email}</span> — one GTM-360 account across all three products.</>

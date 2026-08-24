@@ -73,8 +73,8 @@ const HowWeWork = () => {
                             color: "emerald",
                             title: "Find what's actually broken",
                             duration: "10–14 days",
-                            body: "Before we touch anything, we find the real constraint. Not the one that looks most obvious — the one that's actually causing the problem. Most teams we talk to have already tried the obvious fix. More pipeline. Better tools. New process. It hasn't worked because the diagnosis was wrong.\n\nWe spend 10 to 14 days examining how your revenue system actually behaves — pipeline quality, how deals move, where they stall, whether your ICP still matches who you're selling to, and whether your forecast reflects reality.\n\nAt the end, you get a clear read on what's actually in the way. No obligation to continue.",
-                            gets: ["The real constraint, clearly named", "Why previous fixes didn't stick", "What needs to change first — and what can wait", "An honest view of what it will take"],
+                            body: "Before we touch anything, we find the real constraint — not the obvious one. Most teams have already tried the obvious fix. It hasn't worked because the diagnosis was wrong.\n\nWe spend 10 to 14 days examining how your revenue system actually behaves: pipeline quality, where deals stall, whether your ICP still matches who you're selling to, and whether your forecast reflects reality.\n\nYou get a clear read on what's actually in the way. No obligation to continue.",
+                            gets: ["The real constraint, clearly named", "Why previous fixes didn't stick", "What needs to change first — and what can wait"],
                             link: "/start-here",
                             cta: "Start with the diagnostic"
                         },
@@ -84,7 +84,7 @@ const HowWeWork = () => {
                             title: "Design the fix",
                             duration: "Typically 4–8 weeks",
                             body: "Once we know the constraint, we redesign the parts of the revenue system that are causing it. This might be pipeline stage definitions. It might be the ICP. It might be how marketing and sales hand off to each other, or how you run your weekly forecast call.\n\nWe design the fix with your team — not for them. The people running the system need to understand it and believe in it, or it won't hold.",
-                            gets: ["GTM operating model redesign", "ICP and segmentation clarity", "Pipeline and stage architecture", "Handoff protocols and governance", "The metrics that actually matter"],
+                            gets: ["GTM operating model redesign", "ICP and segmentation clarity", "Pipeline and stage architecture", "The metrics that actually matter"],
                             link: "/start-here",
                             cta: "Talk about your situation"
                         },
@@ -94,7 +94,7 @@ const HowWeWork = () => {
                             title: "Build it",
                             duration: "Depends on scope",
                             body: "A good system design on paper doesn't help anyone. Our specialists build the changes — CRM architecture, outbound infrastructure, automation workflows, AI signal layers, reporting. You don't manage a list of vendors. We own the implementation end to end.\n\nWhen it's done, your team has a running system they understand and can operate — not a set of slides.",
-                            gets: ["CRM rebuilt around the new model", "Outbound infrastructure and sequencing", "Automation that reduces manual work", "Reporting that reflects real performance", "Handover with documentation and training"],
+                            gets: ["CRM rebuilt around the new model", "Outbound infrastructure and sequencing", "Automation that reduces manual work", "Reporting that reflects real performance"],
                             link: "/start-here",
                             cta: "Start with the diagnostic"
                         }
@@ -206,11 +206,11 @@ const HowWeWork = () => {
                     <h2 className="text-3xl font-bold text-slate-900 mb-10">How GTM-360 engagements work — common questions</h2>
                     <div className="space-y-8">
                         {[
-                            { q: "How long does a GTM consulting engagement take?", a: "The Diagnostic phase is a standalone 10–14 day engagement. Architecture (design) typically runs 3–6 weeks depending on scope. Engineering (implementation) runs 6–16 weeks. Most companies start with the Diagnostic only — it produces a findings report and a clear recommendation for what to do next. Whether to proceed with Architecture and Engineering is a separate decision." },
-                            { q: "What does the GTM diagnostic actually cover?", a: "The diagnostic reviews: ICP definition and how well current pipeline matches it; pipeline stage criteria and whether they require buyer evidence or seller activity; forecast governance and accuracy patterns; GTM alignment between marketing, sales, and customer success; and any AI or tooling deployed on top of the motion. The output is a written constraint diagnosis — what's actually blocking revenue growth and why." },
+                            { q: "How long does a GTM consulting engagement take?", a: "The Diagnostic is a standalone 10–14 day engagement. Architecture (design) runs 3–6 weeks; Engineering (implementation) runs 6–16 weeks. Most companies start with the Diagnostic only — it produces a findings report and a clear recommendation. Whether to proceed further is a separate decision." },
+                            { q: "What does the GTM diagnostic actually cover?", a: "The diagnostic reviews ICP definition and pipeline fit, stage criteria (buyer evidence vs seller activity), forecast governance and accuracy, alignment between marketing, sales, and CS, and any AI or tooling in the motion. The output is a written constraint diagnosis — what's actually blocking growth and why." },
                             { q: "Do you work with companies that already have a CRO or VP of Sales?", a: "Yes — most of our engagements are with companies that already have a revenue leader. We work alongside existing leadership as an independent diagnostic and design partner, not as a replacement. Many CROs and VPs of Sales use the diagnostic as an independent verification of their own read of the system — particularly when they're new to the role and need an external view before making changes." },
                             { q: "What's the difference between a GTM consultant and a fractional CRO?", a: "A fractional CRO provides ongoing executive revenue leadership. A GTM consultant runs defined diagnostic and design engagements with specific deliverables and end dates. GTM-360 runs engagements, not ongoing placements. The output is a working system, not an executive relationship." },
-                            { q: "How do you measure whether the engagement worked?", a: "We define success metrics before the engagement starts — specific, measurable outcomes tied to the constraint we identified. For pipeline quality work: win rate and forecast accuracy. For operating model work: sales cycle length and MQL-to-revenue conversion. For forecasting work: forecast accuracy variance. Every engagement has a written definition of what 'it worked' looks like." }
+                            { q: "How do you measure whether the engagement worked?", a: "We define success metrics before the engagement starts, tied to the constraint. Pipeline work: win rate and forecast accuracy. Operating model work: cycle length and MQL-to-revenue conversion. Forecasting work: forecast accuracy variance. 'It worked' is always written down." }
                         ].map((item, i) => (
                             <div key={i} className="border-b border-slate-200 pb-8 last:border-0">
                                 <h3 className="text-base font-bold text-slate-900 mb-3">{item.q}</h3>
