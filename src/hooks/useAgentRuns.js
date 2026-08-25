@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { supabase, getWorkspaceId } from '../lib/supabase';
 
 /**
@@ -11,7 +11,7 @@ export function useAgentRuns(limit = 20) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const fetchRuns = async () => {
+    const fetchRuns = useCallback(async () => {
         try {
             setLoading(true);
             const workspaceId = getWorkspaceId();
@@ -33,7 +33,7 @@ export function useAgentRuns(limit = 20) {
         } finally {
             setLoading(false);
         }
-    };
+    }, [limit]);
 
     useEffect(() => {
         fetchRuns();
@@ -60,7 +60,7 @@ export function useAgentRuns(limit = 20) {
         return () => {
             subscription.unsubscribe();
         };
-    }, [limit]);
+    }, [fetchRuns]);
 
     return { runs, loading, error, refetch: fetchRuns };
 }

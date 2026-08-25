@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { supabase, getWorkspaceId } from '../lib/supabase';
 
 /**
@@ -11,7 +11,7 @@ export function useDossiers(limit = 20) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const fetchDossiers = async () => {
+    const fetchDossiers = useCallback(async () => {
         try {
             setLoading(true);
             const workspaceId = getWorkspaceId();
@@ -33,11 +33,11 @@ export function useDossiers(limit = 20) {
         } finally {
             setLoading(false);
         }
-    };
+    }, [limit]);
 
     useEffect(() => {
         fetchDossiers();
-    }, [limit]);
+    }, [fetchDossiers]);
 
     return { dossiers, loading, error, refetch: fetchDossiers };
 }

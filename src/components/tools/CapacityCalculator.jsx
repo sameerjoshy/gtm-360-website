@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import {
     Users, BarChart2, AlertCircle,
     Settings, Download, Table, ChevronDown, ChevronUp
@@ -27,11 +27,7 @@ const CapacityCalculator = () => {
     const { status } = useSubmitLead();
 
     // --- CALCULATION ENGINE ---
-    useEffect(() => {
-        calculateModel();
-    }, [inputs]);
-
-    const calculateModel = () => {
+    const calculateModel = useCallback(() => {
         let currentHeadcount = inputs.startingReps;
         let cumulativeRevenueStreet = 0;
         let cumulativeRevenueSpreadsheet = 0;
@@ -102,7 +98,11 @@ const CapacityCalculator = () => {
             gap: Math.round(cumulativeRevenueSpreadsheet - cumulativeRevenueStreet),
             gapPct: Math.round(((cumulativeRevenueSpreadsheet - cumulativeRevenueStreet) / cumulativeRevenueSpreadsheet) * 100)
         });
-    };
+    }, [inputs]);
+
+    useEffect(() => {
+        calculateModel();
+    }, [calculateModel]);
 
     // --- HELPERS ---
     const formatMoney = (n) => new Intl.NumberFormat('en-US', {

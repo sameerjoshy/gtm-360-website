@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { caseStudies } from '../../data/caseStudies';
 import { Helmet } from 'react-helmet-async';
@@ -23,7 +23,10 @@ const CaseStudyPost = () => {
     const observerRef = useRef(null);
 
     // Build the sections that actually have content in this study
-    const sections = SECTION_DEFS.filter(s => study?.sections?.[s.key]);
+    const sections = useMemo(
+        () => SECTION_DEFS.filter(s => study?.sections?.[s.key]),
+        [study]
+    );
 
     // IntersectionObserver — tracks which section is in view
     useEffect(() => {
@@ -44,7 +47,7 @@ const CaseStudyPost = () => {
 
         headings.forEach(el => observerRef.current.observe(el));
         return () => observerRef.current?.disconnect();
-    }, [slug, sections.length]);
+    }, [slug, sections, study]);
 
     if (!study) return <Navigate to="/insights" />;
 

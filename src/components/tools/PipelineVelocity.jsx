@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Zap, Download, Gauge } from 'lucide-react';
 import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import useSubmitLead from '../../hooks/useSubmitLead';
@@ -18,21 +18,15 @@ const PipelineVelocity = () => {
     useSubmitLead();
 
     // CALCULATE
-    useEffect(() => {
-        const v = calculateVelocity(inputs);
-        setVelocity(v);
-        calculateImpacts(v, inputs);
-    }, [inputs]);
-
-    const calculateVelocity = (data) => {
+    const calculateVelocity = useCallback((data) => {
         const totalPipelineValue = data.opportunities * data.dealValue;
         const expectedRevenue = totalPipelineValue * (data.winRate / 100);
         const cycleMonths = data.salesCycle / 30;
         const effectiveCycle = cycleMonths < 0.1 ? 0.1 : cycleMonths;
         return Math.round(expectedRevenue / effectiveCycle);
-    };
+    }, []);
 
-    const calculateImpacts = (currentV, data) => {
+    const calculateImpacts = useCallback((currentV, data) => {
         // Impact of 10% improvement in each metric
         const betterWinRate = calculateVelocity({ ...data, winRate: data.winRate * 1.1 });
         const betterCycle = calculateVelocity({ ...data, salesCycle: data.salesCycle * 0.9 });
@@ -43,7 +37,13 @@ const PipelineVelocity = () => {
             cycle: betterCycle - currentV,
             dealValue: betterValue - currentV
         });
-    };
+    }, [calculateVelocity]);
+
+    useEffect(() => {
+        const v = calculateVelocity(inputs);
+        setVelocity(v);
+        calculateImpacts(v, inputs);
+    }, [inputs, calculateVelocity, calculateImpacts]);
 
     const formatMoney = (n) =>
         new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(n);
