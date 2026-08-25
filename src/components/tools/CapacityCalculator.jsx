@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
-    Users, TrendingDown, ArrowRight, BarChart2, AlertCircle,
+    Users, BarChart2, AlertCircle,
     Settings, Download, Table, ChevronDown, ChevronUp
 } from 'lucide-react';
 import {
-    AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine
+    AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 } from 'recharts';
 import useSubmitLead from '../../hooks/useSubmitLead';
 
@@ -24,8 +24,7 @@ const CapacityCalculator = () => {
 
     const [chartData, setChartData] = useState([]);
     const [summary, setSummary] = useState({});
-    const { submit, status } = useSubmitLead();
-    const [email, setEmail] = useState('');
+    const { status } = useSubmitLead();
 
     // --- CALCULATION ENGINE ---
     useEffect(() => {

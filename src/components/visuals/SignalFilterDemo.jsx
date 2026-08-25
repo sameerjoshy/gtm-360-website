@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Bell, CheckCircle, Search, Filter, Cpu, Zap, AlertCircle } from 'lucide-react';
+import { Activity, Bell, CheckCircle, Search, Filter, Cpu, Zap } from 'lucide-react';
 
 const RAW_EVENTS = [
     { id: 1, type: 'click', label: 'Clicked Sidebar Link', company: 'Unknown', score: 2 },
@@ -15,7 +15,7 @@ const RAW_EVENTS = [
 
 const SignalFilterDemo = () => {
     const [isFiltering, setIsFiltering] = useState(false);
-    const [events, setEvents] = useState(RAW_EVENTS);
+    const [events] = useState(RAW_EVENTS);
     const [filteredEvents, setFilteredEvents] = useState([]);
     const [processingIndex, setProcessingIndex] = useState(-1);
 

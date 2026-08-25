@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Target, CheckCircle2, ArrowRight, Printer, Download, Star } from 'lucide-react';
+import { useState } from 'react';
+import { Target, CheckCircle2, Printer, Download, Star } from 'lucide-react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import useSubmitLead from '../../hooks/useSubmitLead';
 import useLocalStorage from '../../hooks/useLocalStorage';
@@ -18,7 +18,6 @@ const ICPCalculator = () => {
     const { submit, status } = useSubmitLead();
 
     const totalScore = Object.values(scores).reduce((a, b) => a + Number(b), 0);
-    const maxScore = 100;
 
     const data = [
         { subject: 'Budget', A: scores.budget, fullMark: 20 },

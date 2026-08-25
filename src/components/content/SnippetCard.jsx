@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Share2, Copy, CheckCircle, Twitter, Quote } from 'lucide-react';
+import { useState } from 'react';
+import { Copy, CheckCircle, Twitter, Quote } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const SnippetCard = ({ snippet }) => {

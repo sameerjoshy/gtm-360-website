@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Layers, Zap, Database, Share2, BarChart3, Users, Globe, ArrowRight, Search } from 'lucide-react';

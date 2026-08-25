@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Sparkles, FileText, Link as LinkIcon, Upload, ArrowLeft, Edit, Check, X, Copy, Download } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Sparkles, FileText, Link as LinkIcon, Upload, ArrowLeft, Edit, Check, Copy, Download } from 'lucide-react';
+import { motion } from 'framer-motion';
 import StatusBadge from '../components/agents/StatusBadge';
 import LastRunBadge from '../components/agents/LastRunBadge';
 import AgentLoader from '../components/agents/AgentLoader';

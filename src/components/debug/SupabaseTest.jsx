@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabaseClient';
 
 const SupabaseTest = () => {
@@ -21,7 +21,7 @@ const SupabaseTest = () => {
                 }
 
                 // Try to fetch current session (doesn't require database tables)
-                const { data, error } = await supabase.auth.getSession();
+                const { error } = await supabase.auth.getSession();
 
                 if (error) throw error;
 

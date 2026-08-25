@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { AreaChart as AreaIcon, Check, X, ArrowRight, ScatterChart, Printer, Download, Target, TrendingUp } from 'lucide-react';
+import { AreaChart as AreaIcon, ArrowRight, Printer, Download, Target, TrendingUp } from 'lucide-react';
 import { ScatterChart as RechartsScatter, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Label, Cell } from 'recharts';
 import useSubmitLead from '../../hooks/useSubmitLead';
 import useLocalStorage from '../../hooks/useLocalStorage';
@@ -11,7 +10,7 @@ const RuleOf40 = () => {
     });
 
     const score = Number(inputs.growthRate) + Number(inputs.profitMargin);
-    const { submit } = useSubmitLead();
+    useSubmitLead();
 
     // Data for the user's point
     const userPoint = [{ x: inputs.growthRate, y: inputs.profitMargin, z: 1 }];

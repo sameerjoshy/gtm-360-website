@@ -27,7 +27,7 @@ const useVisitorData = () => {
                         // Even if cached, check for RB2B if it loaded late
                         if (!window.reb2b) return;
                     }
-                } catch (e) {
+                } catch {
                     localStorage.removeItem('gtm360_visitor');
                 }
             }
@@ -59,7 +59,7 @@ const useVisitorData = () => {
                         timestamp: Date.now()
                     }));
                 }
-            } catch (err) {
+            } catch {
                 // Silent fallback
             } finally {
                 if (isMounted) setLoading(false);

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const LiveFeed = ({ runs }) => {
     if (!runs || runs.length === 0) {

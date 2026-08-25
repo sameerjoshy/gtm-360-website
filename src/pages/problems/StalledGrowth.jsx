@@ -1,7 +1,12 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
+
+const LINKS = [
+    { tag: 'Insight', title: 'Why Growth Stalls', href: '/insights/why-growth-stalls' },
+    { tag: 'Service', title: 'GTM Operating Model Realignment', href: '/services/gtm-operating-model' },
+    { tag: 'Case Study', title: 'Pipeline Full, Revenue Flat', href: '/insights/case-studies/pipeline-full-revenue-flat' },
+];
 
 const StalledGrowth = () => (
     <div className="min-h-screen bg-white font-sans">

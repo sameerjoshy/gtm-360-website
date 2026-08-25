@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const PipelineFunnel = () => {
@@ -55,7 +55,7 @@ const PipelineFunnel = () => {
 };
 
 // Particle Component that travels down
-const ParticleEmitter = ({ delay, x }) => {
+const ParticleEmitter = ({ x }) => {
     // 0 = Filtered at Stage 1, 1 = Filtered at Stage 2, 2 = Filtered at Stage 3, 3 = Success
     const getFate = () => Math.floor(Math.random() * 4); // Random fate
 
@@ -98,7 +98,6 @@ const Particle = ({ fate }) => {
     // Fate 3: Goes to 100% (Revenue)
 
     const isSuccess = fate === 3;
-    const color = isSuccess ? '#4f46e5' : '#94a3b8'; // Indigo vs Slate
 
     return (
         <motion.div

@@ -1,7 +1,12 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
+
+const LINKS = [
+    { tag: 'Insight', title: 'The Stage Definition Problem Nobody Talks About', href: '/insights/stage-definition-problem' },
+    { tag: 'Service', title: 'Pipeline Quality & Win Rate', href: '/services/pipeline-quality' },
+    { tag: 'Case Study', title: 'Pipeline Full, Revenue Flat', href: '/insights/case-studies/pipeline-full-revenue-flat' },
+];
 
 const PipelineConversion = () => (
     <div className="min-h-screen bg-white font-sans">

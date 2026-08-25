@@ -11,6 +11,7 @@ const PRODUCTS = [
   { label: 'Marketing (gtm-360.com)', url: 'https://gtm-360.com', mustContain: ['Compass', 'Cockpit', 'Crew', 'The Revenue Operating System'] },
   { label: 'Hub (/system)', url: 'https://gtm-360.com/system', mustContain: ['Compass', 'Cockpit', 'Crew', 'Revenue Operating System'] },
   { label: 'Revenue OS (hq)', url: 'https://hq.gtm-360.com', mustContain: ['Compass', 'Cockpit', 'Crew'] },
+  { label: 'Operating Model (gtm)', url: 'https://gtm.gtm-360.com', mustContain: ['Compass', 'Cockpit', 'Crew'] },
 ]
 
 const timeout = (ms) => new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), ms))

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const VisualConcept = ({ title, description, children, theme = 'dark' }) => {
     const isDark = theme === 'dark';

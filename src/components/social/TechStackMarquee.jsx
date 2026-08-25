@@ -1,4 +1,3 @@
-import React from 'react';
 
 // Clean inline SVG logos — all monochrome, currentColor, 50×35 viewBox
 // Tools sourced from onegtmlab.com "Powered by" + GTM stack we work with

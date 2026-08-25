@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Activity, Filter, BarChart2, Users, Zap, Eye } from 'lucide-react';
 import SEO from '../components/SEO';

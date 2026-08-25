@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const TriggerForm = ({ onStart }) => {
     const [domain, setDomain] = useState('');

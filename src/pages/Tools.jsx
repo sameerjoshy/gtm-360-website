@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import CapacityCalculator from '../components/tools/CapacityCalculator';
 import SaaSCompass from '../components/tools/SaaSCompass';

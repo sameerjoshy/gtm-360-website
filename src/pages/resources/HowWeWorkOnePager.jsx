@@ -1,4 +1,3 @@
-import React from 'react';
 import PlanningCycleMinimal from '../../components/visuals/PlanningCycleMinimal';
 
 const HowWeWorkOnePager = () => {

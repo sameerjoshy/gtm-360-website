@@ -1,7 +1,12 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
+
+const LINKS = [
+    { tag: 'Insight', title: 'Why Forecasts Decay Over Time', href: '/insights/forecast-decay' },
+    { tag: 'Service', title: 'Forecasting & Revenue Governance', href: '/services/forecasting-governance' },
+    { tag: 'Case Study', title: 'Forecast Board Wanted Predictability', href: '/insights/case-studies/forecast-board-wanted-predictability' },
+];
 
 const ForecastVolatility = () => (
     <div className="min-h-screen bg-white font-sans">

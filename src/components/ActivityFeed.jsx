@@ -1,11 +1,10 @@
-import React from 'react';
 import { useAgentRuns } from '../hooks/useAgentRuns';
 import { Activity, CheckCircle, AlertCircle, Clock } from 'lucide-react';
 
 const ActivityFeed = ({ limit = 10 }) => {
     const { runs, loading, error } = useAgentRuns(limit);
 
-    const getAgentIcon = (agentType) => {
+    const getAgentIcon = () => {
         return <Activity size={16} className="text-indigo-600" />;
     };
 

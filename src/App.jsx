@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 
 // Core pages

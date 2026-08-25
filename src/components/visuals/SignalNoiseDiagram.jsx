@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const SignalNoiseDiagram = () => {
     const [step, setStep] = useState(0);
@@ -11,7 +11,7 @@ const SignalNoiseDiagram = () => {
     }, []);
 
     // Generate random noise dots
-    const noiseDots = Array.from({ length: 20 }).map((_, i) => ({
+    const noiseDots = Array.from({ length: 20 }).map(() => ({
         cx: Math.random() * 300 + 50,
         cy: Math.random() * 300 + 50,
         r: Math.random() * 3 + 1

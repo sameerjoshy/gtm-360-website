@@ -1,4 +1,3 @@
-import React from 'react';
 
 const IconRenderer = ({ icon, className = "w-6 h-6" }) => {
     switch (icon) {

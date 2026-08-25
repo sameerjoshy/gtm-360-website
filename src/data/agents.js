@@ -1,7 +1,7 @@
 
 import {
-    Database, Mail, Activity, PenTool, MessageSquare, Monitor, Disc,
-    TrendingUp, ShieldCheck, Search, Crosshair, Network, FileText
+    Database, Mail, Activity, Monitor,
+    TrendingUp, ShieldCheck, Search, Network, FileText
 } from 'lucide-react';
 
 

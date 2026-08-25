@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Settings, Zap, ArrowRight, Download, Gauge } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Zap, Download, Gauge } from 'lucide-react';
 import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import useSubmitLead from '../../hooks/useSubmitLead';
 import useLocalStorage from '../../hooks/useLocalStorage';
@@ -15,7 +15,7 @@ const PipelineVelocity = () => {
 
     const [velocity, setVelocity] = useState(0);
     const [impacts, setImpacts] = useState({});
-    const { submit, status } = useSubmitLead();
+    useSubmitLead();
 
     // CALCULATE
     useEffect(() => {

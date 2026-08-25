@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { agentSwarms } from '../../data/agents';
 
 const SwarmMap = () => {
     const navigate = useNavigate();
-    const [hoveredAgent, setHoveredAgent] = useState(null);
+    const [, setHoveredAgent] = useState(null);
 
     return (
         <div className="w-full">

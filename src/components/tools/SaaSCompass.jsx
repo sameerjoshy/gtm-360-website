@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Compass, TrendingUp, DollarSign, Activity, AlertTriangle, RefreshCw, Save, ArrowRight, Download, Printer } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Compass, Activity, RefreshCw, ArrowRight, Download, Printer } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
-import useSubmitLead from '../../hooks/useSubmitLead';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
 const SaaSCompass = () => {
-    const [activeTab, setActiveTab] = useState('dashboard');
-
     // PERSISTENCE: Use local storage for inputs
     const [inputs, setInputs] = useLocalStorage('saas-compass-inputs', {
         cac: 15000,
@@ -20,8 +17,6 @@ const SaaSCompass = () => {
 
     const [metrics, setMetrics] = useState(null);
     const [scenarioMetrics, setScenarioMetrics] = useState(null);
-
-    const { submit, status } = useSubmitLead();
 
     // CALCULATION ENGINE
     useEffect(() => {
@@ -61,8 +56,6 @@ const SaaSCompass = () => {
         if (!isComparing) setScenario({ ...inputs });
         setIsComparing(!isComparing);
     };
-
-    const formatMoney = (n) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0, notation: "compact" }).format(n);
 
     // EXPORT: CSV
     const handleExportCSV = () => {

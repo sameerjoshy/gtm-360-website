@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { ArrowRight, DollarSign, Calculator, ChevronRight, TrendingDown, ShieldAlert, Zap, Download } from 'lucide-react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
+import { useState } from 'react';
+import { ArrowRight, TrendingDown, ShieldAlert, Zap, Download } from 'lucide-react';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import useSubmitLead from '../../hooks/useSubmitLead';
 
 const RevenueLeakageCalculator = () => {
