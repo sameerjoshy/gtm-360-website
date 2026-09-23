@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { forText } from '../../lib/color';
 import { Link, useParams } from 'react-router-dom';
 import SEO from '../../components/SEO';
 // Agent videos come from the build-time registry (produced by build-agent-videos.mjs).
@@ -122,7 +123,7 @@ const AgentPage = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                         {/* Left: outcome-first standard description */}
                         <div>
-                            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: eng.color }}>
+                            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: forText(eng.color) }}>
                                 {eng.name} Engine{journeyLabel} · {ag.role}
                             </p>
                             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-slate-900 leading-[1.1]">
@@ -187,7 +188,7 @@ const AgentPage = () => {
             {/* THE ENGINE — context */}
             <section className="py-14 bg-white">
                 <div className="container max-w-4xl">
-                    <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: eng.color }}>{eng.name}</p>
+                                <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: forText(eng.color) }}>{eng.name}</p>
                     <h2 className="text-2xl font-bold text-slate-900 mb-3">Part of the {eng.name} engine</h2>
                     <p className="text-slate-500 max-w-2xl mb-6">{eng.claim}</p>
                     <div className="flex flex-wrap gap-2">

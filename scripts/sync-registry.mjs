@@ -43,15 +43,25 @@ const snapshot = {
   executiveLenses: mod.EXECUTIVE_LENSES,
 };
 const next = JSON.stringify(snapshot, null, 2) + '\n';
+
+// The wiki's agent slots are derived from the registry (canonical ids).
+const slotLines = snapshot.agents
+  .map((a) => `  '${a.id}': { name: ${JSON.stringify(a.name)}, status: '${a.status === 'planned' ? 'build' : a.status}', swarm: '${a.group}' },`)
+  .join('\n');
+const slotsFile = `// GENERATED from @gtm360/agent-registry — do not edit. Run: npm run sync:registry\n\nexport const AGENT_SLOTS = {\n${slotLines}\n};\n`;
+
+const outFile2 = path.resolve(websiteRoot, 'src/data/wiki/agentSlots.js');
 const prev = fs.existsSync(outFile) ? fs.readFileSync(outFile, 'utf8') : '';
+const prev2 = fs.existsSync(outFile2) ? fs.readFileSync(outFile2, 'utf8') : '';
 
 if (check) {
-  if (prev !== next) {
-    console.error('✗ registry snapshot is stale — run: npm run sync:registry');
+  if (prev !== next || prev2 !== slotsFile) {
+    console.error('✗ registry snapshot/slots are stale — run: npm run sync:registry');
     process.exit(1);
   }
-  console.log('✓ registry snapshot is current');
+  console.log('✓ registry snapshot + slots are current');
 } else {
   fs.writeFileSync(outFile, next);
-  console.log(`✓ wrote src/data/agentRegistry.snapshot.json — ${snapshot.groups.length} engines, ${snapshot.agents.length} agents`);
+  fs.writeFileSync(outFile2, slotsFile);
+  console.log(`✓ wrote agentRegistry.snapshot.json + wiki/agentSlots.js — ${snapshot.groups.length} engines, ${snapshot.agents.length} agents`);
 }

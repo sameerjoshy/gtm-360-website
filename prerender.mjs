@@ -134,6 +134,7 @@ async function prerender() {
             console.log(`  ✓ ${route}`);
         }
         console.log('\n✅ Basic prerender complete. Each route now has its own index.html.');
+        fs.writeFileSync(path.resolve(distDir, '404.html'), template);
         writeSitemap();
         return;
     }
@@ -170,6 +171,26 @@ async function prerender() {
         } catch (err) {
             console.warn(`  ⚠️  Skipped ${route}: ${err.message}`);
         }
+    }
+
+    // Custom 404 for unmatched routes (Cloudflare Pages serves dist/404.html).
+    try {
+        const { html: nfHtml, helmet } = render('/404');
+        const pageHtml = template
+            .replace('<!--app-head-->', helmet ? [
+                helmet.title?.toString() || '',
+                helmet.meta?.toString() || '',
+                helmet.link?.toString() || '',
+                helmet.script?.toString() || '',
+                helmet.style?.toString() || '',
+                helmet.base?.toString() || '',
+                helmet.noscript?.toString() || '',
+            ].join('\n') : '')
+            .replace('<!--app-html-->', nfHtml);
+        fs.writeFileSync(path.resolve(distDir, '404.html'), pageHtml);
+        console.log('  ✓ /404.html');
+    } catch (err) {
+        console.warn(`  ⚠️  Skipped 404: ${err.message}`);
     }
 
     console.log('\n✅ Full SSR prerender complete. Site is crawler-readable.');

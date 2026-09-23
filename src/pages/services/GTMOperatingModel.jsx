@@ -80,7 +80,7 @@ const GTMOperatingModel = () => (
                         { symptom: "Revenue leadership disagrees on what the real problem is", cause: "Without shared metrics and shared definitions, each function diagnoses the same problem differently. Marketing sees a sales effectiveness problem. Sales sees a lead quality problem. Both are partially right — and neither can fix it alone." }
                     ].map((item, i) => (
                         <div key={i} className="bg-white border border-slate-200 rounded-xl p-7">
-                            <p className="text-xs font-bold text-red-500 uppercase tracking-widest mb-2">Symptom</p>
+                            <p className="text-xs font-bold text-red-600 uppercase tracking-widest mb-2">Symptom</p>
                             <h3 className="text-sm font-bold text-slate-900 mb-3">{item.symptom}</h3>
                             <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Root cause</p>
                             <p className="text-slate-600 text-sm leading-relaxed">{item.cause}</p>

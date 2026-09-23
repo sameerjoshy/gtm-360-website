@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { forText } from '../../lib/color'
 import { LAYERS, getAgentsFor } from '../../data/wiki/framework'
 import { getContent, hasContent, slugify } from '../../data/wiki/content'
 import { getLayerReferences } from '../../data/wiki/references'
@@ -39,7 +40,7 @@ export default function Layer() {
       <div className="flex items-center gap-2 text-xs text-slate-400 mb-4">
         <Link to="/wiki/method" className="hover:text-slate-600">The Map</Link>
         <span>›</span>
-        <span className="font-semibold" style={{ color: layer.color }}>{layer.name}</span>
+        <span className="font-semibold" style={{ color: forText(layer.color) }}>{layer.name}</span>
       </div>
 
       {/* Header */}

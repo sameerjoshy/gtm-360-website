@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { forText } from '../../lib/color'
 import { LAYERS, getAgentsFor, getToolsFor } from '../../data/wiki/framework'
 import { getContent, slugify } from '../../data/wiki/content'
 import { getLayerReferences } from '../../data/wiki/references'
@@ -76,7 +77,7 @@ export default function Process() {
       <div className="flex items-center gap-2 text-xs text-slate-400 mb-4">
         <Link to="/wiki/method" className="hover:text-slate-600">The Map</Link>
         <span>›</span>
-        <span style={{ color: layer.color }} className="font-semibold">{layer.name}</span>
+        <span style={{ color: forText(layer.color) }} className="font-semibold">{layer.name}</span>
         <span>›</span>
         <span className="text-slate-600 font-semibold">{process.name}</span>
       </div>
@@ -110,7 +111,7 @@ export default function Process() {
       {/* Short learning blocks */}
       {content && (
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          <Block title="Why it matters" color={layer.color} items={[content.why]} />
+          <Block title="Why it matters" color={forText(layer.color)} items={[content.why]} />
           <Block title="Best practices" color={layer.color} items={content.best} />
           <Block title="Common mistakes" color={layer.color} items={content.mistakes} />
           <Block title="Key questions" color={layer.color} items={content.questions} />
@@ -126,7 +127,7 @@ export default function Process() {
               {agents.map((a) => (
                 <span key={a.id} className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold border ${statusCls[a.status] || statusCls.build}`}>
                   {a.name}
-                  {a.status === 'build' && <span className="font-normal opacity-70">· to build</span>}
+                  {a.status === 'build' && <span className="font-normal">· to build</span>}
                 </span>
               ))}
             </div>

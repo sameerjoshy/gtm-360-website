@@ -31,9 +31,9 @@ const phases = [
 ];
 
 const colorMap = {
-    emerald: { dot: 'bg-emerald-500', text: 'text-emerald-600', border: 'border-emerald-200', light: 'bg-emerald-50' },
-    indigo:  { dot: 'bg-indigo-500',  text: 'text-indigo-600',  border: 'border-indigo-200',  light: 'bg-indigo-50'  },
-    violet:  { dot: 'bg-violet-500',  text: 'text-violet-600',  border: 'border-violet-200',  light: 'bg-violet-50'  },
+    emerald: { dot: 'bg-emerald-500', text: 'text-emerald-600', textLight: 'text-emerald-300', border: 'border-emerald-200', light: 'bg-emerald-50' },
+    indigo:  { dot: 'bg-indigo-500',  text: 'text-indigo-600',  textLight: 'text-indigo-300',  border: 'border-indigo-200',  light: 'bg-indigo-50'  },
+    violet:  { dot: 'bg-violet-500',  text: 'text-violet-600',  textLight: 'text-violet-300',  border: 'border-violet-200',  light: 'bg-violet-50'  },
 };
 
 const EngagementTimeline = () => {
@@ -55,11 +55,11 @@ const EngagementTimeline = () => {
                                 className="flex flex-col items-center gap-2 group flex-shrink-0"
                             >
                                 <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-200
-                                    ${active === i ? `${c.dot} text-white shadow-lg scale-110` : 'bg-slate-700 text-slate-400 group-hover:bg-slate-600'}`}>
+                                    ${active === i ? `${c.dot} text-slate-900 shadow-lg scale-110` : 'bg-slate-700 text-slate-400 group-hover:bg-slate-600'}`}>
                                     {phase.number}
                                 </div>
                                 <span className={`text-xs font-bold uppercase tracking-wider transition-colors
-                                    ${active === i ? `${c.text}` : 'text-slate-500 group-hover:text-slate-300'}`}>
+                                    ${active === i ? `${c.textLight}` : 'text-slate-500 group-hover:text-slate-300'}`}>
                                     {phase.label}
                                 </span>
                             </button>
@@ -78,13 +78,13 @@ const EngagementTimeline = () => {
                 return (
                     <div key={i} className={`rounded-lg border ${c.border} p-6 bg-slate-800`}>
                         <div className="flex items-center justify-between mb-3">
-                            <span className={`text-xs font-bold uppercase tracking-widest ${c.text}`}>
+                            <span className={`text-xs font-bold uppercase tracking-widest ${c.textLight}`}>
                                 Phase {phase.number} · {phase.duration}
                             </span>
                         </div>
                         <h4 className="text-white font-bold text-lg mb-2">{phase.headline}</h4>
                         <p className="text-slate-400 text-sm leading-relaxed mb-5">{phase.description}</p>
-                        <div className={`inline-flex items-center gap-2 text-xs font-bold ${c.text} bg-slate-900 px-3 py-1.5 rounded`}>
+                        <div className={`inline-flex items-center gap-2 text-xs font-bold ${c.textLight} bg-slate-900 px-3 py-1.5 rounded`}>
                             <span className={`w-1.5 h-1.5 rounded-full ${c.dot}`} />
                             Output: {phase.output}
                         </div>

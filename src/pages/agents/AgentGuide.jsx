@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { forText } from '../../lib/color';
 import { Link, useParams } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import AgentVideo from '../../components/media/AgentVideo';
@@ -96,7 +97,7 @@ const AgentGuide = () => {
             {/* HERO */}
             <section className="pb-12 bg-white">
                 <div className="container max-w-4xl">
-                    <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: eng.color }}>
+                    <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: forText(eng.color) }}>
                         {eng.name} Engine · plain-English guide
                     </p>
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-slate-900 leading-[1.1]">
@@ -183,7 +184,7 @@ const AgentGuide = () => {
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
-                                        <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-3">Measured</p>
+                                        <p className="text-xs font-bold text-emerald-700 uppercase tracking-widest mb-3">Measured</p>
                                         <ul className="space-y-2">
                                             {guide.method.measured.map((m, i) => (
                                                 <li key={i} className="text-slate-600 text-sm flex gap-2"><span className="text-emerald-500">✓</span>{m}</li>
@@ -191,7 +192,7 @@ const AgentGuide = () => {
                                         </ul>
                                     </div>
                                     <div>
-                                        <p className="text-xs font-bold text-amber-600 uppercase tracking-widest mb-3">Inferred</p>
+                                        <p className="text-xs font-bold text-amber-700 uppercase tracking-widest mb-3">Inferred</p>
                                         <ul className="space-y-2">
                                             {guide.method.inferred.map((m, i) => (
                                                 <li key={i} className="text-slate-600 text-sm flex gap-2"><span className="text-amber-500">~</span>{m}</li>

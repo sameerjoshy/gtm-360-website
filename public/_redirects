@@ -1,8 +1,9 @@
 # Legacy URLs -> canonical destinations. Single source for server-side redirects.
 # The client no longer declares these (App.jsx only has the SPA catch-all).
+# No /* SPA fallback: every route is prerendered, so unmatched paths 404 honestly
+# (Cloudflare Pages serves the generated /404.html).
 /system     /wiki          301
 /engine     /wiki/method   301
 /learn      /wiki/guides   301
 /services   /offerings     301
 /playbooks  /insights      301
-/*          /index.html    200

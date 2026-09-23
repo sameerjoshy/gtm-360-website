@@ -21,13 +21,13 @@ const MisdiagnosisCycle = () => (
                         ${step.highlight
                             ? 'bg-red-50 border-red-200'
                             : 'bg-slate-50 border-slate-200'}`}>
-                        <span className={`text-2xl block mb-2 ${step.highlight ? 'text-red-500' : 'text-slate-400'}`}>
+                        <span className={`text-2xl block mb-2 ${step.highlight ? 'text-red-700' : 'text-slate-400'}`}>
                             {step.icon}
                         </span>
                         <p className={`font-bold text-sm mb-1 ${step.highlight ? 'text-red-700' : 'text-slate-900'}`}>
                             {step.label}
                         </p>
-                        <p className={`text-xs leading-snug ${step.highlight ? 'text-red-500' : 'text-slate-400'}`}>
+                        <p className={`text-xs leading-snug ${step.highlight ? 'text-red-700' : 'text-slate-400'}`}>
                             {step.sub}
                         </p>
                     </div>
@@ -43,14 +43,14 @@ const MisdiagnosisCycle = () => (
             {steps.map((step, i) => (
                 <div key={i} className={`flex items-start gap-4 p-4 rounded-lg border
                     ${step.highlight ? 'bg-red-50 border-red-200' : 'bg-slate-50 border-slate-200'}`}>
-                    <span className={`text-xl mt-0.5 ${step.highlight ? 'text-red-500' : 'text-slate-400'}`}>
+                    <span className={`text-xl mt-0.5 ${step.highlight ? 'text-red-700' : 'text-slate-400'}`}>
                         {step.icon}
                     </span>
                     <div>
                         <p className={`font-bold text-sm ${step.highlight ? 'text-red-700' : 'text-slate-900'}`}>
                             {step.label}
                         </p>
-                        <p className={`text-xs ${step.highlight ? 'text-red-500' : 'text-slate-400'}`}>
+                        <p className={`text-xs ${step.highlight ? 'text-red-700' : 'text-slate-400'}`}>
                             {step.sub}
                         </p>
                     </div>

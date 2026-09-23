@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Bowtie from '../components/visuals/Bowtie';
 import { ENGINES, AGENT_TOTAL } from '../data/engines';
+import { forText } from '../lib/color';
 
 const AgentsPage = () => {
     return (
@@ -72,7 +73,7 @@ const AgentsPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-10">
                         {ENGINES.map((e) => (
                             <div key={e.id} className="border border-slate-200 rounded-xl p-5">
-                                <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: e.color }}>{e.name}</p>
+                                <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: forText(e.color) }}>{e.name}</p>
                                 <p className="text-slate-500 text-sm leading-relaxed mb-3">{e.what}</p>
                                 <p className="text-xs font-bold text-slate-700">{e.agents.length} agents</p>
                             </div>
@@ -82,7 +83,7 @@ const AgentsPage = () => {
                     <div className="space-y-3">
                         {ENGINES.map((e) => (
                             <div key={e.id} className="flex flex-col md:flex-row md:items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5">
-                                <span className="w-40 flex-shrink-0 text-sm font-bold" style={{ color: e.color }}>{e.name}</span>
+                                <span className="w-40 flex-shrink-0 text-sm font-bold" style={{ color: forText(e.color) }}>{e.name}</span>
                                 <div className="flex-1 flex flex-wrap gap-1.5">
                                     {e.agents.map((a) => (
                                         <Link

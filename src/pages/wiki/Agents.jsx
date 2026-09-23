@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { AGENT_SLOTS } from '../../data/wiki/framework'
+import { forText } from '../../lib/color'
 
 const swarms = [
   { id: 'strategy', label: 'Strategy', color: '#2563eb' },
@@ -40,14 +41,14 @@ export function Agents() {
           return (
             <div key={sw.id} className="bg-white border border-slate-200 rounded-2xl p-5 shadow-card">
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-sm font-bold" style={{ color: sw.color }}>{sw.label}</h2>
+                <h2 className="text-sm font-bold" style={{ color: forText(sw.color) }}>{sw.label}</h2>
                 <span className="text-[11px] text-slate-400">{liveCount}/{slots.length} live</span>
               </div>
               <div className="flex flex-wrap gap-2">
                 {slots.map((a) => (
                   <span key={a.id} className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold border ${statusCls[a.status] || statusCls.build}`}>
                     {a.name}
-                    {a.status === 'build' && <span className="font-normal opacity-70">· to build</span>}
+                    {a.status === 'build' && <span className="font-normal">· to build</span>}
                   </span>
                 ))}
               </div>

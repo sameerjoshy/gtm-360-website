@@ -103,7 +103,7 @@ const B2BSalesConsulting = () => {
                             <div key={i} className="border border-slate-200 rounded-xl p-8 hover:shadow-sm transition-all">
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                     <div>
-                                        <p className="text-xs font-bold text-red-500 uppercase tracking-widest mb-2">The symptom</p>
+                                        <p className="text-xs font-bold text-red-600 uppercase tracking-widest mb-2">The symptom</p>
                                         <h3 className="text-base font-bold text-slate-900">{item.problem}</h3>
                                     </div>
                                     <div>

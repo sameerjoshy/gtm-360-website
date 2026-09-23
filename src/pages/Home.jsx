@@ -114,7 +114,7 @@ const Home = () => {
                             Operator-led practice. Ran GTM at AWS and Dell. Series A–C, B2B SaaS &amp; technology.
                         </p>
                     </div>
-                    <p className="text-xs text-slate-400">Sameer's background is verifiable on <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-500 underline">LinkedIn</a>.</p>
+                    <p className="text-xs text-slate-400">Sameer's background is verifiable on <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline">LinkedIn</a>.</p>
                 </div>
             </section>
 
@@ -311,7 +311,7 @@ const Home = () => {
                         <a href={AGENT_PORTAL_URL}
                             className="bg-slate-900 text-white rounded-xl p-8 hover:bg-slate-800 transition-all">
                             <p className="text-xs font-bold uppercase tracking-widest mb-3 text-slate-400">The tools</p>
-                            <h3 className="text-2xl font-bold mb-3">Agent Portal →</h3>
+                            <h3 className="text-2xl font-bold mb-3 text-white">Agent Portal →</h3>
                             <p className="text-slate-400 text-sm leading-relaxed">
                                 Specialist agents that answer revenue questions with evidence — grounded in your
                                 data, with defined handoffs.
@@ -319,9 +319,9 @@ const Home = () => {
                         </a>
                         <Link to={KNOWLEDGE_URL}
                             className="bg-blue-600 text-white rounded-xl p-8 hover:bg-blue-700 transition-all">
-                            <p className="text-xs font-bold uppercase tracking-widest mb-3 text-blue-200">The thinking</p>
-                            <h3 className="text-2xl font-bold mb-3">Knowledge →</h3>
-                            <p className="text-blue-100 text-sm leading-relaxed">
+                            <p className="text-xs font-bold uppercase tracking-widest mb-3 text-blue-50">The thinking</p>
+                            <h3 className="text-2xl font-bold mb-3 text-white">Knowledge →</h3>
+                            <p className="text-blue-50 text-sm leading-relaxed">
                                 The operating model, playbooks, and a plain-English guide to every agent. The whole
                                 method, written down.
                             </p>

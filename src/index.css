@@ -3,6 +3,54 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * WCAG 2.1 AA guardrails for muted text.
+ * slate-300/400 are too faint on light surfaces; slate-500/600 are too dark on
+ * dark surfaces. Rather than chase hundreds of usages, normalise by surface.
+ * Only the text-colour utilities are affected — fills, dots and borders are not.
+ */
+.text-slate-300,
+.text-slate-400 {
+  color: #64748b !important; /* slate-500 — passes on white and slate-50 */
+}
+
+/* light surfaces (re-assert for light cards nested inside dark sections) */
+:is(.bg-white, .bg-slate-50):is(.text-slate-300, .text-slate-400),
+.bg-white :is(.text-slate-300, .text-slate-400),
+.bg-slate-50 :is(.text-slate-300, .text-slate-400) {
+  color: #64748b !important;
+}
+
+/* slate-100 badges/rows need slate-600 */
+:is(.bg-slate-100):is(.text-slate-300, .text-slate-400, .text-slate-500),
+.bg-slate-100 :is(.text-slate-300, .text-slate-400, .text-slate-500) {
+  color: #475569 !important;
+}
+
+/* dark surfaces last so they win over the light re-assertions */
+:is(.bg-slate-700, .bg-slate-800, .bg-slate-900, .bg-slate-950, .bg-black) :is(.text-slate-300, .text-slate-400, .text-slate-500, .text-slate-600),
+:is(.bg-slate-700, .bg-slate-800, .bg-slate-900, .bg-slate-950, .bg-black):is(.text-slate-300, .text-slate-400, .text-slate-500, .text-slate-600) {
+  color: #cbd5e1 !important; /* slate-300 on dark */
+}
+
+/* legacy gray/red/green palettes (insight + case-study templates) — AA on light */
+.text-gray-300,
+.text-gray-400 {
+  color: #4b5563 !important; /* gray-600 */
+}
+
+.text-red-400 {
+  color: #dc2626 !important; /* red-600 */
+}
+
+.text-green-600 {
+  color: #15803d !important; /* green-700 */
+}
+
+:is(.bg-slate-800, .bg-slate-900, .bg-slate-950, .bg-black) :is(.text-gray-300, .text-gray-400) {
+  color: #cbd5e1 !important;
+}
+
 :root {
   /* Brand Colors - Aligned with Tailwind */
   --color-primary: #0A192F;

@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { forText } from '../lib/color';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { ENGINES } from '../data/engines';
@@ -75,7 +76,7 @@ const Learn = () => {
                                     >
                                         <p className="font-bold text-slate-900 mb-1">{a.name}</p>
                                         <p className="text-sm text-slate-500 mb-3">{a.role}</p>
-                                        <p className="text-xs font-semibold" style={{ color: eng.color }}>
+                                        <p className="text-xs font-semibold" style={{ color: forText(eng.color) }}>
                                             Read the guide → 
                                         </p>
                                     </Link>

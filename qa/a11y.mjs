@@ -8,8 +8,12 @@ const { chromium } = pwPath ? require(pwPath) : require('playwright')
 
 const BASE = process.argv[2] || 'https://gtm-360.com'
 const PAGES = ['/', '/agents', '/offerings', '/problems', '/how-we-work', '/insights', '/about',
-  '/wiki', '/wiki/method', '/wiki/method/agents', '/wiki/method/tools', '/start-here', '/contact',
-  '/agents/strategy/diagnostic', '/wiki/playbooks/the-qbr-trap']
+  '/wiki', '/wiki/method', '/wiki/method/agents', '/wiki/method/tools', '/wiki/method/layer/L5',
+  '/wiki/method/process/crm-management', '/wiki/glossary', '/wiki/guides', '/wiki/playbooks',
+  '/start-here', '/contact', '/diagnostic-score', '/gtm-consulting', '/resources/gtm-diagnostic-checklist',
+  '/services/gtm-operating-model', '/problems/stalled-growth', '/insights/why-growth-stalls',
+  '/insights/case-studies/pipeline-full-revenue-flat', '/privacy', '/terms',
+  '/agents/strategy/diagnostic', '/agents/strategy/diagnostic/guide', '/wiki/playbooks/the-qbr-trap']
 
 const browser = await chromium.launch()
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 } })

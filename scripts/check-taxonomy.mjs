@@ -19,12 +19,8 @@ const { ENGINES, AGENT_TOTAL } = await import(new URL('../src/data/engines.js', 
 const { AGENT_SLOTS } = await import(new URL('../src/data/wiki/framework.js', import.meta.url).href);
 
 // Wiki slot ids that predate the canonical registry and have not been reconciled
-// yet. They must be mapped (or the wiki list replaced by the registry). Tracked
-// here so creating NEW drift still fails the build.
-const KNOWN_UNMAPPED_WIKI_IDS = new Set([
-  'pricing', 'forecast', 'playbook', 'content-multiplier', 'seo', 'campaign',
-  'onboarding', 'renewal', 'pipeline',
-]);
+// yet. (Empty now — the wiki list is generated from the registry.)
+const KNOWN_UNMAPPED_WIKI_IDS = new Set([]);
 
 const errors = [];
 const warnings = [];
@@ -51,7 +47,7 @@ if (AGENT_TOTAL !== snapshot.agents.length) {
   errors.push(`AGENT_TOTAL ${AGENT_TOTAL} !== registry ${snapshot.agents.length}`);
 }
 
-// 2) wiki list: fail on NEW unknown ids; report the known unmapped set
+// 2) wiki AGENT_SLOTS must be exactly the registry
 const slotIds = Object.keys(AGENT_SLOTS);
 const unknown = slotIds.filter((id) => !canonIds.has(id));
 for (const id of unknown) {
@@ -60,6 +56,17 @@ for (const id of unknown) {
 const missingFromWiki = [...canonIds].filter((id) => !slotIds.includes(id));
 if (unknown.length) warnings.push(`wiki AGENT_SLOTS: ${unknown.length} legacy ids not yet reconciled (${unknown.join(', ')})`);
 if (missingFromWiki.length) warnings.push(`wiki AGENT_SLOTS: ${missingFromWiki.length} registry agents absent from the wiki list`);
+
+// 3) wiki process arrays must only reference canonical agent ids
+const frameworkText = fs.readFileSync(path.resolve(root, 'src/data/wiki/framework.js'), 'utf8');
+const badProcessIds = new Set();
+for (const m of frameworkText.matchAll(/agents:\s*\[([^\]]*)\]/g)) {
+  for (const raw of m[1].split(',')) {
+    const id = raw.trim().replace(/^['"]|['"]$/g, '');
+    if (id && !canonIds.has(id)) badProcessIds.add(id);
+  }
+}
+for (const id of badProcessIds) errors.push(`wiki process references unknown agent id "${id}"`);
 
 warnings.forEach((w) => console.warn(`⚠ ${w}`));
 if (errors.length) {

@@ -53,45 +53,10 @@ export const TOOL_CATALOG = {
   'plausible':{ name: 'Plausible',      fn: 'Privacy-first analytics',   alt: ['GA', 'Fathom'] },
 }
 
-// Agent slots: names of Crew agents that can drive a process.
-// status: 'live' = exists today, 'build' = slot to build, 'advisory' = advisory service not agent
-export const AGENT_SLOTS = {
-  // Strategy
-  'diagnostic':      { name: 'Diagnostic Agent',     status: 'live', swarm: 'strategy' },
-  'planning-cycle':  { name: 'Planning Cycle Agent', status: 'live', swarm: 'strategy' },
-  'icp-clarifier':   { name: 'ICP Clarifier',        status: 'demo', swarm: 'strategy' },
-  'market-research': { name: 'Market Research',      status: 'build', swarm: 'strategy' },
-  'pricing':         { name: 'Pricing Strategist',   status: 'build', swarm: 'strategy' },
-  'roadmap-align':   { name: 'Roadmap Aligner',      status: 'build', swarm: 'strategy' },
-
-  // Sales
-  'signals-scout':   { name: 'Signals Scout',        status: 'live', swarm: 'sales' },
-  'qualifier':       { name: 'Qualifier Agent',      status: 'live', swarm: 'sales' },
-  'sniper':          { name: 'Sniper',               status: 'live', swarm: 'sales' },
-  'deal-room':       { name: 'Deal Room',            status: 'demo', swarm: 'sales' },
-  'forecast':        { name: 'Forecast Analyst',     status: 'build', swarm: 'sales' },
-  'playbook':        { name: 'Playbook Builder',     status: 'build', swarm: 'sales' },
-
-  // Marketing
-  'listener':        { name: 'Listener',             status: 'live', swarm: 'marketing' },
-  'content-multiplier': { name: 'Content Multiplier', status: 'live', swarm: 'marketing' },
-  'competitor-intel':{ name: 'Competitor Intel',     status: 'live', swarm: 'marketing' },
-  'seo':             { name: 'SEO Analyst',          status: 'build', swarm: 'marketing' },
-  'campaign':        { name: 'Campaign Builder',     status: 'build', swarm: 'marketing' },
-
-  // CS
-  'health-monitor':  { name: 'Health Monitor',       status: 'demo', swarm: 'expansion' },
-  'churn-predictor': { name: 'Churn Predictor',      status: 'demo', swarm: 'expansion' },
-  'expansion-radar': { name: 'Expansion Radar',      status: 'demo', swarm: 'expansion' },
-  'onboarding':      { name: 'Onboarding Coach',     status: 'build', swarm: 'expansion' },
-  'renewal':         { name: 'Renewal Analyst',      status: 'build', swarm: 'expansion' },
-
-  // RevOps
-  'hygiene':         { name: 'Hygiene Agent',        status: 'live', swarm: 'operations' },
-  'pipeline':        { name: 'Pipeline Auditor',     status: 'build', swarm: 'operations' },
-  'attribution':     { name: 'Attribution Analyst',  status: 'build', swarm: 'operations' },
-  'comp-quota':      { name: 'Comp & Quota Modeler', status: 'build', swarm: 'operations' },
-}
+// Agent slots — generated from the canonical registry (single source of truth).
+// status: 'live' = exists today, 'demo' = working demo, 'build' = planned.
+import { AGENT_SLOTS } from './agentSlots.js'
+export { AGENT_SLOTS }
 
 // ── LAYERS ──────────────────────────────────────────────────────────────
 export const LAYERS = [
@@ -128,25 +93,25 @@ export const LAYERS = [
       {
         name: 'Pipeline Planning',
         workflow: ['Revenue Target', 'Conversion Modeling', 'Pipeline Requirements', 'Forecast Build', 'Risk Assessment', 'Mitigation', 'Tracking', 'Adjustment'],
-        agents: ['pipeline', 'forecast'],
+        agents: ['pipeline-auditor', 'forecast-analyser'],
         tools: ['hubspot', 'metabase', 'supabase'],
       },
       {
         name: 'Sales Playbook Development',
         workflow: ['Segment Definition', 'Use Case Mapping', 'Messaging', 'Objection ID', 'Solution Architecture', 'Playbook Creation', 'Enablement', 'Iteration'],
-        agents: ['playbook', 'sniper'],
+        agents: ['workflow-builder', 'sniper'],
         tools: ['claude', 'notion', 'hubspot'],
       },
       {
         name: 'GTM Metrics Framework',
         workflow: ['Metric Definition', 'Data Source ID', 'Calculation Logic', 'Baseline', 'Target', 'Dashboard', 'Monitoring', 'Optimization'],
-        agents: ['pipeline', 'attribution'],
+        agents: ['pipeline-auditor', 'attribution'],
         tools: ['metabase', 'supabase', 'ga'],
       },
       {
         name: 'Dashboard & Reporting',
         workflow: ['Needs Assessment', 'Metric Selection', 'Dashboard Design', 'Data Integration', 'Automation', 'Distribution', 'Consumption', 'Refinement'],
-        agents: ['attribution', 'pipeline'],
+        agents: ['attribution', 'pipeline-auditor'],
         tools: ['metabase', 'supabase', 'n8n'],
       },
       {
@@ -176,7 +141,7 @@ export const LAYERS = [
       {
         name: 'Team Training & Onboarding',
         workflow: ['Needs Assessment', 'Curriculum Design', 'Content Dev', 'Delivery', 'Execution', 'Verification', 'Reinforcement', 'Learning'],
-        agents: ['playbook'],
+        agents: ['workflow-builder'],
         tools: ['notion', 'claude', 'slack'],
       },
       {
@@ -188,19 +153,19 @@ export const LAYERS = [
       {
         name: 'Revenue Model & Pricing Strategy',
         workflow: ['Customer Research', 'Value Analysis', 'Competitive Benchmarking', 'Pricing Model Design', 'Packaging Architecture', 'Testing', 'Optimization'],
-        agents: ['pricing', 'market-research'],
+        agents: ['pricing-strategist', 'market-research'],
         tools: ['exa', 'apify', 'notion'],
       },
       {
         name: 'Campaign Planning',
         workflow: ['Campaign Objectives', 'Audience Definition', 'Channel Selection', 'Content & Creative Planning', 'Budget Allocation', 'Execution Setup', 'Performance Tracking', 'Optimization'],
-        agents: ['campaign', 'attribution'],
+        agents: ['campaign-builder', 'attribution'],
         tools: ['n8n', 'hubspot', 'metabase'],
       },
       {
         name: 'Territory Planning',
         workflow: ['Account Universe Definition', 'Account Segmentation', 'Capacity Planning', 'Territory Design', 'Rep Assignment', 'Quota Setting', 'Performance Tracking', 'Rebalancing'],
-        agents: ['comp-quota', 'pipeline'],
+        agents: ['comp-quota', 'pipeline-auditor'],
         tools: ['hubspot', 'metabase'],
       },
       {
@@ -212,7 +177,7 @@ export const LAYERS = [
       {
         name: 'Marketing Calendar Development',
         workflow: ['Annual Theme Definition', 'Campaign Identification', 'Content Planning', 'Channel Allocation', 'Timeline Creation', 'Resource Assignment', 'Publishing Schedule', 'Performance Tracking'],
-        agents: ['campaign', 'content-multiplier'],
+        agents: ['campaign-builder', 'writer'],
         tools: ['notion', 'n8n'],
       },
       {
@@ -224,7 +189,7 @@ export const LAYERS = [
       {
         name: 'Attribution & ROI Tracking',
         workflow: ['Touch Point Definition', 'Attribution Model Design', 'Data Collection Setup', 'Analysis Framework', 'Campaign Attribution', 'ROI Calculation', 'Optimization'],
-        agents: ['attribution', 'campaign'],
+        agents: ['attribution', 'campaign-builder'],
         tools: ['ga', 'metabase', 'supabase'],
       },
       {
@@ -268,7 +233,7 @@ export const LAYERS = [
       {
         name: 'Personalization',
         workflow: ['Enriched Profiles', 'Signal-to-Angle Mapping', 'Email Copy', 'Subject Lines', 'Sequence Design', 'Template Variation', 'Testing', 'Ready to Send'],
-        agents: ['sniper', 'content-multiplier'],
+        agents: ['sniper', 'writer'],
         tools: ['claude', 'smartlead', 'deepseek'],
       },
       {
@@ -286,19 +251,19 @@ export const LAYERS = [
       {
         name: 'Content Strategy',
         workflow: ['Audience', 'Topic Research', 'Pillar Selection', 'Content Planning', 'Format Mix', 'Editorial Calendar', 'Creation', 'Distribution', 'Measurement', 'Optimization'],
-        agents: ['content-multiplier', 'listener'],
+        agents: ['writer', 'listener'],
         tools: ['claude', 'exa', 'notion'],
       },
       {
         name: 'SEO & Organic Search',
         workflow: ['Keyword Research', 'Technical Audit', 'On-Page', 'Content Strategy', 'Link Building', 'Ranking Monitor', 'Traffic', 'Conversion', 'Improvement'],
-        agents: ['seo', 'content-multiplier'],
+        agents: ['seo-analyzer', 'writer'],
         tools: ['exa', 'ga', 'plausible'],
       },
       {
         name: 'Paid Advertising',
         workflow: ['Objectives', 'Audience', 'Channel', 'Budget', 'Creative', 'Landing Page', 'Launch', 'Monitoring', 'Optimization', 'ROI'],
-        agents: ['campaign', 'attribution'],
+        agents: ['campaign-builder', 'attribution'],
         tools: ['ga', 'metabase', 'make'],
       },
       {
@@ -310,7 +275,7 @@ export const LAYERS = [
       {
         name: 'Marketing Automation',
         workflow: ['Platform Selection', 'Integration', 'Workflow Design', 'Sequence Creation', 'Trigger Def', 'Monitoring', 'Lead Scoring', 'Insights', 'Optimization'],
-        agents: ['campaign', 'listener'],
+        agents: ['campaign-builder', 'listener'],
         tools: ['n8n', 'hubspot', 'make'],
       },
     ],
@@ -366,13 +331,13 @@ export const LAYERS = [
       {
         name: 'Handoff to AE',
         workflow: ['Meeting Confirmed', 'Context Docs', 'AE Brief', 'Deal Structure', 'Account Assignment', 'Tracking', 'Progress', 'Deal Review'],
-        agents: ['deal-room', 'pipeline'],
+        agents: ['deal-room', 'pipeline-auditor'],
         tools: ['hubspot', 'notion'],
       },
       {
         name: 'Forecast & Pipeline Management',
         workflow: ['Leads Generated', 'Pipeline Capture', 'Stage Assignment', 'Forecast Model', 'Pipeline Review', 'Risk Assessment', 'Accuracy Measure', 'Adjustment', 'Reporting'],
-        agents: ['forecast', 'pipeline'],
+        agents: ['forecast-analyser', 'pipeline-auditor'],
         tools: ['hubspot', 'metabase', 'supabase'],
       },
       {
@@ -396,13 +361,13 @@ export const LAYERS = [
       {
         name: 'Sales Training',
         workflow: ['Needs Assessment', 'Curriculum Design', 'Content Dev', 'Delivery', 'Execution', 'Verification', 'Certification', 'Reinforcement'],
-        agents: ['playbook'],
+        agents: ['workflow-builder'],
         tools: ['notion', 'claude'],
       },
       {
         name: 'Manager Coaching & Development',
         workflow: ['Manager Assessment', 'Dev Plan', 'Coaching Curriculum', 'Execution', 'Feedback', 'Practice', 'Reinforcement', 'Monitoring'],
-        agents: ['playbook'],
+        agents: ['workflow-builder'],
         tools: ['notion', 'claude'],
       },
     ],
@@ -416,31 +381,31 @@ export const LAYERS = [
       {
         name: "Customer Onboarding Strategy",
         workflow: ["Success Planning","Stakeholder Mapping","Timeline & Milestones","Training & Enablement Plan","Success Metrics Definition","Communication & Engagement Plan","Kickoff Preparation"],
-        agents: ["onboarding","health-monitor"],
+        agents: ["onboarding-coach","health-monitor"],
         tools: ["hubspot","notion"],
       },
       {
         name: "Customer Onboarding Implementation",
         workflow: ["Setup & Configuration","User Provisioning","Technical Integration","Training Delivery","Adoption Monitoring","Support & Troubleshooting","Adoption Acceleration"],
-        agents: ["onboarding"],
+        agents: ["onboarding-coach"],
         tools: ["hubspot","n8n","notion"],
       },
       {
         name: "Value Realization & Win Planning",
         workflow: ["Baseline Establishment","Quick Win Identification","Value Tracking Setup","Milestone Planning","Business Review Planning","ROI Documentation"],
-        agents: ["onboarding","health-monitor"],
+        agents: ["onboarding-coach","health-monitor"],
         tools: ["hubspot","metabase"],
       },
       {
         name: "Training & Certification Program",
         workflow: ["Curriculum Design","Role-Based Learning Paths","Training Content Development","Delivery Planning","Training Delivery","Assessment & Certification","Ongoing Education & Updates"],
-        agents: ["onboarding","playbook"],
+        agents: ["onboarding-coach","workflow-builder"],
         tools: ["notion","claude"],
       },
       {
         name: "Customer Health Monitoring & Renewal Readiness",
         workflow: ["Health Indicator Selection","Real-Time Monitoring","Risk Assessment","Intervention Planning","Proactive Engagement","Renewal Readiness Assessment"],
-        agents: ["health-monitor","renewal"],
+        agents: ["health-monitor","renewal-analyst"],
         tools: ["metabase","supabase"],
       },
       {
@@ -458,13 +423,13 @@ export const LAYERS = [
       {
         name: "Learning & Certification Platform",
         workflow: ["Learning Platform Evaluation & Selection","Learning & Content Strategy","Content Production Pipeline","Content Development & Launch","Learner Enrollment & Progress Tracking","Assessment & Certification","Usage Analytics & Continuous Improvement"],
-        agents: ["onboarding","playbook"],
+        agents: ["onboarding-coach","workflow-builder"],
         tools: ["notion","supabase"],
       },
       {
         name: "Community & Peer Learning",
         workflow: ["Community Strategy & Goals","Community Platform Setup","Moderator & Community Manager Preparation","Initial Member Recruitment","Content & Discussion Kickoff","Recognition & Gamification","Analytics & Evolution"],
-        agents: ["listener","campaign"],
+        agents: ["listener","campaign-builder"],
         tools: ["notion","slack"],
       },
       {
@@ -482,7 +447,7 @@ export const LAYERS = [
       {
         name: "Renewal & Negotiation Process",
         workflow: ["Renewal Planning & Qualification","Value & ROI Documentation","Renewal Negotiation Preparation","Renewal Conversation & Value Review","Negotiation & Terms Refinement","Contract Closure & Signature","Celebration & Next Phase Planning"],
-        agents: ["renewal","deal-room"],
+        agents: ["renewal-analyst","deal-room"],
         tools: ["hubspot","smartlead"],
       },
       {
@@ -500,7 +465,7 @@ export const LAYERS = [
       {
         name: "Customer Success Metrics & Dashboard",
         workflow: ["Success Metrics Framework","Data Architecture & Integration","Dashboard Design & Visualization","Dashboard Implementation","Team Training & Adoption","Usage Monitoring & Support","Continuous Improvement & Optimization"],
-        agents: ["health-monitor","pipeline"],
+        agents: ["health-monitor","pipeline-auditor"],
         tools: ["metabase","supabase"],
       },
     ],
@@ -544,7 +509,7 @@ export const LAYERS = [
       {
         name: "Add-On & Module Expansion",
         workflow: ["Feature/Module Expansion Analysis","Adoption & Readiness Assessment","Pricing & Bundling Strategy","Business Justification & Proposal","Sales Team Training & Enablement","Customer Launch & Promotion"],
-        agents: ["expansion-radar","pricing"],
+        agents: ["expansion-radar","pricing-strategist"],
         tools: ["metabase","claude"],
       },
       {
@@ -562,25 +527,25 @@ export const LAYERS = [
       {
         name: "ABM Program Management",
         workflow: ["High-Value Account Prioritization","Account-Specific Strategy Development","Personalized Content & Messaging Development","Multi-Channel Campaign Execution","Engagement Tracking & Analytics","Continuous Optimization & Results"],
-        agents: ["signals-scout","campaign"],
+        agents: ["signals-scout","campaign-builder"],
         tools: ["parallel","n8n","supabase"],
       },
       {
         name: "Account Executive Coordination",
         workflow: ["Account Assignment & Territory Planning","AE Strategy Alignment","Opportunity Pipeline Planning","Regular Account Reviews & Coaching","Forecast & Results Management"],
-        agents: ["deal-room","pipeline"],
+        agents: ["deal-room","pipeline-auditor"],
         tools: ["hubspot","notion"],
       },
       {
         name: "Account-Based Marketing Campaigns",
         workflow: ["ABM Campaign Strategy","Account Segmentation & Personalization","Creative Development & Asset Production","Multi-Channel Campaign Orchestration","Performance Tracking & Measurement","Optimization & Results"],
-        agents: ["campaign","content-multiplier"],
+        agents: ["campaign-builder","writer"],
         tools: ["n8n","hubspot","make"],
       },
       {
         name: "Customer Reference & Advocate Programs",
         workflow: ["Reference Customer Identification","Advocate Recruitment & Program Enrollment","Reference Call Training & Preparation","Success Story & Case Study Development","Reference Call Coordination & Execution","Advocate Recognition & Program Growth"],
-        agents: ["listener","content-multiplier"],
+        agents: ["listener","writer"],
         tools: ["hubspot","notion"],
       },
     ],
@@ -594,49 +559,49 @@ export const LAYERS = [
       {
         name: "Value-Based Pricing",
         workflow: ["Value Analysis","Willingness-to-Pay Research","Pricing Model Development","Competitive Benchmarking","Test & Validation"],
-        agents: ["pricing","market-research"],
+        agents: ["pricing-strategist","market-research"],
         tools: ["exa","apify","notion"],
       },
       {
         name: "Product Tiers & Edition Strategy",
         workflow: ["Customer Segmentation for Packaging","Feature Mapping & Tier Definition","Pricing Structure & Tier Economics","Messaging & Positioning"],
-        agents: ["pricing","roadmap-align"],
+        agents: ["pricing-strategist","roadmap-align"],
         tools: ["notion","metabase"],
       },
       {
         name: "Add-On & Module Pricing",
         workflow: ["Add-On & Module Identification","Value Assessment & Willingness to Pay","Add-On Packaging & Bundling","Pricing Model Development","Sales & Marketing Enablement","Add-On Launch & Go-to-Market"],
-        agents: ["pricing"],
+        agents: ["pricing-strategist"],
         tools: ["metabase","notion"],
       },
       {
         name: "A/B Testing for Pricing & Packaging",
         workflow: ["Hypothesis Development","Test Design & Setup","Test Implementation & Launch","Data Collection & Monitoring","Results Analysis & Statistical Testing","Recommendation & Decision","Rollout & Impact Monitoring"],
-        agents: ["pricing","attribution"],
+        agents: ["pricing-strategist","attribution"],
         tools: ["metabase","supabase"],
       },
       {
         name: "Price Increase Management",
         workflow: ["Pricing Increase Justification","Customer Impact Analysis","Tiered Implementation Strategy","Communication Planning","Price Increase Implementation","Renewal & Negotiation Management","Results Monitoring & Optimization"],
-        agents: ["pricing"],
+        agents: ["pricing-strategist"],
         tools: ["hubspot","notion","metabase"],
       },
       {
         name: "Renewal Pricing & Escalation",
         workflow: ["Renewal Pricing Analysis","Escalation Strategy Development","Segment-Specific Escalation Plans","Communication & Sales Preparation","Renewal Pricing Negotiation","Results Monitoring & Analysis","Continuous Optimization"],
-        agents: ["pricing","renewal"],
+        agents: ["pricing-strategist","renewal-analyst"],
         tools: ["hubspot","metabase"],
       },
       {
         name: "Competitive Pricing",
         workflow: ["Competitor Research","Pricing Tracking","Feature Comparison","Positioning","Differentiation","Messaging","Sales Training","Monitoring","Analysis"],
-        agents: ["pricing","competitor-intel"],
+        agents: ["pricing-strategist","competitor-intel"],
         tools: ["exa","apify"],
       },
       {
         name: "Enterprise / Custom Pricing",
         workflow: ["Deal Identified","Complexity Assessment","Approval Process","Proposal","Negotiation Authority","Deal Structure","Signature","CRM Track","Learning"],
-        agents: ["pricing","deal-room"],
+        agents: ["pricing-strategist","deal-room"],
         tools: ["hubspot","notion"],
       },
     ],
@@ -674,43 +639,43 @@ export const LAYERS = [
       {
         name: 'Territory Design',
         workflow: ['Account Universe', 'Segmentation', 'Capacity Planning', 'Territory Creation', 'Quota Allocation', 'Rep Assignment', 'Baseline', 'Tracking', 'Annual Review'],
-        agents: ['comp-quota', 'pipeline'],
+        agents: ['comp-quota', 'pipeline-auditor'],
         tools: ['hubspot', 'metabase'],
       },
       {
         name: 'Territory Forecast',
         workflow: ['Territory Assigned', 'Historical Analysis', 'Market Analysis', 'Pipeline Opportunity', 'Forecast Model', 'Scenario Planning', 'Submission', 'Tracking', 'Accuracy'],
-        agents: ['forecast', 'comp-quota'],
+        agents: ['forecast-analyser', 'comp-quota'],
         tools: ['metabase', 'hubspot'],
       },
       {
         name: 'Funnel Analytics',
         workflow: ['Funnel Def', 'Metrics ID', 'Data Collection', 'Conversion Rate', 'Stage Analysis', 'Bottleneck', 'Recommendations', 'Testing', 'Optimization'],
-        agents: ['pipeline', 'attribution'],
+        agents: ['pipeline-auditor', 'attribution'],
         tools: ['metabase', 'ga', 'supabase'],
       },
       {
         name: 'Pipeline Analytics',
         workflow: ['Pipeline Metrics', 'Data Collection', 'Stage Duration', 'Win Rate', 'Health Assessment', 'Risk ID', 'Forecast', 'Monitoring', 'Optimization'],
-        agents: ['pipeline', 'forecast'],
+        agents: ['pipeline-auditor', 'forecast-analyser'],
         tools: ['metabase', 'hubspot'],
       },
       {
         name: 'CAC & LTV Analysis',
         workflow: ['Acquisition Cost', 'LTV Calc', 'Payback Period', 'Profitability', 'By Channel/Segment', 'Recommendations', 'Testing', 'Monitoring'],
-        agents: ['attribution', 'pipeline'],
+        agents: ['attribution', 'pipeline-auditor'],
         tools: ['metabase', 'supabase'],
       },
       {
         name: 'Channel Attribution',
         workflow: ['Touch Point Def', 'Attribution Model', 'Data Integration', 'Analysis', 'Channel Contribution', 'ROI by Channel', 'Recommendations', 'Budget Reallocation'],
-        agents: ['attribution', 'campaign'],
+        agents: ['attribution', 'campaign-builder'],
         tools: ['ga', 'metabase', 'supabase'],
       },
       {
         name: 'CRM Management',
         workflow: ['CRM Selection', 'Implementation', 'Data Migration', 'Process Config', 'Workflow Automation', 'Integration', 'Training', 'Adoption', 'Data Quality'],
-        agents: ['hygiene', 'pipeline'],
+        agents: ['hygiene', 'pipeline-auditor'],
         tools: ['hubspot', 'attio', 'n8n'],
       },
       {
@@ -722,7 +687,7 @@ export const LAYERS = [
       {
         name: 'Sales Forecasting',
         workflow: ['Historical Analysis', 'Forecast Model', 'Rep Submission', 'Consolidation', 'Scenario Planning', 'Review', 'Approval', 'Tracking', 'Accuracy'],
-        agents: ['forecast', 'pipeline'],
+        agents: ['forecast-analyser', 'pipeline-auditor'],
         tools: ['metabase', 'hubspot'],
       },
       {
@@ -760,19 +725,19 @@ export const LAYERS = [
       {
         name: 'Partner Program Design',
         workflow: ['Program Objectives', 'Partner Model', 'Commission Structure', 'Co-Marketing', 'Incentives', 'Resources', 'Training', 'Execution', 'Performance'],
-        agents: ['comp-quota', 'campaign'],
+        agents: ['comp-quota', 'campaign-builder'],
         tools: ['notion', 'metabase'],
       },
       {
         name: 'Partner Training & Enablement',
         workflow: ['Training Needs', 'Curriculum', 'Content Creation', 'Delivery', 'Execution', 'Certification', 'Reinforcement', 'Resource Updates'],
-        agents: ['playbook', 'campaign'],
+        agents: ['workflow-builder', 'campaign-builder'],
         tools: ['notion', 'claude'],
       },
       {
         name: 'Co-Marketing Campaign',
         workflow: ['Opportunity ID', 'Joint Planning', 'Campaign Dev', 'Execution', 'Lead Sharing', 'ROI', 'Optimization', 'Feedback', 'Renewal'],
-        agents: ['campaign', 'attribution'],
+        agents: ['campaign-builder', 'attribution'],
         tools: ['n8n', 'hubspot', 'metabase'],
       },
       {
@@ -784,25 +749,25 @@ export const LAYERS = [
       {
         name: 'Reseller Program',
         workflow: ['Reseller Selection', 'Agreement', 'Margin Setup', 'Portal Access', 'Product Training', 'Sales Training', 'Territory', 'Kickoff', 'Performance'],
-        agents: ['onboarding', 'playbook'],
+        agents: ['onboarding-coach', 'workflow-builder'],
         tools: ['hubspot', 'notion'],
       },
       {
         name: 'Partner Integration',
         workflow: ['Opportunity', 'Technical Requirements', 'Dev Plan', 'Testing', 'Documentation', 'Launch', 'Promotion', 'Training', 'Education'],
-        agents: ['hygiene', 'pipeline'],
+        agents: ['hygiene', 'pipeline-auditor'],
         tools: ['supabase', 'n8n', 'metabase'],
       },
       {
         name: 'Referral Program Design',
         workflow: ['Objectives', 'Incentive Structure', 'Process Def', 'Platform Selection', 'Launch Prep', 'Communication', 'Execution', 'Tracking', 'Optimization'],
-        agents: ['campaign', 'attribution'],
+        agents: ['campaign-builder', 'attribution'],
         tools: ['notion', 'metabase', 'hubspot'],
       },
       {
         name: 'Affiliate Marketing',
         workflow: ['Affiliate Activated', 'Campaign Strategy', 'Promotion', 'Traffic', 'Conversion Track', 'Commission', 'Payment', 'Reporting', 'Optimization'],
-        agents: ['attribution', 'campaign'],
+        agents: ['attribution', 'campaign-builder'],
         tools: ['metabase', 'ga', 'hubspot'],
       },
     ],
@@ -816,25 +781,25 @@ export const LAYERS = [
       {
         name: 'Campaign Strategy',
         workflow: ['Business Objective', 'Audience', 'Positioning', 'Channel', 'Timeline', 'Budget', 'Content Strategy', 'Execution Plan', 'Launch', 'Tracking'],
-        agents: ['campaign', 'content-multiplier'],
+        agents: ['campaign-builder', 'writer'],
         tools: ['n8n', 'hubspot', 'metabase'],
       },
       {
         name: 'Multi-Channel Campaign',
         workflow: ['Objectives', 'Channel Planning', 'Message Tailoring', 'Content Creation', 'Schedule Coord', 'Launch Sync', 'Cross-Channel Track', 'Analysis', 'Optimization'],
-        agents: ['campaign', 'content-multiplier'],
+        agents: ['campaign-builder', 'writer'],
         tools: ['n8n', 'hubspot', 'make'],
       },
       {
         name: 'Campaign Execution',
         workflow: ['Campaign Ready', 'Resource Alignment', 'Launch', 'Real-Time Monitor', 'Issue Resolution', 'Optimization', 'Pace', 'Close-out', 'Learning'],
-        agents: ['campaign', 'hygiene'],
+        agents: ['campaign-builder', 'hygiene'],
         tools: ['n8n', 'hubspot', 'slack'],
       },
       {
         name: 'Campaign Analytics',
         workflow: ['Active', 'Metric Track', 'Daily Monitor', 'Trend Analysis', 'Conversion', 'ROI', 'Performance Report', 'Recommendations', 'Learning'],
-        agents: ['attribution', 'campaign'],
+        agents: ['attribution', 'campaign-builder'],
         tools: ['ga', 'metabase'],
       },
       {
@@ -852,31 +817,31 @@ export const LAYERS = [
       {
         name: 'Value Proposition',
         workflow: ['Market Research', 'Competitive Analysis', 'Customer Research', 'Value Def', 'Articulation', 'Testing', 'Refinement', 'Sales Training', 'Consistency'],
-        agents: ['content-multiplier', 'market-research'],
+        agents: ['writer', 'market-research'],
         tools: ['exa', 'claude', 'notion'],
       },
       {
         name: 'Messaging Hierarchy',
         workflow: ['Value Prop', 'Primary Messages', 'Secondary', 'Tertiary', 'Segment Tailoring', 'Alignment', 'Documentation', 'Training', 'Monitoring'],
-        agents: ['content-multiplier', 'listener'],
+        agents: ['writer', 'listener'],
         tools: ['claude', 'notion'],
       },
       {
         name: 'Customer Success Stories',
         workflow: ['Customer Selection', 'Interview', 'Story Dev', 'Case Study', 'Design', 'Publishing', 'Promotion', 'Sales Integration', 'ROI Docs'],
-        agents: ['content-multiplier', 'listener'],
+        agents: ['writer', 'listener'],
         tools: ['claude', 'notion', 'hubspot'],
       },
       {
         name: 'Brand Strategy',
         workflow: ['Market Position', 'Brand Personality', 'Visual Identity', 'Messaging Tone', 'Guidelines', 'Stakeholder Alignment', 'Implementation', 'Monitoring', 'Consistency'],
-        agents: ['content-multiplier'],
+        agents: ['writer'],
         tools: ['notion', 'claude'],
       },
       {
         name: 'Industry Presence',
         workflow: ['Strategy Def', 'Target ID', 'Sponsorship', 'Speaking', 'Awards', 'Partnerships', 'Execution', 'Brand Leverage', 'ROI'],
-        agents: ['campaign', 'content-multiplier'],
+        agents: ['campaign-builder', 'writer'],
         tools: ['notion', 'exa'],
       },
     ],
@@ -890,25 +855,25 @@ export const LAYERS = [
       {
         name: 'Customer Selection',
         workflow: ['Prospect Def', 'ICP', 'Outreach', 'Interest Confirm', 'Timeline', 'Agreement', 'Scheduling', 'Kickoff', 'Data Collection'],
-        agents: ['listener', 'content-multiplier'],
+        agents: ['listener', 'writer'],
         tools: ['hubspot', 'notion'],
       },
       {
         name: 'Case Study Development',
         workflow: ['Discovery', 'Interview Prep', 'Interview', 'Story Dev', 'ROI Calc', 'Writing', 'Design', 'Review', 'Approval', 'Publishing'],
-        agents: ['content-multiplier'],
+        agents: ['writer'],
         tools: ['claude', 'notion', 'metabase'],
       },
       {
         name: 'Case Study Distribution',
         workflow: ['Published', 'Website', 'Sales Collateral', 'Marketing Integration', 'Event Use', 'Repurposing', 'Social', 'Tracking', 'Analysis'],
-        agents: ['content-multiplier', 'campaign'],
+        agents: ['writer', 'campaign-builder'],
         tools: ['notion', 'hubspot', 'plausible'],
       },
       {
         name: 'Reference Program',
         workflow: ['Candidate ID', 'Outreach', 'Agreement', 'Scheduling', 'Briefing', 'Call Support', 'Feedback', 'Maintenance', 'Engagement'],
-        agents: ['listener', 'content-multiplier'],
+        agents: ['listener', 'writer'],
         tools: ['hubspot', 'notion'],
       },
       {
@@ -920,7 +885,7 @@ export const LAYERS = [
       {
         name: 'Social Proof',
         workflow: ['Testimonial Opportunity', 'Collection', 'Video/Quote', 'Publishing', 'Promotion', 'Website', 'Sales Use', 'Ad Use', 'Monitoring'],
-        agents: ['content-multiplier', 'listener'],
+        agents: ['writer', 'listener'],
         tools: ['claude', 'notion', 'hubspot'],
       },
       {
@@ -932,7 +897,7 @@ export const LAYERS = [
       {
         name: 'User Groups',
         workflow: ['Community Interest', 'Group Launch', 'Recruitment', 'Agenda', 'Meetup Planning', 'Facilitation', 'Networking', 'Engagement', 'Growth'],
-        agents: ['campaign', 'listener'],
+        agents: ['campaign-builder', 'listener'],
         tools: ['notion', 'slack', 'hubspot'],
       },
       {
