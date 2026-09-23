@@ -143,7 +143,7 @@ async function prerender() {
 
     for (const route of routes) {
         try {
-            const { html: appHtml, helmet } = render(route);
+            const { html: appHtml, helmet } = await render(route);
 
             // Inject rendered content + helmet tags into template.
             // Include helmet.script — JSON-LD (<script type="application/ld+json">)
@@ -175,7 +175,7 @@ async function prerender() {
 
     // Custom 404 for unmatched routes (Cloudflare Pages serves dist/404.html).
     try {
-        const { html: nfHtml, helmet } = render('/404');
+        const { html: nfHtml, helmet } = await render('/404');
         const pageHtml = template
             .replace('<!--app-head-->', helmet ? [
                 helmet.title?.toString() || '',
