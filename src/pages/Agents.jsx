@@ -52,7 +52,7 @@ const AgentsPage = () => {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center bg-white text-slate-600 border border-slate-200 px-8 py-4 rounded font-medium hover:bg-slate-50 transition-all"
                         >
-                            Open Crew — specialists on call →
+                            Open the Agent Portal →
                         </a>
                     </div>
                     <p className="text-xs text-slate-400 mt-6">Each agent below has its own page — what it does, what it needs, what you get, and how to try it.</p>
@@ -119,7 +119,7 @@ const AgentsPage = () => {
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center bg-white text-slate-900 px-10 py-4 rounded font-bold hover:bg-slate-100 transition-all"
                         >
-                            Open Crew →
+                            Open the Agent Portal →
                         </a>
                         <Link to="/start-here"
                             className="inline-flex items-center justify-center bg-transparent text-slate-300 border border-slate-600 px-10 py-4 rounded font-medium hover:border-slate-400 transition-all">

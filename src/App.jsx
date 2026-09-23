@@ -94,10 +94,6 @@ export function AppRoutes() {
                 <Route path="/wiki/method/tools" element={<WikiTools />} />
                 <Route path="/wiki/method/agents" element={<WikiAgents />} />
                 <Route path="/wiki/method/about" element={<WikiAbout />} />
-                {/* Legacy redirects into the wiki */}
-                <Route path="/learn" element={<Navigate to="/wiki/guides" replace />} />
-                <Route path="/system" element={<Navigate to="/wiki" replace />} />
-                <Route path="/engine" element={<Navigate to="/wiki" replace />} />
                 <Route path="/diagnostic-score" element={<DiagnosticScore />} />
                 <Route path="/insights/case-studies/:slug" element={<CaseStudyPost />} />
                 <Route path="/insights/:slug" element={<InsightPost />} />
@@ -109,13 +105,11 @@ export function AppRoutes() {
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/thank-you" element={<ThankYou />} />
-                {/* Redirects */}
-                <Route path="/services" element={<Navigate to="/offerings" replace />} />
+                {/* Legacy URLs are 301-redirected in public/_redirects (single source). */}
                 <Route path="/b2b-sales-consulting" element={<B2BSalesConsulting />} />
                 <Route path="/resources/gtm-diagnostic-checklist" element={<GTMDiagnosticChecklist />} />
                 <Route path="/series-b-gtm-strategy" element={<SeriesBGTM />} />
                 <Route path="/gtm-consulting" element={<GTMConsulting />} />
-                <Route path="/playbooks" element={<Navigate to="/insights" replace />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
             <Footer />

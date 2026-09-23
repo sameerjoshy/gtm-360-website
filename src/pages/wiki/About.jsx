@@ -43,7 +43,7 @@ export function About() {
           <a href="https://gtm-360.com" className="text-xs font-bold bg-white text-slate-900 px-4 py-2 rounded-lg hover:bg-slate-100">gtm-360.com</a>
           <a href="https://okr.gtm-360.com" className="text-xs font-bold bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20">Compass · goals</a>
           <a href="https://brain.gtm-360.com" className="text-xs font-bold bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20">Cockpit · execution</a>
-          <a href="https://agents.gtm-360.com" className="text-xs font-bold bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20">Crew · agents</a>
+          <a href="https://agents.gtm-360.com" className="text-xs font-bold bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20">Agent Portal · agents</a>
         </div>
       </div>
     </div>
