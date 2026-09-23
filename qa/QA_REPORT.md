@@ -15,7 +15,7 @@
 |---|---|
 | `qa/routes.mjs` (live crawl) | **283 routes · 0 failures · 0 dead links · 0 console errors · 0 page errors** |
 | `qa/a11y.mjs` (axe, 30 pages) | **0 violations** |
-| `qa/live.mjs` | 24/25 — only F1 (below) |
+| `qa/live.mjs` | **25/25 pass** |
 | 404 behaviour | unknown path → **HTTP 404** with the branded page |
 | Security headers | HSTS, CSP (report-only), X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy |
 | Build/lint | website · crew · cockpit · method all green; prerender 283 + 404 |
@@ -32,7 +32,7 @@
 | F5 | Medium (Perf) | ~1.1 MB main JS; route splitting blocked by `renderToString` | Streaming SSR (`renderToPipeableStream` + `onAllReady`) + route-level `lazy()`. Main bundle **47 KB**. |
 | F6 | Medium (Security) | Missing HSTS + CSP | Added via `public/_headers` (CSP report-only), existing cache rules preserved. |
 | F7 | Low | Method app had one title on every route | Per-route `document.title` (layer/process aware). |
-| F1 | High (SEO) | `content.gtm-360.com` used a client-side JS redirect | Server-side 301 via a Pages Function (`content-engine/apps/web/functions/_middleware.js`). **Pending the next content-engine deploy** (manual; content-engine is not under git). |
+| F1 | High (SEO) | `content.gtm-360.com` used a client-side JS redirect | **Resolved & live** — server-side 301 via a Pages Function (`content-engine/apps/web/functions/_middleware.js`), deployed to the `content-engine` project. `live.mjs` now 25/25. |
 | — | — | Problem pages rendered empty related-reading cards (`[LINKS]` array bug) | Fixed in StalledGrowth / PipelineConversion / ForecastVolatility. |
 | — | — | `/contact` hydration mismatch (Calendly) | Widget now client-only. |
 | — | — | Silent lead loss; GA4 unwired; stale llms.txt; wrong agent count; corrupted canon; crew duplicate portal; switcher duplication; missing labels | All fixed earlier in this engagement. |
