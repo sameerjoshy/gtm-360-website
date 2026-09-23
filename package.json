@@ -5,11 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/check-taxonomy.mjs",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "build:ssr": "vite build --ssr src/entry-server.jsx --config vite.ssr.config.js",
     "build:ssg": "npm run build",
+    "sync:registry": "node scripts/sync-registry.mjs",
+    "check:registry": "node scripts/check-taxonomy.mjs",
     "postbuild": "npm run build:ssr && node prerender.mjs || true"
   },
   "dependencies": {
