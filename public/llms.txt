@@ -12,7 +12,7 @@ GTM-360's revenue system is organized around the customer journey, not the org c
 - **Expansion (Grow)** — retain and grow the book. Health Monitor, Churn Predictor, Expansion Radar.
 - **Operations (Validate)** — trustworthy numbers and learnings. Hygiene, Forecast Analyser, Workflow Builder, Win/Loss.
 
-25 specialist agents total. The loop: Strategy feeds the journey → Marketing attracts → Sales converts → Expansion grows → Operations validates → the learnings enhance next quarter's Strategy. AI is the engine, never the hero — the customer confirms every move.
+41 specialist agents total. The loop: Strategy feeds the journey → Marketing attracts → Sales converts → Expansion grows → Operations validates → the learnings enhance next quarter's Strategy. AI is the engine, never the hero — the customer confirms every move.
 
 ## The Problem We Solve
 
@@ -61,20 +61,16 @@ Q: What is the difference between a GTM consultant and a fractional CRO?
 A: A fractional CRO provides ongoing executive leadership. A GTM consultant runs defined engagements that end in a working system — and then the system keeps running.
 
 Q: How does the agentic system work?
-A: Five engines, 25 specialist agents, each following a four-step chain: gather real data, validate quality, synthesise with an LLM, verify output. Every agent has defined inputs, outputs, gates, and handoffs. Nothing executes without your approval.
+A: Five engines, 41 specialist agents, each following a four-step chain: gather real data, validate quality, synthesise with an LLM, verify output. Every agent has defined inputs, outputs, gates, and handoffs. Nothing executes without your approval.
 
 ## Contact
 
 Website: https://gtm-360.com
 Start with the diagnostic: https://gtm-360.com/start-here
-The system: https://gtm-360.com/system
-The engine: https://gtm-360.com/engine
+The operating model: https://gtm-360.com/wiki/method
+The knowledge base: https://gtm-360.com/wiki
+The Agent Portal: https://agents.gtm-360.com
 Insights and case studies: https://gtm-360.com/insights
-
-User-agent: *
-Allow: /
-
-Sitemap: https://gtm-360.com/sitemap.xml
 
 ## Additional Resources
 

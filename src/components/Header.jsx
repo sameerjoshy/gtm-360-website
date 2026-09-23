@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { Menu, X } from 'lucide-react';
+import { track } from '../lib/analytics';
 
 /**
  * Marketing site header.
@@ -58,10 +59,12 @@ const Header = () => {
                 {/* Right: the two entries */}
                 <div className="hidden lg:flex items-center gap-3">
                     <Link to={KNOWLEDGE_URL}
+                        onClick={() => track('cta_click', { label: 'Knowledge', location: 'header' })}
                         className="bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-blue-700 transition-all">
                         Knowledge
                     </Link>
                     <a href={AGENT_PORTAL_URL}
+                        onClick={() => track('cta_click', { label: 'Agent Portal', location: 'header' })}
                         className="bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-slate-700 transition-all">
                         Agent Portal
                     </a>
@@ -84,8 +87,8 @@ const Header = () => {
                     ))}
                     <Link to="/contact" className="py-3.5 text-base font-medium text-slate-600 border-b border-slate-50">Talk to us</Link>
                     <div className="pt-5 flex flex-col gap-3">
-                        <a href={AGENT_PORTAL_URL} className="bg-slate-900 text-white text-center py-3.5 rounded-lg font-bold block">Agent Portal</a>
-                        <Link to={KNOWLEDGE_URL} className="bg-blue-600 text-white text-center py-3.5 rounded-lg font-bold block">Knowledge</Link>
+                        <a href={AGENT_PORTAL_URL} onClick={() => track('cta_click', { label: 'Agent Portal', location: 'header-mobile' })} className="bg-slate-900 text-white text-center py-3.5 rounded-lg font-bold block">Agent Portal</a>
+                        <Link to={KNOWLEDGE_URL} onClick={() => track('cta_click', { label: 'Knowledge', location: 'header-mobile' })} className="bg-blue-600 text-white text-center py-3.5 rounded-lg font-bold block">Knowledge</Link>
                     </div>
                 </div>
             )}

@@ -8,8 +8,8 @@ const AgentsPage = () => {
     return (
         <div className="font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
             <SEO
-                title="Specialist Agents | GTM-360 — 25 agents, 5 engines, evidence-first"
-                description="GTM-360's specialist agents answer revenue questions with evidence, not opinion. Strategy, Marketing, Sales, Expansion, Operations — 25 agents in 5 engines, every answer grounded in your data."
+                title={`Specialist Agents | GTM-360 — ${AGENT_TOTAL} agents, ${ENGINES.length} engines, evidence-first`}
+                description={`GTM-360's specialist agents answer revenue questions with evidence, not opinion. Strategy, Marketing, Sales, Expansion, Operations — ${AGENT_TOTAL} agents in ${ENGINES.length} engines, every answer grounded in your data.`}
                 canonical="https://gtm-360.com/agents"
             />
             <Helmet>
@@ -19,7 +19,7 @@ const AgentsPage = () => {
                         "@type": "Service",
                         "name": "GTM-360 Specialist Agents",
                         "provider": { "@type": "Organization", "name": "GTM-360" },
-                        "description": "25 specialist agents across five engines — Strategy, Marketing, Sales, Expansion, Operations. Every agent follows a four-step chain: gather real data, validate quality, synthesise with an LLM, verify output. Evidence-first answers on demand.",
+                        "description": `${AGENT_TOTAL} specialist agents across five engines — Strategy, Marketing, Sales, Expansion, Operations. Every agent follows a four-step chain: gather real data, validate quality, synthesise with an LLM, verify output. Evidence-first answers on demand.`,
                     })}
                 </script>
             </Helmet>

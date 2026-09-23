@@ -95,7 +95,7 @@ function writeSitemap() {
     const priorityFor = (route) => {
         if (route === '/') return '1.0';
         if (route === '/start-here') return '0.9';
-        if (['/how-we-work', '/system', '/engine', '/agents', '/learn', '/about'].includes(route)) return '0.8';
+        if (['/how-we-work', '/wiki', '/agents', '/about'].includes(route)) return '0.8';
         if (route.endsWith('/guide')) return '0.7';
         if (route.startsWith('/agents/')) return '0.6';
         return '0.6';

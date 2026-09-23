@@ -1,28 +1,37 @@
 #!/usr/bin/env node
-// GTM-360 cross-app smoke test.
-// Checks every product URL is live, the unified brand (Compass · Cockpit · Crew)
-// is present in every shipped bundle, and no route in the sitemap is dead.
-// No browser needed — pure fetch. Run locally or in CI (GitHub Actions).
+// GTM-360 cross-surface smoke test.
+//
+// Three surfaces (IA): marketing site + knowledge base + Agent Portal.
+//   gtm-360.com            marketing + /wiki knowledge base
+//   agents.gtm-360.com     Agent Portal (the single agent surface)
+//   okr / brain            Compass / Cockpit
+//
+// Also asserts the retired URLs still 301 to their canonical destination, and
+// that every URL in the sitemap resolves. Pure fetch — no browser. Run locally
+// or in CI.
 
-const PRODUCTS = [
-  { label: 'Compass (okr)', url: 'https://okr.gtm-360.com', mustContain: ['Compass', 'Cockpit', 'Crew'] },
-  { label: 'Cockpit (brain)', url: 'https://brain.gtm-360.com/cockpit', mustContain: ['Compass', 'Cockpit', 'Crew'] },
-  { label: 'Crew (agents)', url: 'https://agents.gtm-360.com', mustContain: ['Compass', 'Cockpit', 'Crew'] },
-  { label: 'Marketing (gtm-360.com)', url: 'https://gtm-360.com', mustContain: ['Compass', 'Cockpit', 'Crew', 'The Revenue Operating System'] },
-  { label: 'Hub (/system)', url: 'https://gtm-360.com/system', mustContain: ['Compass', 'Cockpit', 'Crew', 'Revenue Operating System'] },
-  { label: 'Revenue OS (hq)', url: 'https://hq.gtm-360.com', mustContain: ['Compass', 'Cockpit', 'Crew'] },
-  { label: 'Operating Model (gtm)', url: 'https://gtm.gtm-360.com', mustContain: ['Compass', 'Cockpit', 'Crew'] },
+const SURFACES = [
+  { label: 'Marketing', url: 'https://gtm-360.com', mustContain: ['GTM-360'] },
+  { label: 'Knowledge base', url: 'https://gtm-360.com/wiki', mustContain: ['GTM-360'] },
+  { label: 'Agents (marketing)', url: 'https://gtm-360.com/agents', mustContain: ['GTM-360'] },
+  { label: 'Agent Portal', url: 'https://agents.gtm-360.com', mustContain: ['GTM-360'] },
+  { label: 'Compass (okr)', url: 'https://okr.gtm-360.com', mustContain: ['GTM-360'] },
+  { label: 'Cockpit (brain)', url: 'https://brain.gtm-360.com/cockpit', mustContain: ['GTM-360'] },
 ]
 
-const timeout = (ms) => new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), ms))
+// Retired URLs must keep 301-ing to their canonical destination (never 404).
+const REDIRECTS = [
+  { from: 'https://gtm.gtm-360.com', to: 'gtm-360.com/wiki' },
+  { from: 'https://gtm-360-agents.pages.dev', to: 'agents.gtm-360.com' },
+  { from: 'https://content.gtm-360.com', to: 'agents.gtm-360.com' },
+]
 
-async function get(url) {
+const get = async (url, opts = {}) => {
   const ctrl = new AbortController()
   const t = setTimeout(() => ctrl.abort(), 25000)
   try {
-    const res = await fetch(url, { redirect: 'follow', signal: ctrl.signal })
-    const text = await res.text()
-    return { status: res.status, text }
+    const res = await fetch(url, { redirect: 'follow', signal: ctrl.signal, ...opts })
+    return { status: res.status, text: await res.text(), headers: res.headers }
   } finally {
     clearTimeout(t)
   }
@@ -30,41 +39,50 @@ async function get(url) {
 
 const failures = []
 
-async function checkProduct(p) {
+async function checkSurface(s) {
   try {
-    const { status, text } = await get(p.url)
+    const { status, text } = await get(s.url)
     if (status !== 200) throw new Error(`HTTP ${status}`)
-    const jsMatch = text.match(/src="(\/assets\/[^"]+\.js)"/)
-    let bundle = text
-    if (jsMatch) {
-      const bundleUrl = new URL(jsMatch[1], p.url).href
-      const { text: js } = await get(bundleUrl)
-      bundle = js
-    }
-    const missing = p.mustContain.filter((s) => !bundle.includes(s))
-    if (missing.length) throw new Error(`missing brand strings: ${missing.join(', ')}`)
-    console.log(`✓ ${p.label} — live, brand present`)
+    const missing = s.mustContain.filter((c) => !text.includes(c))
+    if (missing.length) throw new Error(`missing: ${missing.join(', ')}`)
+    console.log(`✓ ${s.label} — live`)
   } catch (e) {
-    failures.push(`✗ ${p.label} — ${e.message}`)
+    failures.push(`✗ ${s.label} (${s.url}) — ${e.message}`)
+  }
+}
+
+async function checkRedirect(r) {
+  try {
+    const res = await fetch(r.from, { redirect: 'manual' })
+    const loc = res.headers.get('location') || ''
+    if (![301, 302, 307, 308].includes(res.status)) throw new Error(`expected 3xx, got ${res.status}`)
+    if (!loc.includes(r.to)) throw new Error(`location "${loc}" does not include "${r.to}"`)
+    console.log(`✓ ${r.from} → ${r.to}`)
+  } catch (e) {
+    failures.push(`✗ redirect ${r.from} — ${e.message}`)
   }
 }
 
 async function checkSitemap() {
-  const { status, text } = await get('https://gtm-360.com/sitemap.xml')
-  if (status !== 200) { failures.push('✗ sitemap.xml HTTP ' + status); return }
-  const urls = [...text.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])
-  for (const u of urls) {
-    const { status } = await get(u)
-    if (status !== 200 && status !== 301 && status !== 308) failures.push(`✗ sitemap route ${u} → ${status}`)
+  try {
+    const { status, text } = await get('https://gtm-360.com/sitemap.xml')
+    if (status !== 200) throw new Error('HTTP ' + status)
+    const urls = [...text.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])
+    for (const u of urls) {
+      const res = await fetch(u, { redirect: 'manual' })
+      if (res.status >= 400) failures.push(`✗ sitemap route ${u} → ${res.status}`)
+    }
+    console.log(`✓ sitemap — ${urls.length} routes checked`)
+  } catch (e) {
+    failures.push(`✗ sitemap — ${e.message}`)
   }
-  console.log(`✓ sitemap — ${urls.length} routes checked`)
 }
 
-await Promise.all([...PRODUCTS.map(checkProduct), checkSitemap()])
+await Promise.all([...SURFACES.map(checkSurface), ...REDIRECTS.map(checkRedirect), checkSitemap()])
+
 if (failures.length) {
   console.log('\nFAILURES:')
   failures.forEach((f) => console.log(f))
   process.exit(1)
-} else {
-  console.log('\n✅ All products live, brand unified, no dead routes.')
 }
+console.log('\n✅ All surfaces live, retired URLs 301, no dead sitemap routes.')

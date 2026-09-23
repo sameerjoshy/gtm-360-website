@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { AGENT_PORTAL_URL, KNOWLEDGE_URL } from './Header';
+import { track } from '../lib/analytics';
 
 const SUBSTACK_URL = "https://gtm360.substack.com/?r=65ta79&utm_campaign=pub-share-checklist";
 
@@ -36,10 +37,12 @@ const Footer = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3">
                         <Link to={KNOWLEDGE_URL}
+                            onClick={() => track('cta_click', { label: 'Knowledge', location: 'footer' })}
                             className="bg-blue-600 text-white px-6 py-3 rounded-lg text-sm font-bold hover:bg-blue-700 transition-all text-center">
                             Knowledge
                         </Link>
                         <a href={AGENT_PORTAL_URL}
+                            onClick={() => track('cta_click', { label: 'Agent Portal', location: 'footer' })}
                             className="bg-slate-900 text-white px-6 py-3 rounded-lg text-sm font-bold hover:bg-slate-700 transition-all text-center">
                             Agent Portal
                         </a>

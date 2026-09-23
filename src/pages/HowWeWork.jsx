@@ -100,7 +100,7 @@ const HowWeWork = () => {
                             duration: "$4–8K / month",
                             body: "After the build, the loop runs between engagements. Strategy aims, Marketing attracts, Sales converts, Expansion grows, Operations validates — AI does the work, you confirm every move.\n\nThis is the part most firms can't offer. They hand you a roadmap and leave. We built the system, so it can stay.",
                             gets: ["The loop running on your data", "Weekly agent work, your approval", "Quarterly operator review", "The discipline doesn't stop when we leave"],
-                            link: "/system",
+                            link: "/wiki",
                             cta: "See the system"
                         },
                         {
@@ -110,7 +110,7 @@ const HowWeWork = () => {
                             duration: "Expansion",
                             body: "Every quarter, the learnings feed back — what retained, what churned, what grew, what the numbers said. The loop enhances next quarter's strategy.\n\nNew engines, deeper handoffs, better numbers. The system compounds.",
                             gets: ["Quarterly learning loop", "New agents as the roadmap ships", "Deeper automation on proven handoffs", "Numbers that keep getting more trustworthy"],
-                            link: "/engine",
+                            link: "/wiki/method",
                             cta: "Explore the engine"
                         }
                     ].map((phase, i) => (

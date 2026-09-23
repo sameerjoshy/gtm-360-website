@@ -1,7 +1,7 @@
 # Legacy URLs -> canonical destinations. Single source for server-side redirects.
 # The client no longer declares these (App.jsx only has the SPA catch-all).
 /system     /wiki          301
-/engine     /wiki          301
+/engine     /wiki/method   301
 /learn      /wiki/guides   301
 /services   /offerings     301
 /playbooks  /insights      301

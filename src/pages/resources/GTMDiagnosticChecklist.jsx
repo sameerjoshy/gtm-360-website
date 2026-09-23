@@ -297,7 +297,7 @@ const GTMDiagnosticChecklist = () => {
                                     </span>
                                 ))}
                             </div>
-                            <Link to="/engine" className="text-sm font-bold text-indigo-300 hover:text-indigo-200 underline underline-offset-4">
+                            <Link to="/wiki/method" className="text-sm font-bold text-indigo-300 hover:text-indigo-200 underline underline-offset-4">
                                 See the five engines →
                             </Link>
                         </div>

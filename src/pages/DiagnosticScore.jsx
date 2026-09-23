@@ -159,7 +159,7 @@ const DiagnosticScore = () => {
                                     </span>
                                 ))}
                             </div>
-                            <Link to="/engine" className="text-sm font-bold text-indigo-600 hover:underline">
+                            <Link to="/wiki/method" className="text-sm font-bold text-indigo-600 hover:underline">
                                 See what's inside this engine →
                             </Link>
                         </div>

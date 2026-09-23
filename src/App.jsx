@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 // Core pages
 import Home from './pages/Home';
@@ -24,6 +24,7 @@ import { Tools as WikiTools } from './pages/wiki/Tools';
 import { Agents as WikiAgents } from './pages/wiki/Agents';
 import { About as WikiAbout } from './pages/wiki/About';
 import DiagnosticScore from './pages/DiagnosticScore';
+import NotFound from './pages/NotFound';
 
 // Engagement
 import StartHere from './pages/StartHere';
@@ -53,11 +54,13 @@ import GTMDiagnosticChecklist from './pages/resources/GTMDiagnosticChecklist';
 // Layout
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { trackPageView } from './lib/analytics';
 
 function ScrollToTop() {
     const { pathname } = useLocation();
     useEffect(() => {
         if (typeof window !== 'undefined') window.scrollTo(0, 0);
+        trackPageView(pathname, document.title);
     }, [pathname]);
     return null;
 }
@@ -110,7 +113,7 @@ export function AppRoutes() {
                 <Route path="/resources/gtm-diagnostic-checklist" element={<GTMDiagnosticChecklist />} />
                 <Route path="/series-b-gtm-strategy" element={<SeriesBGTM />} />
                 <Route path="/gtm-consulting" element={<GTMConsulting />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </>

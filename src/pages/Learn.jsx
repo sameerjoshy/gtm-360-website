@@ -46,7 +46,7 @@ const Learn = () => {
                             className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded font-bold hover:bg-slate-700 transition-all">
                             Browse the agents →
                         </Link>
-                        <Link to="/engine"
+                        <Link to="/wiki/method"
                             className="inline-flex items-center justify-center bg-white text-slate-600 border border-slate-200 px-8 py-4 rounded font-medium hover:bg-slate-50 transition-all">
                             See the engine →
                         </Link>

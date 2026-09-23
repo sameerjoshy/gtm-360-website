@@ -240,6 +240,7 @@ const RevenueLeakageCalculator = () => {
                                             {status === 'submitting' ? '...' : 'Send'}
                                         </button>
                                     </form>
+                                    {status === 'error' && <p className="text-red-600 text-xs mt-2">Something went wrong. Email us at hello@gtm-360.com.</p>}
                                 </div>
                             )}
 

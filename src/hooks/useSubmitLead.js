@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { track } from '../lib/analytics';
 
 // Configuration (Shared)
 const PORTAL_ID = '244225374';
@@ -44,6 +45,7 @@ const useSubmitLead = () => {
 
             if (response.ok) {
                 setStatus('success');
+                track('generate_lead', { type });
                 // Plausible goal — lead submitted (configure the goal in Plausible
                 // dashboard as "Lead submitted" to see funnel conversions).
                 if (typeof window !== 'undefined' && window.plausible) {
@@ -55,8 +57,7 @@ const useSubmitLead = () => {
             }
         } catch (error) {
             console.error('HubSpot Submission Error:', error);
-            // In dev mode, we might want to simulate success if CORS fails
-            setStatus('success');
+            setStatus('error');
             return false;
         }
     };
