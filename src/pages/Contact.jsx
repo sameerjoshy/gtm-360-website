@@ -1,8 +1,22 @@
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 
 const Contact = () => {
+    // The Calendly embed injects DOM into its container. Rendering that container
+    // only after mount (and loading the widget script imperatively) keeps hydration
+    // clean — the third-party markup is never compared against server HTML.
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+        setMounted(true);
+        const s = document.createElement('script');
+        s.src = 'https://assets.calendly.com/assets/external/widget.js';
+        s.async = true;
+        document.body.appendChild(s);
+        return () => { document.body.removeChild(s); };
+    }, []);
+
     return (
         <div className="min-h-screen bg-white font-sans selection:bg-indigo-100 selection:text-indigo-900">
             <Helmet>
@@ -30,16 +44,11 @@ const Contact = () => {
                     </p>
 
                     <div className="bg-slate-50 p-10 rounded-xl border border-slate-200 mb-8">
-                        {/* Calendly inline embed */}
+                        {/* Calendly inline embed — client-only (see note above) */}
                         <div
-                            className="calendly-inline-widget"
-                            data-url="https://calendly.com/sameer-gtm-360/new-meeting?hide_gdpr_banner=1&primary_color=0f172a"
+                            className={mounted ? 'calendly-inline-widget' : undefined}
+                            data-url={mounted ? 'https://calendly.com/sameer-gtm-360/new-meeting?hide_gdpr_banner=1&primary_color=0f172a' : undefined}
                             style={{ minWidth: '320px', height: '700px' }}
-                        />
-                        <script
-                            type="text/javascript"
-                            src="https://assets.calendly.com/assets/external/widget.js"
-                            async
                         />
                     </div>
 
