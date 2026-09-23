@@ -9,7 +9,21 @@ import HowWeWork from './pages/HowWeWork';
 import Problems from './pages/Problems';
 import Insights from './pages/Insights';
 import Agents from './pages/Agents';
-import System from './pages/System';
+import AgentPage from './pages/agents/AgentPage';
+import AgentGuide from './pages/agents/AgentGuide';
+import Learn from './pages/Learn';
+import Offerings from './pages/Offerings';
+import Wiki from './pages/Wiki';
+import Playbooks from './pages/wiki/Playbooks';
+import PlaybookPost from './pages/wiki/PlaybookPost';
+import Glossary from './pages/wiki/Glossary';
+import { Home as WikiHome } from './pages/wiki/Home';
+import WikiLayer from './pages/wiki/Layer';
+import WikiProcess from './pages/wiki/Process';
+import { Tools as WikiTools } from './pages/wiki/Tools';
+import { Agents as WikiAgents } from './pages/wiki/Agents';
+import { About as WikiAbout } from './pages/wiki/About';
+import DiagnosticScore from './pages/DiagnosticScore';
 
 // Engagement
 import StartHere from './pages/StartHere';
@@ -65,7 +79,26 @@ export function AppRoutes() {
                 <Route path="/problems/forecast-volatility" element={<ForecastVolatility />} />
                 <Route path="/insights" element={<Insights />} />
                 <Route path="/agents" element={<Agents />} />
-                <Route path="/system" element={<System />} />
+                <Route path="/agents/:engine/:agent" element={<AgentPage />} />
+                <Route path="/agents/:engine/:agent/guide" element={<AgentGuide />} />
+                <Route path="/offerings" element={<Offerings />} />
+                {/* Knowledge base (wiki) */}
+                <Route path="/wiki" element={<Wiki />} />
+                <Route path="/wiki/guides" element={<Learn />} />
+                <Route path="/wiki/playbooks" element={<Playbooks />} />
+                <Route path="/wiki/playbooks/:slug" element={<PlaybookPost />} />
+                <Route path="/wiki/glossary" element={<Glossary />} />
+                <Route path="/wiki/method" element={<WikiHome />} />
+                <Route path="/wiki/method/layer/:id" element={<WikiLayer />} />
+                <Route path="/wiki/method/process/:slug" element={<WikiProcess />} />
+                <Route path="/wiki/method/tools" element={<WikiTools />} />
+                <Route path="/wiki/method/agents" element={<WikiAgents />} />
+                <Route path="/wiki/method/about" element={<WikiAbout />} />
+                {/* Legacy redirects into the wiki */}
+                <Route path="/learn" element={<Navigate to="/wiki/guides" replace />} />
+                <Route path="/system" element={<Navigate to="/wiki" replace />} />
+                <Route path="/engine" element={<Navigate to="/wiki" replace />} />
+                <Route path="/diagnostic-score" element={<DiagnosticScore />} />
                 <Route path="/insights/case-studies/:slug" element={<CaseStudyPost />} />
                 <Route path="/insights/:slug" element={<InsightPost />} />
                 <Route path="/start-here" element={<StartHere />} />
@@ -77,7 +110,7 @@ export function AppRoutes() {
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/thank-you" element={<ThankYou />} />
                 {/* Redirects */}
-                <Route path="/services" element={<Navigate to="/how-we-work" replace />} />
+                <Route path="/services" element={<Navigate to="/offerings" replace />} />
                 <Route path="/b2b-sales-consulting" element={<B2BSalesConsulting />} />
                 <Route path="/resources/gtm-diagnostic-checklist" element={<GTMDiagnosticChecklist />} />
                 <Route path="/series-b-gtm-strategy" element={<SeriesBGTM />} />

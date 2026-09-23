@@ -1,0 +1,206 @@
+{
+  "competitive-landscape-monitoring": {
+    "stages": [
+      {
+        "name": "Competitor Universe Definition",
+        "objective": "Identify all competitors to track",
+        "input": "Market data, customer data, analyst reports",
+        "output": "Defined competitor list with categories",
+        "activities": "Identify direct competitors, identify adjacent competitors, identify potential competitors, segment by competitive threat level, establish monitoring criteria",
+        "tools": "Competitive intelligence platforms",
+        "roles": "Product marketing (identification), Competitive intelligence (prioritization)",
+        "successMetric": "Competitor universe defined with 20-30+ competitors identified",
+        "decisionPoints": "Right competitors tracked? Threat levels appropriate? Emerging competitors identified?",
+        "qualityGate": "Competitor list approved, categories established"
+      },
+      {
+        "name": "Continuous Monitoring Setup",
+        "objective": "Establish automated monitoring of competitors",
+        "input": "Competitor list, information sources, monitoring tools",
+        "output": "Monitoring system active across multiple sources",
+        "activities": "Set up automated news monitoring, set up website tracking, set up social listening, configure job posting tracking, establish sales intelligence collection",
+        "tools": "Monitoring platforms, news aggregators, social listening tools",
+        "roles": "Operations (setup), Competitive intelligence (validation)",
+        "successMetric": "Monitoring active for all competitors across 5+ sources",
+        "decisionPoints": "Monitoring comprehensive? Signal noise ratio acceptable? Alert frequency right?",
+        "qualityGate": "Monitoring system live, baseline established"
+      },
+      {
+        "name": "Intelligence Gathering & Analysis",
+        "objective": "Collect and analyze competitive intelligence",
+        "input": "Monitored data, wins/losses, customer feedback",
+        "output": "Competitive analysis report with insights",
+        "activities": "Review monitoring alerts, conduct win/loss analysis quarterly, gather sales team feedback, synthesize insights, identify competitive threats, identify market opportunities",
+        "tools": "Analysis tools, win/loss framework",
+        "roles": "Competitive intelligence (analysis), Sales (input), Product (response)",
+        "successMetric": "Quarterly competitive analysis with 3-5 key insights",
+        "decisionPoints": "Insights actionable? Threats real? Opportunities clear? Response strategy needed?",
+        "qualityGate": "Analysis complete, briefing prepared for leadership"
+      },
+      {
+        "name": "Competitive Intelligence Portal",
+        "objective": "Make competitive intelligence accessible to entire organization",
+        "input": "Competitive analysis, monitoring data, win/loss insights",
+        "output": "Intelligence portal with easy access for sales/marketing/product",
+        "activities": "Create competitive portal, document competitor profiles, create battle cards, document objection handling, establish search/access capabilities",
+        "tools": "Knowledge management systems, portal platforms",
+        "roles": "Operations (build), Competitive intelligence (content)",
+        "successMetric": "Portal live with competitor profiles and battle cards for top 10 competitors",
+        "decisionPoints": "Portal easy to use? Content comprehensive? Adoption high? Update frequency sufficient?",
+        "qualityGate": "Portal live, team trained, adoption tracking started"
+      },
+      {
+        "name": "Competitive Alerts & Briefings",
+        "objective": "Rapidly communicate significant competitive intelligence",
+        "input": "Monitoring data, analysis",
+        "output": "Alert system and regular briefings active",
+        "activities": "Establish alert criteria for significant news, send urgent alerts to sales, create monthly competitive briefing, identify strategic competitive threats, brief leadership quarterly",
+        "tools": "Alert systems, briefing templates",
+        "roles": "Competitive intelligence (alerts), Sales (response)",
+        "successMetric": "Alert system active, briefings sent monthly",
+        "decisionPoints": "Alert frequency appropriate? Content actionable? Sales responding? Briefing cadence right?",
+        "qualityGate": "Alert system working, briefing cadence established"
+      }
+    ]
+  },
+  "win-loss-analysis-program": {
+    "stages": [
+      {
+        "name": "Deal Selection for Analysis",
+        "objective": "Identify deals for win/loss interviews",
+        "input": "CRM data, closed deals, deal outcomes",
+        "output": "Deal list for interview with contact information",
+        "activities": "Identify recent wins for customer interviews, identify recent losses for customer/competitor interviews, ensure geographic/vertical balance, prioritize strategic deals",
+        "tools": "CRM, deal tracking",
+        "roles": "Sales (identification), Operations (coordination)",
+        "successMetric": "Deal list with 40-50 deals identified quarterly",
+        "decisionPoints": "Mix of wins/losses? Representative sample? Contact information quality?",
+        "qualityGate": "Deal list finalized, interview plan created"
+      },
+      {
+        "name": "Interview Coordination & Scheduling",
+        "objective": "Coordinate and schedule win/loss interviews",
+        "input": "Deal list, contact information, interview guides",
+        "output": "Scheduled interviews with prepared teams",
+        "activities": "Contact customers/prospects, schedule interviews, brief interview team, prepare questions, organize logistics",
+        "tools": "Calendar management, interview templates",
+        "roles": "Operations (scheduling), Sales/product (interviews)",
+        "successMetric": "40-50 interviews scheduled (70%+ acceptance rate)",
+        "decisionPoints": "Interview availability? Team prepared? Guide comprehensive? Incentives working?",
+        "qualityGate": "Interviews scheduled, team briefed, recordings planned"
+      },
+      {
+        "name": "Interview Execution",
+        "objective": "Conduct win/loss interviews",
+        "input": "Scheduled interviews, interview guides, recording setup",
+        "output": "Interview recordings and notes",
+        "activities": "Conduct interviews, take detailed notes, record for reference, stay neutral and curious, explore decision drivers",
+        "tools": "Video conferencing, recording tools",
+        "roles": "Sales/product leaders (interviews)",
+        "successMetric": "Interviews conducted with recordings captured",
+        "decisionPoints": "Candid responses? Key insights gathered? Notes comprehensive? Recording quality?",
+        "qualityGate": "Interviews complete, recordings and notes organized"
+      },
+      {
+        "name": "Analysis & Insight Synthesis",
+        "objective": "Analyze interview data and identify patterns",
+        "input": "Interview recordings, notes, CRM data",
+        "output": "Win/loss analysis report with insights",
+        "activities": "Transcribe interviews, code responses by theme, identify patterns, analyze wins vs. losses, identify competitive differentiators, identify product gaps, identify messaging gaps",
+        "tools": "Analysis software, transcription services",
+        "roles": "Competitive intelligence (analysis), Product (interpretation)",
+        "successMetric": "Analysis report with 5-10 key insights",
+        "decisionPoints": "Patterns clear? Insights actionable? Product gaps real? Sales process issues?",
+        "qualityGate": "Analysis complete, insights validated"
+      },
+      {
+        "name": "Insight Communication & Action Items",
+        "objective": "Share insights and drive action across organization",
+        "input": "Analysis report, insights, recommendations",
+        "output": "Communicated insights with documented action items",
+        "activities": "Brief leadership, create executive summary, brief sales team, brief product team, identify action items, assign owners, track actions",
+        "tools": "Briefing templates, action tracking",
+        "roles": "Operations (communication), Leadership (action items)",
+        "successMetric": "Insights communicated to 3+ departments, action items assigned",
+        "decisionPoints": "Communication effective? Actions clear? Ownership assigned? Timeline reasonable?",
+        "qualityGate": "Insights communicated, action items assigned and tracked"
+      }
+    ]
+  },
+  "buyer-persona-development": {
+    "stages": [
+      {
+        "name": "Research Planning",
+        "objective": "Plan persona research approach",
+        "input": "Product segments, customer data, interview availability",
+        "output": "Persona research plan with methodology",
+        "activities": "Identify key personas needed, define research methodology, plan interview approach, identify data sources, establish timeline",
+        "tools": "Research planning templates",
+        "roles": "Product marketing (lead), Market research (methodology)",
+        "successMetric": "Persona research plan documented",
+        "decisionPoints": "Research comprehensive? Methodology sound? Timelines realistic?",
+        "qualityGate": "Research plan approved, interviewing begins"
+      },
+      {
+        "name": "Data Collection",
+        "objective": "Gather qualitative and quantitative data on personas",
+        "input": "Persona research plan, interview guides, customer data",
+        "output": "Interview transcripts and notes with customer data",
+        "activities": "Conduct customer interviews, interview internal team, gather customer data, survey customer base, research industry analysts",
+        "tools": "Interview platforms, survey tools",
+        "roles": "Market research (execution), Sales (customer access)",
+        "successMetric": "20-30 interviews conducted, survey of 100+ customers, internal team interviews",
+        "decisionPoints": "Interview diversity? Representative? Customer candid? Data quality?",
+        "qualityGate": "Interview data collected, survey complete"
+      },
+      {
+        "name": "Pattern Analysis & Synthesis",
+        "objective": "Identify patterns and synthesize into personas",
+        "input": "Interview data, customer data, internal team input",
+        "output": "Persona profiles with demographics and psychographics",
+        "activities": "Code interview data by theme, identify demographic patterns, identify goal patterns, identify challenge patterns, identify success metric patterns",
+        "tools": "Analysis tools, persona templates",
+        "roles": "Market research (analysis), Product marketing (synthesis)",
+        "successMetric": "3-5 distinct personas identified with clear differentiation",
+        "decisionPoints": "Personas distinct? Differentiation clear? Realistic? Data-backed?",
+        "qualityGate": "Persona profiles drafted"
+      },
+      {
+        "name": "Persona Documentation",
+        "objective": "Document personas with rich detail and context",
+        "input": "Persona profiles, customer quotes, research findings",
+        "output": "Documented persona profiles with visual representations",
+        "activities": "Write persona narratives, create persona images, document goals/challenges/success metrics, document buying process, document concerns/objections",
+        "tools": "Persona templates, design tools",
+        "roles": "Product marketing (documentation), Design (visualization)",
+        "successMetric": "3-5 detailed persona documents created",
+        "decisionPoints": "Documents comprehensive? Relatable? Usable by sales/marketing? Visual engaging?",
+        "qualityGate": "Personas documented, ready for validation"
+      },
+      {
+        "name": "Persona Validation",
+        "objective": "Validate personas with customers and internal team",
+        "input": "Persona documents, validation interviews",
+        "output": "Validated persona profiles",
+        "activities": "Interview customers to validate personas, gather sales team feedback, gather marketing team feedback, refine based on input",
+        "tools": "Validation templates",
+        "roles": "Sales (validation), Product marketing (refinement)",
+        "successMetric": "Personas validated by customers and sales team",
+        "decisionPoints": "Personas resonant? Recognized by team? Actionable?",
+        "qualityGate": "Personas validated and refined"
+      },
+      {
+        "name": "Persona Activation",
+        "objective": "Integrate personas into sales/marketing processes",
+        "input": "Validated personas, sales/marketing strategies",
+        "output": "Personas embedded in go-to-market approach",
+        "activities": "Brief sales team on personas, update sales collateral with persona targeting, update marketing messaging by persona, create persona-specific content, establish persona usage metrics",
+        "tools": "Communication platforms",
+        "roles": "Sales leadership (adoption), Marketing (integration)",
+        "successMetric": "Personas adopted in sales/marketing processes",
+        "decisionPoints": "Team adoption high? Content updated? Metrics tracked? Personas being used?",
+        "qualityGate": "Personas actively used in go-to-market efforts"
+      }
+    ]
+  }
+}

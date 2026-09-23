@@ -1,0 +1,330 @@
+{
+  "content-radar": {
+    "id": "content-radar",
+    "name": "Content Radar",
+    "videoUrl": "/videos/agents/content-radar.mp4",
+    "posterUrl": "/videos/agents/content-radar-poster.jpg",
+    "role": "Whitespace scanner",
+    "vibe": "Finds the question nobody has answered well yet."
+  },
+  "seo-analyzer": {
+    "id": "seo-analyzer",
+    "name": "SEO Analyzer",
+    "videoUrl": "/videos/agents/seo-analyzer.mp4",
+    "posterUrl": "/videos/agents/seo-analyzer-poster.jpg",
+    "role": "Search visibility & AEO audit",
+    "vibe": "Be the answer when the question matters."
+  },
+  "diagnostic": {
+    "id": "diagnostic",
+    "name": "Diagnostic",
+    "videoUrl": "/videos/agents/diagnostic.mp4",
+    "posterUrl": "/videos/agents/diagnostic-poster.jpg",
+    "role": "GTM health assessment",
+    "vibe": "Surfaces the truth the team has been avoiding, with receipts."
+  },
+  "planning-cycle": {
+    "id": "planning-cycle",
+    "name": "Planning Cycle",
+    "videoUrl": "/videos/agents/planning-cycle.mp4",
+    "posterUrl": "/videos/agents/planning-cycle-poster.jpg",
+    "role": "Quarterly operating loop",
+    "vibe": "Turns the bruises of last quarter into the focus of this one."
+  },
+  "goal-designer": {
+    "id": "goal-designer",
+    "name": "Goal Designer",
+    "videoUrl": "/videos/agents/goal-designer.mp4",
+    "posterUrl": "/videos/agents/goal-designer-poster.jpg",
+    "role": "OKR & ambition design",
+    "vibe": "Makes targets ambitious enough to mean something."
+  },
+  "goal-integrity": {
+    "id": "goal-integrity",
+    "name": "Goal Integrity",
+    "videoUrl": "/videos/agents/goal-integrity.mp4",
+    "posterUrl": "/videos/agents/goal-integrity-poster.jpg",
+    "role": "Alignment & gaming monitor",
+    "vibe": "Proves the math and flags the sandbagging."
+  },
+  "icp-clarifier": {
+    "id": "icp-clarifier",
+    "name": "ICP Clarifier",
+    "videoUrl": "/videos/agents/icp-clarifier.mp4",
+    "posterUrl": "/videos/agents/icp-clarifier-poster.jpg",
+    "role": "Account targeting",
+    "vibe": "Shows you who actually buys, not who you think buys."
+  },
+  "competitor-intel": {
+    "id": "competitor-intel",
+    "name": "Competitor Intel",
+    "videoUrl": "/videos/agents/competitor-intel.mp4",
+    "posterUrl": "/videos/agents/competitor-intel-poster.jpg",
+    "role": "Competitive monitor",
+    "vibe": "Reads what your competitors publish so you do not have to."
+  },
+  "angle-validator": {
+    "id": "angle-validator",
+    "name": "Angle Validator",
+    "videoUrl": "/videos/agents/angle-validator.mp4",
+    "posterUrl": "/videos/agents/angle-validator-poster.jpg",
+    "role": "Proceed / pivot / kill",
+    "vibe": "Kills weak angles before they waste a single word."
+  },
+  "researcher": {
+    "id": "researcher",
+    "name": "Researcher",
+    "videoUrl": "/videos/agents/researcher.mp4",
+    "posterUrl": "/videos/agents/researcher-poster.jpg",
+    "role": "Grounded evidence pipeline",
+    "vibe": "Reads everything so the writer never has to guess."
+  },
+  "spec-builder": {
+    "id": "spec-builder",
+    "name": "Spec Builder",
+    "videoUrl": "/videos/agents/spec-builder.mp4",
+    "posterUrl": "/videos/agents/spec-builder-poster.jpg",
+    "role": "Writer specification",
+    "vibe": "Writes instructions so clear they cannot be misread."
+  },
+  "writer": {
+    "id": "writer",
+    "name": "Writer",
+    "videoUrl": "/videos/agents/writer.mp4",
+    "posterUrl": "/videos/agents/writer-poster.jpg",
+    "role": "On-voice first draft",
+    "vibe": "Sounds like a person with scar tissue, not a press release."
+  },
+  "editor": {
+    "id": "editor",
+    "name": "Editor",
+    "videoUrl": "/videos/agents/editor.mp4",
+    "posterUrl": "/videos/agents/editor-poster.jpg",
+    "role": "Fact-check & quality gate",
+    "vibe": "Removes the fabricated and defends the genuinely held."
+  },
+  "distribute": {
+    "id": "distribute",
+    "name": "Distribute",
+    "videoUrl": "/videos/agents/distribute.mp4",
+    "posterUrl": "/videos/agents/distribute-poster.jpg",
+    "role": "Channel variant builder",
+    "vibe": "One checked draft, every channel, no new lies."
+  },
+  "listener": {
+    "id": "listener",
+    "name": "Listener",
+    "videoUrl": "/videos/agents/listener.mp4",
+    "posterUrl": "/videos/agents/listener-poster.jpg",
+    "role": "Market signal monitor",
+    "vibe": "Hears the market whispering and tells you when to shout."
+  },
+  "signals-scout": {
+    "id": "signals-scout",
+    "name": "Signals Scout",
+    "videoUrl": "/videos/agents/signals-scout.mp4",
+    "posterUrl": "/videos/agents/signals-scout-poster.jpg",
+    "role": "Signal-to-intent owner",
+    "vibe": "Turns weak signals into a why-now you can defend."
+  },
+  "sniper": {
+    "id": "sniper",
+    "name": "Sniper",
+    "videoUrl": "/videos/agents/sniper.mp4",
+    "posterUrl": "/videos/agents/sniper-poster.jpg",
+    "role": "Precision outreach drafter",
+    "vibe": "Writes outreach that references a real event, never a template."
+  },
+  "qualifier": {
+    "id": "qualifier",
+    "name": "Qualifier",
+    "videoUrl": "/videos/agents/qualifier.mp4",
+    "posterUrl": "/videos/agents/qualifier-poster.jpg",
+    "role": "Deal qualification engine",
+    "vibe": "Surfaces what you do not know before it costs you the deal."
+  },
+  "deal-room": {
+    "id": "deal-room",
+    "name": "Deal Room",
+    "videoUrl": "/videos/agents/deal-room.mp4",
+    "posterUrl": "/videos/agents/deal-room-poster.jpg",
+    "role": "Live deal intelligence",
+    "vibe": "Gives you the whole deal in one brief, minutes before the call."
+  },
+  "health-monitor": {
+    "id": "health-monitor",
+    "name": "Health Monitor",
+    "videoUrl": "/videos/agents/health-monitor.mp4",
+    "posterUrl": "/videos/agents/health-monitor-poster.jpg",
+    "role": "Account health scoring",
+    "vibe": "A health score that explains itself, no black box."
+  },
+  "churn-predictor": {
+    "id": "churn-predictor",
+    "name": "Churn Predictor",
+    "videoUrl": "/videos/agents/churn-predictor.mp4",
+    "posterUrl": "/videos/agents/churn-predictor-poster.jpg",
+    "role": "Retention risk engine",
+    "vibe": "Names the risk with evidence, not a hunch."
+  },
+  "expansion-radar": {
+    "id": "expansion-radar",
+    "name": "Expansion Radar",
+    "videoUrl": "/videos/agents/expansion-radar.mp4",
+    "posterUrl": "/videos/agents/expansion-radar-poster.jpg",
+    "role": "Upsell signal detection",
+    "vibe": "Tells you which accounts are ready to grow, before they ask."
+  },
+  "hygiene": {
+    "id": "hygiene",
+    "name": "Hygiene",
+    "videoUrl": "/videos/agents/hygiene.mp4",
+    "posterUrl": "/videos/agents/hygiene-poster.jpg",
+    "role": "CRM data integrity",
+    "vibe": "Finds what is broken in the CRM before it breaks the forecast."
+  },
+  "forecast-analyser": {
+    "id": "forecast-analyser",
+    "name": "Forecast Analyser",
+    "videoUrl": "/videos/agents/forecast-analyser.mp4",
+    "posterUrl": "/videos/agents/forecast-analyser-poster.jpg",
+    "role": "Forecast confidence engine",
+    "vibe": "Two numbers: what reps called, and what the evidence supports."
+  },
+  "win-loss": {
+    "id": "win-loss",
+    "name": "Win/Loss",
+    "videoUrl": "/videos/agents/win-loss.mp4",
+    "posterUrl": "/videos/agents/win-loss-poster.jpg",
+    "role": "Win/loss analyst",
+    "vibe": "Distils the post-mortems into patterns you can act on."
+  },
+  "market-research": {
+    "id": "market-research",
+    "name": "Market Research",
+    "videoUrl": "/videos/agents/market-research.mp4",
+    "posterUrl": "/videos/agents/market-research-poster.jpg",
+    "role": "Total addressable market analyst",
+    "vibe": "Maps the market so the plan aims at a real, sized prize."
+  },
+  "roadmap-align": {
+    "id": "roadmap-align",
+    "name": "Roadmap Align",
+    "videoUrl": "/videos/agents/roadmap-align.mp4",
+    "posterUrl": "/videos/agents/roadmap-align-poster.jpg",
+    "role": "Goal-to-pipeline alignment planner",
+    "vibe": "Makes sure the plan and the pipeline are talking about the same quarter."
+  },
+  "campaign-builder": {
+    "id": "campaign-builder",
+    "name": "Campaign Builder",
+    "videoUrl": "/videos/agents/campaign-builder.mp4",
+    "posterUrl": "/videos/agents/campaign-builder-poster.jpg",
+    "role": "Multi-channel campaign architect",
+    "vibe": "Turns one message into a calendar that actually reaches the buyer."
+  },
+  "account-planner": {
+    "id": "account-planner",
+    "name": "Account Planner",
+    "videoUrl": "/videos/agents/account-planner.mp4",
+    "posterUrl": "/videos/agents/account-planner-poster.jpg",
+    "role": "Target account selection & tiering",
+    "vibe": "Picks the accounts worth a campaign before the campaign starts."
+  },
+  "abm-playbook": {
+    "id": "abm-playbook",
+    "name": "ABM Playbook",
+    "videoUrl": "/videos/agents/abm-playbook.mp4",
+    "posterUrl": "/videos/agents/abm-playbook-poster.jpg",
+    "role": "Account-based positioning builder",
+    "vibe": "Builds the play that makes your named accounts feel chosen."
+  },
+  "video-outreach": {
+    "id": "video-outreach",
+    "name": "Video Outreach",
+    "videoUrl": "/videos/agents/video-outreach.mp4",
+    "posterUrl": "/videos/agents/video-outreach-poster.jpg",
+    "role": "Personalised video brief drafter",
+    "vibe": "Turns a signal into a 60-second video you could actually send."
+  },
+  "pricing-strategist": {
+    "id": "pricing-strategist",
+    "name": "Pricing Strategist",
+    "videoUrl": "/videos/agents/pricing-strategist.mp4",
+    "posterUrl": "/videos/agents/pricing-strategist-poster.jpg",
+    "role": "Deal pricing & packaging analyst",
+    "vibe": "Prices the deal so the customer says yes and you still make margin."
+  },
+  "negotiation-coach": {
+    "id": "negotiation-coach",
+    "name": "Negotiation Coach",
+    "videoUrl": "/videos/agents/negotiation-coach.mp4",
+    "posterUrl": "/videos/agents/negotiation-coach-poster.jpg",
+    "role": "Live negotiation advisor",
+    "vibe": "Prepares the concession map before the call, not after."
+  },
+  "onboarding-coach": {
+    "id": "onboarding-coach",
+    "name": "Onboarding Coach",
+    "videoUrl": "/videos/agents/onboarding-coach.mp4",
+    "posterUrl": "/videos/agents/onboarding-coach-poster.jpg",
+    "role": "Time-to-value planner",
+    "vibe": "Gets the customer to their first win before the enthusiasm fades."
+  },
+  "renewal-analyst": {
+    "id": "renewal-analyst",
+    "name": "Renewal Analyst",
+    "videoUrl": "/videos/agents/renewal-analyst.mp4",
+    "posterUrl": "/videos/agents/renewal-analyst-poster.jpg",
+    "role": "Renewal strategy planner",
+    "vibe": "Starts the renewal conversation long before the contract date."
+  },
+  "cross-sell-scout": {
+    "id": "cross-sell-scout",
+    "name": "Cross-Sell Scout",
+    "videoUrl": "/videos/agents/cross-sell-scout.mp4",
+    "posterUrl": "/videos/agents/cross-sell-scout-poster.jpg",
+    "role": "Cross-sell & multi-product scout",
+    "vibe": "Spots the adjacent product the account is already asking for."
+  },
+  "pipeline-auditor": {
+    "id": "pipeline-auditor",
+    "name": "Pipeline Auditor",
+    "videoUrl": "/videos/agents/pipeline-auditor.mp4",
+    "posterUrl": "/videos/agents/pipeline-auditor-poster.jpg",
+    "role": "Pipeline integrity auditor",
+    "vibe": "Finds the pipe that is full but empty."
+  },
+  "attribution": {
+    "id": "attribution",
+    "name": "Attribution",
+    "videoUrl": "/videos/agents/attribution.mp4",
+    "posterUrl": "/videos/agents/attribution-poster.jpg",
+    "role": "Revenue attribution analyst",
+    "vibe": "Tells you which engine actually drove the revenue."
+  },
+  "comp-quota": {
+    "id": "comp-quota",
+    "name": "Comp & Quota",
+    "videoUrl": "/videos/agents/comp-quota.mp4",
+    "posterUrl": "/videos/agents/comp-quota-poster.jpg",
+    "role": "Quota & compensation designer",
+    "vibe": "Sets targets the reps believe and the math supports."
+  },
+  "workflow-builder": {
+    "id": "workflow-builder",
+    "name": "Workflow Builder",
+    "videoUrl": "/videos/agents/workflow-builder.mp4",
+    "posterUrl": "/videos/agents/workflow-builder-poster.jpg",
+    "role": "RevOps automation architect",
+    "vibe": "Turns a decision into a CRM spec the RevOps team can build."
+  },
+  "chief-of-staff": {
+    "id": "chief-of-staff",
+    "name": "Chief of Staff",
+    "videoUrl": "/videos/agents/chief-of-staff.mp4",
+    "posterUrl": "/videos/agents/chief-of-staff-poster.jpg",
+    "role": "Cross-engine orchestrator",
+    "vibe": "Runs the weekly rhythm across every engine — what changed, what needs a decision, what to do."
+  }
+}

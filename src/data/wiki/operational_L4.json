@@ -1,0 +1,842 @@
+{
+  "target-account-list-development-tal": {
+    "stages": [
+      {
+        "name": "TAL Criteria Definition",
+        "objective": "Define characteristics of ideal target accounts",
+        "input": "Customer profiles, revenue data, market research, product fit data",
+        "output": "Documented TAL criteria with scoring methodology",
+        "activities": "Define company size criteria, define industry/vertical criteria, define growth criteria, define budget/spend criteria, define technographic criteria, weight criteria by importance",
+        "tools": "Scoring frameworks, ICP definition",
+        "roles": "Sales leadership (criteria), Marketing (market data), Product (fit assessment)",
+        "successMetric": "TAL criteria documented with 8-12 weighted factors",
+        "decisionPoints": "Criteria comprehensive? Weighted appropriately? Data available?",
+        "qualityGate": "TAL criteria approved by leadership, scoring model built"
+      },
+      {
+        "name": "Account Data Sourcing",
+        "objective": "Gather data on potential target accounts",
+        "input": "TAL criteria, market data sources, customer data",
+        "output": "Database of accounts with required attributes",
+        "activities": "Source account list from data providers, pull company data, gather technology data, pull funding/growth data, validate data quality",
+        "tools": "Data providers (Apollo, Prospeo), business databases, technology trackers",
+        "roles": "Data ops (sourcing), Marketing (enrichment), Sales (validation)",
+        "successMetric": "Account database with 5000+ accounts and required attributes",
+        "decisionPoints": "Account list comprehensive? Data quality acceptable? Duplicates removed? Relevant geographically?",
+        "qualityGate": "Account database cleaned and validated"
+      },
+      {
+        "name": "Account Scoring & Ranking",
+        "objective": "Score all accounts against TAL criteria and rank by fit",
+        "input": "Account database, TAL criteria, scoring model",
+        "output": "Ranked account list with fit scores",
+        "activities": "Apply scoring model to all accounts, calculate composite scores, rank accounts, identify tiers (high/medium/low), validate sample manually",
+        "tools": "Scoring platform, ranking tools",
+        "roles": "Analytics (scoring), Sales (validation)",
+        "successMetric": "All accounts scored and ranked, 500+ high-fit accounts identified",
+        "decisionPoints": "Scores accurate? Validation confirms quality? Tiers meaningful? Top accounts known?",
+        "qualityGate": "Scoring complete, top 500 accounts identified and validated"
+      },
+      {
+        "name": "Account Qualification",
+        "objective": "Deeply qualify top accounts and assess enterprise potential",
+        "input": "Ranked account list, top accounts",
+        "output": "Qualified account list with opportunity assessment",
+        "activities": "Research top accounts, identify decision-makers, assess buying patterns, evaluate fit with sales process, identify red flags",
+        "tools": "Sales research tools, LinkedIn, news sources",
+        "roles": "Sales research (qualification), Sales leadership (assessment)",
+        "successMetric": "Top 500 accounts manually qualified",
+        "decisionPoints": "Truly target accounts? Decision-maker identifiable? Budget expected? Buying timeline?",
+        "qualityGate": "Accounts qualified, opportunity summary created"
+      },
+      {
+        "name": "TAL Prioritization & Segmentation",
+        "objective": "Prioritize TAL and create go-to-market segments",
+        "input": "Qualified account list, revenue potential, strategic fit",
+        "output": "Segmented TAL with 3-4 priority tiers and segments",
+        "activities": "Prioritize by revenue potential, segment by industry/size/geography, identify strategic accounts, create segment-specific strategies",
+        "tools": "Segmentation templates",
+        "roles": "Sales leadership (prioritization), Marketing (segmentation)",
+        "successMetric": "TAL segmented with Tier 1 (50 accounts), Tier 2 (200), Tier 3 (500)",
+        "decisionPoints": "Right number in each tier? Segments meaningful? Strategy clear?",
+        "qualityGate": "TAL finalized and segmented, go-to-market strategy ready"
+      },
+      {
+        "name": "Account Assignment & Team Allocation",
+        "objective": "Assign accounts to sales team members and plan resource allocation",
+        "input": "Segmented TAL, sales team, account characteristics",
+        "output": "Account assignment plan with owner and resource allocation",
+        "activities": "Assign Tier 1 accounts to enterprise AEs, assign Tier 2 to SDRs for routing, assign Tier 3 to automated outreach, allocate support resources, plan enablement",
+        "tools": "Assignment templates, resource planning",
+        "roles": "Sales leadership (assignment), Finance (resource allocation)",
+        "successMetric": "100% of accounts assigned with clear ownership",
+        "decisionPoints": "Right account owner? Capacity matched? Coverage complete?",
+        "qualityGate": "Assignments finalized, owners briefed, resources allocated"
+      }
+    ]
+  },
+  "account-profiling-intelligence-gathering": {
+    "stages": [
+      {
+        "name": "Comprehensive Company Research",
+        "objective": "Gather company-level intelligence on target account",
+        "input": "Account data, research sources",
+        "output": "Company profile with overview and opportunity assessment",
+        "activities": "Research company background, assess growth trajectory, identify revenue sources, research competitors, research strategy/direction, assess leadership",
+        "tools": "News aggregators, LinkedIn, company websites, industry reports",
+        "roles": "Sales research (lead), Marketing (competitive data)",
+        "successMetric": "Comprehensive company profile documented",
+        "decisionPoints": "Key info gathered? Company direction clear? Competitive position understood? Growth trajectory identifiable?",
+        "qualityGate": "Company profile complete, shared with sales team"
+      },
+      {
+        "name": "Organizational Structure & Stakeholder Mapping",
+        "objective": "Map customer organization and identify all stakeholders",
+        "input": "Company profile, organizational data, LinkedIn data",
+        "output": "Org chart with stakeholder map",
+        "activities": "Map organizational structure, identify C-suite, identify relevant department heads, identify budget owners, identify influencers/blockers",
+        "tools": "Org mapping tools, LinkedIn Sales Navigator",
+        "roles": "Sales research (mapping), Sales (validation)",
+        "successMetric": "Org chart with 5-10+ stakeholders identified",
+        "decisionPoints": "Structure clear? Budget owner identified? Coach/champion identified? Blockers identified?",
+        "qualityGate": "Org chart validated, stakeholder roles understood"
+      },
+      {
+        "name": "Problem & Pain Point Analysis",
+        "objective": "Identify company's business challenges and pain points",
+        "input": "Company research, industry analysis, press releases, job postings",
+        "output": "Pain point summary with relevance to product",
+        "activities": "Analyze company financials for challenges, review industry trends affecting company, research news for strategic challenges, identify hiring patterns indicating growth areas, assess competitive threats",
+        "tools": "Financial research, news tracking, job board analysis",
+        "roles": "Sales research (analysis), Product (fit assessment)",
+        "successMetric": "3-5 key pain points identified and linked to product solution",
+        "decisionPoints": "Pain points real? Company actively addressing? Solution relevant? Urgency?",
+        "qualityGate": "Pain point analysis complete and validated"
+      },
+      {
+        "name": "Buying Process Understanding",
+        "objective": "Understand how account evaluates and purchases solutions",
+        "input": "Company research, comparable accounts, sales history",
+        "output": "Buying process summary with decision criteria",
+        "activities": "Analyze comparable accounts for buying patterns, research decision criteria from industry/analyst reports, assess approval complexity, identify budget cycle",
+        "tools": "Win/loss analysis, industry research",
+        "roles": "Sales (patterns), Sales leadership (validation)",
+        "successMetric": "Buying process documented with timeline",
+        "decisionPoints": "Buying process clear? Timeline understood? Budget cycle identified? Approval levels?",
+        "qualityGate": "Buying process understood, timeline mapped"
+      },
+      {
+        "name": "Technology Stack & System Assessment",
+        "objective": "Understand account's current technology and integration needs",
+        "input": "Company research, technology tracking data",
+        "output": "Technology assessment with integration opportunities",
+        "activities": "Identify current systems using technology trackers, assess current solutions for replacement opportunity, identify integration points, assess technology maturity",
+        "tools": "Technographic data, technology tracking platforms",
+        "roles": "Sales engineering (assessment), Product (capabilities)",
+        "successMetric": "Technology stack documented with integration points",
+        "decisionPoints": "Current solution adequate? Replacement opportunity? Integration needed? Timeline for change?",
+        "qualityGate": "Technology stack mapped, integration strategy identified"
+      }
+    ]
+  },
+  "competitive-account-assessment": {
+    "stages": [
+      {
+        "name": "Incumbent & Competitor Identification",
+        "objective": "Identify current solutions and competitors at target account",
+        "input": "Account research, company data, technology tracking",
+        "output": "Competitor list with installed base",
+        "activities": "Research current solutions using technology trackers, identify incumbent vendors, assess competitive threats, document version/implementation details",
+        "tools": "Technographic data, news tracking",
+        "roles": "Sales research (lead), Sales (validation)",
+        "successMetric": "Current solutions identified for target account",
+        "decisionPoints": "Incumbents clear? Switching likelihood? Competitive threat?",
+        "qualityGate": "Competitive landscape documented"
+      },
+      {
+        "name": "Win/Loss Pattern Analysis",
+        "objective": "Understand competitive win/loss patterns at this account type",
+        "input": "Historical win/loss data, account industry/size",
+        "output": "Competitive intelligence by segment",
+        "activities": "Analyze historical wins vs. competitors, identify competitive patterns, assess pricing impact, identify typical objections, document competitive strengths/weaknesses",
+        "tools": "Win/loss database, CRM",
+        "roles": "Sales (patterns), Competitive intelligence (analysis)",
+        "successMetric": "Win/loss patterns documented",
+        "decisionPoints": "Patterns clear? Competitive threats identified?",
+        "qualityGate": "Competitive patterns understood"
+      },
+      {
+        "name": "Pricing & Offer Comparison",
+        "objective": "Assess competitive pricing and offers",
+        "input": "Competitor pricing intelligence, deal economics",
+        "output": "Pricing comparison and positioning strategy",
+        "activities": "Research competitor pricing, assess value positioning, identify price differentiators, model win probability at different prices",
+        "tools": "Pricing intelligence, competitive databases",
+        "roles": "Sales (deal context), Finance (economics)",
+        "successMetric": "Pricing comparison analyzed",
+        "decisionPoints": "Pricing competitive? Value justifiable? Discount strategy?",
+        "qualityGate": "Pricing strategy developed"
+      },
+      {
+        "name": "Feature/Capability Comparison",
+        "objective": "Compare product capabilities vs. competitors",
+        "input": "Product roadmap, competitor products",
+        "output": "Feature comparison matrix with positioning",
+        "activities": "Document competitor features, compare against product, identify gaps/advantages, assess importance to account, plan messaging",
+        "tools": "Feature comparison templates",
+        "roles": "Product (comparison), Sales (account relevance)",
+        "successMetric": "Feature comparison completed",
+        "decisionPoints": "Differentiation clear? Gaps acceptable? Advantages clear?",
+        "qualityGate": "Feature positioning developed"
+      },
+      {
+        "name": "Objection Handling Strategy",
+        "objective": "Prepare responses to anticipated competitive objections",
+        "input": "Competitive analysis, common objections, positioning strategy",
+        "output": "Objection handling playbook for this account",
+        "activities": "Identify likely objections, develop responses, identify proof points, prepare ROI comparisons, document competitive neutralizers",
+        "tools": "Objection handling templates, battle cards",
+        "roles": "Sales (preparation), Product (technical responses)",
+        "successMetric": "Objection responses documented",
+        "decisionPoints": "Responses credible? Proof points available? ROI clear?",
+        "qualityGate": "Objection handling guide ready for sales"
+      }
+    ]
+  },
+  "expansion-opportunity-identification": {
+    "stages": [
+      {
+        "name": "Current Revenue & Usage Analysis",
+        "objective": "Understand current account revenue and expansion potential",
+        "input": "Customer data, usage patterns, contract terms",
+        "output": "Current state analysis with expansion potential",
+        "activities": "Analyze current ACV/MRR, assess usage by department, identify power users, quantify unutilized features, project growth trajectory",
+        "tools": "Usage analytics, CRM",
+        "roles": "CSM (analysis), Analytics (data)",
+        "successMetric": "Current state analysis documented",
+        "decisionPoints": "Expansion potential clear? Utilization levels? Growth trajectory?",
+        "qualityGate": "Current state understood"
+      },
+      {
+        "name": "Expansion Type Identification",
+        "objective": "Identify types of expansion opportunities",
+        "input": "Current state analysis, product capabilities, customer organization",
+        "output": "Expansion opportunity types with examples",
+        "activities": "Identify horizontal expansion (other departments), identify vertical expansion (other geographies), identify product expansion (add-ons/upgrades), identify deeper penetration",
+        "tools": "Expansion frameworks",
+        "roles": "CSM (identification), Product (capabilities)",
+        "successMetric": "Multiple expansion types identified",
+        "decisionPoints": "Opportunities realistic? Customer interest likely? ROI positive?",
+        "qualityGate": "Expansion opportunities characterized"
+      },
+      {
+        "name": "Opportunity Sizing & ROI",
+        "objective": "Size expansion opportunities and calculate potential ROI",
+        "input": "Expansion opportunities, pricing, customer financials",
+        "output": "Sized opportunities with ROI models",
+        "activities": "Estimate number of additional users/seats, calculate incremental revenue, model implementation costs, calculate ROI/payback, rank by impact",
+        "tools": "ROI models, financial spreadsheets",
+        "roles": "CSM (narrative), Finance (modeling)",
+        "successMetric": "Opportunities sized with ROI calculated",
+        "decisionPoints": "Sizing realistic? ROI compelling? Payback acceptable?",
+        "qualityGate": "Opportunity sizing approved"
+      },
+      {
+        "name": "Go/No-Go Decision",
+        "objective": "Decide which expansion opportunities to pursue",
+        "input": "Sized opportunities, ROI analysis, resource availability",
+        "output": "Prioritized expansion opportunities",
+        "activities": "Prioritize opportunities by ROI and timeline, assess customer readiness, identify resource requirements, make go/no-go decision, plan next steps",
+        "tools": "Priority matrices",
+        "roles": "Sales leadership (decision), CSM (input)",
+        "successMetric": "Expansion opportunities prioritized",
+        "decisionPoints": "Opportunities worth pursuing? Timing right? Resources available?",
+        "qualityGate": "Expansion plan approved, initiatives assigned"
+      }
+    ]
+  },
+  "department-division-expansion-strategy": {
+    "stages": [
+      {
+        "name": "Target Department Analysis",
+        "objective": "Analyze target department for expansion",
+        "input": "Company structure, department data, usage analysis",
+        "output": "Target department profile with expansion potential",
+        "activities": "Identify department needs and pain points, assess headcount, analyze current process, identify key stakeholders, assess adoption likelihood",
+        "tools": "Organizational analysis, research",
+        "roles": "CSM (analysis), Sales (stakeholder context)",
+        "successMetric": "Target department profiled",
+        "decisionPoints": "Needs clear? Pain points addressable? Adoption likely?",
+        "qualityGate": "Department profile documented"
+      },
+      {
+        "name": "Use Case Development",
+        "objective": "Develop compelling use case for target department",
+        "input": "Department analysis, product capabilities, department needs",
+        "output": "Use case document with business justification",
+        "activities": "Define business problem for department, map product solution, quantify impact specific to department, identify measurable success criteria",
+        "tools": "Use case templates",
+        "roles": "CSM (development), Product (fit)",
+        "successMetric": "Use case documented",
+        "decisionPoints": "Use case compelling? Relevant to department needs?",
+        "qualityGate": "Use case validated"
+      },
+      {
+        "name": "Business Case Development",
+        "objective": "Develop financial business case for department expansion",
+        "input": "Use case, department sizing, ROI model",
+        "output": "Business case with financial projections",
+        "activities": "Quantify department impact, calculate ROI for department, identify implementation costs, calculate payback, compare to alternatives",
+        "tools": "Financial modeling, business case templates",
+        "roles": "CSM (narrative), Finance (modeling)",
+        "successMetric": "Business case completed",
+        "decisionPoints": "ROI compelling? Payback acceptable? Presentation ready?",
+        "qualityGate": "Business case approved"
+      },
+      {
+        "name": "Department Stakeholder Identification & Mapping",
+        "objective": "Identify and map all stakeholders in target department",
+        "input": "Department profile, organizational structure",
+        "output": "Stakeholder map with influence/power assessment",
+        "activities": "Identify department head, identify budget owner, identify influencers/power users, identify potential objectors, develop influence strategy",
+        "tools": "Stakeholder mapping templates",
+        "roles": "Sales (mapping), CSM (department knowledge)",
+        "successMetric": "Stakeholders mapped with influence levels",
+        "decisionPoints": "Right stakeholders identified? Power structure clear?",
+        "qualityGate": "Stakeholder map complete"
+      },
+      {
+        "name": "Pilot Program Design & Execution",
+        "objective": "Plan and execute pilot with target department",
+        "input": "Business case, stakeholder map, pilot structure",
+        "output": "Successful pilot with positive results",
+        "activities": "Define pilot scope and success criteria, recruit pilot participants, provide training, monitor pilot closely, document results, celebrate early wins",
+        "tools": "Pilot program framework, monitoring",
+        "roles": "CSM (leadership), Product (support)",
+        "successMetric": "Pilot completed with positive results",
+        "decisionPoints": "Pilot successful? ROI realized? Department enthusiastic?",
+        "qualityGate": "Pilot results documented, expansion decision clear"
+      },
+      {
+        "name": "Full Department Expansion & Implementation",
+        "objective": "Roll out to full department",
+        "input": "Pilot results, expansion plan, resource plan",
+        "output": "Full department adoption",
+        "activities": "Expand to full department user base, provide comprehensive training, manage implementation, monitor adoption, adjust based on feedback",
+        "tools": "Implementation management",
+        "roles": "CSM (leadership), Implementation team (execution)",
+        "successMetric": "Full department adoption with usage similar to pilot",
+        "decisionPoints": "Adoption on track? Support adequate? Champion engaged?",
+        "qualityGate": "Full expansion complete, success metrics tracked"
+      }
+    ]
+  },
+  "add-on-module-expansion": {
+    "stages": [
+      {
+        "name": "Feature/Module Expansion Analysis",
+        "objective": "Identify add-on products or modules for expansion",
+        "input": "Product roadmap, customer usage data, expansion strategy",
+        "output": "List of expansion candidates by customer",
+        "activities": "Analyze current feature adoption, identify underadopted features, identify complementary products, assess expansion fit for account type",
+        "tools": "Product analytics, roadmap analysis",
+        "roles": "Product (feature expertise), CSM (customer context)",
+        "successMetric": "Expansion candidates identified",
+        "decisionPoints": "Candidates align to customer strategy? Value clear?",
+        "qualityGate": "Expansion candidates prioritized"
+      },
+      {
+        "name": "Adoption & Readiness Assessment",
+        "objective": "Assess customer readiness for expansion",
+        "input": "Customer health, current adoption, organization readiness",
+        "output": "Readiness assessment and timing recommendation",
+        "activities": "Assess current product adoption depth, analyze training readiness, evaluate budget availability, assess organizational bandwidth",
+        "tools": "Readiness assessment frameworks",
+        "roles": "CSM (assessment)",
+        "successMetric": "Readiness documented",
+        "decisionPoints": "Customer ready now or later? Barriers to adoption?",
+        "qualityGate": "Timing recommendation made"
+      },
+      {
+        "name": "Pricing & Bundling Strategy",
+        "objective": "Develop pricing and packaging for add-on expansion",
+        "input": "Add-on product, customer metrics, pricing models",
+        "output": "Pricing and bundling strategy for this customer",
+        "activities": "Develop pricing options (standalone, bundled, tiered), model revenue impact, assess willingness to pay, prepare pricing justification",
+        "tools": "Pricing models",
+        "roles": "Finance (pricing), Sales (customer fit)",
+        "successMetric": "Pricing strategy developed",
+        "decisionPoints": "Pricing competitive? Value justified?",
+        "qualityGate": "Pricing approved"
+      },
+      {
+        "name": "Business Justification & Proposal",
+        "objective": "Develop compelling business case and proposal",
+        "input": "Add-on product, pricing, customer value",
+        "output": "Proposal ready for customer",
+        "activities": "Develop customer-specific ROI, create proposal, prepare presentation, identify success criteria",
+        "tools": "Proposal templates, ROI calculators",
+        "roles": "CSM (customer fit), Sales (proposal)",
+        "successMetric": "Proposal completed",
+        "decisionPoints": "Proposal compelling? Customized to customer?",
+        "qualityGate": "Proposal approved"
+      },
+      {
+        "name": "Sales Team Training & Enablement",
+        "objective": "Train sales team on new add-on product",
+        "input": "Product details, customer use cases, pricing",
+        "output": "Trained sales team ready to sell",
+        "activities": "Product training on features/benefits, training on customer use cases, pricing training, competitive positioning, objection handling",
+        "tools": "Training materials, battle cards",
+        "roles": "Product marketing (training), Sales leadership (enforcement)",
+        "successMetric": "Sales team trained and tested",
+        "decisionPoints": "Team confident? Can articulate value?",
+        "qualityGate": "Training complete, team ready"
+      },
+      {
+        "name": "Customer Launch & Promotion",
+        "objective": "Launch add-on to customer with promotional support",
+        "input": "Proposal, pricing, customer contacts",
+        "output": "Add-on launched with customer adoption",
+        "activities": "Present to customer, drive adoption, provide training, monitor usage, celebrate success",
+        "tools": "Communication platforms, training",
+        "roles": "CSM (customer), Sales (closure)",
+        "successMetric": "Add-on purchased, initial adoption visible",
+        "decisionPoints": "Customer purchased? Usage adopted? Satisfaction high?",
+        "qualityGate": "Add-on successful with customer"
+      }
+    ]
+  },
+  "expansion-sales-process": {
+    "stages": [
+      {
+        "name": "Opportunity Discovery",
+        "objective": "Discover and qualify expansion opportunity",
+        "input": "Expansion opportunities identified, customer interest",
+        "output": "Qualified expansion opportunity",
+        "activities": "Conduct discovery meeting, understand business drivers, assess budget, identify timeline, evaluate priority",
+        "tools": "Discovery frameworks, CRM",
+        "roles": "Sales (discovery), CSM (customer knowledge)",
+        "successMetric": "Opportunity qualified with clear timeline",
+        "decisionPoints": "Real opportunity? Budget available? Timeline realistic?",
+        "qualityGate": "Opportunity entered in pipeline"
+      },
+      {
+        "name": "Needs Analysis & Assessment",
+        "objective": "Deeply understand customer needs for expansion",
+        "input": "Opportunity, customer business context",
+        "output": "Needs assessment with requirements",
+        "activities": "Conduct detailed needs analysis, map requirements to product capabilities, identify success criteria, identify constraints/concerns",
+        "tools": "Needs analysis templates",
+        "roles": "Sales/CSM (analysis), Product (fit assessment)",
+        "successMetric": "Needs documented clearly",
+        "decisionPoints": "Requirements clear? Product fit? Any gaps?",
+        "qualityGate": "Needs assessment complete"
+      },
+      {
+        "name": "Solution Design & Demo",
+        "objective": "Design solution and demonstrate to customer",
+        "input": "Needs assessment, product capabilities, pricing",
+        "output": "Customized solution proposal and demo",
+        "activities": "Design solution for customer's specific needs, prepare demo, conduct live demo, gather feedback, iterate design",
+        "tools": "Demo software, presentation tools",
+        "roles": "Sales engineer (demo), Sales (management)",
+        "successMetric": "Demo completed, customer engaged",
+        "decisionPoints": "Solution addresses needs? Customer interested? Questions addressed?",
+        "qualityGate": "Solution approved by customer"
+      },
+      {
+        "name": "Proposal & Negotiation",
+        "objective": "Present proposal and negotiate terms",
+        "input": "Solution design, pricing, customer requirements",
+        "output": "Negotiated proposal accepted",
+        "activities": "Present formal proposal, discuss pricing, address objections, negotiate terms, finalize economics",
+        "tools": "Contracts, proposal templates",
+        "roles": "Sales (negotiation), Finance (pricing)",
+        "successMetric": "Proposal accepted, terms agreed",
+        "decisionPoints": "Customer accepting? Pricing acceptable? Timeline confirmed?",
+        "qualityGate": "Proposal signed"
+      },
+      {
+        "name": "Contract & Implementation Planning",
+        "objective": "Execute contract and plan implementation",
+        "input": "Agreed proposal, implementation requirements",
+        "output": "Signed contract with implementation plan",
+        "activities": "Prepare contract, execute signature, develop implementation plan, identify implementation owner, schedule kickoff",
+        "tools": "Contract management, implementation planning",
+        "roles": "Legal (contracts), Implementation team (planning)",
+        "successMetric": "Contract signed, implementation plan ready",
+        "decisionPoints": "Contract clear? Implementation timeline realistic?",
+        "qualityGate": "Implementation underway"
+      },
+      {
+        "name": "Successful Adoption & Value Realization",
+        "objective": "Ensure successful adoption and value realization",
+        "input": "Implementation plan, success metrics",
+        "output": "Achieved value with satisfied customer",
+        "activities": "Execute implementation, provide training, monitor adoption, support challenges, measure value realization",
+        "tools": "Implementation management, success tracking",
+        "roles": "CSM (adoption support)",
+        "successMetric": "Value metrics met, customer satisfied",
+        "decisionPoints": "Adoption on track? Value realized? Customer happy?",
+        "qualityGate": "Value realization confirmed"
+      }
+    ]
+  },
+  "land-and-expand-execution": {
+    "stages": [
+      {
+        "name": "Land Strategy Development",
+        "objective": "Develop land strategy to enter account at scale",
+        "input": "Land ICP, market sizing, go-to-market strategy",
+        "output": "Land strategy with target profile",
+        "activities": "Define landing product/solution, identify target buyer persona, define landing price point, outline success criteria for land phase",
+        "tools": "Strategy frameworks",
+        "roles": "Product marketing (strategy), Sales leadership (validation)",
+        "successMetric": "Land strategy documented",
+        "decisionPoints": "Landing product right? Target persona clear? Price point accessible?",
+        "qualityGate": "Land strategy approved"
+      },
+      {
+        "name": "Expansion Opportunity Mapping",
+        "objective": "Map expansion opportunities for target accounts",
+        "input": "Land strategy, product portfolio, customer segments",
+        "output": "Expansion roadmap for typical land account",
+        "activities": "Map expansion opportunities by department, map expansion by geography, map expansion by use case, identify typical expansion sequence",
+        "tools": "Expansion roadmaps",
+        "roles": "CSM (sequences), Product (opportunities)",
+        "successMetric": "Typical expansion path mapped",
+        "decisionPoints": "Expansion opportunities realistic? Sequence make sense? Timing clear?",
+        "qualityGate": "Expansion roadmap documented"
+      },
+      {
+        "name": "Expansion Trigger Definition",
+        "objective": "Define signals/metrics triggering expansion conversations",
+        "input": "Customer lifecycle, expansion opportunities, timing",
+        "output": "Expansion trigger framework",
+        "activities": "Define usage triggers (adoption levels), define business triggers (growth indicators), define timeline triggers (post-implementation), create trigger monitoring process",
+        "tools": "Trigger frameworks, monitoring tools",
+        "roles": "CSM (triggers), Analytics (monitoring)",
+        "successMetric": "Expansion triggers defined and monitored",
+        "decisionPoints": "Triggers predictive? Monitoring automated? Response process clear?",
+        "qualityGate": "Trigger monitoring active"
+      },
+      {
+        "name": "Expansion Acceleration Tactics",
+        "objective": "Develop tactics to accelerate expansion",
+        "input": "Expansion roadmap, customer success plan",
+        "output": "Expansion acceleration plan",
+        "activities": "Develop training on new features, plan user group events, create expansion-focused communications, identify expansion champions, plan executive engagement",
+        "tools": "Acceleration playbooks",
+        "roles": "CSM (tactics), Marketing (execution)",
+        "successMetric": "Acceleration tactics documented",
+        "decisionPoints": "Tactics compelling? Resource available? Timeline realistic?",
+        "qualityGate": "Acceleration plan ready"
+      },
+      {
+        "name": "Expansion Execution & Monitoring",
+        "objective": "Execute expansion and monitor success",
+        "input": "Expansion triggers, expansion tactics",
+        "output": "Successful expansions executed",
+        "activities": "Monitor expansion triggers, execute expansion conversations when triggered, measure expansion success, iterate based on results",
+        "tools": "CRM, success tracking",
+        "roles": "CSM (execution), Sales (support)",
+        "successMetric": "Expansion rate tracking metrics achieved",
+        "decisionPoints": "Expansion timing right? Conversion rates acceptable? Customer satisfaction?",
+        "qualityGate": "Land-and-expand model working at scale"
+      }
+    ]
+  },
+  "abm-program-management": {
+    "stages": [
+      {
+        "name": "High-Value Account Prioritization",
+        "objective": "Identify and prioritize key accounts for ABM investment",
+        "input": "Account list, revenue potential, strategic fit",
+        "output": "ABM target account list with prioritization",
+        "activities": "Score accounts by revenue potential, score by strategic fit, identify must-win accounts, segment into tier levels",
+        "tools": "Scoring frameworks, account databases",
+        "roles": "Sales leadership (prioritization), Marketing (scoring)",
+        "successMetric": "ABM account list with 50-200 accounts prioritized",
+        "decisionPoints": "Right mix of accounts? Tier distribution appropriate?",
+        "qualityGate": "ABM account list finalized"
+      },
+      {
+        "name": "Account-Specific Strategy Development",
+        "objective": "Develop customized strategy for each ABM account",
+        "input": "Account research, company strategy, competitive positioning",
+        "output": "Account strategy document per account",
+        "activities": "Research account goals/challenges, develop value hypothesis, identify key stakeholders, plan stakeholder-specific messaging",
+        "tools": "Strategy templates",
+        "roles": "Sales (account knowledge), Marketing (strategy)",
+        "successMetric": "Strategy developed for all ABM accounts",
+        "decisionPoints": "Strategy realistic? Stakeholder-specific? Value clear?",
+        "qualityGate": "Account strategies documented"
+      },
+      {
+        "name": "Personalized Content & Messaging Development",
+        "objective": "Create account-specific content and messaging",
+        "input": "Account strategy, company position, content assets",
+        "output": "Personalized content package for each account",
+        "activities": "Develop account-specific case studies, create stakeholder-specific messaging, personalize ads/emails, develop custom thought leadership",
+        "tools": "Content creation, personalization platforms",
+        "roles": "Content marketing (creation), Design (assets)",
+        "successMetric": "Personalized content created for all accounts",
+        "decisionPoints": "Content compelling? Stakeholder-relevant? Production feasible?",
+        "qualityGate": "Content library built"
+      },
+      {
+        "name": "Multi-Channel Campaign Execution",
+        "objective": "Execute coordinated multi-channel campaigns",
+        "input": "Personalized content, account strategy, channel mix",
+        "output": "Active campaigns across channels",
+        "activities": "Deploy account-based advertising, send personalized emails, execute account events, coordinate sales outreach, orchestrate messaging",
+        "tools": "Marketing automation, advertising, event platforms",
+        "roles": "Marketing (execution), Sales (coordination)",
+        "successMetric": "Multi-channel campaigns active for all accounts",
+        "decisionPoints": "Campaigns coordinated? Messaging consistent? Frequency appropriate?",
+        "qualityGate": "Campaigns live and coordinated"
+      },
+      {
+        "name": "Engagement Tracking & Analytics",
+        "objective": "Track engagement and measure campaign effectiveness",
+        "input": "Campaign data, engagement metrics",
+        "output": "Engagement tracking with ROI analysis",
+        "activities": "Track engagement by channel, measure account-level response rates, analyze decision-maker engagement, calculate ABM ROI",
+        "tools": "Analytics platforms, account engagement tracking",
+        "roles": "Analytics (measurement), Marketing (optimization)",
+        "successMetric": "Engagement tracked for all ABM accounts with ROI calculated",
+        "decisionPoints": "Engagement rates healthy? ROI positive? Insights actionable?",
+        "qualityGate": "Analytics driving decision-making"
+      },
+      {
+        "name": "Continuous Optimization & Results",
+        "objective": "Optimize campaigns based on performance",
+        "input": "Engagement data, results, team feedback",
+        "output": "Optimized campaigns and improved results",
+        "activities": "Analyze underperforming accounts, adjust messaging/tactics, test new approaches, celebrate wins, iterate based on learning",
+        "tools": "Optimization frameworks",
+        "roles": "Marketing (optimization), Sales (feedback)",
+        "successMetric": "ABM pipeline increasing, win rates improving",
+        "decisionPoints": "Results improving? Tactics resonating? ROI positive?",
+        "qualityGate": "ABM program showing measurable results"
+      }
+    ]
+  },
+  "account-executive-coordination": {
+    "stages": [
+      {
+        "name": "Account Assignment & Territory Planning",
+        "objective": "Assign accounts to account executives and plan territories",
+        "input": "Account list, AE team, territory criteria",
+        "output": "Account assignments with territory maps",
+        "activities": "Assign accounts to AEs based on territory/specialization, balance account load, identify gaps, plan coverage for unassigned accounts",
+        "tools": "Territory mapping, account assignment tools",
+        "roles": "Sales leadership (assignment)",
+        "successMetric": "All strategic accounts assigned, territories balanced",
+        "decisionPoints": "Coverage complete? Load balanced? Specialization matched?",
+        "qualityGate": "Account assignments finalized and communicated"
+      },
+      {
+        "name": "AE Strategy Alignment",
+        "objective": "Align AE strategy with corporate strategy",
+        "input": "Corporate strategy, account strategy, AE team",
+        "output": "Aligned AE strategies and quarterly plans",
+        "activities": "Brief AE on corporate strategy, review account strategies, develop AE-specific approach, set team-level targets",
+        "tools": "Strategy templates, planning tools",
+        "roles": "Sales leadership (alignment), AEs (input)",
+        "successMetric": "Strategies aligned, team plans documented",
+        "decisionPoints": "Team understands strategy? Approach clear? Targets realistic?",
+        "qualityGate": "Team aligned and prepared"
+      },
+      {
+        "name": "Opportunity Pipeline Planning",
+        "objective": "Plan opportunity pipeline for assigned accounts",
+        "input": "Account expansion opportunities, sales cycle, capacity",
+        "output": "Pipeline plan with opportunity targets",
+        "activities": "Identify realistic opportunities per account, set opportunity targets, plan discovery timing, forecast closure dates",
+        "tools": "Pipeline planning, forecasting",
+        "roles": "AEs (planning), Sales leadership (review)",
+        "successMetric": "Pipeline planned for all accounts",
+        "decisionPoints": "Pipeline realistic? Targets achievable? Opportunities qualified?",
+        "qualityGate": "Pipeline targets set"
+      },
+      {
+        "name": "Regular Account Reviews & Coaching",
+        "objective": "Conduct regular reviews and coach AEs",
+        "input": "Opportunity pipeline, account results, team feedback",
+        "output": "Account reviews with coaching and adjustments",
+        "activities": "Conduct monthly account reviews, assess progress vs. targets, identify blocked deals, provide coaching, adjust strategy as needed",
+        "tools": "Review templates, coaching frameworks",
+        "roles": "Sales leadership (reviews), AEs (participation)",
+        "successMetric": "Monthly reviews conducted, coaching provided",
+        "decisionPoints": "Progress on track? Coaching effective? Deals advancing?",
+        "qualityGate": "Review process institutionalized"
+      },
+      {
+        "name": "Forecast & Results Management",
+        "objective": "Manage forecasts and track results",
+        "input": "Opportunity pipeline, closed deals, forecast models",
+        "output": "Accurate forecasts and results tracking",
+        "activities": "Manage monthly forecasts, track results vs. targets, analyze variances, adjust pipeline, celebrate wins",
+        "tools": "CRM, forecasting tools",
+        "roles": "Sales leadership (forecasting), Finance (validation)",
+        "successMetric": "Forecasts accurate, results tracked",
+        "decisionPoints": "Forecast accuracy improving? Results on track?",
+        "qualityGate": "Forecasting and results tracking working well"
+      }
+    ]
+  },
+  "account-based-marketing-campaigns": {
+    "stages": [
+      {
+        "name": "ABM Campaign Strategy",
+        "objective": "Define strategy for account-based marketing campaigns",
+        "input": "ABM account list, marketing objectives, budget",
+        "output": "Campaign strategy with goals and targets",
+        "activities": "Define campaign objectives, identify campaign themes, plan campaign timeline, set engagement targets, plan budget allocation",
+        "tools": "Campaign planning templates",
+        "roles": "Marketing leadership (strategy), Sales (account input)",
+        "successMetric": "Campaign strategy documented",
+        "decisionPoints": "Strategy aligned to sales? Targets achievable? Timeline realistic?",
+        "qualityGate": "Strategy approved"
+      },
+      {
+        "name": "Account Segmentation & Personalization",
+        "objective": "Segment accounts and develop personalization approach",
+        "input": "ABM account list, campaign strategy",
+        "output": "Segmented accounts with personalization plan",
+        "activities": "Segment accounts by industry/size/profile, develop segment-specific messaging, plan account-specific creative, design engagement sequence",
+        "tools": "Segmentation tools",
+        "roles": "Marketing (segmentation), Content (personalization)",
+        "successMetric": "Accounts segmented with personalized approach",
+        "decisionPoints": "Segmentation meaningful? Personalization feasible? Resources adequate?",
+        "qualityGate": "Segmentation and personalization planned"
+      },
+      {
+        "name": "Creative Development & Asset Production",
+        "objective": "Develop creative assets for campaigns",
+        "input": "Campaign strategy, personalization requirements, creative themes",
+        "output": "Complete creative library ready for campaigns",
+        "activities": "Develop account-based ads, create personalized landing pages, develop email sequences, create account-specific case studies",
+        "tools": "Creative tools, design, marketing automation",
+        "roles": "Creative team (development)",
+        "successMetric": "Comprehensive creative library developed",
+        "decisionPoints": "Creative quality high? Personalization evident? On-brand?",
+        "qualityGate": "Creatives tested and approved"
+      },
+      {
+        "name": "Multi-Channel Campaign Orchestration",
+        "objective": "Orchestrate campaigns across channels",
+        "input": "Creative assets, account list, channel mix",
+        "output": "Coordinated campaigns running across channels",
+        "activities": "Deploy ads to target accounts, execute email sequences, create account-based content, coordinate sales outreach, manage timing across channels",
+        "tools": "Marketing automation, ad platforms, CRM",
+        "roles": "Campaign operations (orchestration)",
+        "successMetric": "All channels coordinated, campaigns live",
+        "decisionPoints": "Orchestration smooth? Messaging consistent? Frequency right?",
+        "qualityGate": "Campaigns active and coordinated"
+      },
+      {
+        "name": "Performance Tracking & Measurement",
+        "objective": "Track campaign performance and ROI",
+        "input": "Campaign data, engagement metrics, pipeline impact",
+        "output": "Performance dashboard with ROI analysis",
+        "activities": "Track impressions/clicks/engagement by account, measure pipeline impact, calculate campaign ROI, analyze by segment",
+        "tools": "Analytics platforms, attribution",
+        "roles": "Analytics (measurement), Marketing (analysis)",
+        "successMetric": "Dashboard live with key metrics tracked",
+        "decisionPoints": "ROI positive? Engagement rates healthy? Insights clear?",
+        "qualityGate": "Performance dashboard driving decisions"
+      },
+      {
+        "name": "Optimization & Results",
+        "objective": "Optimize campaigns and demonstrate results",
+        "input": "Performance data, engagement insights",
+        "output": "Optimized campaigns with improved results",
+        "activities": "Analyze underperforming segments, test messaging variations, adjust targeting, scale winning approaches, document learning",
+        "tools": "Optimization frameworks",
+        "roles": "Marketing (optimization)",
+        "successMetric": "Campaign performance improving quarter-over-quarter",
+        "decisionPoints": "Results positive? Learning captured? Strategy evolving?",
+        "qualityGate": "Continuous improvement cycle active"
+      }
+    ]
+  },
+  "customer-reference-advocate-programs": {
+    "stages": [
+      {
+        "name": "Reference Customer Identification",
+        "objective": "Identify ideal reference customers",
+        "input": "Customer data, success metrics, account value",
+        "output": "Reference customer list with profile",
+        "activities": "Identify highly satisfied customers, assess willingness to reference, profile reference customers (industry, company size, use case), segment for targeting",
+        "tools": "CRM, customer success data",
+        "roles": "Customer success (identification)",
+        "successMetric": "Reference customer list with 20+ identified",
+        "decisionPoints": "Customers truly happy? Believable referrals? Diverse profiles?",
+        "qualityGate": "Reference list built"
+      },
+      {
+        "name": "Advocate Recruitment & Program Enrollment",
+        "objective": "Recruit customers into reference/advocate program",
+        "input": "Reference customer list, program benefits",
+        "output": "Enrolled advocates committed to participation",
+        "activities": "Recruit advocates by highlighting benefits (thought leadership, exclusive events), create advocate agreements, secure executive commitment, establish escalation path",
+        "tools": "Recruitment templates, agreements",
+        "roles": "Customer success (recruitment), Marketing (benefits)",
+        "successMetric": "10-20 advocates enrolled",
+        "decisionPoints": "Advocates committed? Benefits attractive? Agreements clear?",
+        "qualityGate": "Advocates formally enrolled"
+      },
+      {
+        "name": "Reference Call Training & Preparation",
+        "objective": "Train advocates on effective reference call process",
+        "input": "Advocate list, reference call frameworks, messaging",
+        "output": "Trained advocates ready for calls",
+        "activities": "Train on reference call formats, provide talking points, create reference call scripts, establish time commitments, test call process",
+        "tools": "Training materials, call frameworks",
+        "roles": "Sales (training)",
+        "successMetric": "Advocates trained and ready",
+        "decisionPoints": "Training comprehensive? Advocates confident? Process clear?",
+        "qualityGate": "Advocates ready for calls"
+      },
+      {
+        "name": "Success Story & Case Study Development",
+        "objective": "Document advocate stories for marketing use",
+        "input": "Customer success stories, advocate context",
+        "output": "Case studies and customer stories",
+        "activities": "Conduct customer interviews, document success stories, create case studies, develop video testimonials, get approval from customers",
+        "tools": "Storytelling templates, video tools",
+        "roles": "Content marketing (development)",
+        "successMetric": "3-5 case studies and customer stories documented",
+        "decisionPoints": "Stories compelling? Approval secured? Assets sharable?",
+        "qualityGate": "Stories documented and approved"
+      },
+      {
+        "name": "Reference Call Coordination & Execution",
+        "objective": "Coordinate and execute reference calls with prospects",
+        "input": "Reference requests, advocate list",
+        "output": "Completed reference calls with prospect feedback",
+        "activities": "Match reference with prospect needs, schedule calls, prepare both parties, debrief after calls, document feedback",
+        "tools": "CRM, scheduling, tracking",
+        "roles": "Sales (coordination)",
+        "successMetric": "100+ reference calls completed annually",
+        "decisionPoints": "Calls valuable to prospects? Advocates engaged? Outcomes tracked?",
+        "qualityGate": "Reference call process working smoothly"
+      },
+      {
+        "name": "Advocate Recognition & Program Growth",
+        "objective": "Recognize advocates and grow program",
+        "input": "Call participation, advocate engagement data",
+        "output": "Recognition program and advocate retention",
+        "activities": "Recognize active advocates, share customer stories internally, highlight advocates in communications, plan exclusive advocate events",
+        "tools": "Recognition programs, event planning",
+        "roles": "Customer success (recognition), Marketing (promotion)",
+        "successMetric": "Advocates engaged and growing program",
+        "decisionPoints": "Recognition meaningful? Program growing? Advocacy sustainable?",
+        "qualityGate": "Advocate program thriving"
+      }
+    ]
+  }
+}

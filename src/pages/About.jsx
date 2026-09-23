@@ -21,7 +21,7 @@ const About = () => {
                     "jobTitle": "Founder & GTM Consultant",
                     "worksFor": { "@id": "https://gtm-360.com/#organization" },
                     "description": "20+ years running B2B revenue teams including roles at AWS and Dell. Founder of GTM-360, a GTM consulting firm for B2B SaaS companies.",
-                    "sameAs": ["https://www.linkedin.com/in/sameerjoshy"],
+                    "sameAs": ["https://www.linkedin.com/in/sameer-joshi1/"],
                     "url": "https://gtm-360.com/about",
                     "knowsAbout": ["GTM consulting", "B2B sales", "revenue operations", "sales forecasting", "pipeline management", "ICP definition"]
                 })}</script>

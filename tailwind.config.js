@@ -14,6 +14,10 @@ export default {
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
             },
+            boxShadow: {
+                'card': '0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06)',
+                'panel': '0 8px 40px -8px rgb(0 0 0 / 0.18)',
+            },
         },
     },
     plugins: [],

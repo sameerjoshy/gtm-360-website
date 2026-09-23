@@ -1,65 +1,101 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import { AGENT_PORTAL_URL, KNOWLEDGE_URL } from './Header';
+
+const SUBSTACK_URL = "https://gtm360.substack.com/?r=65ta79&utm_campaign=pub-share-checklist";
+
+const challenges = [
+    { to: "/problems/stalled-growth", label: "Stalled growth" },
+    { to: "/problems/pipeline-conversion", label: "Pipeline that won't convert" },
+    { to: "/problems/forecast-volatility", label: "Forecast volatility" },
+];
+
+const offerings = [
+    { to: "/services/gtm-operating-model", label: "GTM Operating Model" },
+    { to: "/services/pipeline-quality", label: "Pipeline Quality" },
+    { to: "/services/forecasting-governance", label: "Forecasting & Governance" },
+    { to: "/services/gtm-signals-and-ai", label: "GTM Signals & AI" },
+];
+
+const learn = [
+    { to: "/insights", label: "Insights" },
+    { to: "/wiki", label: "Knowledge Base" },
+    { to: "/wiki/playbooks", label: "Playbooks" },
+    { to: "/wiki/glossary", label: "Glossary" },
+    { to: SUBSTACK_URL, label: "Essays", external: true },
+];
 
 const Footer = () => {
     return (
         <footer className="bg-white border-t border-slate-100 pt-16 pb-8">
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-
-                    {/* Brand */}
-                    <div className="md:col-span-2">
-                        <img src={logo} alt="GTM-360" className="h-10 mb-4 opacity-80 hover:opacity-100 transition-all" />
-                        <p className="text-slate-500 text-sm max-w-xs leading-relaxed mb-4">
-                            Your GTM partner at the growth plateau. We find what's actually in the way — and fix it.
-                        </p>
-                        <a
-                            href="https://www.linkedin.com/in/sameer-joshi1/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors"
-                        >
-                            LinkedIn →
+                {/* CTA band — the two entries */}
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-12 mb-12 border-b border-slate-100">
+                    <p className="text-lg font-semibold text-slate-900 max-w-md">
+                        Run the agents yourself, or read how it all works.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                        <Link to={KNOWLEDGE_URL}
+                            className="bg-blue-600 text-white px-6 py-3 rounded-lg text-sm font-bold hover:bg-blue-700 transition-all text-center">
+                            Knowledge
+                        </Link>
+                        <a href={AGENT_PORTAL_URL}
+                            className="bg-slate-900 text-white px-6 py-3 rounded-lg text-sm font-bold hover:bg-slate-700 transition-all text-center">
+                            Agent Portal
                         </a>
                     </div>
+                </div>
 
-                    {/* Work */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                    {/* Brand */}
                     <div>
-                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Work</p>
-                        <div className="space-y-3">
-                            <Link to="/agents" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">The Crew — the six questions</Link>
-                            <a href="https://brain.gtm-360.com" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Run it in the Cockpit →</a>
-                            <Link to="/start-here" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Start Here</Link>
-                            <Link to="/gtm-consulting" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">GTM Consulting</Link>
-                            <Link to="/b2b-sales-consulting" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">B2B Sales Consulting</Link>
-                            <Link to="/series-b-gtm-strategy" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Series B GTM</Link>
-                            <Link to="/how-we-work" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">How We Work</Link>
-                            <Link to="/problems" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Problems We Solve</Link>
-                            <Link to="/insights" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Insights</Link>
+                        <img src={logo} alt="GTM-360" className="h-10 mb-4 opacity-80 hover:opacity-100 transition-all" />
+                        <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                            Your GTM partner at the growth plateau. We find what's actually in the way — and fix it.
+                        </p>
+                        <div className="flex gap-4">
+                            <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer"
+                                className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">LinkedIn →</a>
+                            <a href={SUBSTACK_URL} target="_blank" rel="noopener noreferrer"
+                                className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Substack →</a>
                         </div>
                     </div>
 
-                    {/* Products */}
+                    {/* Challenges */}
                     <div>
-                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">The System</p>
+                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Challenges</p>
                         <div className="space-y-3">
-                            <Link to="/system" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">The system — overview</Link>
-                            <a href="https://okr.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Compass — set the course</a>
-                            <a href="https://brain.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Cockpit — command execution</a>
-                            <a href="https://agents.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Crew — specialists on call</a>
-                            <a href="https://brain.gtm-360.com" target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Run it in the Cockpit →</a>
+                            {challenges.map((l) => (
+                                <Link key={l.to} to={l.to} className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">{l.label}</Link>
+                            ))}
                         </div>
                     </div>
 
-                    {/* Company */}
+                    {/* Offerings */}
                     <div>
+                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Offerings</p>
+                        <div className="space-y-3">
+                            {offerings.map((l) => (
+                                <Link key={l.to} to={l.to} className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">{l.label}</Link>
+                            ))}
+                            <Link to="/how-we-work" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">How we operate</Link>
+                        </div>
+                    </div>
+
+                    {/* Learn + Company */}
+                    <div>
+                        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Learn</p>
+                        <div className="space-y-3 mb-8">
+                            {learn.map((l) => (
+                                l.external
+                                    ? <a key={l.to} href={l.to} target="_blank" rel="noopener noreferrer" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">{l.label}</a>
+                                    : <Link key={l.to} to={l.to} className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">{l.label}</Link>
+                            ))}
+                        </div>
                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Company</p>
                         <div className="space-y-3">
                             <Link to="/about" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">About</Link>
-                            <Link to="/resources/gtm-diagnostic-checklist" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">GTM Diagnostic Checklist</Link>
-                            <Link to="/contact" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Contact</Link>
-                            <Link to="/privacy" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Privacy</Link>
-                            <Link to="/terms" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Terms</Link>
+                            <Link to="/contact" className="block text-sm text-slate-500 hover:text-slate-900 transition-colors">Talk to us</Link>
                         </div>
                     </div>
                 </div>

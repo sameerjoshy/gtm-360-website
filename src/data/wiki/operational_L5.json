@@ -1,0 +1,458 @@
+{
+  "value-based-pricing-framework": {
+    "stages": [
+      {
+        "name": "Value Analysis",
+        "objective": "Quantify value delivered by product to customers",
+        "input": "Customer data, ROI studies, industry benchmarks",
+        "output": "Value assessment framework with value drivers",
+        "activities": "Analyze customer financial outcomes, identify value drivers by segment, quantify time savings, quantify cost reductions, quantify revenue increases",
+        "tools": "Financial analysis, ROI models, value frameworks",
+        "roles": "Product marketing (lead), Finance (modeling), Sales (validation)",
+        "successMetric": "Value framework with 3-5 value drivers documented",
+        "decisionPoints": "Value drivers clear? Quantifiable? Customer-validated? Segment variations?",
+        "qualityGate": "Value analysis complete, drivers validated by sales/customers"
+      },
+      {
+        "name": "Willingness-to-Pay Research",
+        "objective": "Understand what customers will pay for product",
+        "input": "Value analysis, customer segments, competitive offerings",
+        "output": "Willingness-to-pay curves by segment",
+        "activities": "Conduct customer interviews, analyze historical pricing responses, test pricing elasticity, segment by value perception, identify price sensitivity",
+        "tools": "Research methodologies, pricing analysis tools",
+        "roles": "Market research (lead), Sales (interviews), Analytics (analysis)",
+        "successMetric": "Willingness-to-pay curves defined for 3+ segments",
+        "decisionPoints": "Price sensitivity understood? Willingness clear? Variations by segment? Optimal price identified?",
+        "qualityGate": "Willingness-to-pay research complete, price ranges identified"
+      },
+      {
+        "name": "Pricing Model Development",
+        "objective": "Design pricing model reflecting value delivered",
+        "input": "Value analysis, willingness-to-pay, business model",
+        "output": "Proposed pricing model with economics",
+        "activities": "Design pricing approach (value-based, usage-based, tiering), model financial impact, assess competitive positioning, model revenue impact, document assumptions",
+        "tools": "Pricing models, financial modeling",
+        "roles": "Finance (modeling), Product marketing (positioning), Sales (feasibility)",
+        "successMetric": "Pricing model designed with financial modeling complete",
+        "decisionPoints": "Model reflects value? Financial impact acceptable? Competitive positioning? Sales willing to sell?",
+        "qualityGate": "Pricing model approved, economic model validated"
+      },
+      {
+        "name": "Competitive Benchmarking",
+        "objective": "Validate pricing against competitive offerings",
+        "input": "Competitor pricing, competitor features, value positioning",
+        "output": "Competitive price positioning analysis",
+        "activities": "Research competitor pricing, assess feature/value comparison, identify price positioning (premium/parity/discount), assess customer perception",
+        "tools": "Competitive intelligence, pricing databases",
+        "roles": "Competitive intelligence (research), Product (comparison)",
+        "successMetric": "Competitive positioning analyzed and documented",
+        "decisionPoints": "Pricing premium justified? Value perception clear? Competitive differentiation evident?",
+        "qualityGate": "Competitive analysis complete, positioning validated"
+      },
+      {
+        "name": "Test & Validation",
+        "objective": "Test pricing model before full launch",
+        "input": "Proposed pricing model, test customers, sales process",
+        "output": "Validated pricing model with customer feedback",
+        "activities": "Test with select customers, measure price acceptance, measure sales cycle impact, gather qualitative feedback, refine model based on learning",
+        "tools": "A/B testing, pilot programs",
+        "roles": "Sales (testing), Product (measurement)",
+        "successMetric": "Pricing tested with 10-20 customers, acceptance validated",
+        "decisionPoints": "Customers accept pricing? Sales adoption? Messaging clear? Objections identified?",
+        "qualityGate": "Pricing validated, sales team confident, launch ready"
+      }
+    ]
+  },
+  "product-tier-edition-strategy": {
+    "stages": [
+      {
+        "name": "Customer Segmentation for Packaging",
+        "objective": "Identify distinct customer segments for separate product tiers",
+        "input": "Customer data, use case analysis, revenue data",
+        "output": "Segment definition with tier recommendations",
+        "activities": "Segment customers by use case, segment by company size, segment by value perception, assess willingness to pay variations, identify tier boundaries",
+        "tools": "Segmentation analysis",
+        "roles": "Product marketing (segmentation), Sales (validation)",
+        "successMetric": "3-4 distinct segments identified with tier potential",
+        "decisionPoints": "Segments distinct? Separate use cases? Pricing variations justified?",
+        "qualityGate": "Segment definition finalized, tier structure proposed"
+      },
+      {
+        "name": "Feature Mapping & Tier Definition",
+        "objective": "Map features to tiers and define each tier clearly",
+        "input": "Feature roadmap, segment use cases, competitive tiers",
+        "output": "Tier definitions with feature allocations",
+        "activities": "Map features to each tier, define differentiators between tiers, establish feature upgrade paths, ensure tier appeal for each segment",
+        "tools": "Feature mapping, tier templates",
+        "roles": "Product (feature prioritization), Product marketing (tier design)",
+        "successMetric": "3-4 tiers defined with clear feature differentiation",
+        "decisionPoints": "Tiers distinct? Feature allocation optimal? Upgrade paths clear? Pricing justified?",
+        "qualityGate": "Tier definitions approved, feature mapping validated"
+      },
+      {
+        "name": "Pricing Structure & Tier Economics",
+        "objective": "Price each tier and model economics",
+        "input": "Tier definitions, value analysis, competitive pricing",
+        "output": "Pricing structure with financial modeling",
+        "activities": "Price each tier based on value, model revenue impact by tier, assess cannibalization risk, model growth trajectory, identify margin implications",
+        "tools": "Pricing models, financial modeling",
+        "roles": "Finance (modeling), Product marketing (strategy)",
+        "successMetric": "Pricing structure with financial model complete",
+        "decisionPoints": "Price gaps appropriate? Revenue modeling realistic? Margins acceptable?",
+        "qualityGate": "Tier pricing approved, financial model validated"
+      },
+      {
+        "name": "Messaging & Positioning",
+        "objective": "Create compelling messaging for each tier",
+        "input": "Tier definitions, value propositions, segment needs",
+        "output": "Messaging framework for each tier",
+        "activities": "Develop tier naming, create tier value props, develop comparison messaging, create upgrade paths narrative, identify target buyers per tier",
+        "tools": "Messaging templates",
+        "roles": "Product marketing (messaging), Sales (validation)",
+        "successMetric": "Tier messaging developed for all tiers",
+        "decisionPoints": "Messaging clear? Differentiation evident? Customer-resonant? Upgrade paths enticing?",
+        "qualityGate": "Messaging approved, ready for sales/marketing"
+      }
+    ]
+  },
+  "add-on-module-pricing-strategy": {
+    "stages": [
+      {
+        "name": "Add-On & Module Identification",
+        "objective": "Identify potential add-on products and modules",
+        "input": "Product roadmap, customer requests, competitive offerings",
+        "output": "Prioritized add-on/module list",
+        "activities": "Analyze customer expansion requests, identify product gaps, research competitor add-ons, assess technical feasibility, prioritize by demand",
+        "tools": "Product research, customer feedback",
+        "roles": "Product (identification), Sales (customer feedback)",
+        "successMetric": "5-10 add-on candidates identified",
+        "decisionPoints": "Add-ons valuable? Technical feasible? Market demand?",
+        "qualityGate": "Add-on candidates prioritized"
+      },
+      {
+        "name": "Value Assessment & Willingness to Pay",
+        "objective": "Quantify value and price sensitivity for add-ons",
+        "input": "Add-on descriptions, customer data, use cases",
+        "output": "Value assessment with pricing recommendations",
+        "activities": "Analyze customer willingness to pay, quantify value per segment, assess price sensitivity, estimate addressable market",
+        "tools": "Pricing research, customer interviews",
+        "roles": "Product marketing (assessment), Finance (modeling)",
+        "successMetric": "Value and pricing assessed for all add-ons",
+        "decisionPoints": "Value clear? WTP realistic? Pricing opportunities?",
+        "qualityGate": "Value assessment complete"
+      },
+      {
+        "name": "Add-On Packaging & Bundling",
+        "objective": "Design packaging and bundling strategies",
+        "input": "Add-ons identified, pricing data, customer segments",
+        "output": "Packaging and bundling recommendations",
+        "activities": "Design standalone vs. bundled options, identify bundling themes, assess bundling ROI, plan upgrade paths",
+        "tools": "Packaging templates",
+        "roles": "Product marketing (design)",
+        "successMetric": "Packaging strategy documented",
+        "decisionPoints": "Packaging resonant? Bundling opportunities? Cannibalization risk?",
+        "qualityGate": "Packaging strategy approved"
+      },
+      {
+        "name": "Pricing Model Development",
+        "objective": "Develop pricing for add-on products",
+        "input": "Packaging strategy, value assessment, competitive pricing",
+        "output": "Approved add-on pricing",
+        "activities": "Price standalone options, price bundled options, model revenue impact, set discount policies, model margin impact",
+        "tools": "Pricing models, financial modeling",
+        "roles": "Finance (lead), Product marketing (input)",
+        "successMetric": "Add-on pricing established",
+        "decisionPoints": "Pricing competitive? Revenue modeling realistic? Margins acceptable?",
+        "qualityGate": "Pricing approved and ready for launch"
+      },
+      {
+        "name": "Sales & Marketing Enablement",
+        "objective": "Enable sales and marketing to sell add-ons",
+        "input": "Add-on pricing, packaging, business case",
+        "output": "Sales and marketing teams ready",
+        "activities": "Train sales on add-ons, create marketing materials, develop add-on positioning, identify target buyers, create bundling recommendations",
+        "tools": "Training materials, sales enablement",
+        "roles": "Sales enablement (training), Marketing (materials)",
+        "successMetric": "Sales and marketing trained and equipped",
+        "decisionPoints": "Team confident? Materials compelling? Positioning clear?",
+        "qualityGate": "Teams ready to sell"
+      },
+      {
+        "name": "Add-On Launch & Go-to-Market",
+        "objective": "Launch add-ons to market",
+        "input": "Pricing, sales enablement, marketing plan",
+        "output": "Add-ons launched and being sold",
+        "activities": "Announce add-ons, execute marketing campaign, support sales efforts, track adoption, gather feedback",
+        "tools": "Marketing platforms, CRM",
+        "roles": "Marketing (campaign), Sales (selling)",
+        "successMetric": "Add-ons launched, initial adoption visible",
+        "decisionPoints": "Launch smooth? Adoption rates healthy? Customer reaction positive?",
+        "qualityGate": "Add-ons in market with tracking active"
+      }
+    ]
+  },
+  "a-b-testing-for-pricing-packaging": {
+    "stages": [
+      {
+        "name": "Hypothesis Development",
+        "objective": "Define what pricing hypothesis to test",
+        "input": "Pricing concerns, customer feedback, competitive data",
+        "output": "Clear test hypothesis with success metrics",
+        "activities": "Identify pricing question to answer, develop hypothesis, define primary metric, define success threshold, estimate sample size needed",
+        "tools": "Hypothesis templates, statistical calculators",
+        "roles": "Analytics (design), Product marketing (hypothesis)",
+        "successMetric": "Hypothesis documented and approved",
+        "decisionPoints": "Hypothesis clear? Metric meaningful? Sample size adequate?",
+        "qualityGate": "Hypothesis approved"
+      },
+      {
+        "name": "Test Design & Setup",
+        "objective": "Design pricing test",
+        "input": "Hypothesis, pricing options, customer segments",
+        "output": "Test design with implementation plan",
+        "activities": "Design test structure (A/B, multivariate), select test variables, identify test audience, plan control group, design randomization",
+        "tools": "A/B testing platforms",
+        "roles": "Analytics (design), Marketing (logistics)",
+        "successMetric": "Test design complete",
+        "decisionPoints": "Test design rigorous? Control group appropriate? Randomization sound?",
+        "qualityGate": "Test ready to launch"
+      },
+      {
+        "name": "Test Implementation & Launch",
+        "objective": "Launch pricing test",
+        "input": "Test design, pricing options",
+        "output": "Test active with control and test groups",
+        "activities": "Set up test in platform, configure pricing variations, randomize customer assignments, track implementation",
+        "tools": "A/B testing platform, pricing system",
+        "roles": "Engineering (setup), Analytics (monitoring)",
+        "successMetric": "Test live with proper randomization",
+        "decisionPoints": "Randomization working? Groups balanced? Tracking accurate?",
+        "qualityGate": "Test live and tracking properly"
+      },
+      {
+        "name": "Data Collection & Monitoring",
+        "objective": "Collect test data and monitor progress",
+        "input": "Test active, customer interactions",
+        "output": "Sufficient data for statistical analysis",
+        "activities": "Monitor test progress, check for issues, collect response data, monitor for bias, track statistical power",
+        "tools": "Analytics dashboards, monitoring",
+        "roles": "Analytics (monitoring)",
+        "successMetric": "Sufficient data collected (90%+ power)",
+        "decisionPoints": "Data quality good? Sufficient sample? Time to run test?",
+        "qualityGate": "Data collection complete"
+      },
+      {
+        "name": "Results Analysis & Statistical Testing",
+        "objective": "Analyze test results statistically",
+        "input": "Test data, control and test groups",
+        "output": "Statistical analysis with findings",
+        "activities": "Run statistical tests, calculate effect sizes, assess significance, analyze by segment, identify learnings",
+        "tools": "Statistical analysis software",
+        "roles": "Analytics (analysis)",
+        "successMetric": "Analysis complete with clear results",
+        "decisionPoints": "Results significant? Effect size meaningful? Learnings clear?",
+        "qualityGate": "Analysis approved"
+      },
+      {
+        "name": "Recommendation & Decision",
+        "objective": "Develop recommendation based on results",
+        "input": "Analysis results, business implications",
+        "output": "Recommendation to leadership",
+        "activities": "Develop recommendation (change, don't change, test more), model business impact, assess risk, present to leadership",
+        "tools": "Recommendation templates",
+        "roles": "Analytics (recommendation), Product marketing (business impact)",
+        "successMetric": "Recommendation presented",
+        "decisionPoints": "Recommendation clear? Business impact quantified? Risk assessed?",
+        "qualityGate": "Leadership decision made"
+      },
+      {
+        "name": "Rollout & Impact Monitoring",
+        "objective": "Implement decision and monitor impact",
+        "input": "Leadership decision, implementation plan",
+        "output": "Successfully implemented with results tracked",
+        "activities": "Implement pricing change or run next test, monitor impact on revenue, monitor customer satisfaction, track adoption",
+        "tools": "Analytics, CRM",
+        "roles": "Product (implementation), Analytics (monitoring)",
+        "successMetric": "Decision implemented, impact tracked",
+        "decisionPoints": "Implementation smooth? Impact as expected?",
+        "qualityGate": "Results being monitored and communicated"
+      }
+    ]
+  },
+  "price-increase-management": {
+    "stages": [
+      {
+        "name": "Pricing Increase Justification",
+        "objective": "Develop business justification for price increase",
+        "input": "Cost structure, market conditions, competitor pricing, value delivered",
+        "output": "Documented justification for increase",
+        "activities": "Analyze cost inflation, assess value delivered, benchmark against competitors, quantify justification, identify timing",
+        "tools": "Financial analysis",
+        "roles": "Finance (justification), Product (value)",
+        "successMetric": "Justification documented",
+        "decisionPoints": "Justification compelling? Timing right? Value clear?",
+        "qualityGate": "Justification approved by leadership"
+      },
+      {
+        "name": "Customer Impact Analysis",
+        "objective": "Assess impact of increase on customer segments",
+        "input": "Pricing increase, customer list, contract terms",
+        "output": "Segmented impact analysis with risk assessment",
+        "activities": "Segment customers by renewal date, assess increase impact per segment, identify churn risk, calculate revenue impact, identify negotiation cases",
+        "tools": "Customer analytics, financial modeling",
+        "roles": "Analytics (impact), Sales (risk assessment)",
+        "successMetric": "Impact analyzed by segment with risk identified",
+        "decisionPoints": "Impact manageable? Churn risk acceptable? Revenue impact positive?",
+        "qualityGate": "Impact assessment approved"
+      },
+      {
+        "name": "Tiered Implementation Strategy",
+        "objective": "Develop strategy for phased price increase",
+        "input": "Impact analysis, customer risk tiers",
+        "output": "Implementation strategy with timing",
+        "activities": "Define increase amount by segment, plan effective date, identify negotiation strategy for at-risk accounts, plan communication timeline",
+        "tools": "Implementation planning",
+        "roles": "Sales leadership (strategy), Finance (timing)",
+        "successMetric": "Tiered strategy documented",
+        "decisionPoints": "Tiers meaningful? Timing logical? Negotiation approach clear?",
+        "qualityGate": "Implementation strategy approved"
+      },
+      {
+        "name": "Communication Planning",
+        "objective": "Plan communication strategy for price increase",
+        "input": "Tiered strategy, messaging approach",
+        "output": "Communication plan and materials",
+        "activities": "Draft customer communication, prepare sales talking points, prepare customer success messaging, develop Q&A, plan escalation path",
+        "tools": "Communication templates",
+        "roles": "Marketing (comms), Sales (talking points)",
+        "successMetric": "Communication plan and materials ready",
+        "decisionPoints": "Messaging positive? Justification clear? Support adequate?",
+        "qualityGate": "Communications approved"
+      },
+      {
+        "name": "Price Increase Implementation",
+        "objective": "Execute price increase across customer base",
+        "input": "Communication plan, tiered strategy",
+        "output": "Price increase implemented with customer communication",
+        "activities": "Send customer communications, support sales/CSM conversations, process negotiated deals, update billing systems, monitor customer reaction",
+        "tools": "Email, CRM, billing system",
+        "roles": "Marketing (communication), Sales (conversations), Operations (billing)",
+        "successMetric": "Increase communicated, billing updated for all customers",
+        "decisionPoints": "Communication received well? Churn risk realized? Negotiated deals within tolerance?",
+        "qualityGate": "Increase fully implemented"
+      },
+      {
+        "name": "Renewal & Negotiation Management",
+        "objective": "Manage renewals post-price increase",
+        "input": "Customer communication, negotiation strategy",
+        "output": "Renewals closed at new pricing",
+        "activities": "Handle price increase objections, negotiate with at-risk accounts, close renewals, document learnings",
+        "tools": "CRM, negotiation templates",
+        "roles": "Sales (negotiation), CSM (relationships)",
+        "successMetric": "Renewals processed, churn tracked",
+        "decisionPoints": "Churn rate acceptable? Negotiated discounts within budget?",
+        "qualityGate": "Renewals complete with results analyzed"
+      },
+      {
+        "name": "Results Monitoring & Optimization",
+        "objective": "Monitor impact and optimize approach",
+        "input": "Renewal results, churn data, revenue impact",
+        "output": "Results analyzed with recommendations",
+        "activities": "Track actual churn vs. projection, calculate revenue impact, gather customer feedback, identify learnings for future increases",
+        "tools": "Analytics, customer feedback",
+        "roles": "Analytics (analysis), Sales (feedback)",
+        "successMetric": "Results analyzed, learnings documented",
+        "decisionPoints": "Impact as expected? Learnings captured? Strategy improved?",
+        "qualityGate": "Learnings applied to future pricing decisions"
+      }
+    ]
+  },
+  "renewal-pricing-escalation": {
+    "stages": [
+      {
+        "name": "Renewal Pricing Analysis",
+        "objective": "Analyze historical renewal pricing patterns",
+        "input": "Renewal data, customer history, pricing by segment",
+        "output": "Renewal pricing analysis with patterns",
+        "activities": "Analyze historical renewal price changes, segment by customer type, identify escalation patterns, assess elasticity, identify opportunities",
+        "tools": "Customer data, pricing analysis",
+        "roles": "Analytics (analysis), Finance (pricing)",
+        "successMetric": "Pricing analysis documented",
+        "decisionPoints": "Patterns clear? Escalation opportunities? Risk identified?",
+        "qualityGate": "Analysis complete"
+      },
+      {
+        "name": "Escalation Strategy Development",
+        "objective": "Develop renewal escalation strategy",
+        "input": "Pricing analysis, competitive pricing, market conditions",
+        "output": "Escalation strategy with approach",
+        "activities": "Define escalation approach (annual increases, usage-based, market-based), set escalation rates by segment, identify negotiation boundaries",
+        "tools": "Strategy templates",
+        "roles": "Finance (strategy), Sales (reality check)",
+        "successMetric": "Escalation strategy documented",
+        "decisionPoints": "Strategy realistic? Competitive? Acceptable to customers?",
+        "qualityGate": "Strategy approved"
+      },
+      {
+        "name": "Segment-Specific Escalation Plans",
+        "objective": "Develop customized escalation for each customer segment",
+        "input": "Escalation strategy, customer segments",
+        "output": "Segment-specific pricing plans",
+        "activities": "Develop tiered pricing by segment, identify at-risk customers, plan negotiation thresholds, prepare sales guidance",
+        "tools": "Pricing templates",
+        "roles": "Sales leadership (segmentation), Finance (pricing)",
+        "successMetric": "Pricing plans for all segments",
+        "decisionPoints": "Differentiation meaningful? Fair pricing? Competitive?",
+        "qualityGate": "Segment plans approved"
+      },
+      {
+        "name": "Communication & Sales Preparation",
+        "objective": "Prepare sales team for renewal pricing conversations",
+        "input": "Escalation strategy, customer-specific pricing",
+        "output": "Trained sales team ready for conversations",
+        "activities": "Train sales on escalation rationale, provide customer talking points, provide negotiation guidance, distribute pricing sheets, practice objection handling",
+        "tools": "Training materials, talking points, negotiation guides",
+        "roles": "Sales enablement (training)",
+        "successMetric": "Sales team trained and prepared",
+        "decisionPoints": "Team confident? Messaging clear? Objection handling ready?",
+        "qualityGate": "Sales ready for conversations"
+      },
+      {
+        "name": "Renewal Pricing Negotiation",
+        "objective": "Negotiate renewal pricing with customers",
+        "input": "Escalation strategy, customer-specific pricing, negotiation guidance",
+        "output": "Negotiated renewal pricing agreed",
+        "activities": "Present pricing, explain rationale, address objections, negotiate within guidelines, close renewals",
+        "tools": "CRM, negotiation templates",
+        "roles": "Sales (negotiation), CSM (relationship)",
+        "successMetric": "Renewals closed at target pricing or better",
+        "decisionPoints": "Pricing accepted? Negotiations within tolerance? Customer satisfied?",
+        "qualityGate": "Renewals complete"
+      },
+      {
+        "name": "Results Monitoring & Analysis",
+        "objective": "Monitor renewal pricing results",
+        "input": "Renewal agreements, pricing achieved",
+        "output": "Results analysis with impact assessment",
+        "activities": "Track average pricing achieved vs. target, segment performance, analyze negotiated discounts, calculate revenue impact",
+        "tools": "Analytics, CRM data",
+        "roles": "Analytics (analysis), Finance (impact)",
+        "successMetric": "Results analyzed and reported",
+        "decisionPoints": "Targets met? Discount rates acceptable? Revenue impact positive?",
+        "qualityGate": "Results documented and learnings captured"
+      },
+      {
+        "name": "Continuous Optimization",
+        "objective": "Optimize renewal pricing strategy",
+        "input": "Results data, customer feedback, market changes",
+        "output": "Refined strategy for next cycle",
+        "activities": "Analyze what worked, identify improvements, adjust escalation rates, update customer communication, plan next cycle",
+        "tools": "Optimization frameworks",
+        "roles": "Finance (optimization)",
+        "successMetric": "Strategy refined and documented",
+        "decisionPoints": "Learnings captured? Strategy improved? Prepared for next cycle?",
+        "qualityGate": "Next cycle strategy ready"
+      }
+    ]
+  }
+}

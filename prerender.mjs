@@ -9,7 +9,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -20,6 +20,16 @@ const routes = [
     '/contact',
     '/how-we-work',
     '/agents',
+    '/offerings',
+    '/wiki',
+    '/wiki/guides',
+    '/wiki/playbooks',
+    '/wiki/glossary',
+    '/wiki/method',
+    '/wiki/method/tools',
+    '/wiki/method/agents',
+    '/wiki/method/about',
+    '/diagnostic-score',
     '/problems',
     '/problems/stalled-growth',
     '/problems/pipeline-conversion',
@@ -52,8 +62,56 @@ const routes = [
     '/thank-you',
 ];
 
+// Canonical agent pages: gtm-360.com/agents/<engine>/<agent> (from engines.js).
+// Each agent gets a static, crawler-readable page so AI systems can find, cite,
+// and link to every specialist job.
+const { ENGINES } = await import(pathToFileURL(path.resolve(__dirname, 'src/data/engines.js')).href);
+const { AGENT_GUIDES } = await import(pathToFileURL(path.resolve(__dirname, 'src/data/agentGuides.js')).href);
+for (const e of ENGINES) {
+    for (const a of e.agents) {
+        routes.push(`/agents/${e.id}/${a.id}`);
+        // Agents with a written explainer also get a static guide page.
+        if (AGENT_GUIDES[a.id]) routes.push(`/agents/${e.id}/${a.id}/guide`);
+    }
+}
+
+// Knowledge base (wiki) — the operating model's layers and processes, and the
+// playbook library. Enumerated from data so the sitemap + prerender stay in sync.
+const { LAYERS } = await import(pathToFileURL(path.resolve(__dirname, 'src/data/wiki/framework.js')).href);
+const { slugify } = await import(pathToFileURL(path.resolve(__dirname, 'src/data/wiki/content.js')).href);
+const { playbooks } = await import(pathToFileURL(path.resolve(__dirname, 'src/data/playbooks.js')).href);
+for (const l of LAYERS) {
+    routes.push(`/wiki/method/layer/${l.id}`);
+    for (const p of (l.processes || [])) routes.push(`/wiki/method/process/${slugify(p.name)}`);
+}
+for (const p of playbooks) routes.push(`/wiki/playbooks/${p.slug}`);
+
 const distDir = path.resolve(__dirname, 'dist');
 const templatePath = path.resolve(distDir, 'index.html');
+
+// Generate sitemap.xml from the SAME route list we prerender, so the sitemap can
+// never drift from what actually exists (no more hand-maintained URL list).
+function writeSitemap() {
+    const priorityFor = (route) => {
+        if (route === '/') return '1.0';
+        if (route === '/start-here') return '0.9';
+        if (['/how-we-work', '/system', '/engine', '/agents', '/learn', '/about'].includes(route)) return '0.8';
+        if (route.endsWith('/guide')) return '0.7';
+        if (route.startsWith('/agents/')) return '0.6';
+        return '0.6';
+    };
+    const unique = [...new Set(routes)];
+    const body = unique
+        .map((r) => {
+            const loc = `https://gtm-360.com${r === '/' ? '/' : r + '/'}`;
+            const freq = r === '/' ? 'weekly' : 'monthly';
+            return `  <url><loc>${loc}</loc><changefreq>${freq}</changefreq><priority>${priorityFor(r)}</priority></url>`;
+        })
+        .join('\n');
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
+    fs.writeFileSync(path.resolve(distDir, 'sitemap.xml'), xml);
+    console.log(`  ✓ sitemap.xml (${unique.length} urls)`);
+}
 
 async function prerender() {
     // Check dist exists
@@ -76,21 +134,28 @@ async function prerender() {
             console.log(`  ✓ ${route}`);
         }
         console.log('\n✅ Basic prerender complete. Each route now has its own index.html.');
+        writeSitemap();
         return;
     }
 
-    const { render } = await import(serverEntryPath);
+    const { render } = await import(pathToFileURL(serverEntryPath).href);
 
     for (const route of routes) {
         try {
             const { html: appHtml, helmet } = render(route);
 
-            // Inject rendered content + helmet tags into template
+            // Inject rendered content + helmet tags into template.
+            // Include helmet.script — JSON-LD (<script type="application/ld+json">)
+            // lives here and was silently dropped before, so crawlers/AI saw no schema.
             let pageHtml = template
                 .replace('<!--app-head-->', helmet ? [
                     helmet.title?.toString() || '',
                     helmet.meta?.toString() || '',
                     helmet.link?.toString() || '',
+                    helmet.script?.toString() || '',
+                    helmet.style?.toString() || '',
+                    helmet.base?.toString() || '',
+                    helmet.noscript?.toString() || '',
                 ].join('\n') : '')
                 .replace('<!--app-html-->', appHtml);
 
@@ -108,6 +173,7 @@ async function prerender() {
     }
 
     console.log('\n✅ Full SSR prerender complete. Site is crawler-readable.');
+    writeSitemap();
 }
 
 prerender().catch(console.error);

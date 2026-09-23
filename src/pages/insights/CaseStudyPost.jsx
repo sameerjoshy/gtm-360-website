@@ -22,11 +22,19 @@ const CaseStudyPost = () => {
     const [activeId, setActiveId] = useState(null);
     const observerRef = useRef(null);
 
-    // Build the sections that actually have content in this study
-    const sections = useMemo(
-        () => SECTION_DEFS.filter(s => study?.sections?.[s.key]),
-        [study]
-    );
+    // Build the sections that actually have content in this study.
+    // Preferred: the canonical SECTION_DEFS keys. Fallback: legacy case studies
+    // store differently-named keys — render every key present, title-cased.
+    const sections = useMemo(() => {
+        const matched = SECTION_DEFS.filter(s => study?.sections?.[s.key]);
+        if (matched.length) return matched;
+        return Object.keys(study?.sections || {}).map((k) => ({
+            key: k,
+            id: k,
+            label: k.replace(/([A-Z])/g, ' $1').replace(/^./, (c) => c.toUpperCase()).trim(),
+            highlight: false,
+        }));
+    }, [study]);
 
     // IntersectionObserver — tracks which section is in view
     useEffect(() => {
@@ -77,23 +85,26 @@ const CaseStudyPost = () => {
                         Back to Insights
                     </Link>
                     <span className="text-gray-400 font-bold tracking-widest uppercase text-xs mb-6 block">
-                        Case Study /// {study.client_profile}
+                        Case Study /// {study.client_profile || study.category || 'GTM-360'}
                     </span>
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-[1.1]">
                         {study.title}
                     </h1>
                     <p className="text-xl text-gray-500 font-light leading-relaxed max-w-3xl">
-                        {study.subtitle}
+                        {study.subtitle || study.description || study.keyTakeaway}
                     </p>
-                    <div className="mt-8 flex gap-6 text-sm text-slate-400">
-                        <span>{study.problem_type}</span>
-                        <span>·</span>
-                        <span>{study.engagement_length}</span>
-                    </div>
+                    {(study.problem_type || study.engagement_length) && (
+                        <div className="mt-8 flex gap-6 text-sm text-slate-400">
+                            <span>{study.problem_type}</span>
+                            {study.problem_type && study.engagement_length ? <span>·</span> : null}
+                            <span>{study.engagement_length}</span>
+                        </div>
+                    )}
                 </div>
             </header>
 
-            {/* METRICS */}
+            {/* METRICS — only when the study carries before/after numbers */}
+            {study.metrics?.before && study.metrics?.after ? (
             <section className="bg-slate-50 border-b border-gray-200 py-12">
                 <div className="container max-w-4xl">
                     <h3 className="text-xs font-bold uppercase text-gray-400 mb-6 tracking-widest text-center">Before → After</h3>
@@ -115,6 +126,7 @@ const CaseStudyPost = () => {
                     </div>
                 </div>
             </section>
+            ) : null}
 
             {/* BODY */}
             <article className="py-20">

@@ -5,7 +5,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 
 export default [
   {
-    ignores: ['dist/**', 'node_modules/**', 'public/**', 'qa/smoke.mjs'],
+    ignores: ['dist/**', 'node_modules/**', 'public/**', 'qa/**'],
   },
   js.configs.recommended,
   react.configs.flat.recommended,

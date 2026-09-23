@@ -114,14 +114,29 @@ CTAs should feel like next steps, not conversions.
 
 ---
 
-## 10. v2 — THE OPERATOR SYSTEM (addendum, 2026-08-24)
+## 10. v2 ï¿½ THE OPERATOR SYSTEM (addendum, 2026-08-24)
 
-The product suite (Compass · Cockpit · Crew) extends the method instead of replacing it.
+The product suite (Compass ï¿½ Cockpit ï¿½ Crew) extends the method instead of replacing it.
 Reconciles the "AI is never the headline" rule with the system era:
 
-*   **The system IS the method, operationalized.** Not a product that replaces operators — the method they already trust, running continuously between engagements.
+*   **The system IS the method, operationalized.** Not a product that replaces operators ï¿½ the method they already trust, running continuously between engagements.
 *   **AI is the engine, never the hero.** We say "keeps the method running", "executes the support work", "only acts on your confirmation". We never say "AI-powered growth", "autonomous revenue", or "let AI run it".
 *   **The customer stays the hero.** The operator diagnoses and designs; the system executes the routine work; the human confirms every move. "The strategy you approve runs itself. You confirm the moves."
-*   **Product copy obeys section 4.** No "broken/chaos/disaster". Stalled, straining, noise creeping in — not crisis language.
-*   **Naming is fixed:** Compass (set the course) · Cockpit (command the execution) · Crew (specialists on call). Parent: **GTM-360 — The Revenue Operating System.**
-*   **Test:** if the copy implies the software outsmarts the customer's operator — FAIL. If it implies the operator's judgment is what the software amplifies — PASS.
+*   **Product copy obeys section 4.** No "broken/chaos/disaster". Stalled, straining, noise creeping in ï¿½ not crisis language.
+*   **Naming is fixed:** Compass (set the course) ï¿½ Cockpit (command the execution) ï¿½ Crew (specialists on call). Parent: **GTM-360 ï¿½ The Revenue Operating System.**
+*   **Test:** if the copy implies the software outsmarts the customer's operator ï¿½ FAIL. If it implies the operator's judgment is what the software amplifies ï¿½ PASS.
+
+## 11. v3 ï¿½ THE REVENUE LOOP (addendum, 2026-09-20)
+
+The offer is now a strategy firm whose deliverable is a working system that keeps running. Reconciles the consulting identity with the agentic system into one story:
+
+*   **The business model:** GTM-360 is a GTM strategy firm. We bring operator judgment and thought leadership (the strategy layer), develop the playbooks and process ownership (the Method layer), then set up the agentic system that runs the end-to-end GTM process with defined handoffs (the engine layer). Sold as: Diagnose ï¿½ Build ï¿½ Run ï¿½ Grow.
+*   **The thesis (use everywhere):** "We build your revenue system. Then it keeps running." Most advisories hand you a roadmap and leave. We build the loop ï¿½ and it keeps working after we do.
+*   **The model is the bowtie, not a list.** Strategy (top envelope) ï¿½ Attract ï¿½ Convert ï¿½ Grow (the customer journey) ï¿½ Operations (bottom envelope) ï¿½ the loop closes (Enhance) back to Strategy. The graphic is the signature; recognition through repetition.
+*   **The customer journey is the story; the org chart is the label.** Engines carry functional names on the surface (Strategy / Marketing / Sales / Expansion / Operations) because buyers navigate by function. The journey language (Attract / Convert / Grow) is the story that sells. No engine is ever named "Understand" or "Prove."
+*   **Validate, not prove.** The bottom envelope validates the numbers before you act; the loop enhances next quarter. Never "prove".
+*   **Visual-first (show, don't scroll).** Every claim gets a video, a diagram, a table, a chart, or a number. Prose is connective tissue, not the content. One idea per viewport. Tools placed where they carry the argument ï¿½ never force-fit.
+*   **Real quotes only.** Expert quotes are real, attributed, and placed where they carry the argument (e.g. the Bill Gates "automation magnifies" line on the process-first argument). Never invented attribution.
+*   **Humanized consultant+operator voice.** A consultant who has sat in the seat: calm, direct, respects the customer's competence. No machine tells, no forced triads, no "It's not X it's Y", no one-line closers, varied rhythm, specific over vague. The customer is the hero; we are the mirror and the system.
+*   **Base-level engine + roadmap posture.** The loop ships at its base with every engagement; the roadmap is a forward capability progression ("grows next"), never "planned / demo / coming soon". Never defensive, never shallow.
+*   **Naming (expanded):** Compass (goals &amp; governance) ï¿½ Cockpit (deals &amp; the book) ï¿½ Crew (specialists on call) ï¿½ Content (the CREATE engine, part of Marketing) ï¿½ Method (the operating model). Parent: **GTM-360 ï¿½ The Revenue Operating System.**

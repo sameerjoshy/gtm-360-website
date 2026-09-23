@@ -1,6 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { AGENT_PORTAL_URL, KNOWLEDGE_URL } from '../components/Header';
+
+const SUBSTACK_URL = "https://gtm360.substack.com/?r=65ta79&utm_campaign=pub-share-checklist";
 
 const insights = [
     {
@@ -189,6 +192,51 @@ canonical="https://gtm-360.com/insights"
                                 <span className="text-xs text-slate-400 mt-4 block">Read full case study →</span>
                             </Link>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* MORE TO READ — the knowledge tiles */}
+            <section className="py-16 bg-white border-t border-slate-100">
+                <div className="container max-w-5xl">
+                    <div className="max-w-xl mb-10">
+                        <span className="text-slate-400 font-mono text-xs tracking-widest uppercase mb-3 block">More to read</span>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-3">The knowledge base.</h2>
+                        <p className="text-slate-500 font-light">The operating model, the playbooks, and a plain-English guide to every agent.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                        {[
+                            { to: "/wiki", label: "Knowledge Base", desc: "The operating model and the guides, in one place.", external: false },
+                            { to: "/wiki/playbooks", label: "Playbooks", desc: "The step-by-step plays behind every fix.", external: false },
+                            { to: "/wiki/glossary", label: "Glossary", desc: "The terms — defined the way operators use them.", external: false },
+                            { to: SUBSTACK_URL, label: "Essays", desc: "Longer writing, published on Substack.", external: true },
+                        ].map((t) => (
+                            t.external ? (
+                                <a key={t.label} href={t.to} target="_blank" rel="noopener noreferrer"
+                                    className="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 hover:bg-white transition-all block">
+                                    <h3 className="text-base font-bold text-slate-900 mb-2">{t.label} ↗</h3>
+                                    <p className="text-slate-500 text-sm leading-relaxed">{t.desc}</p>
+                                </a>
+                            ) : (
+                                <Link key={t.label} to={t.to}
+                                    className="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 hover:bg-white transition-all block">
+                                    <h3 className="text-base font-bold text-slate-900 mb-2">{t.label}</h3>
+                                    <p className="text-slate-500 text-sm leading-relaxed">{t.desc}</p>
+                                </Link>
+                            )
+                        ))}
+                    </div>
+
+                    {/* The two entries */}
+                    <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                        <Link to={KNOWLEDGE_URL}
+                            className="bg-blue-600 text-white px-6 py-3 rounded-lg text-sm font-bold hover:bg-blue-700 transition-all text-center">
+                            Knowledge
+                        </Link>
+                        <a href={AGENT_PORTAL_URL}
+                            className="bg-slate-900 text-white px-6 py-3 rounded-lg text-sm font-bold hover:bg-slate-700 transition-all text-center">
+                            Agent Portal
+                        </a>
                     </div>
                 </div>
             </section>

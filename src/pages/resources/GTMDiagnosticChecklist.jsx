@@ -2,6 +2,17 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../../components/SEO';
+import useSubmitLead from '../../hooks/useSubmitLead';
+
+// Map each checklist category to the engine that owns it (5-engine model).
+const categoryEngine = {
+    "ICP & Targeting": "Strategy",
+    "Pipeline Quality & Stage Design": "Sales",
+    "Forecasting & Revenue Governance": "Operations",
+    "GTM Alignment": "Strategy",
+    "Revenue Metrics & Signals": "Operations",
+    "GTM Tech & AI Readiness": "Marketing",
+};
 
 const checks = [
     {
@@ -79,6 +90,9 @@ const GTMDiagnosticChecklist = () => {
     const allIds = checks.flatMap(c => c.items.map(i => i.id));
     const [checked, setChecked] = useState({});
     const [expanded, setExpanded] = useState({});
+    const [email, setEmail] = useState('');
+    const [captureStatus, setCaptureStatus] = useState('idle'); // idle, submitting, success, error
+    const { submit } = useSubmitLead();
 
     const toggle = (id) => setChecked(prev => ({ ...prev, [id]: !prev[id] }));
     const toggleRisk = (id) => setExpanded(prev => ({ ...prev, [id]: !prev[id] }));
@@ -95,6 +109,28 @@ const GTMDiagnosticChecklist = () => {
     const uncheckedItems = checks.flatMap(c =>
         c.items.filter(i => !checked[i.id]).map(i => ({ ...i, category: c.category }))
     );
+
+    // Which engines have the most unchecked gaps — the constraint signal.
+    const engineGaps = Object.entries(categoryEngine).reduce((acc, [cat, engine]) => {
+        const catCount = checks.find(c => c.category === cat)?.items.filter(i => !checked[i.id]).length ?? 0;
+        acc[engine] = (acc[engine] ?? 0) + catCount;
+        return acc;
+    }, {});
+    const topEngine = Object.entries(engineGaps).sort((a, b) => b[1] - a[1])[0]?.[0] ?? 'Strategy';
+
+    const handleEmailCapture = async (e) => {
+        e.preventDefault();
+        if (!email) return;
+        setCaptureStatus('submitting');
+        const ok = await submit('diagnostic_score', [
+            { name: 'email', value: email },
+            { name: 'message', value: `GTM diagnostic score: ${pct}% (${done}/${total}). Top constraint engine: ${topEngine}. Gaps: ${uncheckedItems.slice(0, 5).map(i => i.category).join(', ')}` },
+        ]);
+        setCaptureStatus(ok ? 'success' : 'error');
+        if (typeof window !== 'undefined' && window.plausible) {
+            window.plausible('Diagnostic completed', { props: { score: pct, topEngine } });
+        }
+    };
 
     return (
         <div className="min-h-screen bg-white font-sans text-slate-900">
@@ -125,6 +161,11 @@ const GTMDiagnosticChecklist = () => {
                         24 questions across 6 areas of your revenue system. Check what's true for your business. See where the gaps are.
                     </p>
                     <p className="text-sm text-slate-400">No email required. Works in the browser. Takes about 10 minutes.</p>
+                    <div className="mt-4">
+                        <Link to="/diagnostic-score" className="text-sm font-medium text-indigo-600 hover:underline">
+                            Short on time? Find your constraint engine in 2 minutes →
+                        </Link>
+                    </div>
                 </div>
             </section>
 
@@ -239,6 +280,59 @@ const GTMDiagnosticChecklist = () => {
                         {uncheckedItems.length === 0 && (
                             <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 mb-10">
                                 <p className="text-emerald-800 font-medium">All 24 checks passed. If the system is genuinely running this well, the question is whether it's designed to scale to your next stage — not whether it works today.</p>
+                            </div>
+                        )}
+
+                        <div className="bg-slate-900 rounded-xl p-8 text-white mb-6">
+                            <h3 className="text-xl font-bold text-white mb-3">Where the constraint probably sits</h3>
+                            <p className="text-slate-400 mb-5 text-sm leading-relaxed">
+                                Your gaps cluster in <span className="text-white font-bold">{topEngine}</span>.
+                                In GTM-360's model, that's the engine most likely to be limiting growth right now —
+                                Strategy, Marketing, Sales, Expansion, or Operations.
+                            </p>
+                            <div className="flex flex-wrap gap-2 mb-6">
+                                {Object.entries(engineGaps).filter(([, n]) => n > 0).sort((a, b) => b[1] - a[1]).map(([engine, n]) => (
+                                    <span key={engine} className="text-xs px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-slate-300">
+                                        {engine} · {n} gap{n !== 1 ? 's' : ''}
+                                    </span>
+                                ))}
+                            </div>
+                            <Link to="/engine" className="text-sm font-bold text-indigo-300 hover:text-indigo-200 underline underline-offset-4">
+                                See the five engines →
+                            </Link>
+                        </div>
+
+                        {/* EMAIL CAPTURE — deliver the result */}
+                        {captureStatus === 'success' ? (
+                            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-8 text-center mb-6">
+                                <p className="text-emerald-800 font-medium mb-1">Check your inbox.</p>
+                                <p className="text-emerald-700 text-sm">We've sent your diagnostic result. If the gaps line up with a real constraint, that's the conversation worth having.</p>
+                            </div>
+                        ) : (
+                            <div className="bg-white border border-slate-200 rounded-xl p-8 mb-6">
+                                <h3 className="text-lg font-bold text-slate-900 mb-1">Send me this result.</h3>
+                                <p className="text-slate-500 text-sm mb-4">Your score, the constraint engine, and the gaps — in your inbox, free. We won't add you to a nurture sequence without asking.</p>
+                                <form onSubmit={handleEmailCapture} className="flex flex-col sm:flex-row gap-3">
+                                    <input
+                                        type="email"
+                                        required
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        placeholder="Work email"
+                                        className="flex-1 border border-slate-200 rounded-lg px-4 py-3 text-sm focus:border-indigo-400 outline-none"
+                                    />
+                                    <button
+                                        type="submit"
+                                        disabled={captureStatus === 'submitting'}
+                                        className="bg-slate-900 text-white px-6 py-3 rounded-lg text-sm font-bold hover:bg-slate-700 transition-all disabled:opacity-50"
+                                    >
+                                        {captureStatus === 'submitting' ? 'Sending…' : 'Send my result →'}
+                                    </button>
+                                </form>
+                                {captureStatus === 'error' && (
+                                    <p className="text-red-600 text-xs mt-2">Something went wrong. Email us at hello@gtm-360.com</p>
+                                )}
+                                <p className="text-xs text-slate-400 mt-3">Goes to a partner, not a CRM queue.</p>
                             </div>
                         )}
 

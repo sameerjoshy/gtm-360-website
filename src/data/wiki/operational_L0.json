@@ -1,0 +1,2475 @@
+{
+  "annual-gtm-strategy": {
+    "stages": [
+      {
+        "name": "Market Research",
+        "objective": "Understand market opportunity, competitive landscape, and trends to inform strategy",
+        "input": "Industry data, competitor information, market reports, customer feedback",
+        "output": "Market analysis document with opportunity assessment",
+        "activities": [
+          "Competitive research (feature comparison, pricing analysis, messaging study)",
+          "TAM/SAM/SOM analysis (total addressable market, serviceable market, obtainable market)",
+          "Industry trend identification (emerging technologies, buyer behavior shifts)",
+          "Customer research (pain points, buying criteria, success metrics)",
+          "Win/loss analysis from sales team"
+        ],
+        "tools": "Competitive intelligence platforms, market research databases, industry reports, analyst firms, sales team interviews",
+        "roles": [
+          "GTM lead: coordination and synthesis",
+          "Product/sales: competitive and customer insights",
+          "Finance: market sizing"
+        ],
+        "successMetric": "Comprehensive market understanding documented with data sources cited",
+        "decisionPoints": [
+          "Is the market opportunity large enough to pursue?",
+          "What are the top 3-5 competitive threats?",
+          "Where are market trends moving?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Market TAM >$1B (or company-specific threshold), competitive landscape clear, trends identified",
+          "loopback": "Loop back if: Incomplete data, conflicting sources, need primary research"
+        }
+      },
+      {
+        "name": "Strategic Options Development",
+        "objective": "Develop 2-3 potential go-to-market approaches with pros/cons",
+        "input": "Market analysis, company capabilities, product roadmap, financial constraints",
+        "output": "2-3 strategic options document with evaluation matrix",
+        "activities": [
+          "Brainstorm go-to-market approaches (inbound-first, outbound-first, land-and-expand, enterprise vs. SMB)",
+          "Assess company capabilities (sales team size, marketing budget, product maturity)",
+          "Model financial implications (CAC, LTV, payback period for each option)",
+          "Scenario planning (best case, base case, worst case for each option)",
+          "Risk assessment (competitive response, execution risk, market timing)"
+        ],
+        "tools": "Strategy brainstorming tools, financial modeling spreadsheets, scenario planning templates",
+        "roles": [
+          "Executive leadership: strategy guidance",
+          "GTM lead: option development",
+          "Finance: financial modeling",
+          "Product: capability assessment"
+        ],
+        "successMetric": "2-3 options documented with pros/cons analysis and financial modeling",
+        "decisionPoints": [
+          "Which options are realistic given company resources?",
+          "Which option has highest ROI potential?",
+          "What are the key assumptions underlying each option?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Options are distinct, financial models completed, leadership agreement on viability",
+          "loopback": "Loop back if: Options are too similar, financial assumptions questioned, need more analysis"
+        }
+      },
+      {
+        "name": "Strategy Selection",
+        "objective": "Choose primary GTM strategy and get executive commitment",
+        "input": "Strategic options, financial modeling, risk assessment, board/leadership input",
+        "output": "Approved annual GTM strategy document",
+        "activities": [
+          "Executive decision-making session (present options, discuss trade-offs)",
+          "Final risk/benefit analysis",
+          "Commitment to resource levels and timeline",
+          "Documentation of strategy rationale",
+          "Communication of decision to extended leadership team"
+        ],
+        "tools": "Decision frameworks, executive alignment tools",
+        "roles": [
+          "CEO/Chief Revenue Officer: final decision",
+          "Executive team: input and commitment",
+          "GTM lead: presentation and rationale"
+        ],
+        "successMetric": "Strategy approved by leadership and formally documented",
+        "decisionPoints": [
+          "Which strategy option wins and why?",
+          "What resource commitment is required?",
+          "When do we reevaluate if conditions change?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Strategy chosen, leadership committed, go/no-go criteria documented",
+          "loopback": "Loop back if: Leadership unable to decide, need more data, strategic conflict"
+        }
+      },
+      {
+        "name": "Resource Allocation",
+        "objective": "Allocate budget, headcount, and tools to execute chosen strategy",
+        "input": "Approved strategy, financial plan, hiring plan, tool requirements",
+        "output": "Resource allocation plan with budget locked and hiring initiated",
+        "activities": [
+          "Budget allocation by channel (demand gen, sales, customer success, operations)",
+          "Headcount planning (SDRs, AEs, marketers, CSMs, ops roles)",
+          "Tool investment planning (CRM, marketing automation, analytics, etc.)",
+          "Infrastructure planning (offices, workspace, technology)",
+          "Timeline and phasing (Q1-Q4 hiring, budget spend schedule)"
+        ],
+        "tools": "Budget tracking spreadsheets, headcount planning tools, HRIS systems",
+        "roles": [
+          "Finance: budget approval and tracking",
+          "GTM lead: resource planning",
+          "HR: headcount planning",
+          "Operations: tool and infrastructure planning"
+        ],
+        "successMetric": "Resource plan approved, budget locked, hiring plan initiated",
+        "decisionPoints": [
+          "Are resources sufficient to execute strategy?",
+          "What hiring order optimizes ramp?",
+          "Which tools are critical vs. nice-to-have?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Budget approved by finance, hiring plan submitted to HR, tools contracted",
+          "loopback": "Loop back if: Budget constraints, resource unavailable, need to adjust plan"
+        }
+      },
+      {
+        "name": "Execution Planning",
+        "objective": "Translate annual strategy into Q1 tactical plan",
+        "input": "Annual strategy, resources allocated, market priorities",
+        "output": "Q1 strategic plan with initiatives, OKRs, and team assignments",
+        "activities": [
+          "Quarterly initiative identification (which campaigns, processes, launches in Q1?)",
+          "OKR setting (what do we want to achieve in Q1?)",
+          "Team assignment (who owns what initiatives?)",
+          "Timeline and milestones",
+          "Success metrics and tracking setup"
+        ],
+        "tools": "OKR frameworks, project management tools, roadmap templates",
+        "roles": [
+          "GTM leadership: initiative and OKR definition",
+          "Team leads: estimation and planning",
+          "Finance: forecast prep"
+        ],
+        "successMetric": "Q1 plan documented, OKRs set, team aligned and ready to execute",
+        "decisionPoints": [
+          "Which initiatives should launch in Q1?",
+          "What are our stretch vs. committed OKRs?",
+          "Do we have dependencies between initiatives?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Plan shared with teams, OKRs approved, kickoff scheduled",
+          "loopback": "Loop back if: Unclear priorities, resource conflicts, need to adjust plan"
+        }
+      },
+      {
+        "name": "Quarterly Reviews & Adjustments",
+        "objective": "Track execution against plan and make strategic adjustments",
+        "input": "Quarterly results, market changes, competitive updates, learnings",
+        "output": "Quarterly review with strategy/plan adjustments as needed",
+        "activities": [
+          "Results review (did we hit our OKRs? Why or why not?)",
+          "Market monitoring (competitive moves, customer needs shifts)",
+          "Learnings extraction (what worked? what didn't? why?)",
+          "Resource rebalancing if needed (shift budget/headcount to winning initiatives)",
+          "Next quarter planning based on learnings"
+        ],
+        "tools": "OKR tracking systems, analytics dashboards, qualitative feedback collection",
+        "roles": [
+          "GTM leadership: review facilitation",
+          "Team leads: results presentation",
+          "Finance: budget and forecast updates"
+        ],
+        "successMetric": "Quarterly review completed, decisions documented, next quarter plan updated",
+        "decisionPoints": [
+          "Should we continue the annual strategy or pivot?",
+          "Which initiatives should we double down on?",
+          "Where should we shift resources?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Review published to company, learning captured, Q+1 plan started",
+          "loopback": "Loop back if: Results unclear, need more time for analysis, dependencies unclear"
+        }
+      },
+      {
+        "name": "Strategy Refinement",
+        "objective": "Update strategy based on year results and prepare for next year",
+        "input": "Year results, quarterly reviews, market changes, competitive updates",
+        "output": "Refined strategy document for next year",
+        "activities": [
+          "Annual strategy review (did our strategy work as planned?)",
+          "Market reassessment (market opportunity changed?)",
+          "Competitive reassessment (competitive landscape shifted?)",
+          "Learning application (what did we learn that changes strategy?)",
+          "Next year strategy refinement and documentation"
+        ],
+        "tools": "Strategy review frameworks, historical data analysis",
+        "roles": [
+          "Executive leadership: strategy refinement",
+          "GTM leadership: analysis and recommendations",
+          "Extended team: feedback on what worked/didn't"
+        ],
+        "successMetric": "Strategy refined, documented, and approved for next year",
+        "decisionPoints": [
+          "Should we continue the same strategic approach next year?",
+          "What did we learn that should change our strategy?",
+          "Where should we shift strategic focus?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Next year strategy documented, board approved, budget planning started",
+          "loopback": "Loop back if: Results need more analysis, strategic consensus unclear"
+        }
+      }
+    ]
+  },
+  "market-segment-prioritization": {
+    "stages": [
+      {
+        "name": "Market Scanning",
+        "objective": "Identify all potential markets and segments company could serve",
+        "input": "Product capabilities, competitor analysis, market research",
+        "output": "Comprehensive list of potential markets/segments",
+        "activities": [
+          "Identify potential market segments (by industry, company size, geography, use case)",
+          "Research each segment (size, growth, customer profile)",
+          "Document current market presence by segment",
+          "Identify emerging or underserved segments"
+        ],
+        "tools": "Market research platforms, industry databases, analyst reports",
+        "roles": [
+          "Product marketing: segment identification",
+          "Market research: sizing and analysis",
+          "Sales leadership: current market feedback"
+        ],
+        "successMetric": "Comprehensive market/segment list documented",
+        "decisionPoints": [
+          "Which segments are we not currently serving?",
+          "Are there emerging segments with growth potential?"
+        ],
+        "qualityGate": {
+          "go": "Go if: 10+ segments identified and researched",
+          "loopback": "Loop back if: Incomplete research, missing key segments"
+        }
+      },
+      {
+        "name": "Opportunity Identification",
+        "objective": "Assess opportunity level for each potential market",
+        "input": "Segment list, market sizing data, competitive data",
+        "output": "Scored opportunity list with high/medium/low potential",
+        "activities": [
+          "Score each segment on: size, growth, customer fit, competitive intensity",
+          "Identify adjacent segments (different customer profile, same use case)",
+          "Assess customer pain points in each segment",
+          "Identify customer buying journey for each segment"
+        ],
+        "tools": "Scoring frameworks, market analysis tools",
+        "roles": [
+          "Product marketing: opportunity assessment",
+          "Sales: customer fit feedback"
+        ],
+        "successMetric": "Opportunity scored for each segment, ranked by potential",
+        "decisionPoints": [
+          "Which segments have the best fit with our product?",
+          "Which segments are growing fastest?",
+          "Which segments have least competition?"
+        ],
+        "qualityGate": {
+          "go": "Go if: All segments scored consistently, ranking agreed upon",
+          "loopback": "Loop back if: Scoring criteria unclear, need more data"
+        }
+      },
+      {
+        "name": "Market Sizing",
+        "objective": "Calculate market size and addressable market for prioritized segments",
+        "input": "Opportunity-ranked segments, market research data",
+        "output": "Market sizing for top segments (TAM, SAM, SOM)",
+        "activities": [
+          "Calculate TAM (Total Addressable Market) - all customers who could buy",
+          "Calculate SAM (Serviceable Available Market) - customers we can realistically reach",
+          "Calculate SOM (Serviceable Obtainable Market) - what we can capture in year 1-3",
+          "Identify market growth rate and trends",
+          "Assess market maturity (emerging, growth, mature, decline)"
+        ],
+        "tools": "Market research databases, analyst reports, spreadsheet modeling",
+        "roles": [
+          "Finance: market sizing modeling",
+          "Product marketing: segment definition",
+          "Market research: data gathering"
+        ],
+        "successMetric": "Market sizes calculated for top 3-5 segments with growth rates",
+        "decisionPoints": [
+          "Which segments have large enough markets?",
+          "Is the market growing or contracting?",
+          "Can we realistically capture meaningful market share?"
+        ],
+        "qualityGate": {
+          "go": "Go if: TAM/SAM/SOM calculated, growth rates verified, methodology documented",
+          "loopback": "Loop back if: Data insufficient, methodology questioned"
+        }
+      },
+      {
+        "name": "Competitive Assessment",
+        "objective": "Assess competitive landscape within each target segment",
+        "input": "Top-ranked segments, competitor data",
+        "output": "Competitive analysis by segment with positioning recommendations",
+        "activities": [
+          "Identify competitors in each segment",
+          "Assess competitor strength, positioning, and market share",
+          "Identify competitive gaps and weaknesses",
+          "Assess barriers to entry and how defensible competitive position is"
+        ],
+        "tools": "Competitive intelligence tools, sales win/loss data",
+        "roles": [
+          "Competitive intelligence: competitor research",
+          "Sales: real competitive feedback",
+          "Product: competitive product comparison"
+        ],
+        "successMetric": "Competitive analysis completed for each target segment",
+        "decisionPoints": [
+          "Which segments have less competitive intensity?",
+          "Where can we build defensible competitive advantage?",
+          "Which competitors are strongest in each segment?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Competitors identified, positioning clear, gaps documented",
+          "loopback": "Loop back if: Incomplete competitor research, need more depth"
+        }
+      },
+      {
+        "name": "Prioritization",
+        "objective": "Rank segments by overall attractiveness and fit",
+        "input": "Opportunity scores, market sizes, competitive analysis",
+        "output": "Prioritized segment list (Tier 1, Tier 2, Tier 3)",
+        "activities": [
+          "Score segments on: TAM size, growth rate, competitive intensity, product fit, customer fit",
+          "Weight scoring factors based on company strategy",
+          "Rank segments overall",
+          "Define Tier 1 (focus), Tier 2 (build), Tier 3 (monitor)",
+          "Get leadership alignment on prioritization"
+        ],
+        "tools": "Scoring matrices, priority frameworks",
+        "roles": [
+          "Executive leadership: approval of prioritization",
+          "Product marketing: scoring and analysis"
+        ],
+        "successMetric": "Prioritized segment list with clear Tier 1/2/3 definition",
+        "decisionPoints": [
+          "What's our top segment to focus on?",
+          "What's our secondary/tertiary focus?",
+          "Should we specialize in 1-2 segments or go broad?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Prioritization agreed by leadership, rationale documented",
+          "loopback": "Loop back if: Conflict on prioritization, need more consensus"
+        }
+      },
+      {
+        "name": "Segment Definition",
+        "objective": "Deeply define target customer profile for each prioritized segment",
+        "input": "Prioritized segments, customer research data",
+        "output": "Detailed segment/ICP definition with customer profile, pain points, buying criteria",
+        "activities": [
+          "Define ideal customer profile (company size, industry, use cases, geography)",
+          "Document customer pain points and success metrics",
+          "Map customer buying journey (who are decision-makers, what's their process?)",
+          "Identify customer motivations and objections",
+          "Create segment-specific messaging and positioning"
+        ],
+        "tools": "Customer research tools, persona development frameworks",
+        "roles": [
+          "Product marketing: ICP definition",
+          "Sales: customer profile feedback",
+          "Customer success: customer pain points and success metrics"
+        ],
+        "successMetric": "Detailed ICP documented for each Tier 1 segment",
+        "decisionPoints": [
+          "Who is our ideal customer in each segment?",
+          "What's their buying process?",
+          "What are their key decision criteria?"
+        ],
+        "qualityGate": {
+          "go": "Go if: ICP definition complete, buying journey mapped, messaging started",
+          "loopback": "Loop back if: Customer understanding insufficient, need more research"
+        }
+      },
+      {
+        "name": "Go-to-Market Planning",
+        "objective": "Develop segment-specific GTM strategy and tactics",
+        "input": "Segment definition, competitive positioning, resource availability",
+        "output": "Segment-specific GTM plan with channel strategy, messaging, and tactics",
+        "activities": [
+          "Define channel strategy (inbound, outbound, partnerships, events for each segment)",
+          "Develop segment-specific messaging and positioning",
+          "Plan customer acquisition approach (how do we reach this segment?)",
+          "Identify customer advocates or reference customers",
+          "Set segment-specific targets and forecasts"
+        ],
+        "tools": "GTM planning templates, channel strategy frameworks",
+        "roles": [
+          "GTM leadership: GTM strategy development",
+          "Product marketing: messaging and positioning",
+          "Sales/marketing: channel and tactic planning"
+        ],
+        "successMetric": "Segment-specific GTM plan documented with targets",
+        "decisionPoints": [
+          "Which channels are most effective for this segment?",
+          "What's our customer acquisition strategy?",
+          "What do we need to succeed in this segment?"
+        ],
+        "qualityGate": {
+          "go": "Go if: GTM plan complete, channels selected, targets set, execution plan ready",
+          "loopback": "Loop back if: Unclear strategy, resource gaps, need clarification"
+        }
+      }
+    ]
+  },
+  "competitive-positioning": {
+    "stages": [
+      {
+        "name": "Competitive Research",
+        "objective": "Understand competitive landscape, product features, and positioning",
+        "input": "Competitor list, industry data, customer feedback",
+        "output": "Competitive analysis document with feature/pricing/messaging comparison",
+        "activities": [
+          "Research competitor products (features, capabilities, limitations)",
+          "Research competitor pricing (tiers, pricing strategy, value positioning)",
+          "Research competitor messaging (value prop, positioning, target market)",
+          "Research competitor go-to-market (channels, customer acquisition, sales process)",
+          "Analyze win/loss data to understand why customers choose competitors"
+        ],
+        "tools": "Competitive intelligence platforms, competitor websites, sales win/loss database",
+        "roles": [
+          "Competitive intelligence: research execution",
+          "Sales: win/loss analysis",
+          "Product: product comparison"
+        ],
+        "successMetric": "Competitive analysis documented with detailed comparison",
+        "decisionPoints": [
+          "Who are our top 3-5 competitors?",
+          "What features do they have that we don't?",
+          "How do they position differently than us?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Top competitors analyzed, features compared, messaging documented",
+          "loopback": "Loop back if: Incomplete research, missing key competitors"
+        }
+      },
+      {
+        "name": "Positioning Analysis",
+        "objective": "Analyze where competitors position and identify gaps",
+        "input": "Competitive analysis, market research, customer research",
+        "output": "Positioning gap analysis with opportunity identification",
+        "activities": [
+          "Map competitor positioning on a 2D matrix (e.g., enterprise vs. SMB, price vs. features)",
+          "Identify positioning gaps (where no competitor is strong)",
+          "Assess defensibility of gaps (can we own this space?)",
+          "Identify adjacent positioning moves (if we move here, can we win?)",
+          "Assess customer perception of our current positioning vs. competitors"
+        ],
+        "tools": "Positioning matrices, customer research",
+        "roles": [
+          "Product marketing: positioning analysis",
+          "Sales: customer perception feedback"
+        ],
+        "successMetric": "Positioning gaps identified with feasibility analysis",
+        "decisionPoints": [
+          "Where can we own a unique position?",
+          "What position is defensible and valuable?",
+          "Should we move our positioning or stay put?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Gaps mapped, opportunities identified, customer validation started",
+          "loopback": "Loop back if: Gaps unclear, feasibility questioned"
+        }
+      },
+      {
+        "name": "Message Development",
+        "objective": "Develop core differentiating messages",
+        "input": "Positioning analysis, company capabilities, market research",
+        "output": "Key messages and value propositions validated by customers",
+        "activities": [
+          "Develop core value proposition (what we do differently and better)",
+          "Develop supporting messages (specific benefits, use cases)",
+          "Develop anti-messages (what we're NOT)",
+          "Test messages with target customers",
+          "Refine based on feedback",
+          "Develop messaging variants for different personas/segments"
+        ],
+        "tools": "Messaging frameworks, customer research, A/B testing",
+        "roles": [
+          "Product marketing: message development",
+          "Sales: customer validation",
+          "Product: capability validation"
+        ],
+        "successMetric": "Core messages developed and tested with customers",
+        "decisionPoints": [
+          "What message resonates most with customers?",
+          "Is our differentiation compelling and believable?",
+          "Do we need different messages for different segments?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Messages tested and validated, customer feedback positive, ready for sales training",
+          "loopback": "Loop back if: Messages not resonating, need to adjust"
+        }
+      },
+      {
+        "name": "Differentiation Strategy",
+        "objective": "Define how we're different and better than competitors",
+        "input": "Messages, positioning, competitive positioning, product capabilities",
+        "output": "Differentiation strategy document linking features to benefits to value",
+        "activities": [
+          "Map company features to customer benefits",
+          "Map benefits to customer value/ROI",
+          "Compare differentiation vs. competitors",
+          "Develop ROI arguments for differentiation",
+          "Identify which differentiators matter most to customers"
+        ],
+        "tools": "Feature-benefit mapping, ROI calculators",
+        "roles": [
+          "Product marketing: differentiation strategy",
+          "Product: feature/capability input",
+          "Sales: customer value feedback"
+        ],
+        "successMetric": "Differentiation strategy documented with feature/benefit/value linkage",
+        "decisionPoints": [
+          "What are our top 3-5 differentiators?",
+          "Which differentiators drive customer buying decisions?",
+          "Can we prove our differentiation claims?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Differentiation clear and defensible, ROI quantified, customer validated",
+          "loopback": "Loop back if: Differentiation questionable, can't prove claims"
+        }
+      },
+      {
+        "name": "Messaging Hierarchy",
+        "objective": "Organize messages from primary to tertiary by priority",
+        "input": "Differentiation strategy, customer research, persona segmentation",
+        "output": "Messaging hierarchy by persona and customer journey stage",
+        "activities": [
+          "Rank messages by importance (primary, secondary, tertiary)",
+          "Develop persona-specific messaging (what messages matter to each buyer persona?)",
+          "Develop journey-specific messaging (what messages matter at awareness vs. consideration vs. decision?)",
+          "Create messaging frameworks for different scenarios (objection handling, comparison, value prop)",
+          "Document messaging guidelines for sales and marketing"
+        ],
+        "tools": "Messaging hierarchy templates, persona frameworks",
+        "roles": [
+          "Product marketing: hierarchy development",
+          "Sales: persona/journey input",
+          "Customer success: customer lifecycle insights"
+        ],
+        "successMetric": "Messaging hierarchy documented by persona/journey with clear priority",
+        "decisionPoints": [
+          "Which message should we lead with?",
+          "Do we need different messages for different personas?",
+          "How do we simplify without losing important nuance?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Hierarchy documented, sales/marketing aligned, training materials ready",
+          "loopback": "Loop back if: Hierarchy unclear, personas need refinement"
+        }
+      },
+      {
+        "name": "Sales/Marketing Alignment",
+        "objective": "Ensure sales and marketing use consistent messaging",
+        "input": "Messaging hierarchy, sales playbooks, marketing materials",
+        "output": "Aligned sales and marketing materials with consistent messaging",
+        "activities": [
+          "Audit current sales materials (presentations, battle cards, emails)",
+          "Audit current marketing materials (website, ads, content, emails)",
+          "Update materials to align with new messaging hierarchy",
+          "Train sales team on new messaging",
+          "Train marketing team on messaging guidelines",
+          "Create collateral (one-pagers, pitch decks, battle cards) with aligned messaging",
+          "Establish feedback loop for messaging updates"
+        ],
+        "tools": "Sales training platforms, marketing asset management",
+        "roles": [
+          "Sales enablement: sales training",
+          "Product marketing: message alignment",
+          "Sales leadership: adoption accountability"
+        ],
+        "successMetric": "All sales and marketing materials updated and aligned, sales trained",
+        "decisionPoints": [
+          "Are sales and marketing using the same messages?",
+          "Do materials reflect the messaging hierarchy?",
+          "Is the sales team adopting the new messaging?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Materials audited and updated, sales trained and adopting, customer feedback positive",
+          "loopback": "Loop back if: Adoption low, materials need more updates"
+        }
+      },
+      {
+        "name": "Continuous Monitoring",
+        "objective": "Track competitive changes and messaging effectiveness",
+        "input": "Win/loss data, customer feedback, competitive updates, marketing metrics",
+        "output": "Monthly/quarterly positioning updates as needed",
+        "activities": [
+          "Track win/loss data (are we winning or losing to competitors? Why?)",
+          "Monitor customer feedback (is our messaging resonating?)",
+          "Monitor competitor moves (are they changing their positioning?)",
+          "Monitor marketing metrics (are messages driving engagement and conversions?)",
+          "Quarterly positioning review (should we adjust?)"
+        ],
+        "tools": "Win/loss database, customer feedback tools, competitive intelligence, analytics",
+        "roles": [
+          "Competitive intelligence: competitor monitoring",
+          "Sales: win/loss analysis",
+          "Marketing: messaging effectiveness metrics",
+          "Product marketing: quarterly positioning review"
+        ],
+        "successMetric": "Positioning reviewed quarterly, updates made as needed, stays competitive",
+        "decisionPoints": [
+          "Should we adjust our positioning?",
+          "Are competitors gaining ground in any area?",
+          "Is our messaging still relevant and resonating?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Monitoring system in place, quarterly reviews happening, responsive to changes",
+          "loopback": "Loop back if: Not monitoring effectively, missed competitive moves"
+        }
+      }
+    ]
+  },
+  "product-roadmap-alignment": {
+    "stages": [
+      {
+        "name": "GTM Needs Assessment",
+        "objective": "Identify what GTM needs from product roadmap",
+        "input": "Market priorities, customer feedback, competitive gaps, sales feedback",
+        "output": "GTM feature priorities and timing requirements",
+        "activities": "Gather GTM feedback on customer needs, competitive gaps, sales wins/losses, market requirements",
+        "tools": "Feedback collection tools, market research",
+        "roles": "GTM leadership (coordination), Sales/Marketing (feedback), Product (input)",
+        "successMetric": "Clear GTM feature priorities documented with timing",
+        "decisionPoints": "What features most impact GTM success? Timeline critical?",
+        "qualityGate": "GTM priorities documented and validated"
+      },
+      {
+        "name": "Product Requirements",
+        "objective": "Translate GTM needs into product requirements",
+        "input": "GTM priorities, product capabilities, technical constraints",
+        "output": "Product requirements document for roadmap features",
+        "activities": "Define requirements detail, assess technical feasibility, identify dependencies, estimate effort",
+        "tools": "Requirements documentation, product management tools",
+        "roles": "Product management (requirements), GTM (validation), Engineering (feasibility)",
+        "successMetric": "Product requirements clear and feasible",
+        "decisionPoints": "Requirements address GTM needs? Technical feasible? Timeline realistic?",
+        "qualityGate": "Requirements documented, engineering feasibility confirmed, timeline agreed"
+      },
+      {
+        "name": "Release Planning",
+        "objective": "Plan release cadence and feature sequencing",
+        "input": "Product requirements, engineering capacity, market timing",
+        "output": "Release roadmap with feature timing",
+        "activities": "Sequence features by priority/timing, plan releases (quarterly, monthly, etc.), identify dependencies, confirm capacity",
+        "tools": "Product roadmap tools, project planning",
+        "roles": "Product management (planning), Engineering (capacity), GTM (timing input)",
+        "successMetric": "Release roadmap documented with feature timing",
+        "decisionPoints": "Release cadence? Feature sequencing? Market timing critical?",
+        "qualityGate": "Roadmap approved, GTM and engineering aligned, timeline confirmed"
+      },
+      {
+        "name": "Launch Strategy",
+        "objective": "Develop go-to-market strategy for new features/releases",
+        "input": "Release roadmap, market priorities, competitive positioning",
+        "output": "Launch plan with messaging, targeting, channels",
+        "activities": "Define launch timing, develop launch messaging, plan target audience, identify launch channels, plan customer communication",
+        "tools": "Launch planning templates, messaging frameworks",
+        "roles": "GTM leadership (strategy), Product marketing (messaging), Product (details)",
+        "successMetric": "Launch plan documented with messaging and channels",
+        "decisionPoints": "Launch timing optimal? Messaging compelling? Channels selected?",
+        "qualityGate": "Launch plan complete, messaging approved, channels aligned"
+      },
+      {
+        "name": "Go-to-Market Execution",
+        "objective": "Execute launch and drive feature adoption",
+        "input": "Launch plan approved, launch messaging ready",
+        "output": "Live launch with adoption metrics tracked",
+        "activities": "Execute launch campaigns, drive awareness, support sales, track adoption, monitor customer feedback",
+        "tools": "Marketing automation, analytics, sales tools",
+        "roles": "Marketing (campaigns), Sales (customer), Product (support), Analytics (tracking)",
+        "successMetric": "Launch executed, adoption metrics tracked, customer feedback positive",
+        "decisionPoints": "Launch timing optimal? Adoption tracking? Customer response?",
+        "qualityGate": "Launch complete, adoption metrics tracked, feedback collected"
+      },
+      {
+        "name": "Customer Feedback",
+        "objective": "Gather customer feedback on new features",
+        "input": "Feature live, customer usage data",
+        "output": "Customer feedback and learning documentation",
+        "activities": "Collect customer feedback, analyze usage data, identify feature issues, identify adoption barriers",
+        "tools": "Customer feedback, analytics, support tickets",
+        "roles": "Product (analysis), Customer success (feedback), Sales (usage feedback)",
+        "successMetric": "Customer feedback documented, adoption patterns clear",
+        "decisionPoints": "Feature resonating? Adoption as expected? Issues identified?",
+        "qualityGate": "Feedback collected, usage analyzed, learning documented"
+      },
+      {
+        "name": "Roadmap Refinement",
+        "objective": "Update roadmap based on feature performance and feedback",
+        "input": "Customer feedback, adoption data, market response",
+        "output": "Refined roadmap with adjustments",
+        "activities": "Assess feature performance, update priorities based on impact, identify next features, adjust roadmap",
+        "tools": "Product roadmap tools, analytics",
+        "roles": "Product management (refinement), GTM (impact), Customer success (feedback)",
+        "successMetric": "Roadmap refined based on learning, priorities updated",
+        "decisionPoints": "Features underperforming? Should we adjust priorities? Next focus?",
+        "qualityGate": "Roadmap updated, GTM aligned on next priorities"
+      }
+    ]
+  },
+  "revenue-model-pricing-strategy": {
+    "stages": [
+      {
+        "name": "Customer Research",
+        "objective": "Understand customer willingness to pay and value perception",
+        "input": "Customer data, market research, sales feedback",
+        "output": "Customer willingness to pay analysis",
+        "activities": "Interview customers on pricing, survey willingness to pay, analyze customer value perception, research customer buying criteria",
+        "tools": "Customer research, survey tools, pricing research",
+        "roles": "Pricing strategy lead, Customer success (feedback), Sales (data)",
+        "successMetric": "Willingness to pay understood for each segment",
+        "decisionPoints": "How much would customers pay? Value drivers? Segment variations?",
+        "qualityGate": "Customer research complete, willingness to pay clear"
+      },
+      {
+        "name": "Value Analysis",
+        "objective": "Quantify value delivered by product to customers",
+        "input": "Customer success data, ROI calculations, competitive benchmarking",
+        "output": "Value quantification document",
+        "activities": "Calculate customer ROI, identify value drivers, estimate time to value, assess value by segment",
+        "tools": "ROI calculators, financial models",
+        "roles": "Pricing strategy lead, Finance, Customer success",
+        "successMetric": "Value quantified for each segment/customer type",
+        "decisionPoints": "How to measure value? ROI by customer? Value drivers?",
+        "qualityGate": "Value quantified and validated with customers"
+      },
+      {
+        "name": "Competitive Benchmarking",
+        "objective": "Understand competitive pricing and positioning",
+        "input": "Competitor pricing data, market research, sales competitive feedback",
+        "output": "Competitive pricing benchmark analysis",
+        "activities": "Research competitor pricing, assess competitive positioning, identify pricing gaps, understand pricing strategies",
+        "tools": "Competitive intelligence, pricing databases, sales win/loss",
+        "roles": "Competitive intelligence, Sales (feedback), Pricing strategy",
+        "successMetric": "Competitive pricing landscape understood",
+        "decisionPoints": "How do we position vs. competitors? Pricing gap opportunities? Premium or value?",
+        "qualityGate": "Competitive pricing documented, positioning clear"
+      },
+      {
+        "name": "Pricing Model Design",
+        "objective": "Design optimal pricing model for business",
+        "input": "Value analysis, willingness to pay, competitive benchmarking",
+        "output": "Recommended pricing model",
+        "activities": "Model different pricing approaches (value-based, cost-plus, competitive, freemium, usage-based), compare financial impact, select optimal model",
+        "tools": "Financial models, pricing strategy tools",
+        "roles": "Pricing strategy lead, Finance, Executive team",
+        "successMetric": "Pricing model designed with financial modeling",
+        "decisionPoints": "Value-based or cost-based? Per-seat or usage? Premium or discount vs. competitors?",
+        "qualityGate": "Pricing model selected, financial modeling complete, leadership agreement"
+      },
+      {
+        "name": "Packaging Architecture",
+        "objective": "Design pricing tiers and feature bundling",
+        "input": "Pricing model, feature set, customer segmentation",
+        "output": "Packaging architecture with tiers and features",
+        "activities": "Define tiers (starter/professional/enterprise), allocate features by tier, set price points, plan add-ons",
+        "tools": "Packaging templates, financial models",
+        "roles": "Pricing strategy lead, Product, Finance",
+        "successMetric": "Packaging architecture defined with price points",
+        "decisionPoints": "How many tiers? Which features per tier? Add-ons for revenue?",
+        "qualityGate": "Packaging approved, price points set, feature allocation clear"
+      },
+      {
+        "name": "Testing",
+        "objective": "Test pricing approach with customers and market",
+        "input": "Packaging architecture, customer sample",
+        "output": "Validated pricing approach with feedback",
+        "activities": "Test pricing with customer sample, gather feedback on perceived value, refine based on feedback, test pricing page conversions",
+        "tools": "A/B testing, customer research",
+        "roles": "Pricing strategy lead, Sales (feedback), Marketing (landing pages)",
+        "successMetric": "Pricing tested and validated with customers",
+        "decisionPoints": "Price points resonating? Feature allocation make sense? Add-ons valuable?",
+        "qualityGate": "Pricing tested, customer feedback positive, ready to implement"
+      },
+      {
+        "name": "Optimization",
+        "objective": "Continuously optimize pricing strategy",
+        "input": "Pricing live, customer data, competitive updates",
+        "output": "Pricing optimization recommendations",
+        "activities": "Monitor pricing conversion, analyze customer value realization, track competitive pricing, gather customer feedback, recommend optimizations",
+        "tools": "Analytics, customer feedback, competitive intelligence",
+        "roles": "Pricing strategy lead, Analytics, Sales",
+        "successMetric": "Pricing monitored and optimized regularly",
+        "decisionPoints": "Are price points optimal? Should we adjust? Competitive moves to counter?",
+        "qualityGate": "Pricing optimization cadence established, improvements made based on data"
+      }
+    ]
+  },
+  "territory-planning": {
+    "stages": [
+      {
+        "name": "Account Universe Definition",
+        "objective": "Identify all accounts that could be assigned to territories",
+        "input": "ICP definition, market data, current customer list",
+        "output": "Comprehensive account universe with fit scoring",
+        "activities": "Identify potential accounts, score fit to ICP, estimate account value, segment by size/type",
+        "tools": "Account databases, CRM, fit scoring tools",
+        "roles": "Sales operations (coordination), Sales leadership (feedback), Analytics (scoring)",
+        "successMetric": "Complete account universe with fit scoring",
+        "decisionPoints": "How many accounts total? What's our total addressable?",
+        "qualityGate": "Account universe documented with scoring"
+      },
+      {
+        "name": "Account Segmentation",
+        "objective": "Segment accounts by opportunity and coverage strategy",
+        "input": "Account universe, fit scoring, revenue potential",
+        "output": "Account segmentation with coverage strategy",
+        "activities": "Segment by size/opportunity, identify tier 1/2/3 accounts, plan coverage model (1:1, 1:many, digital), identify expansion opportunities",
+        "tools": "Segmentation models, CRM",
+        "roles": "Sales operations, Sales leadership",
+        "successMetric": "Accounts segmented with coverage strategy",
+        "decisionPoints": "How many tiers? Coverage approach? Expansion strategy?",
+        "qualityGate": "Segmentation complete, coverage model clear"
+      },
+      {
+        "name": "Capacity Planning",
+        "objective": "Assess sales team capacity and plan hiring",
+        "input": "Account universe, target revenue, current headcount",
+        "output": "Capacity model with hiring recommendations",
+        "activities": "Calculate accounts per rep, assess current capacity, model hiring needed, plan onboarding timeline",
+        "tools": "Capacity models, headcount planning",
+        "roles": "Sales operations, Finance, Sales leadership",
+        "successMetric": "Capacity model complete with hiring plan",
+        "decisionPoints": "Accounts per rep sustainable? Hiring needed? Timeline?",
+        "qualityGate": "Capacity assessment complete, hiring plan aligned"
+      },
+      {
+        "name": "Territory Design",
+        "objective": "Design territories that are balanced and achievable",
+        "input": "Segmentation, capacity plan, account locations",
+        "output": "Territory design with account assignments",
+        "activities": "Create territories (geographic, account-based, vertical-based), balance across reps, account assignment, document territory rules",
+        "tools": "Territory mapping tools, CRM",
+        "roles": "Sales operations (design), Sales leadership (review)",
+        "successMetric": "Territories designed and balanced",
+        "decisionPoints": "Geographic or account-based territories? How balanced? Clear rules?",
+        "qualityGate": "Territory design approved, account assignments clear"
+      },
+      {
+        "name": "Rep Assignment",
+        "objective": "Assign reps to territories matching capability",
+        "input": "Territory design, rep profiles, capabilities",
+        "output": "Territory rep assignments",
+        "activities": "Assess rep capabilities, match to territories, plan onboarding, document assignments",
+        "tools": "CRM, HRIS",
+        "roles": "Sales leadership (assignment), HR (onboarding)",
+        "successMetric": "All territories assigned with aligned reps",
+        "decisionPoints": "Right rep for right territory? Capability gaps? Onboarding plan?",
+        "qualityGate": "Assignments complete, reps notified, onboarding planned"
+      },
+      {
+        "name": "Quota Setting",
+        "objective": "Set revenue quotas for each rep and territory",
+        "input": "Territory accounts, historical data, revenue targets",
+        "output": "Rep quotas with clear expectations",
+        "activities": "Analyze historical performance by territory, estimate revenue potential per territory, set quotas, plan for new reps/territories",
+        "tools": "Quota modeling, financial tools",
+        "roles": "Sales leadership (setting), Finance (validation)",
+        "successMetric": "Quotas set for all reps, aligned to company revenue goals",
+        "decisionPoints": "Quotas realistic? Aligned to historical performance? Fair distribution?",
+        "qualityGate": "Quotas approved by leadership, communicated to reps"
+      },
+      {
+        "name": "Performance Tracking",
+        "objective": "Track territory and rep performance throughout year",
+        "input": "Quotas, performance data, account data",
+        "output": "Monthly/quarterly performance reports and coaching",
+        "activities": "Track quota attainment, identify high/low performers, provide coaching, adjust resources as needed",
+        "tools": "CRM dashboards, pipeline analytics, coaching tools",
+        "roles": "Sales leadership (coaching), Sales ops (tracking)",
+        "successMetric": "Performance tracked monthly, coaching provided",
+        "decisionPoints": "Who's on track? Who needs support? Resource shifts needed?",
+        "qualityGate": "Performance tracked consistently, coaching happening"
+      },
+      {
+        "name": "Rebalancing",
+        "objective": "Rebalance territories if needed based on performance/changes",
+        "input": "Performance data, headcount changes, market changes",
+        "output": "Territory adjustments or new territory design",
+        "activities": "Assess territory balance, identify underperforming territories, make adjustments, communicate changes",
+        "tools": "Territory tools, CRM",
+        "roles": "Sales leadership (decision), Sales ops (execution)",
+        "successMetric": "Territories rebalanced when needed, adjustments communicated",
+        "decisionPoints": "Rebalance needed? Account shifts? New assignments?",
+        "qualityGate": "Rebalancing done annually or when major changes occur"
+      }
+    ]
+  },
+  "resource-planning": {
+    "stages": [
+      {
+        "name": "Demand Forecasting",
+        "objective": "Forecast GTM resource needs for year",
+        "input": "Annual strategy, growth targets, initiatives planned",
+        "output": "Resource demand forecast",
+        "activities": "Forecast leads needed by channel, forecast sales capacity needed, forecast marketing capacity, forecast customer success capacity",
+        "tools": "Demand modeling, financial forecasts",
+        "roles": "GTM leadership (coordination), Channel leads (input), Finance (validation)",
+        "successMetric": "Resource demand forecast completed",
+        "decisionPoints": "How many leads do we need? Sales capacity? Support capacity?",
+        "qualityGate": "Demand forecast complete, assumptions documented"
+      },
+      {
+        "name": "Capability Gap Analysis",
+        "objective": "Identify gaps between current capabilities and forecasted demand",
+        "input": "Current headcount, demand forecast, capability requirements",
+        "output": "Capability gap analysis",
+        "activities": "Compare current vs. needed capabilities, identify skill gaps, identify headcount gaps, assess team strengths/weaknesses",
+        "tools": "Skills assessment, headcount analysis",
+        "roles": "GTM leadership, Team leads, HR",
+        "successMetric": "Capability gaps identified and quantified",
+        "decisionPoints": "Headcount gaps? Skill gaps? Build vs. buy?",
+        "qualityGate": "Gaps clearly identified and documented"
+      },
+      {
+        "name": "Hiring Plan",
+        "objective": "Plan hiring to close capability gaps",
+        "input": "Capability gaps, budget available, hiring timeline",
+        "output": "Annual hiring plan with roles, timing, budget",
+        "activities": "Define roles needed, plan hiring sequence, estimate hiring costs, plan onboarding, communicate hiring plan",
+        "tools": "Hiring planning, budgeting tools, HRIS",
+        "roles": "GTM leadership (planning), HR (execution), Finance (budget)",
+        "successMetric": "Hiring plan documented with roles and timeline",
+        "decisionPoints": "Roles to hire? Hiring order? Budget sufficient?",
+        "qualityGate": "Hiring plan approved by leadership and finance, HR alignment"
+      },
+      {
+        "name": "Budget Allocation",
+        "objective": "Allocate budget to GTM functions and initiatives",
+        "input": "Demand forecast, hiring plan, tool requirements, initiative budgets",
+        "output": "GTM budget allocation by function and initiative",
+        "activities": "Allocate budget by function (demand gen, sales, success, ops), allocate contingency, plan spend timeline",
+        "tools": "Budget models, financial systems",
+        "roles": "GTM leadership (planning), Finance (approval)",
+        "successMetric": "Budget allocated and approved",
+        "decisionPoints": "Budget distribution? Contingency allocation? Flexibility?",
+        "qualityGate": "Budget approved by finance, spend plan documented"
+      },
+      {
+        "name": "Tool Investment",
+        "objective": "Plan tool/technology investments needed",
+        "input": "Initiative requirements, current tool stack, budget available",
+        "output": "Tool investment plan with priorities and budget",
+        "activities": "Assess current tools, identify gaps, evaluate new tools, plan implementation, allocate budget",
+        "tools": "Tool evaluation frameworks, budget tools",
+        "roles": "GTM leadership (planning), Operations (evaluation), Finance (budget)",
+        "successMetric": "Tool investment plan documented with budget",
+        "decisionPoints": "Which tools critical? Implementation timeline? Vendor selection?",
+        "qualityGate": "Tool investment approved, vendors identified, implementation planned"
+      },
+      {
+        "name": "Execution",
+        "objective": "Execute hiring and resource allocation throughout year",
+        "input": "Hiring plan, budget allocation, resource plan",
+        "output": "New hires onboarded, resources deployed",
+        "activities": "Recruit and hire, onboard new employees, allocate to projects, deploy resources",
+        "tools": "Recruiting tools, onboarding tools, HRIS",
+        "roles": "HR (hiring), GTM leadership (allocation), Team leads (integration)",
+        "successMetric": "Hiring on track, resources deployed, onboarding complete",
+        "decisionPoints": "Hiring pace on track? Resources deployed effectively? Ramp curves expected?",
+        "qualityGate": "Hiring and deployment on track, no critical staffing gaps"
+      },
+      {
+        "name": "Utilization Tracking",
+        "objective": "Track resource utilization and efficiency",
+        "input": "Resource deployed, project hours tracked, productivity data",
+        "output": "Monthly/quarterly utilization reports",
+        "activities": "Track time allocation, measure productivity, identify over/under-utilization, gather feedback",
+        "tools": "Time tracking, utilization analytics",
+        "roles": "Operations (tracking), Team leads (input), Finance (analysis)",
+        "successMetric": "Utilization tracked monthly, trends visible",
+        "decisionPoints": "Utilization optimal? Productivity up to expectation? Rebalancing needed?",
+        "qualityGate": "Utilization tracking in place, regular reviews happening"
+      },
+      {
+        "name": "Optimization",
+        "objective": "Optimize resource allocation based on performance",
+        "input": "Utilization data, performance metrics, team feedback",
+        "output": "Resource optimization recommendations",
+        "activities": "Analyze utilization vs. results, identify inefficiencies, recommend optimizations, adjust allocation",
+        "tools": "Analytics, feedback tools",
+        "roles": "GTM leadership (optimization), Finance (analysis)",
+        "successMetric": "Resource optimization recommendations documented",
+        "decisionPoints": "Resource allocation optimal? Capability gaps closed? Team effective?",
+        "qualityGate": "Quarterly optimization review, adjustments made as needed"
+      }
+    ]
+  },
+  "pipeline-planning": {
+    "stages": [
+      {
+        "name": "Revenue Target Definition",
+        "objective": "Define revenue targets for year",
+        "input": "Company growth goals, market opportunity, historical performance",
+        "output": "Annual and quarterly revenue targets",
+        "activities": "Set annual revenue target, break into quarterly targets, set targets by segment/product, document rationale",
+        "tools": "Financial planning tools, historical data",
+        "roles": "Executive leadership (targets), Finance (validation), GTM leadership (feasibility assessment)",
+        "successMetric": "Revenue targets set for year and quarters",
+        "decisionPoints": "Revenue target achievable? Aligned to market opportunity? By segment breakdown?",
+        "qualityGate": "Revenue targets approved by leadership and board"
+      },
+      {
+        "name": "Conversion Rate Modeling",
+        "objective": "Model conversion rates by sales stage",
+        "input": "Historical conversion data, sales process, pipeline behavior",
+        "output": "Conversion rate model by stage",
+        "activities": "Analyze historical conversion rates by stage, identify benchmarks, model forward, assess assumptions",
+        "tools": "Analytics tools, historical data, pipeline tools",
+        "roles": "Analytics (analysis), Sales leadership (feedback), Finance (validation)",
+        "successMetric": "Conversion rates modeled for each stage",
+        "decisionPoints": "Conversion rates realistic? Any improvements expected?",
+        "qualityGate": "Conversion rates documented, assumptions validated"
+      },
+      {
+        "name": "Pipeline Requirements",
+        "objective": "Calculate pipeline needed to hit revenue targets",
+        "input": "Revenue targets, conversion rates",
+        "output": "Pipeline requirements calculation",
+        "activities": "Calculate pipeline needed at each stage, work backwards from revenue target, assess current vs. needed",
+        "tools": "Pipeline calculators, financial models",
+        "roles": "Analytics (calculation), Sales leadership (reality check)",
+        "successMetric": "Pipeline requirements calculated",
+        "decisionPoints": "Current pipeline sufficient? New pipeline needed? By how much?",
+        "qualityGate": "Pipeline requirements clear and documented"
+      },
+      {
+        "name": "Forecast Build",
+        "objective": "Build revenue forecast based on current pipeline",
+        "input": "Current pipeline, pipeline requirements, conversion rates",
+        "output": "Revenue forecast for year",
+        "activities": "Model current pipeline through conversion rates, identify forecast gap, build pipeline addition needed",
+        "tools": "Forecasting models, CRM",
+        "roles": "Analytics (forecast), Sales (pipeline review), Finance (validation)",
+        "successMetric": "Revenue forecast documented",
+        "decisionPoints": "Forecast to hit targets? Gap identified? Risks?",
+        "qualityGate": "Forecast built, reviewed by leadership"
+      },
+      {
+        "name": "Risk Assessment",
+        "objective": "Identify risks to revenue forecast",
+        "input": "Revenue forecast, pipeline data, market factors",
+        "output": "Risk assessment document",
+        "activities": "Identify pipeline risks (loss rates, stage time), identify competitive risks, identify market risks, quantify impact",
+        "tools": "Risk assessment frameworks",
+        "roles": "Sales leadership (pipeline risk), GTM (market risk), Finance (impact)",
+        "successMetric": "Risks identified and quantified",
+        "decisionPoints": "What's our biggest forecast risk? Impact if realized? Mitigation possible?",
+        "qualityGate": "Major risks identified and documented"
+      },
+      {
+        "name": "Mitigation Planning",
+        "objective": "Plan mitigation for identified risks",
+        "input": "Risk assessment, pipeline, resources available",
+        "output": "Risk mitigation plan",
+        "activities": "Plan mitigations for top risks, plan contingencies, ensure resource availability",
+        "tools": "Risk management templates",
+        "roles": "Sales leadership (mitigation), GTM (support), Finance (tracking)",
+        "successMetric": "Mitigation plan for top risks documented",
+        "decisionPoints": "Mitigations sufficient? Additional resources needed?",
+        "qualityGate": "Mitigation plan approved, resources committed"
+      },
+      {
+        "name": "Tracking",
+        "objective": "Track pipeline and forecast performance throughout year",
+        "input": "Revenue forecast, current pipeline, monthly results",
+        "output": "Monthly/quarterly forecast tracking and updates",
+        "activities": "Monitor pipeline health, compare actual to forecast, update forecast monthly, assess forecast accuracy",
+        "tools": "CRM dashboards, forecasting tools, pipeline analytics",
+        "roles": "Sales leadership (pipeline), Analytics (tracking), Finance (forecasting)",
+        "successMetric": "Pipeline and forecast tracked monthly with visibility",
+        "decisionPoints": "On track to forecast? Variance from plan? Forecast adjusted?",
+        "qualityGate": "Monthly tracking happening, forecast updates communicated"
+      },
+      {
+        "name": "Adjustment",
+        "objective": "Adjust pipeline and forecast based on performance",
+        "input": "Tracking data, market changes, pipeline changes",
+        "output": "Adjusted forecast and pipeline strategy",
+        "activities": "Analyze variances, adjust forecast as needed, adjust pipeline strategy, rebalance resources",
+        "tools": "Forecasting tools, resource planning",
+        "roles": "Sales leadership (strategy), GTM (support), Finance (forecasting)",
+        "successMetric": "Forecast adjusted, strategy updated",
+        "decisionPoints": "Major adjustments needed? Strategy shift? Resource rebalancing?",
+        "qualityGate": "Adjustments documented, communicated to stakeholders"
+      }
+    ]
+  },
+  "sales-playbook-development": {
+    "stages": [
+      {
+        "name": "Segment Definition",
+        "objective": "Define which segment/persona the playbook targets",
+        "input": "ICP definition, segment analysis, customer data",
+        "output": "Clear segment/persona definition for playbook",
+        "activities": "Define target segment, customer profile, pain points, success criteria, buying journey",
+        "tools": "Persona frameworks, customer research",
+        "roles": "Product marketing (definition), Sales (validation)",
+        "successMetric": "Clear segment/persona defined",
+        "decisionPoints": "One playbook or multiple by segment? Level of detail?",
+        "qualityGate": "Segment clearly defined, sales aligned"
+      },
+      {
+        "name": "Use Case Mapping",
+        "objective": "Identify how our product solves customer problems in this segment",
+        "input": "Segment definition, product capabilities, customer pain points",
+        "output": "Use case mapping for segment",
+        "activities": "Map customer pain points to our solutions, identify key use cases, quantify value/ROI, identify competitive alternatives",
+        "tools": "Use case templates, value modeling",
+        "roles": "Product marketing (mapping), Product (capabilities), Sales (customer context)",
+        "successMetric": "Use cases mapped with value quantified",
+        "decisionPoints": "What are top 3 use cases? ROI clear? Differentiated?",
+        "qualityGate": "Use cases documented, value clear"
+      },
+      {
+        "name": "Messaging Development",
+        "objective": "Develop segment-specific messaging and positioning",
+        "input": "Use cases, competitive positioning, segment needs",
+        "output": "Segment messaging with primary, secondary, supporting messages",
+        "activities": "Develop value propositions, develop supporting messages, develop objection handling messages",
+        "tools": "Messaging frameworks",
+        "roles": "Product marketing (development), Sales (validation)",
+        "successMetric": "Segment messaging developed and validated",
+        "decisionPoints": "Messaging resonates? Differentiated from competitors?",
+        "qualityGate": "Messaging approved by sales and marketing leadership"
+      },
+      {
+        "name": "Objection Identification",
+        "objective": "Identify and plan for common objections in this segment",
+        "input": "Win/loss analysis, sales feedback, competitive data",
+        "output": "Objection handling framework",
+        "activities": "Identify top objections, develop handling responses, plan for competitive objections, develop proof points",
+        "tools": "Win/loss database, objection handling templates",
+        "roles": "Sales (input), Product marketing (documentation)",
+        "successMetric": "Top objections identified with responses documented",
+        "decisionPoints": "Most common objections? Best responses? Case studies to support?",
+        "qualityGate": "Objection handling documented, sales trained"
+      },
+      {
+        "name": "Solution Architecture",
+        "objective": "Map product to customer solution architecture",
+        "input": "Use cases, customer technical context, product capabilities",
+        "output": "Solution architecture for segment",
+        "activities": "Define typical customer architecture, map product into it, identify integrations, plan technical positioning",
+        "tools": "Architecture frameworks, technical documentation",
+        "roles": "Product (architecture), Sales engineers (input), Product marketing (positioning)",
+        "successMetric": "Solution architecture clear for segment",
+        "decisionPoints": "How does product fit customer tech stack? Key integrations?",
+        "qualityGate": "Architecture documented, sales eng aligned"
+      },
+      {
+        "name": "Playbook Creation",
+        "objective": "Create comprehensive playbook for sales to follow",
+        "input": "Messaging, use cases, objections, solution architecture, sales process",
+        "output": "Complete sales playbook for segment",
+        "activities": "Document segment strategy, document sales process by stage, document key messages/talking points, document case studies/proof points, document tools/resources",
+        "tools": "Playbook templates, documentation tools",
+        "roles": "Product marketing (creation), Sales leadership (review)",
+        "successMetric": "Comprehensive playbook documented",
+        "decisionPoints": "Enough detail without being overwhelming? Organized clearly?",
+        "qualityGate": "Playbook complete, reviewed by sales leadership"
+      },
+      {
+        "name": "Sales Enablement",
+        "objective": "Train sales team on playbook and get adoption",
+        "input": "Completed playbook",
+        "output": "Trained sales team with playbook adoption",
+        "activities": "Conduct training session, role-play scenarios, provide feedback, establish usage expectations, create accountability",
+        "tools": "Training tools, role-play materials",
+        "roles": "Sales enablement (training), Product marketing (content expertise)",
+        "successMetric": "Sales team trained, adoption beginning",
+        "decisionPoints": "Adoption level? Gaps in understanding? Additional support needed?",
+        "qualityGate": "Training complete, initial adoption confirmed"
+      },
+      {
+        "name": "Iteration",
+        "objective": "Update playbook based on sales feedback and results",
+        "input": "Sales feedback, win/loss data, usage data",
+        "output": "Updated playbook with improvements",
+        "activities": "Gather sales feedback on playbook, analyze results, identify gaps/improvements, update playbook, retrain",
+        "tools": "Feedback tools, analytics",
+        "roles": "Product marketing (iteration), Sales (feedback)",
+        "successMetric": "Playbook updated quarterly based on learning",
+        "decisionPoints": "What's working? What needs improvement? Major changes or tweaks?",
+        "qualityGate": "Regular playbook reviews happening, improvements implemented"
+      }
+    ]
+  },
+  "marketing-calendar-development": {
+    "stages": [
+      {
+        "name": "Annual Theme Definition",
+        "objective": "Define overarching marketing theme/strategy for year",
+        "input": "Annual GTM strategy, market positioning, customer needs",
+        "output": "Annual marketing theme and pillars",
+        "activities": "Define annual theme, define 3-5 marketing pillars/topics, identify key moments/events, plan messaging flow",
+        "tools": "Strategy templates, content planning",
+        "roles": "Marketing leadership (theme), Product marketing (positioning)",
+        "successMetric": "Clear annual theme with 3-5 pillars",
+        "decisionPoints": "Compelling theme? Aligned to strategy? Flexible enough for changes?",
+        "qualityGate": "Theme approved by leadership"
+      },
+      {
+        "name": "Campaign Identification",
+        "objective": "Identify specific campaigns for the year",
+        "input": "Annual theme, quarterly OKRs, customer calendar, industry calendar",
+        "output": "Campaign calendar with campaigns identified",
+        "activities": "Identify demand gen campaigns, identify engagement campaigns, identify thought leadership campaigns, identify event tie-ins",
+        "tools": "Campaign planning templates",
+        "roles": "Marketing leadership (planning), Team leads (input)",
+        "successMetric": "Campaign calendar with campaigns identified",
+        "decisionPoints": "Right number of campaigns? Good distribution throughout year? Aligned to OKRs?",
+        "qualityGate": "Campaign calendar approved"
+      },
+      {
+        "name": "Content Planning",
+        "objective": "Plan content needed to support campaigns and pillars",
+        "input": "Campaign calendar, marketing pillars, content inventory",
+        "output": "Content calendar with content pieces identified",
+        "activities": "Identify content pieces by type (blog, whitepaper, case study, video, etc.), plan content creation, identify repurposing opportunities",
+        "tools": "Content calendars, content management systems",
+        "roles": "Content marketing (planning), Team leads (input)",
+        "successMetric": "Content calendar with all campaigns and content mapped",
+        "decisionPoints": "Right content mix? Creation vs. repurposing? Enough resources?",
+        "qualityGate": "Content calendar complete"
+      },
+      {
+        "name": "Channel Allocation",
+        "objective": "Allocate campaigns and content to channels",
+        "input": "Campaign calendar, content calendar, channel capabilities",
+        "output": "Channel-specific campaign and content plan",
+        "activities": "Map campaigns to channels, identify channel owners, plan channel strategy for each campaign",
+        "tools": "Channel strategy templates",
+        "roles": "Channel leads (input), Marketing leadership (coordination)",
+        "successMetric": "Campaigns and content allocated to channels",
+        "decisionPoints": "Right channels for each campaign? Resource available? Conflicts?",
+        "qualityGate": "Channel allocation complete, channel leads aligned"
+      },
+      {
+        "name": "Timeline Creation",
+        "objective": "Create detailed timeline for campaign execution",
+        "input": "Campaign calendar, content calendar, channel allocation",
+        "output": "Detailed timeline with milestones and deadlines",
+        "activities": "Define campaign start/end dates, identify key milestones, identify content creation deadlines, identify publishing dates",
+        "tools": "Project management tools, calendars",
+        "roles": "Marketing operations (timeline), Team leads (input)",
+        "successMetric": "Detailed timeline with all milestones",
+        "decisionPoints": "Timeline realistic? Enough lead time? Dependencies clear?",
+        "qualityGate": "Timeline created and resource-loaded"
+      },
+      {
+        "name": "Resource Assignment",
+        "objective": "Assign resources to each campaign and content piece",
+        "input": "Timeline, campaigns, content, available resources",
+        "output": "Resource allocation with owners and team assignments",
+        "activities": "Assign campaign owners, assign content creators, assign budget, plan resource timeline",
+        "tools": "Resource planning, project management",
+        "roles": "Marketing leadership (assignment), Team leads (confirmation)",
+        "successMetric": "All campaigns and content assigned owners with resources confirmed",
+        "decisionPoints": "Resources sufficient? Right skills assigned? Capacity conflicts?",
+        "qualityGate": "Resource allocation complete, owners confirmed"
+      },
+      {
+        "name": "Publishing Schedule",
+        "objective": "Create detailed publishing schedule for content",
+        "input": "Content calendar, channel allocation, timeline",
+        "output": "Content publishing calendar",
+        "activities": "Define publishing dates and frequency, identify publishing channel per content, set up automation where possible",
+        "tools": "Content management systems, publishing tools",
+        "roles": "Content marketing (schedule), Channel leads (channel input)",
+        "successMetric": "Publishing schedule defined for all content",
+        "decisionPoints": "Publishing frequency optimal? Timezone considerations? Promotion timing?",
+        "qualityGate": "Publishing schedule confirmed, automation set up"
+      },
+      {
+        "name": "Performance Tracking",
+        "objective": "Track marketing calendar execution and performance",
+        "input": "Publishing schedule, campaigns active",
+        "output": "Monthly/quarterly performance reports",
+        "activities": "Monitor campaign performance, track content engagement, track channel performance, identify optimizations needed",
+        "tools": "Analytics dashboards, campaign tracking",
+        "roles": "Analytics (reporting), Marketing leadership (analysis)",
+        "successMetric": "Performance tracked monthly, reporting consistent",
+        "decisionPoints": "Campaigns on track? Content performing? Optimizations needed?",
+        "qualityGate": "Performance tracking in place, regular reviews happening"
+      }
+    ]
+  },
+  "weekly-monthly-execution-plan": {
+    "stages": [
+      {
+        "name": "Priority Setting",
+        "objective": "Identify top priorities for week/month",
+        "input": "OKRs, initiatives, customer needs, blockers",
+        "output": "Clear list of top priorities",
+        "activities": "Review OKRs and initiatives, identify top 3-5 priorities for week, identify urgent issues, plan priority order",
+        "tools": "Priority management tools",
+        "roles": "GTM leadership (setting), Team leads (input)",
+        "successMetric": "Clear top priorities identified",
+        "decisionPoints": "What's most important this week? Any urgent items? Dependencies?",
+        "qualityGate": "Priorities clear and communicated"
+      },
+      {
+        "name": "Task Definition",
+        "objective": "Break priorities into specific tasks",
+        "input": "Priorities identified",
+        "output": "Detailed task list with descriptions",
+        "activities": "Define specific tasks for each priority, break into subtasks, define success criteria",
+        "tools": "Task management tools",
+        "roles": "Team leads (definition), Individual contributors (input)",
+        "successMetric": "All priorities broken into specific tasks",
+        "decisionPoints": "Tasks clear and actionable? Right level of detail?",
+        "qualityGate": "Task list finalized"
+      },
+      {
+        "name": "Owner Assignment",
+        "objective": "Assign owners to each task",
+        "input": "Task list, team capabilities",
+        "output": "Tasks with assigned owners",
+        "activities": "Identify task owners, confirm capacity, establish accountability",
+        "tools": "Task management, HRIS",
+        "roles": "Team leads (assignment), Individuals (confirmation)",
+        "successMetric": "All tasks assigned with confirmed owners",
+        "decisionPoints": "Right person for each task? Capacity okay? Too many on one person?",
+        "qualityGate": "All owners assigned and confirmed"
+      },
+      {
+        "name": "Deadline Setting",
+        "objective": "Set realistic deadlines for each task",
+        "input": "Task list, owner assignments",
+        "output": "Tasks with deadlines",
+        "activities": "Set deadlines, sequence tasks, identify dependencies, plan buffer time",
+        "tools": "Calendars, project management tools",
+        "roles": "Team leads (setting), Owners (confirmation)",
+        "successMetric": "All tasks have deadlines",
+        "decisionPoints": "Deadlines realistic? Dependencies sequenced? Buffers adequate?",
+        "qualityGate": "Deadlines set and agreed"
+      },
+      {
+        "name": "Resource Allocation",
+        "objective": "Allocate resources needed for task execution",
+        "input": "Task list, deadlines, available resources",
+        "output": "Resource allocation plan",
+        "activities": "Identify resource needs, allocate budget, allocate tools/access, plan support",
+        "tools": "Resource planning tools",
+        "roles": "Operations (allocation), Team leads (input)",
+        "successMetric": "Resource needs identified and allocated",
+        "decisionPoints": "Resources sufficient? Conflicts? Contingencies needed?",
+        "qualityGate": "Resources allocated and confirmed available"
+      },
+      {
+        "name": "Kickoff",
+        "objective": "Kick off week/month with team alignment",
+        "input": "Tasks, assignments, resources, deadlines",
+        "output": "Aligned team ready to execute",
+        "activities": "Hold kickoff meeting, review priorities, clarify tasks, address questions, establish communication cadence",
+        "tools": "Meeting tools, task management",
+        "roles": "GTM leadership (facilitation), Team leads (participation)",
+        "successMetric": "Team aligned and ready to execute",
+        "decisionPoints": "Everyone clear on priorities? Any blockers before start?",
+        "qualityGate": "Kickoff complete, team ready"
+      },
+      {
+        "name": "Progress Tracking",
+        "objective": "Track daily/weekly progress throughout period",
+        "input": "Tasks assigned, deadlines set",
+        "output": "Daily/weekly progress updates and issue escalation",
+        "activities": "Daily standup (15 min), track progress, identify blockers, escalate issues, adjust plan as needed",
+        "tools": "Standup tools, task management, issue tracking",
+        "roles": "Team leads (facilitation), Team (updates)",
+        "successMetric": "Daily progress tracked, blockers visible",
+        "decisionPoints": "On track? Blockers identified? Plan adjustments needed?",
+        "qualityGate": "Daily tracking happening, issues escalated quickly"
+      },
+      {
+        "name": "Adjustment",
+        "objective": "Adjust execution plan based on real-time learning",
+        "input": "Progress data, blockers, changes",
+        "output": "Adjusted plan for remainder of week/month",
+        "activities": "Assess progress vs. plan, identify adjustments needed, rebalance resources, communicate changes, keep momentum",
+        "tools": "Task management, resource planning",
+        "roles": "GTM leadership (adjustment), Team leads (input)",
+        "successMetric": "Plan adjusted as needed, team kept on track",
+        "decisionPoints": "Major adjustments needed? Resource rebalancing? Timeline changes?",
+        "qualityGate": "Adjustments made quickly, minimal plan disruption"
+      }
+    ]
+  },
+  "gtm-metrics-framework": {
+    "stages": [
+      {
+        "name": "Metric Definition",
+        "objective": "Define which metrics matter for GTM success",
+        "input": "OKRs, strategy, business goals, customer needs",
+        "output": "Comprehensive metric definition",
+        "activities": "Identify leading and lagging indicators, define metric names/descriptions, identify owners",
+        "tools": "Metric framework templates",
+        "roles": "Analytics (definition), GTM leadership (strategy input), Finance (business input)",
+        "successMetric": "15-20 key metrics defined with descriptions",
+        "decisionPoints": "Which metrics truly matter? Leading vs. lagging? Actionable?",
+        "qualityGate": "Metrics defined and agreed as key indicators"
+      },
+      {
+        "name": "Data Source Identification",
+        "objective": "Identify where data comes from for each metric",
+        "input": "Metric definitions, data systems available",
+        "output": "Data source mapping for each metric",
+        "activities": "Identify system where each metric lives (CRM, marketing automation, analytics), confirm data availability, plan data integration",
+        "tools": "Data inventory, integration tools",
+        "roles": "Analytics (identification), Operations (integration planning)",
+        "successMetric": "Data sources identified for all metrics",
+        "decisionPoints": "Data available? Clean? Integration needed?",
+        "qualityGate": "Data sources confirmed and accessible"
+      },
+      {
+        "name": "Calculation Logic",
+        "objective": "Define exactly how each metric is calculated",
+        "input": "Metrics, data sources",
+        "output": "Calculation logic documentation",
+        "activities": "Define calculation formula, define data filters/segments, define time periods, document edge cases",
+        "tools": "Calculation documentation, data tools",
+        "roles": "Analytics (definition), Data (validation)",
+        "successMetric": "Calculation logic documented for all metrics",
+        "decisionPoints": "Logic clear and unambiguous? Consistent across reports?",
+        "qualityGate": "Calculation logic documented and validated"
+      },
+      {
+        "name": "Baseline Setting",
+        "objective": "Establish baseline for each metric",
+        "input": "Historical data, calculation logic",
+        "output": "Baseline values established",
+        "activities": "Pull historical data, calculate baseline, document baseline assumptions",
+        "tools": "Analytics, historical data",
+        "roles": "Analytics (calculation)",
+        "successMetric": "Baselines calculated and documented",
+        "decisionPoints": "Baseline realistic? Comparable periods?",
+        "qualityGate": "Baselines established and documented"
+      },
+      {
+        "name": "Target Setting",
+        "objective": "Set targets for each metric",
+        "input": "Baselines, OKRs, strategy",
+        "output": "Metric targets for year/quarter",
+        "activities": "Set targets based on OKRs and strategy, set committed vs. stretch targets, document rationale",
+        "tools": "Target setting frameworks",
+        "roles": "GTM leadership (targets), Finance (validation)",
+        "successMetric": "Targets set for all metrics for year and quarters",
+        "decisionPoints": "Targets ambitious but achievable? Aligned to OKRs?",
+        "qualityGate": "Targets approved by leadership"
+      },
+      {
+        "name": "Dashboard Creation",
+        "objective": "Create dashboards to track metrics",
+        "input": "Metrics, targets, data sources, calculation logic",
+        "output": "Live metric dashboards",
+        "activities": "Design dashboard layout, configure data pulls, set up automated reporting, establish refresh cadence",
+        "tools": "Dashboard tools (Tableau, Looker, etc.), data integration",
+        "roles": "Analytics/BI (creation), Operations (automation)",
+        "successMetric": "Dashboards live and updated regularly",
+        "decisionPoints": "Accessible to right people? Refresh frequency adequate?",
+        "qualityGate": "Dashboards live and showing accurate data"
+      },
+      {
+        "name": "Monitoring",
+        "objective": "Monitor metrics against targets throughout period",
+        "input": "Live dashboards, targets",
+        "output": "Monthly/weekly metric reports",
+        "activities": "Review metrics vs. targets, identify variances, investigate root causes, communicate results",
+        "tools": "Dashboards, reporting tools",
+        "roles": "Analytics (monitoring), GTM leadership (analysis)",
+        "successMetric": "Metrics monitored weekly/monthly with results communicated",
+        "decisionPoints": "On track to targets? Variances explained? Actions taken?",
+        "qualityGate": "Regular monitoring happening, results communicated"
+      },
+      {
+        "name": "Optimization",
+        "objective": "Optimize metrics based on performance data",
+        "input": "Performance data, variance analysis, team feedback",
+        "output": "Metric optimizations and target adjustments",
+        "activities": "Analyze what's driving underperformance, plan optimizations, adjust targets if needed, implement improvements",
+        "tools": "Analytics, improvement tracking",
+        "roles": "GTM leadership (optimization), Analytics (analysis)",
+        "successMetric": "Metrics reviewed quarterly, optimizations planned",
+        "decisionPoints": "Targets still realistic? Metrics still relevant? Optimizations possible?",
+        "qualityGate": "Quarterly metric review and optimization happening"
+      }
+    ]
+  },
+  "dashboard-reporting": {
+    "stages": [
+      {
+        "name": "Reporting Needs Assessment",
+        "objective": "Identify who needs what reporting",
+        "input": "Stakeholder list, decision-making needs",
+        "output": "Reporting requirements by audience",
+        "activities": "Identify stakeholders (executives, managers, ICs), identify their questions/needs, identify required frequency",
+        "tools": "Stakeholder analysis",
+        "roles": "GTM leadership (assessment), Analytics (input)",
+        "successMetric": "Reporting requirements documented for each stakeholder group",
+        "decisionPoints": "Who needs what information? Frequency? Detail level?",
+        "qualityGate": "Requirements clear and documented"
+      },
+      {
+        "name": "Metric Selection",
+        "objective": "Select metrics to include in dashboards/reports",
+        "input": "Available metrics, stakeholder needs",
+        "output": "Metrics selected for each audience",
+        "activities": "Select relevant metrics per audience, prioritize by importance, plan data sources",
+        "tools": "Metric framework, data inventory",
+        "roles": "Analytics (selection), Stakeholders (validation)",
+        "successMetric": "Metrics selected for each reporting audience",
+        "decisionPoints": "Right metrics for audience? Actionable? Too many or too few?",
+        "qualityGate": "Metrics selected and stakeholders agree relevant"
+      },
+      {
+        "name": "Dashboard Design",
+        "objective": "Design dashboards for each reporting audience",
+        "input": "Metrics selected, visualization needs, brand guidelines",
+        "output": "Dashboard designs and layouts",
+        "activities": "Design dashboard layout, identify visualizations, design for accessibility, balance comprehensiveness and simplicity",
+        "tools": "Dashboard design tools, design guidelines",
+        "roles": "Analytics/BI (design), UX (guidance)",
+        "successMetric": "Dashboard designs created for each audience",
+        "decisionPoints": "Layouts intuitive? Visualizations clear? Data hierarchy right?",
+        "qualityGate": "Dashboard designs reviewed and approved"
+      },
+      {
+        "name": "Data Integration",
+        "objective": "Integrate data sources to populate dashboards",
+        "input": "Dashboard designs, metric definitions, data sources",
+        "output": "Dashboards connected to live data",
+        "activities": "Build data queries, configure data pulls, set up transformations, validate data accuracy",
+        "tools": "BI tools, data integration tools",
+        "roles": "Analytics/BI (integration), Data (support)",
+        "successMetric": "Dashboards connected to live data",
+        "decisionPoints": "Data accurate? Refresh frequency sufficient? Data quality good?",
+        "qualityGate": "Data integration complete and validated"
+      },
+      {
+        "name": "Automation Setup",
+        "objective": "Automate dashboard updates and report generation",
+        "input": "Dashboards live, reporting frequency defined",
+        "output": "Automated dashboard updates and report generation",
+        "activities": "Set up automated data refresh, set up automated report generation, schedule deliveries, configure alerts",
+        "tools": "BI tools, automation tools",
+        "roles": "Analytics/BI (setup), Operations (monitoring)",
+        "successMetric": "Dashboards auto-update, reports auto-generate",
+        "decisionPoints": "Refresh frequency adequate? Distribution timing right? Alerts useful?",
+        "qualityGate": "Automation working, no manual intervention needed"
+      },
+      {
+        "name": "Distribution",
+        "objective": "Get dashboards/reports to stakeholders",
+        "input": "Automated reports/dashboards",
+        "output": "Reports/dashboards distributed regularly",
+        "activities": "Set up report distribution, provide access to dashboards, communicate cadence, establish access controls",
+        "tools": "Email, dashboard access, distribution tools",
+        "roles": "Operations (distribution), Analytics (access)",
+        "successMetric": "Reports distributed on schedule, dashboard access available",
+        "decisionPoints": "Distribution working? Access correct? Format right?",
+        "qualityGate": "All stakeholders receiving reports/dashboards regularly"
+      },
+      {
+        "name": "Consumption Tracking",
+        "objective": "Track whether stakeholders are using reports/dashboards",
+        "input": "Distributed reports, dashboards available",
+        "output": "Usage tracking and insights",
+        "activities": "Track report opens, track dashboard views, identify usage patterns, gather feedback",
+        "tools": "Email tracking, analytics, feedback tools",
+        "roles": "Analytics (tracking), Operations (feedback)",
+        "successMetric": "Usage data collected and analyzed",
+        "decisionPoints": "Usage levels adequate? Engagement high? Gaps in consumption?",
+        "qualityGate": "Usage tracking in place, patterns visible"
+      },
+      {
+        "name": "Refinement",
+        "objective": "Refine reports and dashboards based on usage and feedback",
+        "input": "Usage data, stakeholder feedback",
+        "output": "Refined reports and dashboards",
+        "activities": "Analyze feedback, identify improvements, adjust metrics/visualizations, update dashboards, communicate changes",
+        "tools": "Dashboard tools, feedback collection",
+        "roles": "Analytics (refinement), Stakeholders (input)",
+        "successMetric": "Reports/dashboards refined quarterly based on feedback",
+        "decisionPoints": "Major changes needed? Metrics still relevant? Format working?",
+        "qualityGate": "Regular refinement happening, stakeholder satisfaction high"
+      }
+    ]
+  },
+  "data-integrity-architecture": {
+    "stages": [
+      {
+        "name": "Data Audit",
+        "objective": "Audit current data landscape and quality",
+        "input": "Data systems in use, current data",
+        "output": "Data audit report with quality assessment",
+        "activities": "Inventory data systems, assess data completeness, assess data accuracy, identify quality issues, identify gaps",
+        "tools": "Data auditing tools, data quality tools",
+        "roles": "Data ops (audit), Analytics (assessment), IT (systems)",
+        "successMetric": "Comprehensive data audit completed",
+        "decisionPoints": "Data quality issues identified? Extent of problems? Priority fixes?",
+        "qualityGate": "Data audit completed and issues documented"
+      },
+      {
+        "name": "Quality Issues Identification",
+        "objective": "Identify specific data quality problems",
+        "input": "Data audit, quality assessment",
+        "output": "Prioritized list of data quality issues",
+        "activities": "Categorize issues (duplicates, missing data, incorrect data), prioritize by impact, estimate effort to fix",
+        "tools": "Issue tracking, data quality tools",
+        "roles": "Data ops (identification), Analytics (impact assessment)",
+        "successMetric": "Quality issues identified and prioritized",
+        "decisionPoints": "Which issues most important? Quick wins available? Root causes?",
+        "qualityGate": "Issues documented with prioritization"
+      },
+      {
+        "name": "Data Governance Plan",
+        "objective": "Create plan for managing data quality going forward",
+        "input": "Quality issues identified, organizational structure",
+        "output": "Data governance plan with policies and responsibilities",
+        "activities": "Define data governance policies, assign data owners, define data quality standards, define escalation process",
+        "tools": "Governance templates, policy documents",
+        "roles": "Data leadership (planning), IT (input), GTM (input)",
+        "successMetric": "Comprehensive data governance plan documented",
+        "decisionPoints": "Roles clear? Standards realistic? Enforcement mechanisms?",
+        "qualityGate": "Governance plan approved and communicated"
+      },
+      {
+        "name": "Integration Setup",
+        "objective": "Integrate data systems to ensure consistency",
+        "input": "Data systems inventory, integration needs",
+        "output": "Data integrations configured",
+        "activities": "Map data across systems, build data pipelines, configure automated syncs, test integrations",
+        "tools": "Data integration tools (Zapier, make.com, etc.), APIs",
+        "roles": "Data ops (setup), IT (infrastructure), Analytics (validation)",
+        "successMetric": "Key data integrations configured and working",
+        "decisionPoints": "Integration coverage sufficient? Sync frequency adequate? Error handling?",
+        "qualityGate": "Integrations tested and working reliably"
+      },
+      {
+        "name": "Validation Rules",
+        "objective": "Implement validation rules to prevent bad data",
+        "input": "Data quality standards, data entry points",
+        "output": "Validation rules in place",
+        "activities": "Define validation rules, configure in systems, test rules, provide feedback to users",
+        "tools": "Data validation tools, CRM configuration, automation",
+        "roles": "Data ops (configuration), IT (setup), GTM (testing)",
+        "successMetric": "Validation rules implemented across key systems",
+        "decisionPoints": "Rules comprehensive? Too restrictive? User experience?",
+        "qualityGate": "Validation rules working and preventing bad data"
+      },
+      {
+        "name": "Ongoing Monitoring",
+        "objective": "Monitor data quality on ongoing basis",
+        "input": "Data systems with validation, metrics defined",
+        "output": "Monthly data quality reports",
+        "activities": "Monitor data quality metrics, identify new issues early, escalate problems, provide feedback to data owners",
+        "tools": "Data quality dashboards, monitoring tools",
+        "roles": "Data ops (monitoring), Analytics (reporting)",
+        "successMetric": "Data quality monitored monthly with visibility",
+        "decisionPoints": "Quality improving? New issues appearing? Root causes?",
+        "qualityGate": "Monitoring system in place, monthly reports generated"
+      },
+      {
+        "name": "Regular Audits",
+        "objective": "Conduct regular audits of data quality and governance",
+        "input": "Data quality metrics, governance policies",
+        "output": "Quarterly/annual audit reports",
+        "activities": "Conduct data quality audits, assess governance compliance, identify improvement areas",
+        "tools": "Audit templates, data quality tools",
+        "roles": "Data leadership (audit), Data ops (execution)",
+        "successMetric": "Quarterly audits conducted, results documented",
+        "decisionPoints": "Quality improving? Governance being followed? Major issues?",
+        "qualityGate": "Regular audit cadence established"
+      },
+      {
+        "name": "Improvement",
+        "objective": "Continuously improve data quality and governance",
+        "input": "Audit results, monitoring data, issue feedback",
+        "output": "Data quality improvements implemented",
+        "activities": "Plan improvements, execute fixes, retrain users, document learnings",
+        "tools": "Issue tracking, improvement templates",
+        "roles": "Data leadership (planning), Data ops (execution), IT (support)",
+        "successMetric": "Data quality improving over time, governance compliance high",
+        "decisionPoints": "Most important improvements? Quick wins? Training needed?",
+        "qualityGate": "Improvement plan executed, quality metrics show improvement"
+      }
+    ]
+  },
+  "attribution-roi-tracking": {
+    "stages": [
+      {
+        "name": "Touch Point Definition",
+        "objective": "Define all customer touch points to track",
+        "input": "Customer journey, marketing channels, sales activities",
+        "output": "Comprehensive list of touch points",
+        "activities": "Map customer journey, identify all touch points (ads, content, sales calls, events, etc.), plan tracking for each",
+        "tools": "Customer journey mapping, analytics tools",
+        "roles": "Marketing (mapping), Analytics (tracking plan)",
+        "successMetric": "All major touch points identified",
+        "decisionPoints": "Which touch points matter? Tracking feasible? Data available?",
+        "qualityGate": "Touch point list comprehensive and tracking feasible"
+      },
+      {
+        "name": "Attribution Model Design",
+        "objective": "Design attribution model (how credit gets assigned to touch points)",
+        "input": "Touch points, customer data, business goals",
+        "output": "Attribution model specification",
+        "activities": "Choose model type (first-touch, last-touch, linear, time-decay, custom), specify model rules, get stakeholder agreement",
+        "tools": "Attribution model templates, analytics tools",
+        "roles": "Analytics (design), Finance (financial input), GTM (business logic)",
+        "successMetric": "Attribution model designed and documented",
+        "decisionPoints": "Which model best reflects business? Stakeholder agreement? Custom needed?",
+        "qualityGate": "Model specified, stakeholders agree on approach"
+      },
+      {
+        "name": "Data Collection Setup",
+        "objective": "Set up systems to collect attribution data",
+        "input": "Attribution model, touch points, data systems",
+        "output": "Data collection infrastructure in place",
+        "activities": "Implement tracking code, configure analytics, set up CRM tracking, set up integration between systems",
+        "tools": "Analytics platforms, UTM tracking, CRM, data integration",
+        "roles": "Analytics (setup), IT (infrastructure), Marketing (implementation)",
+        "successMetric": "Data collection working for all touch points",
+        "decisionPoints": "Tracking complete? Data flowing correctly? Quality good?",
+        "qualityGate": "Data collection tested and working"
+      },
+      {
+        "name": "Analysis Framework",
+        "objective": "Define framework for analyzing attribution data",
+        "input": "Attribution model, business questions, available tools",
+        "output": "Analysis framework and reporting approach",
+        "activities": "Define key questions to answer (which channels drive revenue, what's CAC by channel, etc.), plan analysis approach",
+        "tools": "Analysis templates, reporting tools",
+        "roles": "Analytics (framework), GTM (questions)",
+        "successMetric": "Analysis framework documented",
+        "decisionPoints": "Right questions? Feasible to analyze? Tools adequate?",
+        "qualityGate": "Framework defined, analysis approach clear"
+      },
+      {
+        "name": "Campaign Attribution",
+        "objective": "Calculate attribution for each marketing campaign",
+        "input": "Attribution model, campaign data, touch point data",
+        "output": "Campaign-level attribution reports",
+        "activities": "Analyze which touch points contributed to conversions, calculate credit per campaign, identify highest-impact campaigns",
+        "tools": "Analytics platforms, attribution tools, BI tools",
+        "roles": "Analytics (analysis), Marketing (validation)",
+        "successMetric": "Campaign attribution reports generated",
+        "decisionPoints": "Which campaigns most impactful? Surprising results? Actionable insights?",
+        "qualityGate": "Attribution calculated for all campaigns"
+      },
+      {
+        "name": "ROI Calculation",
+        "objective": "Calculate ROI by campaign/channel",
+        "input": "Campaign attribution, campaign spend, customer value",
+        "output": "ROI reports by campaign/channel",
+        "activities": "Calculate revenue influenced by campaign, compare to campaign spend, calculate ROI, identify most efficient channels",
+        "tools": "Financial tools, ROI calculators, BI tools",
+        "roles": "Analytics (calculation), Finance (validation)",
+        "successMetric": "ROI calculated for all major campaigns/channels",
+        "decisionPoints": "Which channels most efficient? ROI meeting targets? Budget allocation optimal?",
+        "qualityGate": "ROI calculated and validated"
+      },
+      {
+        "name": "Optimization",
+        "objective": "Optimize marketing spend based on attribution and ROI",
+        "input": "Attribution and ROI data, campaign performance",
+        "output": "Optimization recommendations and budget reallocation",
+        "activities": "Identify highest-ROI channels, identify lowest-ROI channels, plan budget shifts, plan performance improvements",
+        "tools": "Analytics, budget planning tools",
+        "roles": "Analytics (analysis), Marketing (strategy), Finance (approval)",
+        "successMetric": "Attribution insights used to optimize spending",
+        "decisionPoints": "Which channels shift budget to? Should we stop underperformers? Invest in winners?",
+        "qualityGate": "Attribution insights regularly used to optimize spending"
+      }
+    ]
+  },
+  "decision-making-framework": {
+    "stages": [
+      {
+        "name": "Decision Type Definition",
+        "objective": "Identify types of decisions that get made in GTM",
+        "input": "Strategy, organizational structure, common decisions",
+        "output": "Decision type categories",
+        "activities": "Identify strategic decisions, identify tactical decisions, identify operational decisions, categorize decisions",
+        "tools": "Decision frameworks",
+        "roles": "GTM leadership (definition)",
+        "successMetric": "Decision types categorized",
+        "decisionPoints": "Right categories? Overlaps? Mutually exclusive?",
+        "qualityGate": "Decision types clearly defined"
+      },
+      {
+        "name": "Authority Mapping",
+        "objective": "Map authority to make decisions to roles/individuals",
+        "input": "Decision types, organizational structure, decision value/impact",
+        "output": "Authority matrix (who decides what)",
+        "activities": "Assign decision authority by type, define escalation thresholds, identify veto power, document exceptions",
+        "tools": "Authority matrices, organizational charts",
+        "roles": "Executive leadership (mapping)",
+        "successMetric": "Clear authority matrix documented",
+        "decisionPoints": "Authority clear? Aligned to organizational structure? Fair distribution?",
+        "qualityGate": "Authority matrix approved by leadership"
+      },
+      {
+        "name": "Process Documentation",
+        "objective": "Document decision-making process",
+        "input": "Authority matrix, decision types",
+        "output": "Decision process documentation",
+        "activities": "Document process for each decision type, identify inputs/stakeholders, identify timeline, document documentation requirements",
+        "tools": "Process documentation, playbook templates",
+        "roles": "GTM operations (documentation), Leadership (input)",
+        "successMetric": "Decision process documented for all decision types",
+        "decisionPoints": "Processes clear? Efficiently designed? Properly documented?",
+        "qualityGate": "Process documentation complete and reviewed"
+      },
+      {
+        "name": "Training",
+        "objective": "Train team on decision-making framework",
+        "input": "Authority matrix, process documentation",
+        "output": "Trained team on decision framework",
+        "activities": "Hold training session, review authority matrix, review decision processes, answer questions, test understanding",
+        "tools": "Training materials, training tools",
+        "roles": "Operations (training delivery), Leadership (participation)",
+        "successMetric": "Team trained on decision framework",
+        "decisionPoints": "Team understanding? Questions resolved? Adoption likely?",
+        "qualityGate": "Training complete, team ready to use framework"
+      },
+      {
+        "name": "Execution",
+        "objective": "Execute decisions following the framework",
+        "input": "Decision type identified, framework in place",
+        "output": "Decisions made following process",
+        "activities": "Identify decision type, gather inputs, get appropriate approval, document decision, communicate",
+        "tools": "Decision templates, documentation tools",
+        "roles": "Decision-maker (execution), Stakeholders (input)",
+        "successMetric": "Decisions made and documented systematically",
+        "decisionPoints": "Process being followed? Decisions efficient? Stakeholder buy-in?",
+        "qualityGate": "Decision process being followed consistently"
+      },
+      {
+        "name": "Review",
+        "objective": "Review decision outcomes",
+        "input": "Decision made, results over time",
+        "output": "Decision outcome assessment",
+        "activities": "Review decision against objectives, assess if it achieved intended outcome, document learnings",
+        "tools": "Review templates, outcome tracking",
+        "roles": "GTM leadership (review), Decision-maker (input)",
+        "successMetric": "Decisions reviewed for outcome",
+        "decisionPoints": "Decision effective? What worked? What didn't?",
+        "qualityGate": "Regular decision reviews happening"
+      },
+      {
+        "name": "Feedback Loop",
+        "objective": "Gather feedback on decision-making process",
+        "input": "Decision outcomes, process execution",
+        "output": "Feedback on decision framework",
+        "activities": "Gather feedback from decision-makers, gather feedback from stakeholders, identify process improvements",
+        "tools": "Feedback surveys, interview tools",
+        "roles": "Operations (feedback collection), Leadership (participation)",
+        "successMetric": "Feedback collected regularly",
+        "decisionPoints": "Process working well? Improvements needed? Changes to framework?",
+        "qualityGate": "Feedback being collected systematically"
+      },
+      {
+        "name": "Refinement",
+        "objective": "Refine decision framework based on learning",
+        "input": "Feedback, outcome assessments",
+        "output": "Refined decision framework",
+        "activities": "Identify framework improvements, update authority/process as needed, retrain team, communicate changes",
+        "tools": "Process improvement templates",
+        "roles": "Leadership (refinement), Operations (execution)",
+        "successMetric": "Framework refined regularly, improvements implemented",
+        "decisionPoints": "Framework improvements clear? Should we change authority? Process refinements?",
+        "qualityGate": "Annual framework review and refinement happening"
+      }
+    ]
+  },
+  "weekly-gtm-standup": {
+    "stages": [
+      {
+        "name": "Status Collection",
+        "objective": "Gather status updates from all teams",
+        "input": "Initiative progress, team accomplishments, blockers",
+        "output": "Status summary from all teams",
+        "activities": "Have team leads provide updates (what we accomplished, what we're working on, blockers), consolidate status",
+        "tools": "Status templates, meeting tools",
+        "roles": "Team leads (updates), Operations (consolidation)",
+        "successMetric": "Status received from all teams",
+        "decisionPoints": "What was accomplished? What's on track?",
+        "qualityGate": "Comprehensive status collected"
+      },
+      {
+        "name": "Issue Identification",
+        "objective": "Identify issues that need discussion/resolution",
+        "input": "Status updates, team feedback",
+        "output": "List of issues to discuss",
+        "activities": "Identify blockers, identify risks, identify decisions needed, prioritize issues",
+        "tools": "Issue tracking, meeting tools",
+        "roles": "Operations (identification), Team leads (input)",
+        "successMetric": "Issues identified and prioritized",
+        "decisionPoints": "Which issues most urgent? What can be resolved quickly?",
+        "qualityGate": "Issues clearly identified"
+      },
+      {
+        "name": "Discussion",
+        "objective": "Discuss issues and get team input",
+        "input": "Issue list, team input",
+        "output": "Issue discussion and perspectives",
+        "activities": "Facilitate discussion, get diverse perspectives, understand root causes, explore solutions",
+        "tools": "Meeting tools, collaboration tools",
+        "roles": "GTM leadership (facilitation), Team (input)",
+        "successMetric": "Issues discussed thoroughly",
+        "decisionPoints": "Root causes clear? Possible solutions identified?",
+        "qualityGate": "Discussion happening, multiple perspectives heard"
+      },
+      {
+        "name": "Decision Making",
+        "objective": "Make decisions to resolve issues",
+        "input": "Issue discussion, authority matrix",
+        "output": "Decisions and action plans",
+        "activities": "Make decisions on issues, assign accountability, set timelines",
+        "tools": "Decision templates",
+        "roles": "Decision authority (making), Team (input)",
+        "successMetric": "Decisions made on all critical issues",
+        "decisionPoints": "Decision clear? Owner assigned? Timeline realistic?",
+        "qualityGate": "Decisions made and communicated"
+      },
+      {
+        "name": "Action Items",
+        "objective": "Document action items from standup",
+        "input": "Decisions made, discussion outcomes",
+        "output": "Documented action items with owners and deadlines",
+        "activities": "Capture action items, assign owners, set deadlines, document in issue tracking system",
+        "tools": "Action item tracking, issue system",
+        "roles": "Operations (documentation), Team (confirmation)",
+        "successMetric": "All action items documented and assigned",
+        "decisionPoints": "All items captured? Owners confirmed? Deadlines realistic?",
+        "qualityGate": "Action items in tracking system"
+      },
+      {
+        "name": "Follow-up",
+        "objective": "Follow up on action items during the week",
+        "input": "Action items assigned",
+        "output": "Action item progress through the week",
+        "activities": "Check in on action items mid-week, escalate anything at risk, provide support to owners",
+        "tools": "Action tracking, communication tools",
+        "roles": "Operations (follow-up), Owners (updates)",
+        "successMetric": "Action items tracked to completion",
+        "decisionPoints": "On track to deadline? Support needed? Blockers?",
+        "qualityGate": "Proactive follow-up happening"
+      },
+      {
+        "name": "Resolution",
+        "objective": "Close out action items when complete",
+        "input": "Completed action items",
+        "output": "Resolved issues and action items",
+        "activities": "Confirm completion, document resolution, communicate outcomes",
+        "tools": "Action tracking, communication",
+        "roles": "Owners (completion), Operations (confirmation)",
+        "successMetric": "Action items closed when complete",
+        "decisionPoints": "Completion acceptable? Learning captured?",
+        "qualityGate": "Action items closed systematically"
+      },
+      {
+        "name": "Learning Capture",
+        "objective": "Capture learnings for improvement",
+        "input": "Issues discussed, resolutions, outcomes",
+        "output": "Learning documentation",
+        "activities": "Identify patterns in issues, document root causes, capture best practices",
+        "tools": "Learning docs, issue tracking",
+        "roles": "Operations (documentation), Leadership (input)",
+        "successMetric": "Learnings documented monthly",
+        "decisionPoints": "Patterns in issues? Systemic problems? Improvement opportunities?",
+        "qualityGate": "Learning captured and shared"
+      }
+    ]
+  },
+  "quarterly-gtm-planning": {
+    "stages": [
+      {
+        "name": "Strategy Review",
+        "objective": "Review annual strategy and assess relevance to current quarter",
+        "input": "Annual GTM strategy, prior quarter results, market changes, competitive updates",
+        "output": "Confirmed/adjusted strategy for coming quarter",
+        "activities": [
+          "Review annual strategy and strategic pillars",
+          "Assess if strategy still applies given market/competitive changes",
+          "Review last quarter results and learnings",
+          "Identify if strategic adjustments needed",
+          "Document any strategic pivots or adjustments"
+        ],
+        "tools": "Strategy documents, quarterly results dashboards",
+        "roles": [
+          "Executive leadership: strategy review",
+          "GTM lead: assessment and recommendations",
+          "Extended team: feedback on execution"
+        ],
+        "successMetric": "Strategy confirmed or adjusted, documented for quarter planning",
+        "decisionPoints": [
+          "Does our annual strategy still make sense?",
+          "Should we pivot based on last quarter learnings?",
+          "Are market conditions changing our strategy?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Strategy reviewed and confirmed, any pivots documented and approved",
+          "loopback": "Loop back if: Major strategy questions, need executive alignment"
+        }
+      },
+      {
+        "name": "Objective Setting",
+        "objective": "Define quarterly objectives and key results (OKRs)",
+        "input": "Strategy confirmed, budget available, team capacity",
+        "output": "Quarterly OKRs (3-5 objectives with 3-4 key results each)",
+        "activities": [
+          "Define quarterly objectives (what do we want to achieve?)",
+          "Set key results for each objective (how do we measure success?)",
+          "Balance committed vs. stretch goals",
+          "Set targets that are ambitious but achievable",
+          "Get alignment from all teams on OKRs"
+        ],
+        "tools": "OKR frameworks, planning templates",
+        "roles": [
+          "Executive leadership: OKR approval",
+          "GTM lead: OKR definition",
+          "Team leads: input on ambitious-but-achievable targets"
+        ],
+        "successMetric": "3-5 quarterly OKRs with clear key results defined and approved",
+        "decisionPoints": [
+          "What are our top 3-5 priorities for the quarter?",
+          "Are our targets stretching but realistic?",
+          "Do we have dependencies between OKRs?"
+        ],
+        "qualityGate": {
+          "go": "Go if: OKRs approved by leadership, teams understand and committed",
+          "loopback": "Loop back if: OKRs too ambitious/conservative, need recalibration"
+        }
+      },
+      {
+        "name": "Initiative Planning",
+        "objective": "Identify specific initiatives needed to achieve OKRs",
+        "input": "Quarterly OKRs, team capacity, available budget",
+        "output": "List of initiatives with owners, timelines, budgets",
+        "activities": [
+          "Identify initiatives needed to achieve each OKR",
+          "Define initiative scope, timeline, and success criteria",
+          "Estimate resource requirements (headcount, budget, tools)",
+          "Identify dependencies between initiatives",
+          "Assign owners and executive sponsors",
+          "Sequence initiatives throughout quarter"
+        ],
+        "tools": "Project management tools, initiative planning templates",
+        "roles": [
+          "Team leads: initiative identification and planning",
+          "GTM lead: coordination and prioritization",
+          "Finance: budget validation"
+        ],
+        "successMetric": "List of initiatives defined with owners, timelines, budgets",
+        "decisionPoints": [
+          "Which initiatives are most critical?",
+          "Do we have capacity to execute all initiatives?",
+          "Should we prioritize or parallelize?"
+        ],
+        "qualityGate": {
+          "go": "Go if: All initiatives assigned owners, budgets approved, sequencing clear",
+          "loopback": "Loop back if: Too many initiatives, resource constraints, need to prioritize"
+        }
+      },
+      {
+        "name": "Resource Allocation",
+        "objective": "Allocate budget and headcount to initiatives",
+        "input": "Initiatives list, available budget, headcount available",
+        "output": "Resource allocation plan with budget by initiative",
+        "activities": [
+          "Allocate budget by initiative (how much can we spend on each?)",
+          "Allocate headcount by initiative (who is working on what?)",
+          "Identify any resource gaps (what do we need vs. what do we have?)",
+          "Plan for new hiring if needed",
+          "Document resource constraints and trade-offs"
+        ],
+        "tools": "Budget tracking, HRIS, resource planning tools",
+        "roles": [
+          "Finance: budget allocation and approval",
+          "GTM operations: resource planning",
+          "HR: headcount coordination"
+        ],
+        "successMetric": "Budget allocated by initiative, resource plan documented",
+        "decisionPoints": [
+          "Are we over-resourced on any initiatives?",
+          "Are we under-resourced on critical initiatives?",
+          "Should we hire or redirect existing resources?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Budget approved, resource plan clear, no critical gaps",
+          "loopback": "Loop back if: Budget constraints force priority changes, need executive decision"
+        }
+      },
+      {
+        "name": "Team Alignment",
+        "objective": "Ensure all teams understand quarterly priorities and plan",
+        "input": "OKRs, initiatives, resource allocation",
+        "output": "Aligned teams ready to execute",
+        "activities": [
+          "Hold kickoff meeting with extended team",
+          "Present OKRs and explain rationale",
+          "Present initiatives and resource allocations",
+          "Address questions and concerns",
+          "Establish communication cadence for quarter",
+          "Distribute planning documents to all teams"
+        ],
+        "tools": "Presentation tools, planning documents",
+        "roles": [
+          "GTM leadership: kickoff facilitation and communication",
+          "Team leads: team communications"
+        ],
+        "successMetric": "Team kickoff completed, plan communicated, teams aligned and committed",
+        "decisionPoints": [
+          "Do teams understand the quarterly priorities?",
+          "Are there any unresolved concerns or questions?",
+          "Is everyone committed to the plan?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Kickoff completed, Q&A addressed, teams ready to execute",
+          "loopback": "Loop back if: Significant resistance or unclear understanding, need more alignment"
+        }
+      },
+      {
+        "name": "Execution Kickoff",
+        "objective": "Launch initiatives and establish execution cadence",
+        "input": "Teams aligned, budgets approved, resource allocated",
+        "output": "Initiatives kicked off with tracking and governance in place",
+        "activities": [
+          "Kick off each initiative (project planning, team assignment)",
+          "Establish initiative governance (weekly/bi-weekly check-ins)",
+          "Set up tracking and dashboards (progress, milestones, blockers)",
+          "Establish escalation path for issues",
+          "Set up weekly GTM standup to sync across initiatives"
+        ],
+        "tools": "Project management tools, progress tracking dashboards",
+        "roles": [
+          "Team leads: initiative kickoff",
+          "GTM lead: cross-initiative coordination"
+        ],
+        "successMetric": "All initiatives kicked off, tracking in place, weekly sync established",
+        "decisionPoints": [
+          "Are all teams executing against plan?",
+          "Are there early blockers or issues?",
+          "Do we need to adjust plan based on execution reality?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Initiatives actively executing, tracking updated, no critical blockers",
+          "loopback": "Loop back if: Initiatives stalled, tracking incomplete"
+        }
+      },
+      {
+        "name": "Progress Tracking & Adjustments",
+        "objective": "Track progress throughout quarter and make real-time adjustments",
+        "input": "Weekly updates from initiatives, metrics dashboards, team feedback",
+        "output": "Quarterly review of progress with in-quarter adjustments",
+        "activities": [
+          "Weekly standup to review progress on all initiatives",
+          "Monthly review of OKR progress",
+          "Identify blockers and resolve quickly",
+          "Rebalance resources if needed based on execution reality",
+          "Adjust plan if market changes warrant",
+          "Celebrate wins and learnings",
+          "Document issues for post-quarter review"
+        ],
+        "tools": "Dashboards, weekly update templates, issue tracking",
+        "roles": [
+          "GTM lead: progress tracking and coordination",
+          "Team leads: initiative updates and issue escalation"
+        ],
+        "successMetric": "Weekly tracking complete, OKR progress clear, issues escalated and resolved",
+        "decisionPoints": [
+          "Are we tracking to OKRs?",
+          "Should we accelerate or slow any initiatives?",
+          "Do we need to resource anything differently?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Tracking system working, blockers being resolved, progress on track",
+          "loopback": "Loop back if: Tracking incomplete, too many unresolved blockers"
+        }
+      },
+      {
+        "name": "Results Review",
+        "objective": "Review quarter results and assess achievement against OKRs",
+        "input": "Final quarter metrics, completed initiatives, team feedback",
+        "output": "Quarterly business review with results, learnings, and next quarter implications",
+        "activities": [
+          "Review OKR achievement (did we hit our targets? Why or why not?)",
+          "Analyze initiative results (what worked? what didn't?)",
+          "Extract learnings (what should we do differently?)",
+          "Identify wins to celebrate and share",
+          "Assess impact on annual strategy (are we on track?)",
+          "Plan implications for next quarter",
+          "Share results broadly across company"
+        ],
+        "tools": "Results dashboards, qualitative feedback collection, retrospective templates",
+        "roles": [
+          "GTM lead: results analysis and synthesis",
+          "Team leads: team feedback and contribution",
+          "Executive leadership: review and strategic implications"
+        ],
+        "successMetric": "Quarterly review completed, results communicated, learnings documented",
+        "decisionPoints": [
+          "Did we achieve our OKRs?",
+          "What should we do differently next quarter?",
+          "Should we adjust annual strategy based on results?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Results reviewed, learnings captured, next quarter informed by results",
+          "loopback": "Loop back if: Results analysis incomplete, unclear implications for next quarter"
+        }
+      }
+    ]
+  },
+  "campaign-planning": {
+    "stages": [
+      {
+        "name": "Campaign Objectives",
+        "objective": "Define campaign goals and success criteria",
+        "input": "Quarterly OKRs, business priorities, customer data",
+        "output": "Campaign objectives and success metrics",
+        "activities": [
+          "Define campaign purpose (awareness, demand gen, engagement, conversion)",
+          "Set campaign targets (# leads, pipeline value, qualified meetings, conversions)",
+          "Define success metrics and KPIs",
+          "Set campaign timeline (start date, end date, key milestones)",
+          "Identify campaign theme or message focus"
+        ],
+        "tools": "Campaign planning templates, goal-setting frameworks",
+        "roles": [
+          "Campaign manager: campaign planning",
+          "Marketing leadership: objective approval",
+          "Sales: target/pipeline input"
+        ],
+        "successMetric": "Campaign objectives defined with clear success metrics",
+        "decisionPoints": [
+          "What's the primary goal of this campaign?",
+          "What targets are realistic and ambitious?",
+          "What timeframe do we need?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Objectives approved, targets set, timeline clear",
+          "loopback": "Loop back if: Objectives unclear, targets disputed"
+        }
+      },
+      {
+        "name": "Audience Definition",
+        "objective": "Define target audience for campaign",
+        "input": "Campaign objectives, customer data, ICP definition",
+        "output": "Detailed audience profile with segments and personas",
+        "activities": [
+          "Define primary audience (who is this campaign for?)",
+          "Define secondary audience (who else might benefit?)",
+          "Segment audience (are there sub-segments with different messages?)",
+          "Define persona(s) (role, responsibilities, pain points, buying criteria)",
+          "Estimate audience size and reachability",
+          "Identify audience characteristics (demographics, firmographics, psychographics)"
+        ],
+        "tools": "Audience research tools, CRM data, persona frameworks",
+        "roles": [
+          "Campaign manager: audience definition",
+          "Product marketing: persona input",
+          "Analytics: audience sizing"
+        ],
+        "successMetric": "Audience profile defined with detailed persona(s)",
+        "decisionPoints": [
+          "Who is our core target for this campaign?",
+          "Are there important sub-segments?",
+          "How big is the addressable audience?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Audience clearly defined, persona(s) documented, size estimated",
+          "loopback": "Loop back if: Audience definition unclear, persona needs refinement"
+        }
+      },
+      {
+        "name": "Channel Selection",
+        "objective": "Choose channels to reach target audience",
+        "input": "Audience definition, budget available, channel capabilities",
+        "output": "Multi-channel plan with audience by channel",
+        "activities": [
+          "Identify potential channels (email, ads, content, events, partnerships, etc.)",
+          "Assess channel effectiveness for this audience (which channels reach them best?)",
+          "Assess channel capacity (can we execute at our scale?)",
+          "Estimate cost per channel",
+          "Select primary and supporting channels",
+          "Allocate target audience by channel"
+        ],
+        "tools": "Channel capability assessments, audience research, budget models",
+        "roles": [
+          "Campaign manager: channel selection",
+          "Channel teams: capability and capacity input",
+          "Analytics: effectiveness data"
+        ],
+        "successMetric": "Multi-channel plan defined with audience/budget by channel",
+        "decisionPoints": [
+          "Which channels will reach our audience most effectively?",
+          "Should we do single-channel or multi-channel?",
+          "What's our channel budget allocation?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Channels selected, rationale clear, channel teams aligned",
+          "loopback": "Loop back if: Channel selection questioned, capacity concerns"
+        }
+      },
+      {
+        "name": "Content & Creative Planning",
+        "objective": "Plan content and creative assets for campaign",
+        "input": "Campaign theme, audience, channel selection",
+        "output": "Content calendar and creative asset list",
+        "activities": [
+          "Define campaign message and positioning",
+          "Plan content pieces needed (blogs, emails, ads, landing pages, social, etc.)",
+          "Define creative requirements (copy, design, imagery)",
+          "Assign content ownership (who creates what?)",
+          "Create content calendar (when does each piece publish?)",
+          "Plan A/B testing (which variations will we test?)"
+        ],
+        "tools": "Content management systems, creative brief templates",
+        "roles": [
+          "Campaign manager: content planning",
+          "Copywriters: copy content",
+          "Designers: visual creative",
+          "Content creators: blog, social, video content"
+        ],
+        "successMetric": "Content calendar created with all assets assigned and dated",
+        "decisionPoints": [
+          "What's the core message for this campaign?",
+          "What content pieces are essential?",
+          "Should we create new content or repurpose existing?",
+          "What A/B tests should we run?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Content calendar complete, assignments clear, creative briefs approved",
+          "loopback": "Loop back if: Content gaps, creative direction unclear"
+        }
+      },
+      {
+        "name": "Budget Allocation",
+        "objective": "Allocate campaign budget across channels and activities",
+        "input": "Channel plan, content plan, creative requirements",
+        "output": "Campaign budget with cost by channel and activity",
+        "activities": [
+          "Estimate cost by channel (ad spend, sponsorships, events, etc.)",
+          "Estimate content creation costs",
+          "Estimate tools and technology costs",
+          "Allocate contingency budget",
+          "Get budget approval",
+          "Track budget vs. spend"
+        ],
+        "tools": "Budget tracking spreadsheets, finance systems",
+        "roles": [
+          "Campaign manager: budget planning",
+          "Finance: budget approval and tracking",
+          "Channel teams: cost estimation"
+        ],
+        "successMetric": "Campaign budget approved with detailed allocation",
+        "decisionPoints": [
+          "What's our total campaign budget?",
+          "How should we allocate across channels?",
+          "Is our budget sufficient to hit targets?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Budget approved by finance, allocations clear, tracking set up",
+          "loopback": "Loop back if: Budget constraints force strategy changes"
+        }
+      },
+      {
+        "name": "Execution Setup",
+        "objective": "Set up all systems and assets needed to launch campaign",
+        "input": "Approved content, budget, channel plans",
+        "output": "Campaign ready to launch with all systems configured",
+        "activities": [
+          "Create all content assets (copy, design, landing pages, ads, emails)",
+          "Set up tracking (UTM codes, conversion tracking, lead scoring)",
+          "Configure tools (email platform, ad accounts, landing pages)",
+          "Test all systems (emails send, ads deploy, landing pages load)",
+          "Brief all teams (who's doing what, when?)",
+          "Plan launch sequence (when does each channel go live?)"
+        ],
+        "tools": "Marketing automation, ad platforms, landing page builders, testing tools",
+        "roles": [
+          "Campaign manager: execution coordination",
+          "Content team: asset creation",
+          "Ops/analytics: tracking setup",
+          "Channel teams: platform configuration"
+        ],
+        "successMetric": "All campaign systems configured, assets created, launch ready",
+        "decisionPoints": [
+          "Are all assets ready?",
+          "Is tracking configured correctly?",
+          "Do we need to sequence launches?"
+        ],
+        "qualityGate": {
+          "go": "Go if: All systems tested and ready, launch plan clear, team briefed",
+          "loopback": "Loop back if: Assets incomplete, systems not working, need fixes"
+        }
+      },
+      {
+        "name": "Performance Tracking",
+        "objective": "Monitor campaign performance in real-time",
+        "input": "Campaign launched, metrics dashboard",
+        "output": "Daily/weekly performance reporting and optimization adjustments",
+        "activities": [
+          "Set up performance dashboards (impressions, clicks, conversions, CAC, etc.)",
+          "Monitor daily performance",
+          "Alert on underperforming channels or tactics",
+          "Identify opportunities for optimization",
+          "Make real-time adjustments (pause underperforming ads, adjust targeting, etc.)",
+          "Document performance for post-campaign analysis"
+        ],
+        "tools": "Analytics dashboards, ad platform dashboards, metrics tracking",
+        "roles": [
+          "Campaign manager: daily monitoring",
+          "Paid media specialist: ad optimization",
+          "Analytics: metrics and insights"
+        ],
+        "successMetric": "Performance tracked daily, optimizations made, on-track to targets",
+        "decisionPoints": [
+          "Are we tracking to targets?",
+          "Which channels/tactics are performing best?",
+          "Should we shift budget to winning channels?",
+          "Are we hitting CAC targets?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Tracking system active, performance visible, optimizations being made",
+          "loopback": "Loop back if: Tracking incomplete, no visibility into performance"
+        }
+      },
+      {
+        "name": "Optimization",
+        "objective": "Improve campaign performance throughout campaign",
+        "input": "Performance data, A/B test results, team feedback",
+        "output": "Campaign performance improvements and learnings",
+        "activities": [
+          "Analyze A/B test results (winning variations)",
+          "Double down on high-performing tactics",
+          "Pause or reduce underperforming tactics",
+          "Adjust targeting or messaging based on performance",
+          "Optimize landing page conversions",
+          "Optimize email open and click rates",
+          "Optimize ad creative and copy",
+          "Document optimizations and results"
+        ],
+        "tools": "A/B testing platforms, analytics, optimization tools",
+        "roles": [
+          "Campaign manager: optimization coordination",
+          "Analytics: performance analysis",
+          "Specialists: tactic-specific optimization"
+        ],
+        "successMetric": "Campaign optimized with improved performance, learnings documented",
+        "decisionPoints": [
+          "Which tactics should we double down on?",
+          "Which tactics should we pause?",
+          "What was our most successful messaging?",
+          "What did we learn for next campaign?"
+        ],
+        "qualityGate": {
+          "go": "Go if: Campaign complete, results analyzed, learnings documented for next campaign",
+          "loopback": "Loop back if: Final performance unclear, need more analysis"
+        }
+      }
+    ]
+  }
+}

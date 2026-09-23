@@ -1,0 +1,1226 @@
+{
+  "customer-onboarding-strategy": {
+    "stages": [
+      {
+        "name": "Success Planning",
+        "objective": "Define customer success outcomes and alignment with customer goals",
+        "input": "Customer contract, product roadmap, customer's business objectives",
+        "output": "Customer success plan documenting goals and outcomes",
+        "activities": "Discovery meeting with customer, document business goals, identify success criteria, map to product capabilities, define success metrics",
+        "tools": "Success planning templates, customer data platforms, CRM",
+        "roles": "Customer success manager (coordination), Sales (context), Product (capabilities)",
+        "successMetric": "Success plan documented and approved by customer",
+        "decisionPoints": "Success criteria clear? Aligned to business outcomes? Realistic timeline?",
+        "qualityGate": "Success plan approved, metrics agreed, customer aligned"
+      },
+      {
+        "name": "Stakeholder Mapping",
+        "objective": "Identify all customer stakeholders and their roles",
+        "input": "Customer org chart, success plan, buying committee",
+        "output": "Stakeholder map with roles, influence, support needs",
+        "activities": "Identify executive sponsor, identify end users, identify technical stakeholders, map influence/power, identify objection handlers",
+        "tools": "Stakeholder mapping templates",
+        "roles": "CSM (mapping), Sales (buying committee knowledge)",
+        "successMetric": "Stakeholder map with 5+ stakeholders identified and profiled",
+        "decisionPoints": "Right stakeholders identified? Executive support secured? Influencers identified?",
+        "qualityGate": "Stakeholder map complete, executive sponsor identified, communication plan drafted"
+      },
+      {
+        "name": "Timeline & Milestones",
+        "objective": "Create realistic onboarding timeline with key milestones",
+        "input": "Customer context, product setup complexity, resource availability",
+        "output": "Detailed onboarding timeline with milestones (30/60/90 day plan)",
+        "activities": "Map onboarding phases, identify key milestones, identify critical path, plan resource allocation, build buffer time",
+        "tools": "Project management, timeline templates",
+        "roles": "CSM (lead), Technical services (input), Customer (constraints)",
+        "successMetric": "Timeline with all milestones and dependencies mapped",
+        "decisionPoints": "Timeline realistic? Dependencies clear? Customer constraints understood?",
+        "qualityGate": "Timeline approved by customer and internal team"
+      },
+      {
+        "name": "Training & Enablement Plan",
+        "objective": "Design training curriculum specific to customer's needs and users",
+        "input": "Customer user profiles, product capabilities, success plan",
+        "output": "Training curriculum with delivery method and schedule",
+        "activities": "Assess user skill levels, design role-specific training paths, create training materials, plan delivery method (live/video/docs), schedule training sessions",
+        "tools": "Learning management systems, training templates",
+        "roles": "Enablement team (design), CSM (coordination), Product team (expertise)",
+        "successMetric": "Training curriculum documented with user groups and schedules",
+        "decisionPoints": "Right training depth? Appropriate delivery method? Enough time allocated?",
+        "qualityGate": "Training plan approved, materials ready, delivery scheduled"
+      },
+      {
+        "name": "Success Metrics Definition",
+        "objective": "Quantify success with measurable outcomes and tracking plan",
+        "input": "Success plan, customer goals, product metrics available",
+        "output": "Dashboard with KPIs, success metrics, and tracking approach",
+        "activities": "Map customer goals to product metrics, identify leading/lagging indicators, set success thresholds, design tracking/reporting, identify data sources",
+        "tools": "Analytics platforms, dashboard tools, data warehouse",
+        "roles": "CSM (definition), Analytics (implementation), Customer (validation)",
+        "successMetric": "Success dashboard designed with 3-5 key metrics and tracking plan",
+        "decisionPoints": "Metrics aligned to business goals? Data available? Achievable targets?",
+        "qualityGate": "Success metrics agreed, dashboard built, reporting cadence set"
+      },
+      {
+        "name": "Communication & Engagement Plan",
+        "objective": "Design communication cadence and engagement model with customer",
+        "input": "Stakeholder map, timeline, success plan",
+        "output": "Communication plan with cadence, channels, owners",
+        "activities": "Define communication cadence (weekly/bi-weekly/monthly), identify channels per stakeholder, assign owners, plan check-in agendas, plan escalation path",
+        "tools": "Communication templates, calendar management",
+        "roles": "CSM (lead), Marketing (engagement content), Sales (ongoing relationship)",
+        "successMetric": "Communication plan with cadence, channels, and owners documented",
+        "decisionPoints": "Right frequency? Stakeholder preferences understood? Engagement ownership clear?",
+        "qualityGate": "Communication plan approved by customer, calendar locked"
+      },
+      {
+        "name": "Kickoff Preparation",
+        "objective": "Prepare materials and team for customer kickoff",
+        "input": "All prior stages, team assignments, customer context",
+        "output": "Kickoff meeting materials and prepared team",
+        "activities": "Prepare kickoff presentation, assign team roles, brief internal team, prepare customer materials, confirm attendees, test technology",
+        "tools": "Presentation tools, meeting software, communication systems",
+        "roles": "CSM (lead), Executive sponsor (input), Technical team (setup), Product (demo)",
+        "successMetric": "Kickoff materials ready, team briefed, customer confirmed",
+        "decisionPoints": "Team ready? Materials clear? Customer expectations set? Technology working?",
+        "qualityGate": "Kickoff scheduled, materials approved, team prepared, customer confirmed"
+      }
+    ]
+  },
+  "customer-onboarding-implementation": {
+    "stages": [
+      {
+        "name": "Setup & Configuration",
+        "objective": "Configure product instance for customer's specific needs",
+        "input": "Success plan, customer requirements, integration needs",
+        "output": "Configured product instance ready for training",
+        "activities": "Provision account/workspace, configure settings per customer needs, set up custom fields, configure workflows, set up integrations, test configuration",
+        "tools": "Product admin console, integration platform, CRM, data platforms",
+        "roles": "Onboarding specialist (execution), Product experts (complex configs), Customer (requirements)",
+        "successMetric": "Product configured and tested, ready for user training",
+        "decisionPoints": "Configuration accurate? All integrations working? User permissions set correctly?",
+        "qualityGate": "Configuration complete and tested, customer approved"
+      },
+      {
+        "name": "User Provisioning",
+        "objective": "Create user accounts and set up access for all customer users",
+        "input": "Stakeholder map, user profiles, access requirements",
+        "output": "All users provisioned with correct permissions and access",
+        "activities": "Create user accounts per user list, assign role-based permissions, configure authentication/SSO if needed, test access, send credential information",
+        "tools": "User management systems, SSO platforms, identity management",
+        "roles": "Onboarding tech (execution), IT support (if SSO), Customer IT (requirements)",
+        "successMetric": "All users provisioned and able to log in",
+        "decisionPoints": "Permissions correct per role? SSO configured? Access tested?",
+        "qualityGate": "All users active, permissions verified, login confirmed"
+      },
+      {
+        "name": "Technical Integration",
+        "objective": "Connect product to customer's existing systems and workflows",
+        "input": "Integration requirements, existing system details, API documentation",
+        "output": "Active integrations with all required systems",
+        "activities": "Map integration requirements, configure API connections, build/configure middleware if needed, test data flows, monitor for issues",
+        "tools": "Integration platforms, APIs, middleware solutions, monitoring tools",
+        "roles": "Integration specialist (setup), Technical team (execution), Customer IT (requirements)",
+        "successMetric": "All planned integrations live and syncing",
+        "decisionPoints": "Data flows working correctly? No data loss? Monitoring in place? Error handling configured?",
+        "qualityGate": "Integrations tested and stable, monitoring active"
+      },
+      {
+        "name": "Training Delivery",
+        "objective": "Execute training curriculum with all user groups",
+        "input": "Training curriculum, user groups, materials",
+        "output": "Trained users ready to use product",
+        "activities": "Conduct live training sessions, answer questions, provide hands-on practice, capture attendance, assess understanding, provide recordings",
+        "tools": "Training platform, video conferencing, recording tools",
+        "roles": "Training specialist (delivery), Product expert (complex topics), CSM (coordination)",
+        "successMetric": "Training sessions delivered, 80%+ attendance, participants rated ready",
+        "decisionPoints": "Training effective? Users asking right questions? Pace appropriate? Hands-on practice sufficient?",
+        "qualityGate": "All training sessions completed, attendance tracked, feedback positive"
+      },
+      {
+        "name": "Adoption Monitoring",
+        "objective": "Track user adoption and identify gaps during early usage",
+        "input": "Success metrics, product usage data, training completed",
+        "output": "Adoption report with usage patterns and identified blockers",
+        "activities": "Monitor daily/weekly usage, identify inactive users, identify feature adoption gaps, reach out to struggling users, provide targeted help",
+        "tools": "Product analytics, usage dashboards, communication tools",
+        "roles": "CSM (monitoring), Adoption specialist (outreach), Product team (troubleshooting)",
+        "successMetric": "Adoption metrics tracked, 60%+ active users, key features adopted by 40%+",
+        "decisionPoints": "Adoption on track? Blockers identified? Training gaps? Engagement needed?",
+        "qualityGate": "Adoption baseline established, intervention plan for underperformers"
+      },
+      {
+        "name": "Support & Troubleshooting",
+        "objective": "Provide rapid support for issues encountered during onboarding",
+        "input": "Customer questions, technical issues, usage blockers",
+        "output": "Resolved issues, engaged support team, updated documentation",
+        "activities": "Triage support requests, resolve common issues quickly, escalate complex issues, document solutions, update FAQs, track resolution time",
+        "tools": "Support ticketing, knowledge base, live chat, communication",
+        "roles": "Support team (frontline), Product experts (escalation), CSM (follow-up)",
+        "successMetric": "Support tickets resolved <24hrs, 90%+ first-contact resolution",
+        "decisionPoints": "Resolution time acceptable? Escalation paths working? Pattern identification?",
+        "qualityGate": "Support SLA met, issue resolution tracked, common issues documented"
+      },
+      {
+        "name": "Adoption Acceleration",
+        "objective": "Drive feature adoption and increase usage to success metrics",
+        "input": "Adoption monitoring data, usage gaps, user feedback",
+        "output": "Adoption acceleration plan with targeted interventions",
+        "activities": "Identify power users for peer learning, conduct feature adoption campaigns, provide use-case specific training, celebrate milestones, remove friction points",
+        "tools": "Adoption campaigns, user communication, in-app messaging",
+        "roles": "CSM (strategy), Adoption specialist (execution), Product (enablement)",
+        "successMetric": "Feature adoption increasing, usage trending toward success metrics",
+        "decisionPoints": "Adoption accelerating? Right features prioritized? User engagement increasing?",
+        "qualityGate": "Adoption plan working, metrics trending up, engagement consistent"
+      }
+    ]
+  },
+  "value-realization-win-planning": {
+    "stages": [
+      {
+        "name": "Baseline Establishment",
+        "objective": "Establish customer's current state before product use",
+        "input": "Customer success plan, metrics defined, customer's current operations",
+        "output": "Documented baseline for comparison",
+        "activities": "Understand current process/metrics, quantify current state, identify measurement methodology, establish historical data, document assumptions",
+        "tools": "Customer data, analytics, interview notes",
+        "roles": "CSM (coordination), Customer finance/ops (data), Analytics (measurement)",
+        "successMetric": "Baseline documented with current state and methodology",
+        "decisionPoints": "Baseline clear? Measurement method agreed? Historical data available?",
+        "qualityGate": "Baseline approved by customer, documented in success plan"
+      },
+      {
+        "name": "Quick Win Identification",
+        "objective": "Identify early wins to build momentum and demonstrate value",
+        "input": "Success metrics, customer use case, product capabilities",
+        "output": "2-3 identified quick wins with implementation plan",
+        "activities": "Analyze success metrics for highest-impact targets, identify shortest-time-to-value initiatives, design quick win implementation, plan communication",
+        "tools": "Impact/effort matrix, planning templates",
+        "roles": "CSM (identification), Product expert (feasibility), Customer (validation)",
+        "successMetric": "2-3 quick wins identified and prioritized",
+        "decisionPoints": "Quick wins realistic? High-impact? Visible to customer? Communication planned?",
+        "qualityGate": "Quick wins approved by customer, implementation plan started"
+      },
+      {
+        "name": "Value Tracking Setup",
+        "objective": "Set up system to track and demonstrate value realization",
+        "input": "Success metrics, baseline, data sources",
+        "output": "Dashboard/report showing value tracking",
+        "activities": "Connect data sources, configure metric calculations, set up automated reporting, establish reporting cadence, plan communication approach",
+        "tools": "Business intelligence, dashboards, reporting automation",
+        "roles": "Analytics (setup), CSM (design), Customer (validation)",
+        "successMetric": "Value dashboard live and auto-updating",
+        "decisionPoints": "Data sources accurate? Calculations correct? Reporting frequency right? Accessible to customer?",
+        "qualityGate": "Dashboard deployed, first report generated, customer trained"
+      },
+      {
+        "name": "Milestone Planning",
+        "objective": "Plan value-focused milestones through engagement lifecycle",
+        "input": "Success plan, timeline, value realization targets",
+        "output": "Milestone calendar with targets and celebration plan",
+        "activities": "Map major milestones (30/60/90 days, 6mo, 1yr), assign targets for each, plan communications, plan celebrations/reviews, track progress",
+        "tools": "Project management, milestone templates",
+        "roles": "CSM (planning), Customer stakeholders (validation)",
+        "successMetric": "Milestone calendar with targets and celebration plan documented",
+        "decisionPoints": "Milestones motivating? Targets achievable? Celebration plan resonant?",
+        "qualityGate": "Milestones agreed, targets locked, communication plan ready"
+      },
+      {
+        "name": "Business Review Planning",
+        "objective": "Plan cadence and structure for business value reviews",
+        "input": "Milestones, success metrics, stakeholder needs",
+        "output": "Business review calendar with agenda templates",
+        "activities": "Define review frequency (30/60/90 days, quarterly), design agenda structure, identify attendees, plan communication, create presentation templates",
+        "tools": "Meeting templates, agenda structures",
+        "roles": "CSM (planning), Executive sponsor (input), Customer (requirements)",
+        "successMetric": "Business review calendar and templates ready",
+        "decisionPoints": "Review frequency right? Stakeholders identified? Agenda structure clear? Presentation templates useful?",
+        "qualityGate": "Business review schedule locked, templates created, first review scheduled"
+      },
+      {
+        "name": "ROI Documentation",
+        "objective": "Document and communicate ROI to customer stakeholders",
+        "input": "Value realization data, cost information, customer context",
+        "output": "ROI report with financial and business impact",
+        "activities": "Calculate financial ROI, document non-financial benefits, create executive summary, prepare presentation, identify cost avoidance, project forward",
+        "tools": "ROI calculators, presentation tools, financial models",
+        "roles": "CSM (narrative), Finance/ops (calculations), Executive sponsor (delivery)",
+        "successMetric": "ROI documentation complete with financial and operational impact",
+        "decisionPoints": "ROI credible? Methodology transparent? Communicated effectively?",
+        "qualityGate": "ROI approved by customer, ready for stakeholder communication"
+      }
+    ]
+  },
+  "training-certification-program": {
+    "stages": [
+      {
+        "name": "Curriculum Design",
+        "objective": "Design comprehensive training program covering all product areas",
+        "input": "Product features, customer use cases, skill levels needed",
+        "output": "Complete training curriculum with modules and progression",
+        "activities": "Define learning objectives per module, create module structure, design learning paths, identify prerequisite knowledge, scope content depth",
+        "tools": "Instructional design tools, learning management systems",
+        "roles": "Training specialist (lead), Product expert (content), Customer (validation)",
+        "successMetric": "Curriculum designed with 5-10 modules covering key use cases",
+        "decisionPoints": "Comprehensive? Appropriately scoped? Role-based paths clear?",
+        "qualityGate": "Curriculum reviewed by product/customer, modules defined"
+      },
+      {
+        "name": "Role-Based Learning Paths",
+        "objective": "Create customized learning paths for different user roles",
+        "input": "User personas, job functions, product capabilities",
+        "output": "Learning paths mapped to roles with sequencing",
+        "activities": "Analyze user roles, design path for each role, identify prerequisite modules, sequence modules, estimate completion time",
+        "tools": "Learning path templates",
+        "roles": "Training specialist (design), CSM (user context), Product (capabilities)",
+        "successMetric": "Learning paths defined for 4-6 key user roles",
+        "decisionPoints": "Paths comprehensive? Prerequisites clear? Time realistic?",
+        "qualityGate": "Role-based paths defined and sequenced"
+      },
+      {
+        "name": "Training Content Development",
+        "objective": "Create high-quality training materials in multiple formats",
+        "input": "Curriculum, learning paths, product documentation",
+        "output": "Complete training materials (video, docs, interactive)",
+        "activities": "Create video modules, write training documentation, develop practice scenarios, design interactive exercises, create reference guides",
+        "tools": "Video production, documentation tools, interactive platforms",
+        "roles": "Training specialist (project), Subject matter experts (content), Video producer (production)",
+        "successMetric": "Training materials completed for all curriculum modules",
+        "decisionPoints": "Content quality high? Engaging? Comprehensive? Accessible?",
+        "qualityGate": "Materials reviewed and approved by product/SMEs"
+      },
+      {
+        "name": "Delivery Planning",
+        "objective": "Plan training delivery schedule and logistics",
+        "input": "Training materials, customer organization, resource availability",
+        "output": "Training delivery calendar with logistics",
+        "activities": "Schedule training sessions, identify trainer assignments, plan registration process, arrange technology/facilities, prepare trainer materials",
+        "tools": "Calendar management, event planning, trainer prep templates",
+        "roles": "Training specialist (coordination), Trainers (logistics)",
+        "successMetric": "Training schedule published with all logistics planned",
+        "decisionPoints": "Scheduling accessible to customer? Trainer capacity? Technology confirmed?",
+        "qualityGate": "Training calendar locked, trainers prepared, logistics confirmed"
+      },
+      {
+        "name": "Training Delivery",
+        "objective": "Conduct live training sessions with tracking and support",
+        "input": "Training materials, scheduled sessions, registered users",
+        "output": "Trained participants with tracked completion",
+        "activities": "Deliver live training, answer questions, manage Q&A, track attendance, provide recordings, send follow-up materials",
+        "tools": "Video conferencing, recording, learning management systems",
+        "roles": "Trainers (delivery), CSM (support), Product (expert Q&A)",
+        "successMetric": "All training sessions delivered, 80%+ attendance",
+        "decisionPoints": "Engagement level? Question quality? Pace appropriate? Recording quality?",
+        "qualityGate": "Sessions delivered, attendance tracked, recordings available"
+      },
+      {
+        "name": "Assessment & Certification",
+        "objective": "Assess user competency and issue certifications",
+        "input": "Training completion, assessment requirements, skill levels",
+        "output": "Certifications issued, competency documented",
+        "activities": "Design assessment approach (quiz/practical/both), administer assessments, score results, issue certificates, track by user role",
+        "tools": "Assessment platforms, certification systems",
+        "roles": "Training specialist (administration), Product experts (grading), CSM (tracking)",
+        "successMetric": "70%+ of users complete and pass assessments",
+        "decisionPoints": "Assessment level appropriate? Passing threshold clear? Certificates valuable?",
+        "qualityGate": "Assessment process complete, certifications issued, records maintained"
+      },
+      {
+        "name": "Ongoing Education & Updates",
+        "objective": "Maintain training as product evolves and users develop",
+        "input": "Product updates, user feedback, new use cases",
+        "output": "Updated curriculum and continued learning opportunities",
+        "activities": "Monitor product changes, update relevant modules, create refresher content, plan advanced training, identify super users for peer learning",
+        "tools": "Learning management systems, feedback systems",
+        "roles": "Training specialist (updates), Product team (change awareness), Super users (peer learning)",
+        "successMetric": "Curriculum updated quarterly, 40%+ of users engage in ongoing learning",
+        "decisionPoints": "Updates timely? Advanced training valuable? Peer learning scalable?",
+        "qualityGate": "Update process established, advanced curriculum ready"
+      }
+    ]
+  },
+  "customer-health-monitoring-renewal-readiness": {
+    "stages": [
+      {
+        "name": "Health Indicator Selection",
+        "objective": "Define metrics that predict customer health and renewal likelihood",
+        "input": "Success metrics, historical data, customer feedback, product usage",
+        "output": "Health score model with leading and lagging indicators",
+        "activities": "Define health dimensions (adoption, engagement, value realization, sentiment), identify predictive metrics, determine weighting, establish health score calculation",
+        "tools": "Analytics platform, health scoring models",
+        "roles": "Analytics (model), CSM (validation), Product (metrics)",
+        "successMetric": "Health score model defined with 5-10 indicators",
+        "decisionPoints": "Indicators predictive? Data available? Model accurate? Actionable?",
+        "qualityGate": "Health score model validated, baseline established for all customers"
+      },
+      {
+        "name": "Real-Time Monitoring",
+        "objective": "Monitor customer health continuously in real-time",
+        "input": "Health score model, customer data, product usage",
+        "output": "Health dashboard with current status for all customers",
+        "activities": "Integrate data sources, automate health calculations, create dashboards, set up alerts for red flags, establish monitoring rhythm",
+        "tools": "Business intelligence, dashboards, alerting systems",
+        "roles": "Analytics (automation), CSM (monitoring), Product (data accuracy)",
+        "successMetric": "Health dashboard live, updating daily, alerts active",
+        "decisionPoints": "Data feeds reliable? Calculations accurate? Alerts actionable? Visibility complete?",
+        "qualityGate": "Monitoring system live, first alerts reviewed"
+      },
+      {
+        "name": "Risk Assessment",
+        "objective": "Identify at-risk customers and assess churn probability",
+        "input": "Health scores, customer data, historical churn patterns",
+        "output": "At-risk customer list with churn probability and risk factors",
+        "activities": "Identify customers with low health scores, assess multiple risk factors, rate churn probability, identify root causes, prioritize by revenue risk",
+        "tools": "Risk scoring, probability models",
+        "roles": "Analytics (scoring), CSM (context), Management (prioritization)",
+        "successMetric": "At-risk customers identified with risk factors and probability",
+        "decisionPoints": "Risk factors clear? Probability accurate? Actionable interventions identified?",
+        "qualityGate": "At-risk list reviewed, intervention plans ready"
+      },
+      {
+        "name": "Intervention Planning",
+        "objective": "Plan targeted interventions for at-risk customers",
+        "input": "At-risk customer list, risk factors, customer context",
+        "output": "Intervention playbook with actions per risk type",
+        "activities": "Analyze root causes for each at-risk customer, design targeted interventions, assign ownership, plan escalation path, track intervention effectiveness",
+        "tools": "Intervention templates, project management",
+        "roles": "CSM (leadership), Executive sponsor (escalation), Product (technical solutions)",
+        "successMetric": "Intervention plan for each at-risk customer",
+        "decisionPoints": "Interventions targeted to root cause? Ownership clear? Escalation appropriate?",
+        "qualityGate": "Intervention plans documented, assigned, tracking started"
+      },
+      {
+        "name": "Proactive Engagement",
+        "objective": "Execute proactive outreach to maintain and improve customer health",
+        "input": "Health scores, customer preferences, use case opportunities",
+        "output": "Engagement activities scheduled and tracked",
+        "activities": "Schedule proactive check-ins, identify expansion opportunities, provide training on underused features, introduce new features, celebrate milestones",
+        "tools": "Communication platforms, engagement tracking",
+        "roles": "CSM (strategy), Marketing (content), Product (training)",
+        "successMetric": "Proactive outreach to 50%+ of customers, engagement rates increasing",
+        "decisionPoints": "Outreach well-timed? Valuable to customer? Adoption increasing?",
+        "qualityGate": "Proactive engagement plan executed, metrics improving"
+      },
+      {
+        "name": "Renewal Readiness Assessment",
+        "objective": "Assess readiness for renewal conversations 90 days before expiration",
+        "input": "Renewal date, health score, value realization, expansion potential",
+        "output": "Renewal readiness report with strategy",
+        "activities": "Assess value delivery and ROI achievement, gather customer testimonials, identify expansion opportunities, prepare renewal economics, plan renewal conversation",
+        "tools": "Renewal templates, ROI documentation",
+        "roles": "CSM (lead), Finance (renewal economics), Sales (expansion)",
+        "successMetric": "Renewal strategy documented for each customer",
+        "decisionPoints": "ROI clear? Expansion valuable? Negotiation strategy right? Executive alignment?",
+        "qualityGate": "Renewal conversations started 90+ days before expiration"
+      }
+    ]
+  },
+  "feature-adoption-campaigns": {
+    "stages": [
+      {
+        "name": "Feature Selection & Prioritization",
+        "objective": "Identify features to drive adoption based on business impact",
+        "input": "Feature roadmap, customer usage data, business objectives",
+        "output": "Prioritized feature list with adoption target",
+        "activities": "Identify underadopted features, assess business impact of adoption, identify target user segments, set adoption targets, prioritize features",
+        "tools": "Product analytics, feature adoption tracking",
+        "roles": "Product (feature expertise), Analytics (adoption data), CSM (customer context)",
+        "successMetric": "Prioritized feature list with adoption targets",
+        "decisionPoints": "Features high-impact? Adoption realistic? User interest?",
+        "qualityGate": "Features prioritized, adoption targets set, campaign approved"
+      },
+      {
+        "name": "User Segmentation",
+        "objective": "Segment users by adoption readiness and learning style",
+        "input": "User profiles, adoption history, learning preferences",
+        "output": "User segments with tailored campaign approaches",
+        "activities": "Segment by adoption readiness (early adopters/mainstream/laggards), segment by learning style, segment by department/use case, identify champions per segment",
+        "tools": "User segmentation tools, profiling",
+        "roles": "Analytics (segmentation), CSM (learning styles), Product (use case)",
+        "successMetric": "User segments defined with 80%+ of users classified",
+        "decisionPoints": "Segments meaningful? Tailored approaches different? Champions identified?",
+        "qualityGate": "Segments validated, champion identification complete"
+      },
+      {
+        "name": "Campaign Design",
+        "objective": "Design targeted adoption campaign for each user segment",
+        "input": "Feature details, user segments, adoption barriers",
+        "output": "Campaign strategy with messaging, content, timeline",
+        "activities": "Design segment-specific messaging, create educational content, design in-app prompts, plan email outreach, plan webinars, create quick-start guides",
+        "tools": "Content creation, campaign templates, in-app messaging",
+        "roles": "Product marketing (messaging), Content team (materials), CSM (tailoring)",
+        "successMetric": "Campaign strategy documented for each segment",
+        "decisionPoints": "Messaging resonant? Content comprehensive? Timeline realistic? Multi-channel?",
+        "qualityGate": "Campaign strategy approved, content ready, messaging tested"
+      },
+      {
+        "name": "Launch & Promotion",
+        "objective": "Launch adoption campaign and drive awareness",
+        "input": "Campaign strategy, content, user segments, launch plan",
+        "output": "Campaign live with promotional activities",
+        "activities": "Deploy in-app messaging, send campaign emails, host webinars, share content via channels, activate champions for peer promotion",
+        "tools": "Email platform, in-app messaging, webinar tools, communication systems",
+        "roles": "Marketing (execution), CSM (coordination), Product (expertise), Champions (promotion)",
+        "successMetric": "Campaign launched, 60%+ of target users exposed",
+        "decisionPoints": "Launch smooth? Message clarity? Channel mix effective? Champion engagement?",
+        "qualityGate": "Campaign fully launched, tracking active, first week metrics reviewed"
+      },
+      {
+        "name": "Adoption Tracking & Support",
+        "objective": "Monitor adoption progress and provide targeted support",
+        "input": "Campaign live, adoption data, user feedback",
+        "output": "Adoption metrics and support insights",
+        "activities": "Track daily adoption, identify struggling users, provide targeted help, respond to questions, celebrate early adopters, refine messaging based on feedback",
+        "tools": "Analytics dashboards, support chat, feedback collection",
+        "roles": "CSM (monitoring), Support (help), Analytics (tracking)",
+        "successMetric": "Adoption metrics showing 30%+ of target segment using feature",
+        "decisionPoints": "Adoption trending up? Early adopters engaged? Support needs identified?",
+        "qualityGate": "Adoption tracking active, support processes working"
+      },
+      {
+        "name": "Analysis & Reporting",
+        "objective": "Analyze campaign effectiveness and identify learning",
+        "input": "Adoption metrics, campaign data, user feedback",
+        "output": "Campaign analysis report with ROI and learning",
+        "activities": "Calculate adoption rate and ROI, analyze by segment, identify barriers/accelerators, gather qualitative feedback, document learning",
+        "tools": "Analytics, feedback analysis",
+        "roles": "Analytics (analysis), CSM (interpretation), Product (learning)",
+        "successMetric": "Campaign analysis completed with ROI calculated",
+        "decisionPoints": "ROI clear? Learning captured? Barriers understood? Next iteration clear?",
+        "qualityGate": "Analysis approved, learning documented, next campaign ready"
+      }
+    ]
+  },
+  "usage-monitoring-proactive-support": {
+    "stages": [
+      {
+        "name": "Baseline Usage Definition",
+        "objective": "Establish expected usage patterns by user type and company size",
+        "input": "Product telemetry, customer data, industry benchmarks",
+        "output": "Usage baseline by customer segment",
+        "activities": "Define usage metrics (logins, features used, actions per session), establish benchmarks by segment, identify normal variation, document baseline methodology",
+        "tools": "Product analytics, benchmarking data",
+        "roles": "Analytics (definition), CSM (validation), Product (metrics)",
+        "successMetric": "Usage baseline defined for 3-5 customer segments",
+        "decisionPoints": "Metrics meaningful? Benchmarks accurate? Variation understood?",
+        "qualityGate": "Usage baseline approved, documented"
+      },
+      {
+        "name": "Real-Time Monitoring",
+        "objective": "Set up continuous monitoring of customer usage",
+        "input": "Usage baseline, customer data, telemetry system",
+        "output": "Live usage dashboard by customer",
+        "activities": "Integrate customer usage data, create usage dashboards, set up automated alerts, establish monitoring cadence, track usage trends",
+        "tools": "Business intelligence, dashboards, alerting systems",
+        "roles": "Analytics (setup), CSM (monitoring), Product (data accuracy)",
+        "successMetric": "Usage dashboard live with real-time data for all customers",
+        "decisionPoints": "Data accurate? Dashboard useful? Alert timing right? Accessible to team?",
+        "qualityGate": "Monitoring system live, baseline comparison visible"
+      },
+      {
+        "name": "Alert Configuration",
+        "objective": "Set up alerts for usage patterns indicating risk or opportunity",
+        "input": "Usage baseline, churn risk factors, expansion signals",
+        "output": "Alert system configured with thresholds",
+        "activities": "Define alert triggers (sudden drop-off, feature non-adoption, increasing usage), set thresholds, assign owners, test alerts, plan response workflow",
+        "tools": "Alerting platforms, workflow automation",
+        "roles": "Analytics (configuration), CSM (response), Product (interpretation)",
+        "successMetric": "Alert system configured with 5-10 meaningful triggers",
+        "decisionPoints": "Triggers predictive? Alert volume manageable? Response process clear?",
+        "qualityGate": "Alerts tested, response processes defined, team trained"
+      },
+      {
+        "name": "Proactive Outreach",
+        "objective": "Reach out proactively based on usage signals",
+        "input": "Alert triggers, customer context, usage data",
+        "output": "Proactive outreach activities logged and tracked",
+        "activities": "Contact at-risk customers about usage decline, reach out with feature tips based on low adoption, celebrate usage milestones, provide targeted training",
+        "tools": "Communication platforms, CRM",
+        "roles": "CSM (outreach), Support (assistance), Product (expertise)",
+        "successMetric": "80%+ of alert triggers result in proactive outreach",
+        "decisionPoints": "Outreach well-timed? Valuable to customer? Response positive?",
+        "qualityGate": "Proactive outreach process working, engagement rates positive"
+      }
+    ]
+  },
+  "learning-certification-platform": {
+    "stages": [
+      {
+        "name": "Learning Platform Evaluation & Selection",
+        "objective": "Evaluate and select learning management system (LMS) for customer education",
+        "input": "Learning requirements, budget, integration needs, user volume",
+        "output": "Selected LMS platform with implementation plan",
+        "activities": "Define LMS requirements, evaluate platforms (Thought Industries, Docebo, Lessonly), assess integration capabilities, pilot with team, negotiate contracts",
+        "tools": "LMS evaluation matrix, vendor demos",
+        "roles": "Operations (lead), IT (integration), Product marketing (content)",
+        "successMetric": "LMS selected, contract signed, implementation roadmap ready",
+        "decisionPoints": "Right feature set? Scalable? Integration feasible? Cost acceptable?",
+        "qualityGate": "Platform selected and contracted, vendor kickoff scheduled"
+      },
+      {
+        "name": "Learning & Content Strategy",
+        "objective": "Define what to teach and learning paths",
+        "input": "Customer use cases, skill levels, product roadmap",
+        "output": "Learning strategy with curriculum roadmap",
+        "activities": "Map learning objectives, design learning paths by role, define curriculum scope, plan content types, identify prerequisite learning",
+        "tools": "Curriculum templates",
+        "roles": "Training specialist (strategy), Product (expertise)",
+        "successMetric": "Learning strategy documented with curriculum roadmap",
+        "decisionPoints": "Comprehensive? Role-based paths? Content appropriate depth?",
+        "qualityGate": "Learning strategy approved, curriculum plan finalized"
+      },
+      {
+        "name": "Content Production Pipeline",
+        "objective": "Build content production process for continuous curriculum development",
+        "input": "Curriculum plan, content types, production team",
+        "output": "Content production workflow and templates",
+        "activities": "Design content production workflow, create content templates, assign producers, establish review process, plan technology stack",
+        "tools": "Production templates, video/content tools",
+        "roles": "Content producers (workflow), Training (oversight)",
+        "successMetric": "Production pipeline live with first content in progress",
+        "decisionPoints": "Workflow efficient? Quality standards clear? Resources adequate?",
+        "qualityGate": "Production process established, content pipeline active"
+      },
+      {
+        "name": "Content Development & Launch",
+        "objective": "Develop and launch initial content library",
+        "input": "Curriculum plan, content templates, production pipeline",
+        "output": "Live content library on LMS with core courses",
+        "activities": "Produce video modules, write documentation, create interactive exercises, design assessments, upload to LMS, test access",
+        "tools": "Video production, LMS platform",
+        "roles": "Content producers (creation), Quality assurance (testing)",
+        "successMetric": "10-15 core courses live on LMS",
+        "decisionPoints": "Content quality high? Engaging? Technically sound? User experience smooth?",
+        "qualityGate": "Content library live, user testing positive"
+      },
+      {
+        "name": "Learner Enrollment & Progress Tracking",
+        "objective": "Manage learner enrollments and track progress",
+        "input": "User list, learning paths, LMS platform",
+        "output": "Enrollment system with progress tracking dashboard",
+        "activities": "Configure enrollment rules by role, set up progress tracking, create learner dashboards, establish completion tracking, integrate with CRM",
+        "tools": "LMS configuration, dashboard tools",
+        "roles": "Operations (setup), Analytics (tracking)",
+        "successMetric": "All users enrolled in appropriate paths, progress tracked",
+        "decisionPoints": "Enrollment automated? Progress visible? Mobile accessible?",
+        "qualityGate": "Enrollment complete, progress dashboard live"
+      },
+      {
+        "name": "Assessment & Certification",
+        "objective": "Assess learner competency and issue certifications",
+        "input": "Assessment requirements, competency standards",
+        "output": "Assessment system with certification issuance",
+        "activities": "Design assessments (quizzes/practical/projects), set passing scores, create certification criteria, automate certificate generation, track completions",
+        "tools": "Assessment tools, certificate generation",
+        "roles": "Training specialist (design), LMS admin (setup)",
+        "successMetric": "Assessment system live, first certifications issued",
+        "decisionPoints": "Assessments aligned to learning? Certification valuable? Passing standards fair?",
+        "qualityGate": "Assessment system tested, certificates being issued"
+      },
+      {
+        "name": "Usage Analytics & Continuous Improvement",
+        "objective": "Monitor platform usage and continuously improve content",
+        "input": "Usage data, learner feedback, completion metrics",
+        "output": "Analytics dashboard with improvement roadmap",
+        "activities": "Track completion rates by course, identify struggling courses, gather learner feedback, analyze time-to-completion, plan content updates",
+        "tools": "Analytics dashboards, feedback collection",
+        "roles": "Analytics (tracking), Training (improvement)",
+        "successMetric": "Usage analytics live, quarterly improvement cycles active",
+        "decisionPoints": "Insights actionable? Improvements resonating? Adoption increasing?",
+        "qualityGate": "Analytics active, continuous improvement cycle established"
+      }
+    ]
+  },
+  "community-peer-learning": {
+    "stages": [
+      {
+        "name": "Community Strategy & Goals",
+        "objective": "Define community objectives and success metrics",
+        "input": "Customer engagement goals, business objectives, customer feedback",
+        "output": "Community strategy with goals and success metrics",
+        "activities": "Define community purpose and value proposition, set engagement targets, identify key discussions, define moderation approach, plan evolution",
+        "tools": "Strategy templates",
+        "roles": "Customer success (strategy), Marketing (engagement)",
+        "successMetric": "Community strategy documented with clear goals",
+        "decisionPoints": "Purpose compelling? Targets realistic? Moderation plan clear?",
+        "qualityGate": "Strategy approved, success metrics defined"
+      },
+      {
+        "name": "Community Platform Setup",
+        "objective": "Select and configure community platform",
+        "input": "Community strategy, platform requirements, budget",
+        "output": "Live community platform ready for members",
+        "activities": "Evaluate platforms (Mighty Networks, Slack communities, Discord), configure platform structure, set up channels/groups, configure user roles, design user experience",
+        "tools": "Platform demos, configuration tools",
+        "roles": "Operations (setup), Design (UX)",
+        "successMetric": "Platform live with structure designed and tested",
+        "decisionPoints": "Platform chosen fits strategy? Configuration intuitive? Scalable?",
+        "qualityGate": "Platform live, team trained, ready for member launch"
+      },
+      {
+        "name": "Moderator & Community Manager Preparation",
+        "objective": "Train moderators and community managers",
+        "input": "Moderation guidelines, platform training, community strategy",
+        "output": "Prepared moderation team ready to support community",
+        "activities": "Hire/assign community managers, train on platform, establish moderation guidelines, create response templates, plan escalation paths",
+        "tools": "Training materials, guidelines",
+        "roles": "Community managers (training), HR (hiring)",
+        "successMetric": "Moderation team trained and equipped",
+        "decisionPoints": "Team capacity adequate? Guidelines clear? Response templates helpful?",
+        "qualityGate": "Moderators trained, ready to launch"
+      },
+      {
+        "name": "Initial Member Recruitment",
+        "objective": "Recruit founding members and build critical mass",
+        "input": "Customer list, invitation strategy, community value prop",
+        "output": "Initial member base of 50-100+ engaged members",
+        "activities": "Invite high-engagement customers, send invitation with value prop, onboard in waves, encourage peer invites, monitor early adoption",
+        "tools": "Email campaigns, community platform",
+        "roles": "Customer success (recruitment), Marketing (promotion)",
+        "successMetric": "50-100 members joined, activity visible",
+        "decisionPoints": "Right member mix? Value evident? Early adoption positive?",
+        "qualityGate": "Founding members active, momentum building"
+      },
+      {
+        "name": "Content & Discussion Kickoff",
+        "objective": "Seed community with valuable initial content and discussions",
+        "input": "Content strategy, moderators trained, early members",
+        "output": "Active discussions and valued content flowing",
+        "activities": "Post initial content pieces, ask thoughtful questions to start discussions, highlight early contributions, encourage peer-to-peer answers, recognize early contributors",
+        "tools": "Community platform, content calendar",
+        "roles": "Community managers (facilitation), Product experts (answers)",
+        "successMetric": "Active discussions daily, peer engagement visible",
+        "decisionPoints": "Participation encouraged? Quality high? Conversations authentic?",
+        "qualityGate": "Community showing signs of natural engagement"
+      },
+      {
+        "name": "Recognition & Gamification",
+        "objective": "Recognize contributions and drive ongoing engagement",
+        "input": "Engagement data, member contributions, recognition budget",
+        "output": "Recognition program with incentives",
+        "activities": "Create badges for contributions, recognize top contributors monthly, highlight member stories, create leaderboards, plan rewards/incentives",
+        "tools": "Gamification tools, recognition platforms",
+        "roles": "Community managers (program), Marketing (rewards)",
+        "successMetric": "Recognition program active, engagement increasing",
+        "decisionPoints": "Recognition meaningful? Gamification motivating? Rewards valuable?",
+        "qualityGate": "Recognition program running, members responding"
+      },
+      {
+        "name": "Analytics & Evolution",
+        "objective": "Measure community health and plan evolution",
+        "input": "Engagement metrics, member feedback, community data",
+        "output": "Community analytics dashboard with growth plan",
+        "activities": "Track member growth, monitor engagement patterns, analyze top discussions, gather feedback, plan expansion, identify power users",
+        "tools": "Analytics dashboards",
+        "roles": "Analytics (measurement), Community managers (feedback)",
+        "successMetric": "Analytics dashboard live, growth trajectory positive",
+        "decisionPoints": "Growth metrics on track? Member satisfaction high? New initiatives clear?",
+        "qualityGate": "Analytics active, evolution roadmap created"
+      }
+    ]
+  },
+  "churn-prevention-at-risk-recovery": {
+    "stages": [
+      {
+        "name": "At-Risk Customer Identification",
+        "objective": "Identify customers at highest risk of churn",
+        "input": "Health scores, usage data, engagement metrics",
+        "output": "At-risk customer list with churn probability",
+        "activities": "Identify customers with declining health scores, analyze leading churn indicators, segment by risk level, assess revenue impact, prioritize by strategic value",
+        "tools": "Health monitoring dashboards, churn prediction models",
+        "roles": "Analytics (identification), CSM (context), Management (prioritization)",
+        "successMetric": "At-risk customers identified with churn probability >50%",
+        "decisionPoints": "Churn prediction accurate? Risk factors understood? Intervention options clear?",
+        "qualityGate": "At-risk list approved, intervention plan started"
+      },
+      {
+        "name": "Root Cause Analysis",
+        "objective": "Understand why customer is at risk",
+        "input": "At-risk customer list, customer interactions, usage data",
+        "output": "Root cause analysis per customer with intervention recommendations",
+        "activities": "Conduct customer interviews, analyze usage patterns, review customer issues, identify unmet needs, document satisfaction gaps",
+        "tools": "Interview templates, feedback analysis",
+        "roles": "CSM (lead), Support (issue history), Customer (perspective)",
+        "successMetric": "Root cause documented for 90%+ of at-risk customers",
+        "decisionPoints": "Root cause clear? Multiple factors or single issue? Fixable or customer changing?",
+        "qualityGate": "Root cause analysis complete, intervention strategy developed"
+      },
+      {
+        "name": "Intervention Strategy",
+        "objective": "Develop targeted retention strategy for each at-risk customer",
+        "input": "Root cause analysis, customer context, product capabilities",
+        "output": "Retention strategy with specific actions",
+        "activities": "Identify intervention approach (product, process, pricing, relationship), assign ownership, define success criteria, plan timeline, identify escalation path",
+        "tools": "Retention strategy templates",
+        "roles": "CSM (strategy), Executive sponsor (escalation), Product (solutions)",
+        "successMetric": "Retention strategy documented for each at-risk customer",
+        "decisionPoints": "Strategy addresses root cause? Ownership clear? Timeline realistic? Success criteria measurable?",
+        "qualityGate": "Retention strategies approved, owner assignments confirmed"
+      },
+      {
+        "name": "Executive Engagement",
+        "objective": "Secure executive attention for critical retention accounts",
+        "input": "At-risk accounts, revenue impact, retention strategy",
+        "output": "Executive sponsor assigned, intervention plan approved",
+        "activities": "Brief executive on customer situation, secure commitment to intervention, align on approach, establish communication cadence, plan executive outreach",
+        "tools": "Executive briefing templates",
+        "roles": "Management (engagement), CSM (background), Executive sponsor (relationship)",
+        "successMetric": "Executive sponsor assigned to 100% of high-revenue at-risk accounts",
+        "decisionPoints": "Executive committed? Approach aligned? Frequency appropriate?",
+        "qualityGate": "Executive engagement secured, communication plan active"
+      },
+      {
+        "name": "Customer Retention Negotiation",
+        "objective": "Negotiate retention and resolve customer concerns",
+        "input": "Retention strategy, customer needs, product/pricing options",
+        "output": "Negotiated agreement to retain customer",
+        "activities": "Schedule retention conversation, present solutions/options, negotiate terms, document agreement, confirm next steps",
+        "tools": "Contract management, negotiation frameworks",
+        "roles": "CSM (conversation), Sales (negotiation), Product (solutions)",
+        "successMetric": "Agreement reached with 70%+ of at-risk customers",
+        "decisionPoints": "Customer willing to stay? Terms acceptable? Concerns addressed? Follow-up clear?",
+        "qualityGate": "Retention agreement signed, implementation plan active"
+      },
+      {
+        "name": "Success Plan Refresh",
+        "objective": "Refresh customer success plan based on retention negotiation",
+        "input": "Retention agreement, customer commitments, new initiatives",
+        "output": "Updated success plan addressing retention concerns",
+        "activities": "Update success metrics based on issues, add new initiatives to address concerns, adjust timeline if needed, reset engagement cadence, communicate changes",
+        "tools": "Success plan templates",
+        "roles": "CSM (update), Customer (validation), Product (capabilities)",
+        "successMetric": "Updated success plan approved by customer",
+        "decisionPoints": "New plan credible? Concerns addressed? Resources committed? Customer engaged?",
+        "qualityGate": "Success plan updated, new engagement calendar active"
+      },
+      {
+        "name": "Follow-up & Engagement",
+        "objective": "Follow through on retention commitments and rebuild relationship",
+        "input": "Retention agreement, updated success plan",
+        "output": "Sustained engagement and positive trajectory",
+        "activities": "Execute on retention commitments, maintain heightened engagement, celebrate early wins, provide regular updates, monitor health improvement",
+        "tools": "Communication platforms, project tracking",
+        "roles": "CSM (leadership), Extended team (execution)",
+        "successMetric": "Retention commitments delivered, health scores improving",
+        "decisionPoints": "Commitments delivered on time? Customer satisfaction improving? Churn risk decreasing?",
+        "qualityGate": "Retention trajectory positive, health improving, relationship stable"
+      }
+    ]
+  },
+  "expansion-upsell-identification": {
+    "stages": [
+      {
+        "name": "Customer Maturity Assessment",
+        "objective": "Assess customer's maturity level and readiness for expansion",
+        "input": "Customer tenure, usage data, success metrics, organization",
+        "output": "Maturity assessment with expansion readiness score",
+        "activities": "Evaluate product adoption, assess value realization, analyze organizational commitment, evaluate technical maturity, assess financial health",
+        "tools": "Maturity assessment frameworks",
+        "roles": "CSM (assessment), Finance (financial analysis), Product (technical assessment)",
+        "successMetric": "Maturity score calculated for all customers",
+        "decisionPoints": "Customer ready for expansion? What's their appetite? Budget available?",
+        "qualityGate": "Maturity assessment complete, expansion readiness scoring methodology validated"
+      },
+      {
+        "name": "Expansion Opportunity Identification",
+        "objective": "Identify specific expansion opportunities for each customer",
+        "input": "Customer maturity, product roadmap, use cases, business outcomes",
+        "output": "List of potential expansion opportunities with ROI estimates",
+        "activities": "Identify underadopted features for expansion, identify new use cases, identify departments for horizontal expansion, identify add-on products, estimate impact/ROI",
+        "tools": "Opportunity templates, ROI calculators",
+        "roles": "CSM (identification), Product (capabilities), Sales (expansion experience)",
+        "successMetric": "2-3 expansion opportunities identified per mature customer",
+        "decisionPoints": "Opportunities high-value? Aligned to customer needs? Realistic? Customer interested?",
+        "qualityGate": "Expansion opportunities documented with initial ROI estimates"
+      },
+      {
+        "name": "Business Case Development",
+        "objective": "Develop compelling business case for expansion opportunity",
+        "input": "Expansion opportunity, customer context, ROI data",
+        "output": "Business case document with financial and strategic justification",
+        "activities": "Quantify opportunity impact, identify target department/persona, calculate ROI, identify implementation timeline, document strategic benefits",
+        "tools": "Business case templates, financial models",
+        "roles": "CSM (narrative), Finance (calculations), Product (capabilities)",
+        "successMetric": "Business case developed for each opportunity",
+        "decisionPoints": "ROI compelling? Timeline realistic? Impact clear? Customer context reflected?",
+        "qualityGate": "Business case approved by CSM/sales, ready for customer presentation"
+      },
+      {
+        "name": "Customer Alignment",
+        "objective": "Gain internal alignment on expansion approach",
+        "input": "Business case, customer context, organizational priorities",
+        "output": "Aligned expansion strategy with customer stakeholder buy-in",
+        "activities": "Present opportunity to customer stakeholders, assess interest level, gather feedback, refine approach based on input, confirm willingness to proceed",
+        "tools": "Presentation templates, stakeholder management",
+        "roles": "CSM (discovery), Sales (engagement), Product (expertise)",
+        "successMetric": "Customer stakeholders engaged, interest confirmed",
+        "decisionPoints": "Stakeholder interest high? Budget owner interested? Timeline acceptable?",
+        "qualityGate": "Customer interest confirmed, champion identified, next steps discussed"
+      },
+      {
+        "name": "Executive Sponsorship & Proposal Prep",
+        "objective": "Secure internal executive sponsorship and prepare proposal",
+        "input": "Customer interest, business case, expansion opportunity",
+        "output": "Executive-approved proposal ready for customer",
+        "activities": "Brief sales executive on opportunity, secure sponsorship, prepare formal proposal, coordinate internal resources, brief delivery team",
+        "tools": "Proposal templates, executive briefing",
+        "roles": "Sales (sponsorship), CSM (customer context), Product (delivery)",
+        "successMetric": "Executive sponsor assigned, proposal drafted",
+        "decisionPoints": "Executive committed? Proposal strong? Resources identified? Timeline confirmed?",
+        "qualityGate": "Executive approved, proposal ready for presentation"
+      }
+    ]
+  },
+  "renewal-negotiation-process": {
+    "stages": [
+      {
+        "name": "Renewal Planning & Qualification",
+        "objective": "Plan renewal process for all customers approaching expiration",
+        "input": "Renewal date, customer health, contract terms",
+        "output": "Renewal plan for all expiring customers",
+        "activities": "Identify all renewals 6+ months out, assess renewal health, plan renewal strategy by customer, assign renewal owners, identify potential churn risk",
+        "tools": "Renewal calendar, CRM, health scoring",
+        "roles": "CSM (planning), Sales leadership (ownership)",
+        "successMetric": "100% of renewals planned with owners assigned",
+        "decisionPoints": "Renewal likely? Strategy clear? Ownership clear?",
+        "qualityGate": "Renewal plans complete, owners briefed"
+      },
+      {
+        "name": "Value & ROI Documentation",
+        "objective": "Document value delivered and ROI achieved",
+        "input": "Health metrics, usage data, customer outcomes, contract value",
+        "output": "ROI and value documentation ready for renewal conversation",
+        "activities": "Calculate realized ROI, document value delivered, quantify business impact, identify expansion value, prepare executive summary",
+        "tools": "ROI calculator, value templates",
+        "roles": "CSM (narrative), Analytics (calculations)",
+        "successMetric": "ROI documentation complete for all customers",
+        "decisionPoints": "ROI credible? Value clear? Documentation compelling?",
+        "qualityGate": "ROI documentation approved, ready for customer"
+      },
+      {
+        "name": "Renewal Negotiation Preparation",
+        "objective": "Prepare strategy and materials for renewal conversation",
+        "input": "Renewal plan, value documentation, contract terms",
+        "output": "Renewal strategy with conversation plan and pricing options",
+        "activities": "Develop renewal strategy (auto-renewal vs. negotiation), prepare pricing scenarios, identify expansion opportunities, prepare negotiation position, brief internal team",
+        "tools": "Negotiation templates, pricing models",
+        "roles": "CSM (strategy), Sales (negotiation), Finance (pricing)",
+        "successMetric": "Renewal strategy and materials prepared",
+        "decisionPoints": "Strategy strong? Pricing options clear? Expansion opportunities identified?",
+        "qualityGate": "Renewal strategy approved, team briefed"
+      },
+      {
+        "name": "Renewal Conversation & Value Review",
+        "objective": "Conduct renewal conversation and review value delivered",
+        "input": "Renewal strategy, value documentation, customer",
+        "output": "Renewal discussion documented with customer interest",
+        "activities": "Schedule renewal meeting, present value and ROI, review year highlights, discuss expansion opportunities, address concerns",
+        "tools": "CRM, presentation materials",
+        "roles": "CSM (lead), Account executive (if expansion), Customer (discussion)",
+        "successMetric": "Renewal conversation conducted, customer interest assessed",
+        "decisionPoints": "Customer enthusiastic? Churn risk? Expansion interest? Next steps clear?",
+        "qualityGate": "Conversation documented, customer interest confirmed"
+      },
+      {
+        "name": "Negotiation & Terms Refinement",
+        "objective": "Negotiate renewal terms and finalize agreement",
+        "input": "Renewal conversation, customer interests, pricing models",
+        "output": "Agreed renewal terms and pricing",
+        "activities": "Present renewal proposal with pricing, negotiate terms, address objections, finalize pricing/term, prepare contract",
+        "tools": "Contracts, pricing models, negotiation framework",
+        "roles": "Sales (negotiation), Finance (pricing), Legal (contracts)",
+        "successMetric": "Renewal terms agreed and documented",
+        "decisionPoints": "Terms acceptable? Pricing competitive? Customer committed? Expansion included?",
+        "qualityGate": "Renewal terms finalized, contract ready for signature"
+      },
+      {
+        "name": "Contract Closure & Signature",
+        "objective": "Execute renewal contract",
+        "input": "Agreed renewal terms, contract template",
+        "output": "Signed renewal contract",
+        "activities": "Prepare final contract, send to customer for signature, execute e-signature process, finalize contract, update CRM and billing",
+        "tools": "Contract management, e-signature tools, CRM",
+        "roles": "Legal (documents), Sales (signature), Finance (billing)",
+        "successMetric": "Contract signed, billing updated",
+        "decisionPoints": "Contract clear? Customer ready? Billing aligned?",
+        "qualityGate": "Contract signed, renewal locked, billing activated"
+      },
+      {
+        "name": "Celebration & Next Phase Planning",
+        "objective": "Celebrate renewal and plan next phase of engagement",
+        "input": "Signed contract, renewed relationship",
+        "output": "Celebration communication and next phase plan",
+        "activities": "Thank customer, celebrate renewal, share success internally, plan next year initiatives, schedule kickoff for new phase",
+        "tools": "Communication templates, planning tools",
+        "roles": "CSM (planning), Account executive (celebration)",
+        "successMetric": "Renewal celebrated, next year plan initiated",
+        "decisionPoints": "Celebration resonant? Next year strategy clear?",
+        "qualityGate": "Renewal celebrated, next year engagement underway"
+      }
+    ]
+  },
+  "customer-health-scoring-model": {
+    "stages": [
+      {
+        "name": "Health Metrics Selection",
+        "objective": "Identify metrics that predict customer health and renewal",
+        "input": "Historical data, customer feedback, usage patterns",
+        "output": "Selected health metrics with definitions",
+        "activities": "Analyze historical churn patterns, identify leading indicators, define health dimensions (adoption, engagement, support, sentiment), establish metric definitions",
+        "tools": "Data analysis, historical CRM data",
+        "roles": "Analytics (lead), CSM (validation)",
+        "successMetric": "5-10 health metrics selected and defined",
+        "decisionPoints": "Metrics predictive? Data available? Actionable?",
+        "qualityGate": "Metrics approved, data sources identified"
+      },
+      {
+        "name": "Data Architecture & Integration",
+        "objective": "Build data infrastructure to calculate health scores",
+        "input": "Selected metrics, data sources, technical requirements",
+        "output": "Data pipeline delivering health score inputs",
+        "activities": "Map data sources (product, CRM, support, billing), design data architecture, build data connections, establish data quality checks, plan refresh frequency",
+        "tools": "Data platforms, ETL tools, APIs",
+        "roles": "Data engineering (lead), Analytics (oversight)",
+        "successMetric": "Data architecture built, pipelines active",
+        "decisionPoints": "Data accurate? Latency acceptable? Quality consistent?",
+        "qualityGate": "Data flowing reliably, quality verified"
+      },
+      {
+        "name": "Scoring Model Development",
+        "objective": "Build health scoring algorithm",
+        "input": "Selected metrics, historical data, model requirements",
+        "output": "Health score model with weighting",
+        "activities": "Define scoring methodology, weight metrics by impact, calibrate thresholds, build scoring algorithm, test on historical data",
+        "tools": "Statistical analysis, modeling tools",
+        "roles": "Analytics (lead), Data science (if needed)",
+        "successMetric": "Scoring model developed and tested",
+        "decisionPoints": "Model predicts well? Weights appropriate? Thresholds meaningful?",
+        "qualityGate": "Model performs well on test data (>70% accuracy)"
+      },
+      {
+        "name": "Validation & Testing",
+        "objective": "Validate model accuracy and applicability",
+        "input": "Scoring model, historical churn data, validation set",
+        "output": "Validated model with performance metrics",
+        "activities": "Test model against historical churn, assess false positive/negative rates, validate with CSM team, refine thresholds based on feedback",
+        "tools": "Validation datasets, performance metrics",
+        "roles": "Analytics (testing), CSM (feedback)",
+        "successMetric": "Model validated with <10% false positive rate",
+        "decisionPoints": "Model accurate? CSM confident? Thresholds realistic?",
+        "qualityGate": "Model approved for deployment"
+      },
+      {
+        "name": "Score Deployment & Dashboard",
+        "objective": "Deploy health scores and create monitoring dashboard",
+        "input": "Validated model, dashboard requirements",
+        "output": "Live health scores for all customers in dashboard",
+        "activities": "Deploy scoring model to production, create health dashboards, set up auto-refresh, configure alerts, train team on interpretation",
+        "tools": "Dashboard tools, alerting systems",
+        "roles": "Analytics (deployment), Operations (training)",
+        "successMetric": "Health scores live for 100% of customers",
+        "decisionPoints": "Scores accurate? Dashboard clear? Alerts appropriate?",
+        "qualityGate": "Scores live, dashboard adopted by team"
+      },
+      {
+        "name": "Monitoring & Alert Configuration",
+        "objective": "Set up real-time monitoring and alerts for at-risk customers",
+        "input": "Health scores, alert thresholds, escalation process",
+        "output": "Active monitoring and alert system",
+        "activities": "Define alert thresholds (red/yellow/green), configure automated alerts, establish escalation process, test alerts, train team on response",
+        "tools": "Alerting systems, ticketing",
+        "roles": "Operations (setup), CSM (response)",
+        "successMetric": "Alert system active, team responding to alerts",
+        "decisionPoints": "Alert frequency appropriate? Response process working?",
+        "qualityGate": "Alerts sent and acted upon consistently"
+      },
+      {
+        "name": "Continuous Model Improvement",
+        "objective": "Continuously improve model based on performance",
+        "input": "Score accuracy, churn data, feedback",
+        "output": "Updated model with improved accuracy",
+        "activities": "Quarterly review of model performance, analyze misses, identify new signals, update model, retrain team",
+        "tools": "Analysis tools, model versioning",
+        "roles": "Analytics (improvement), CSM (feedback)",
+        "successMetric": "Model accuracy improving each quarter",
+        "decisionPoints": "New signals identified? Thresholds optimized? Predictability increasing?",
+        "qualityGate": "Continuous improvement cycle established"
+      }
+    ]
+  },
+  "customer-satisfaction-nps-program": {
+    "stages": [
+      {
+        "name": "NPS Program Strategy & Design",
+        "objective": "Design NPS program and measurement approach",
+        "input": "Business objectives, customer feedback needs, competitive benchmarks",
+        "output": "NPS program strategy with measurement plan",
+        "activities": "Define program objectives, design survey cadence (quarterly/annual), identify target respondents, design segmentation approach, establish benchmark targets",
+        "tools": "Program templates",
+        "roles": "Customer success (design), Operations (execution)",
+        "successMetric": "NPS program strategy documented",
+        "decisionPoints": "Cadence appropriate? Segments meaningful? Targets realistic?",
+        "qualityGate": "Program strategy approved, benchmark established"
+      },
+      {
+        "name": "Survey Development & Testing",
+        "objective": "Create NPS survey and supporting questions",
+        "input": "Program strategy, customer context, benchmark surveys",
+        "output": "Finalized NPS survey ready for deployment",
+        "activities": "Design core NPS question and scale, create follow-up questions (segmentation, satisfaction, recommendation), add open feedback questions, test with sample customers, refine wording",
+        "tools": "Survey platforms, testing tools",
+        "roles": "Customer success (content), Operations (deployment)",
+        "successMetric": "Survey tested and refined",
+        "decisionPoints": "Questions clear? Segmentation helpful? Response rate expected high?",
+        "qualityGate": "Survey approved, ready for launch"
+      },
+      {
+        "name": "Survey Deployment & Collection",
+        "objective": "Distribute survey and collect responses",
+        "input": "Finalized survey, customer list, distribution method",
+        "output": "NPS responses from target customers",
+        "activities": "Deploy survey via email/in-app/platform, track response rates, send reminders, extend deadline if needed, document response data",
+        "tools": "Survey platforms, email, CRM",
+        "roles": "Operations (deployment), Marketing (promotion)",
+        "successMetric": "30%+ response rate, 100+ responses collected",
+        "decisionPoints": "Response rate adequate? Sample representative? Data quality good?",
+        "qualityGate": "Sufficient responses collected for analysis"
+      },
+      {
+        "name": "Response Analysis & Segmentation",
+        "objective": "Analyze NPS responses and segment by customer groups",
+        "input": "NPS responses, customer data",
+        "output": "NPS analysis with segments and insights",
+        "activities": "Calculate overall NPS and by segment, analyze promoter/detractor/passive split, identify trends, segment by company size/industry/tenure, identify correlation with usage/health",
+        "tools": "Analytics tools, segmentation analysis",
+        "roles": "Analytics (lead), Customer success (interpretation)",
+        "successMetric": "NPS calculated and segmented, insights identified",
+        "decisionPoints": "Insights actionable? Segments clear? Trends significant?",
+        "qualityGate": "Analysis complete, key findings documented"
+      },
+      {
+        "name": "Detractor Follow-Up & Voice of Customer",
+        "objective": "Understand feedback from detractors and low satisfaction customers",
+        "input": "NPS feedback, detractor list, open-ended responses",
+        "output": "Detractor insights and recommended actions",
+        "activities": "Review open-ended feedback, categorize feedback themes, interview sample detractors, identify systemic issues, develop improvement plan",
+        "tools": "Feedback analysis, survey platform",
+        "roles": "Customer success (lead), Product (consideration)",
+        "successMetric": "Detractor feedback analyzed, themes identified",
+        "decisionPoints": "Issues fixable? Patterns clear? Product vs. service issue?",
+        "qualityGate": "Detractor themes documented, action plan created"
+      },
+      {
+        "name": "Action Planning & Internal Communication",
+        "objective": "Develop actions to improve satisfaction and NPS",
+        "input": "Analysis findings, detractor feedback, resource availability",
+        "output": "Action plan to address gaps",
+        "activities": "Prioritize top issues, assign ownership, develop action plan, communicate results to team, celebrate improvements, set targets for next survey",
+        "tools": "Action tracking, communication templates",
+        "roles": "Leadership (ownership), Customer success (execution)",
+        "successMetric": "Action plan created with owners assigned",
+        "decisionPoints": "Actions address root causes? Timelines realistic? Resources available?",
+        "qualityGate": "Actions assigned and tracked"
+      },
+      {
+        "name": "Results Communication & Celebration",
+        "objective": "Communicate NPS results and improvements to team",
+        "input": "NPS analysis, action plan, improvements made",
+        "output": "Team communication and celebration",
+        "activities": "Share NPS results with full team, communicate improvements made since last survey, celebrate improvements, recognize top performers, share customer quotes",
+        "tools": "Communication platforms, internal newsletters",
+        "roles": "Leadership (communication), Customer success (celebration)",
+        "successMetric": "Results communicated, team engaged",
+        "decisionPoints": "Communication clear? Team motivated? Ownership clear?",
+        "qualityGate": "NPS program visible to team, continuous improvement culture evident"
+      }
+    ]
+  },
+  "customer-success-metrics-dashboard": {
+    "stages": [
+      {
+        "name": "Success Metrics Framework",
+        "objective": "Define comprehensive metrics for customer success health",
+        "input": "Business objectives, CSM responsibilities, customer health indicators",
+        "output": "Success metrics framework with KPIs",
+        "activities": "Define health metrics (adoption, usage, satisfaction), define pipeline metrics (renewals, expansion), define operational metrics (cost, efficiency), establish targets",
+        "tools": "Metrics frameworks",
+        "roles": "Customer success leadership (design), Analytics (validation)",
+        "successMetric": "Comprehensive metrics framework with 15-20 KPIs",
+        "decisionPoints": "Metrics comprehensive? Aligned to business? Actionable?",
+        "qualityGate": "Metrics approved by leadership"
+      },
+      {
+        "name": "Data Architecture & Integration",
+        "objective": "Build data infrastructure for success metrics",
+        "input": "Metrics framework, data sources, technical requirements",
+        "output": "Data pipelines feeding success dashboard",
+        "activities": "Identify data sources (product, CRM, billing, surveys), design data model, build data connectors, establish data quality, test data accuracy",
+        "tools": "Data platforms, ETL, APIs",
+        "roles": "Data engineering (lead), Analytics (oversight)",
+        "successMetric": "Data architecture complete, pipelines active",
+        "decisionPoints": "Data accurate? Refresh frequency adequate? Latency acceptable?",
+        "qualityGate": "Data flowing reliably, quality verified"
+      },
+      {
+        "name": "Dashboard Design & Visualization",
+        "objective": "Design intuitive dashboard for success metrics",
+        "input": "Metrics framework, audience needs, design requirements",
+        "output": "Dashboard design mockups ready for implementation",
+        "activities": "Design dashboard layout for different users (CSM, leadership, executive), select visualizations for each metric, define drill-down capabilities, design mobile view",
+        "tools": "Design tools, dashboard software",
+        "roles": "Design (UX), Analytics (logic)",
+        "successMetric": "Dashboard designs created and reviewed",
+        "decisionPoints": "Design intuitive? Drill-downs helpful? Mobile ready?",
+        "qualityGate": "Designs approved, ready for build"
+      },
+      {
+        "name": "Dashboard Implementation",
+        "objective": "Build and deploy success dashboard",
+        "input": "Dashboard designs, data pipelines, platform",
+        "output": "Live dashboard with real-time metrics",
+        "activities": "Build dashboard in platform, configure metrics and visualizations, set up auto-refresh, configure alerts, test all features",
+        "tools": "Dashboard platform",
+        "roles": "Analytics (build), QA (testing)",
+        "successMetric": "Dashboard live with all metrics displaying correctly",
+        "decisionPoints": "Performance adequate? Data accurate? User experience smooth?",
+        "qualityGate": "Dashboard tested and approved for release"
+      },
+      {
+        "name": "Team Training & Adoption",
+        "objective": "Train team on dashboard usage and interpretation",
+        "input": "Live dashboard, training materials",
+        "output": "Trained team using dashboard",
+        "activities": "Create dashboard user guide, train CSMs on how to use, train leadership on insights, establish dashboard review cadence, create help resources",
+        "tools": "Training materials, help documentation",
+        "roles": "Analytics (training), Leadership (adoption)",
+        "successMetric": "100% of team trained, usage visible",
+        "decisionPoints": "Training clear? Team confident? Usage adoption high?",
+        "qualityGate": "Team trained and actively using dashboard"
+      },
+      {
+        "name": "Usage Monitoring & Support",
+        "objective": "Monitor dashboard usage and provide support",
+        "input": "Dashboard usage data, team feedback",
+        "output": "Active dashboard adoption with support",
+        "activities": "Track dashboard login and usage, provide support for questions, monitor for feedback, identify common issues, provide refresher training",
+        "tools": "Usage analytics, support channels",
+        "roles": "Analytics (monitoring), Support (helpdesk)",
+        "successMetric": "80%+ of team using dashboard regularly",
+        "decisionPoints": "Adoption growing? Support questions declining? Usefulness evident?",
+        "qualityGate": "Dashboard becoming integral to CSM workflow"
+      },
+      {
+        "name": "Continuous Improvement & Optimization",
+        "objective": "Optimize dashboard based on usage and feedback",
+        "input": "Dashboard usage data, team feedback, new metrics needed",
+        "output": "Improved dashboard with optimizations",
+        "activities": "Quarterly review of usage, gather feedback on improvements, add new metrics as needed, optimize visualizations, remove unused metrics",
+        "tools": "Dashboard platform, feedback collection",
+        "roles": "Analytics (optimization), Leadership (feedback)",
+        "successMetric": "Dashboard evolving based on feedback",
+        "decisionPoints": "New metrics valuable? Optimizations improving usage?",
+        "qualityGate": "Continuous improvement process established"
+      }
+    ]
+  }
+}

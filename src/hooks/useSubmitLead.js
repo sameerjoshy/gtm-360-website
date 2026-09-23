@@ -44,6 +44,11 @@ const useSubmitLead = () => {
 
             if (response.ok) {
                 setStatus('success');
+                // Plausible goal — lead submitted (configure the goal in Plausible
+                // dashboard as "Lead submitted" to see funnel conversions).
+                if (typeof window !== 'undefined' && window.plausible) {
+                    window.plausible('Lead submitted', { props: { type } });
+                }
                 return true;
             } else {
                 throw new Error('Submission failed');

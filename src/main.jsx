@@ -6,8 +6,9 @@ import './index.css';
 
 const rootElement = document.getElementById('root');
 
-// Hydrate if SSR content exists, otherwise fresh render
-if (rootElement.innerHTML.trim() !== '') {
+// Hydrate if the prerender replaced the placeholder with real markup, otherwise fresh render.
+// (innerHTML is non-empty in dev because of the <!--app-html--> comment — element children are the truth.)
+if (rootElement.children.length > 0) {
     ReactDOM.hydrateRoot(
         rootElement,
         <React.StrictMode>

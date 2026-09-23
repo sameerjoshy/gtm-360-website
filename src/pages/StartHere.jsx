@@ -44,7 +44,13 @@ const StartHere = () => {
                     }
                 })
             });
-            if (res.ok) { setStatus('success'); navigate('/thank-you'); }
+            if (res.ok) {
+                setStatus('success');
+                if (typeof window !== 'undefined' && window.plausible) {
+                    window.plausible('Diagnostic started', { props: { arrRange: formData.arrRange, symptom: formData.primarySymptom } });
+                }
+                navigate('/thank-you');
+            }
             else throw new Error();
         } catch { setStatus('error'); }
     };
@@ -181,9 +187,14 @@ const StartHere = () => {
                     </form>
                     <div className="mt-8 pt-8 border-t border-slate-100 text-center">
                         <p className="text-sm text-slate-500 mb-3">Not ready to talk yet?</p>
-                        <Link to="/resources/gtm-diagnostic-checklist" className="text-sm font-medium text-indigo-600 hover:underline">
-                            Run the 24-point GTM Diagnostic Checklist first →
-                        </Link>
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                            <Link to="/resources/gtm-diagnostic-checklist" className="text-sm font-medium text-indigo-600 hover:underline">
+                                Run the 24-point GTM Diagnostic Checklist first →
+                            </Link>
+                            <Link to="/diagnostic-score" className="text-sm font-medium text-indigo-600 hover:underline">
+                                Or find your constraint engine in 2 minutes →
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
