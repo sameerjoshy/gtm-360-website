@@ -114,7 +114,7 @@ const Home = () => {
                             Operator-led practice. Ran GTM at AWS and Dell. Series A–C, B2B SaaS &amp; technology.
                         </p>
                     </div>
-                    <p className="text-xs text-slate-400">Sameer's background is verifiable on <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:underline">LinkedIn</a>.</p>
+                    <p className="text-xs text-slate-400">Sameer's background is verifiable on <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-500 underline">LinkedIn</a>.</p>
                 </div>
             </section>
 

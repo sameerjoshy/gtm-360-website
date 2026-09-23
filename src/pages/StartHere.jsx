@@ -116,33 +116,33 @@ const StartHere = () => {
                     <form onSubmit={handleSubmit} className="space-y-5">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-1">Your name</label>
-                                <input type="text" name="firstname" required value={formData.firstname} onChange={handleChange}
+                                <label htmlFor="firstname" className="block text-sm font-bold text-slate-700 mb-1">Your name</label>
+                                <input id="firstname" type="text" name="firstname" required value={formData.firstname} onChange={handleChange}
                                     className="w-full border border-slate-200 p-3 rounded focus:border-slate-500 outline-none text-sm" />
                             </div>
                             <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-1">Work email</label>
-                                <input type="email" name="email" required value={formData.email} onChange={handleChange}
+                                <label htmlFor="email" className="block text-sm font-bold text-slate-700 mb-1">Work email</label>
+                                <input id="email" type="email" name="email" required value={formData.email} onChange={handleChange}
                                     className="w-full border border-slate-200 p-3 rounded focus:border-slate-500 outline-none text-sm" />
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-1">Company</label>
-                                <input type="text" name="company" required value={formData.company} onChange={handleChange}
+                                <label htmlFor="company" className="block text-sm font-bold text-slate-700 mb-1">Company</label>
+                                <input id="company" type="text" name="company" required value={formData.company} onChange={handleChange}
                                     className="w-full border border-slate-200 p-3 rounded focus:border-slate-500 outline-none text-sm" />
                             </div>
                             <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-1">Your role</label>
-                                <input type="text" name="role" required value={formData.role} onChange={handleChange}
+                                <label htmlFor="role" className="block text-sm font-bold text-slate-700 mb-1">Your role</label>
+                                <input id="role" type="text" name="role" required value={formData.role} onChange={handleChange}
                                     className="w-full border border-slate-200 p-3 rounded focus:border-slate-500 outline-none text-sm"
                                     placeholder="Founder / CRO / VP Sales" />
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-1">Company ARR</label>
-                                <select name="arrRange" value={formData.arrRange} onChange={handleChange}
+                                <label htmlFor="arrRange" className="block text-sm font-bold text-slate-700 mb-1">Company ARR</label>
+                                <select id="arrRange" name="arrRange" value={formData.arrRange} onChange={handleChange}
                                     className="w-full border border-slate-200 p-3 rounded focus:border-slate-500 outline-none text-sm bg-white">
                                     <option>Under $5M</option>
                                     <option>$5–20M</option>
@@ -152,8 +152,8 @@ const StartHere = () => {
                                 </select>
                             </div>
                             <div>
-                                <label className="block text-sm font-bold text-slate-700 mb-1">What's the main issue?</label>
-                                <select name="primarySymptom" value={formData.primarySymptom} onChange={handleChange}
+                                <label htmlFor="primarySymptom" className="block text-sm font-bold text-slate-700 mb-1">What's the main issue?</label>
+                                <select id="primarySymptom" name="primarySymptom" value={formData.primarySymptom} onChange={handleChange}
                                     className="w-full border border-slate-200 p-3 rounded focus:border-slate-500 outline-none text-sm bg-white">
                                     <option>Pipeline but revenue is flat</option>
                                     <option>Win rates falling</option>

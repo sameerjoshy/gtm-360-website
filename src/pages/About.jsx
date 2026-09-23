@@ -52,7 +52,7 @@ const About = () => {
                     </div>
                     <p className="text-xs text-slate-400 mt-5">
                         Background independently verifiable on{" "}
-                        <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline font-medium">LinkedIn</a>.
+                        <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline font-medium">LinkedIn</a>.
                     </p>
                 </div>
             </section>
@@ -124,7 +124,7 @@ const About = () => {
                     </div>
                     <p className="text-xs text-slate-400 mt-5">
                         Background independently verifiable on{" "}
-                        <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline font-medium">LinkedIn</a>.
+                        <a href="https://www.linkedin.com/in/sameer-joshi1/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline font-medium">LinkedIn</a>.
                     </p>
                 </div>
             </section>
