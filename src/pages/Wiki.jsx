@@ -12,6 +12,12 @@ const SUBSTACK_URL = "https://gtm360.substack.com/?r=65ta79&utm_campaign=pub-sha
 
 const tiles = [
     {
+        to: "/skills",
+        label: "Skill Library",
+        desc: "Every GTM-360 skill — 192 executable procedures across 11 domains, written to be run, each with inputs, steps, output, and a quality bar.",
+        tag: "Skills",
+    },
+    {
         to: "/wiki/method",
         label: "The Operating Model",
         desc: "How go-to-market actually works — 10 layers, 40+ processes, the workflows and tools behind each. The full method.",

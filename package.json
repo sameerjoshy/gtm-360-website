@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/check-taxonomy.mjs",
+    "prebuild": "node scripts/check-taxonomy.mjs && node scripts/sync-skills.mjs --check",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -13,6 +13,8 @@
     "build:ssg": "npm run build",
     "sync:registry": "node scripts/sync-registry.mjs",
     "check:registry": "node scripts/check-taxonomy.mjs",
+    "sync:skills": "node scripts/sync-skills.mjs",
+    "check:skills": "node scripts/sync-skills.mjs --check",
     "postbuild": "npm run build:ssr && node prerender.mjs || true"
   },
   "dependencies": {

@@ -63,6 +63,12 @@ A: A fractional CRO provides ongoing executive leadership. A GTM consultant runs
 Q: How does the agentic system work?
 A: Five engines, 41 specialist agents, each following a four-step chain: gather real data, validate quality, synthesise with an LLM, verify output. Every agent has defined inputs, outputs, gates, and handoffs. Nothing executes without your approval.
 
+## Skill Library
+
+GTM-360 publishes its full skill library: 192 executable go-to-market skills across 11 domains — strategy and positioning, targeting and signals, outbound and sales development, deal execution, customer success and expansion, paid media and ABM, content and community, search and AI visibility, creators and partners, events and recruiting, and RevOps. Each skill names its inputs, its procedure, its output, and a checkable quality bar.
+
+Skill library: https://gtm-360.com/skills
+
 ## Contact
 
 Website: https://gtm-360.com
