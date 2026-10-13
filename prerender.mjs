@@ -29,6 +29,7 @@ const routes = [
     '/wiki/method/tools',
     '/wiki/method/agents',
     '/wiki/method/about',
+    '/skills',
     '/diagnostic-score',
     '/problems',
     '/problems/stalled-growth',
@@ -86,6 +87,11 @@ for (const l of LAYERS) {
 }
 for (const p of playbooks) routes.push(`/wiki/playbooks/${p.slug}`);
 
+// Skill library — one page per skill, enumerated from the committed snapshot so
+// the route list (and sitemap) can never drift from the published skills.
+const skillsSnapshot = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'src/data/skills.snapshot.json'), 'utf8'));
+for (const s of skillsSnapshot.skills) routes.push(`/skills/${s.slug}`);
+
 const distDir = path.resolve(__dirname, 'dist');
 const templatePath = path.resolve(distDir, 'index.html');
 
@@ -95,7 +101,7 @@ function writeSitemap() {
     const priorityFor = (route) => {
         if (route === '/') return '1.0';
         if (route === '/start-here') return '0.9';
-        if (['/how-we-work', '/wiki', '/agents', '/about'].includes(route)) return '0.8';
+        if (['/how-we-work', '/wiki', '/agents', '/skills', '/about'].includes(route)) return '0.8';
         if (route.endsWith('/guide')) return '0.7';
         if (route.startsWith('/agents/')) return '0.6';
         return '0.6';

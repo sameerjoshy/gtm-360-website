@@ -26,6 +26,8 @@ const WikiProcess = lazy(() => import('./pages/wiki/Process'));
 const WikiTools = lazy(() => import('./pages/wiki/Tools').then((m) => ({ default: m.Tools })));
 const WikiAgents = lazy(() => import('./pages/wiki/Agents').then((m) => ({ default: m.Agents })));
 const WikiAbout = lazy(() => import('./pages/wiki/About').then((m) => ({ default: m.About })));
+const Skills = lazy(() => import('./pages/Skills'));
+const SkillPage = lazy(() => import('./pages/SkillPage'));
 const DiagnosticScore = lazy(() => import('./pages/DiagnosticScore'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
@@ -103,6 +105,9 @@ export function AppRoutes() {
                     <Route path="/wiki/method/tools" element={<WikiTools />} />
                     <Route path="/wiki/method/agents" element={<WikiAgents />} />
                     <Route path="/wiki/method/about" element={<WikiAbout />} />
+                    {/* Skill library */}
+                    <Route path="/skills" element={<Skills />} />
+                    <Route path="/skills/:slug" element={<SkillPage />} />
                     <Route path="/diagnostic-score" element={<DiagnosticScore />} />
                     <Route path="/insights/case-studies/:slug" element={<CaseStudyPost />} />
                     <Route path="/insights/:slug" element={<InsightPost />} />

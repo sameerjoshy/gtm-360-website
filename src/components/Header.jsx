@@ -15,6 +15,7 @@ import { track } from '../lib/analytics';
 const navLinks = [
     { to: "/problems", label: "Challenges" },
     { to: "/offerings", label: "Offerings" },
+    { to: "/skills", label: "Skills" },
     { to: "/insights", label: "Insights" },
     { to: "/about", label: "About" },
 ];

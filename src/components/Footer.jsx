@@ -20,6 +20,7 @@ const offerings = [
 
 const learn = [
     { to: "/insights", label: "Insights" },
+    { to: "/skills", label: "Skill Library" },
     { to: "/wiki", label: "Knowledge Base" },
     { to: "/wiki/playbooks", label: "Playbooks" },
     { to: "/wiki/glossary", label: "Glossary" },
